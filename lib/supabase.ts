@@ -7,40 +7,68 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 // Check if we're in development mode
 const isDevelopment = process.env.NODE_ENV === 'development'
 
-if (!supabaseUrl) {
-  const error = "Missing env.NEXT_PUBLIC_SUPABASE_URL"
-  console.error(error)
-  if (isDevelopment) {
-    console.warn("Please create a .env.local file with your Supabase URL")
+// Check if Supabase is configured
+export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey)
+
+// Create a fallback client or real client
+let supabaseClient: any = null
+
+if (isSupabaseConfigured) {
+  // Create a single supabase client for interacting with your database
+  supabaseClient = createClient(supabaseUrl!, supabaseAnonKey!, {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: true
+    }
+  })
+} else {
+  // Create a mock client that throws helpful errors
+  supabaseClient = {
+    auth: {
+      getSession: () => {
+        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+      },
+      signInWithOAuth: () => {
+        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+      },
+      signInWithPassword: () => {
+        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+      },
+      signUp: () => {
+        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+      },
+      signOut: () => {
+        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+      },
+      resetPasswordForEmail: () => {
+        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+      },
+      onAuthStateChange: () => {
+        return { data: { subscription: { unsubscribe: () => {} } } }
+      }
+    }
   }
-  throw new Error(error)
+  
+  if (isDevelopment) {
+    console.warn("Supabase is not configured. Authentication features will be disabled. Please create a .env.local file with your Supabase credentials.")
+  }
 }
 
-if (!supabaseAnonKey) {
-  const error = "Missing env.NEXT_PUBLIC_SUPABASE_ANON_KEY"
-  console.error(error)
-  if (isDevelopment) {
-    console.warn("Please create a .env.local file with your Supabase anon key")
-  }
-  throw new Error(error)
-}
-
-// Create a single supabase client for interacting with your database
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    detectSessionInUrl: true
-  }
-})
+export const supabase = supabaseClient
 
 // Server-side client
 export const createServerClient = () => {
+  if (!isSupabaseConfigured) {
+    console.warn("Supabase is not configured - server client unavailable")
+    return null
+  }
+  
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
   
   if (!serviceRoleKey) {
     console.warn("Missing env.SUPABASE_SERVICE_ROLE_KEY - falling back to anon key")
-    return createClient(supabaseUrl, supabaseAnonKey, {
+    return createClient(supabaseUrl!, supabaseAnonKey!, {
       auth: {
         persistSession: false,
         autoRefreshToken: false
@@ -48,7 +76,7 @@ export const createServerClient = () => {
     })
   }
   
-  return createClient(supabaseUrl, serviceRoleKey, {
+  return createClient(supabaseUrl!, serviceRoleKey, {
     auth: {
       persistSession: false,
       autoRefreshToken: false

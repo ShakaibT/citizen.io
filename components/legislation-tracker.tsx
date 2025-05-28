@@ -22,7 +22,7 @@ import { Progress } from "@/components/ui/progress"
 import { useAuth } from "@/components/auth-provider"
 import { useLocation } from "@/components/location-provider"
 import { useToast } from "@/hooks/use-toast"
-import { supabase } from "@/lib/supabase"
+import { supabase, isSupabaseConfigured } from "@/lib/supabase"
 
 interface Bill {
   id: string
@@ -175,6 +175,15 @@ export function LegislationTracker() {
       toast({
         title: "Sign in required",
         description: "Please sign in to track legislation.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    if (!isSupabaseConfigured) {
+      toast({
+        title: "Feature unavailable",
+        description: "Bill tracking requires database configuration.",
         variant: "destructive",
       })
       return

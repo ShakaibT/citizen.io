@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase"
+import { supabase, isSupabaseConfigured } from "@/lib/supabase"
 import type { User } from "@supabase/supabase-js"
 
 interface AddressData {
@@ -32,6 +32,11 @@ export async function storeValidatedAddress(
   rawInput: string,
   validatedData: AddressData,
 ): Promise<{ success: boolean; address?: StoredAddress; error?: string }> {
+  if (!isSupabaseConfigured) {
+    console.warn("Supabase not configured - address storage disabled")
+    return { success: false, error: "Address storage not available" }
+  }
+  
   try {
     // First, set all existing addresses for this user to non-primary
     await supabase.from("addresses").update({ is_primary: false }).eq("user_id", user.id)
@@ -74,6 +79,11 @@ export async function storeValidatedAddress(
 }
 
 export async function getUserPrimaryAddress(userId: string): Promise<StoredAddress | null> {
+  if (!isSupabaseConfigured) {
+    console.warn("Supabase not configured - address retrieval disabled")
+    return null
+  }
+  
   try {
     const { data, error } = await supabase
       .from("addresses")
@@ -94,6 +104,11 @@ export async function getUserPrimaryAddress(userId: string): Promise<StoredAddre
 }
 
 export async function getUserAddresses(userId: string): Promise<StoredAddress[]> {
+  if (!isSupabaseConfigured) {
+    console.warn("Supabase not configured - address retrieval disabled")
+    return []
+  }
+  
   try {
     const { data, error } = await supabase
       .from("addresses")
@@ -121,6 +136,11 @@ export async function logAddressValidation(
   suggestions?: string[],
   apiResponse?: any,
 ): Promise<void> {
+  if (!isSupabaseConfigured) {
+    console.warn("Supabase not configured - address validation logging disabled")
+    return
+  }
+  
   try {
     await supabase.from("address_validation_logs").insert({
       user_id: userId,

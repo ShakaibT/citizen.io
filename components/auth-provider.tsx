@@ -2,7 +2,7 @@
 
 import React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
-import { supabase } from "../lib/supabase"
+import { supabase, isSupabaseConfigured } from "../lib/supabase"
 import type { User } from "@supabase/supabase-js"
 
 interface AuthContextType {
@@ -33,12 +33,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const initializeAuth = async () => {
       try {
         // Check if Supabase is properly configured
-        const isConfigured = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
         if (mounted) {
-          setIsConfigured(isConfigured)
+          setIsConfigured(isSupabaseConfigured)
         }
 
-        if (!isConfigured) {
+        if (!isSupabaseConfigured) {
           console.warn('Supabase is not properly configured. Authentication features will be disabled.')
           if (mounted) {
             setLoading(false)

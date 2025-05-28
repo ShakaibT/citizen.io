@@ -10,7 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useAuth } from "@/components/auth-provider"
 import { useLocation } from "@/components/location-provider"
 import { useToast } from "@/hooks/use-toast"
-import { supabase } from "@/lib/supabase"
+import { supabase, isSupabaseConfigured } from "@/lib/supabase"
 
 interface NewsArticle {
   id: string
@@ -58,16 +58,21 @@ export function NewsAggregator() {
   const fetchNews = async () => {
     setLoading(true)
     try {
-      // Fetch cached articles from Supabase
-      const { data, error } = await supabase
-        .from("news_articles")
-        .select("*")
-        .order("published_at", { ascending: false })
-        .limit(50)
+      let data = null
+      
+      if (isSupabaseConfigured) {
+        // Fetch cached articles from Supabase
+        const result = await supabase
+          .from("news_articles")
+          .select("*")
+          .order("published_at", { ascending: false })
+          .limit(50)
 
-      if (error) throw error
+        if (result.error) throw result.error
+        data = result.data
+      }
 
-      // If no cached articles, use mock data
+      // If no cached articles or Supabase not configured, use mock data
       if (!data || data.length === 0) {
         const mockArticles: NewsArticle[] = [
           {
@@ -128,6 +133,15 @@ export function NewsAggregator() {
       toast({
         title: "Sign in required",
         description: "Please sign in to save articles.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    if (!isSupabaseConfigured) {
+      toast({
+        title: "Feature unavailable",
+        description: "Article saving requires database configuration.",
         variant: "destructive",
       })
       return

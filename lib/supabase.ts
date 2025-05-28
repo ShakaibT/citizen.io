@@ -7,7 +7,7 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 // Check if we're in development mode
 const isDevelopment = process.env.NODE_ENV === 'development'
 
-// Check if Supabase is configured
+// Check if Supabase is configured - Updated for deployment compatibility
 export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey)
 
 // Create a fallback client or real client

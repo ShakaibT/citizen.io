@@ -1,0 +1,50 @@
+/* Import Leaflet CSS */
+@import 'leaflet/dist/leaflet.css';
+
+/* Leaflet styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.state-tooltip,
+.county-tooltip {
+  background: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.state-tooltip {
+  color: #1e40af;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.county-tooltip {
+  color: #047857;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .state-tooltip,
+  .county-tooltip {
+    background: rgba(31, 41, 55, 0.95);
+    color: white;
+  }
+  
+  .state-tooltip {
+    color: #60a5fa;
+  }
+  
+  .county-tooltip {
+    color: #34d399;
+  }
+}

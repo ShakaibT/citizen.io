@@ -1,0 +1,835 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root variables */
+:root {
+  --background: 255 255 255; /* Pure white */
+  --foreground: 17 24 39; /* Dark gray-900 */
+  --card: 255 255 255; /* White */
+  --card-foreground: 17 24 39; /* Dark gray-900 */
+  --popover: 255 255 255; /* White */
+  --popover-foreground: 17 24 39; /* Dark gray-900 */
+  --primary: 0 40 104; /* US Flag Navy Blue #002868 */
+  --primary-foreground: 255 255 255; /* White */
+  --secondary: 243 244 246; /* Gray-100 */
+  --secondary-foreground: 17 24 39; /* Gray-900 */
+  --muted: 249 250 251; /* Gray-50 */
+  --muted-foreground: 107 114 128; /* Gray-500 */
+  --accent: 0 40 104; /* US Flag Navy Blue #002868 */
+  --accent-foreground: 255 255 255; /* White */
+  --destructive: 239 68 68; /* Red-500 */
+  --destructive-foreground: 255 255 255; /* White */
+  --border: 229 231 235; /* Gray-200 */
+  --input: 229 231 235; /* Gray-200 */
+  --ring: 0 40 104; /* US Flag Navy Blue #002868 */
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 3 7 18; /* Very dark blue-gray instead of pure black */
+  --foreground: 248 250 252; /* Slightly off-white for better readability */
+  --card: 15 23 42; /* Dark slate-800 for better contrast */
+  --card-foreground: 248 250 252; /* Slightly off-white */
+  --popover: 15 23 42; /* Dark slate-800 */
+  --popover-foreground: 248 250 252; /* Slightly off-white */
+  --primary: 0 40 104; /* US Flag Navy Blue #002868 */
+  --primary-foreground: 255 255 255; /* White */
+  --secondary: 30 41 59; /* Slate-700 */
+  --secondary-foreground: 248 250 252; /* Slightly off-white */
+  --muted: 30 41 59; /* Slate-700 */
+  --muted-foreground: 148 163 184; /* Slate-400 for better contrast */
+  --accent: 0 40 104; /* US Flag Navy Blue #002868 */
+  --accent-foreground: 255 255 255; /* White */
+  --destructive: 248 113 113; /* Red-400 for better contrast */
+  --destructive-foreground: 3 7 18; /* Dark background color */
+  --border: 51 65 85; /* Slate-600 for better visibility */
+  --input: 51 65 85; /* Slate-600 */
+  --ring: 0 40 104; /* US Flag Navy Blue #002868 */
+}
+
+/* Base styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    background-color: white;
+    color: rgb(17, 24, 39);
+  }
+
+  .dark html,
+  .dark body {
+    background-color: rgb(3, 7, 18);
+    color: rgb(248, 250, 252);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* COMPREHENSIVE BACKGROUND FIX - NO TRANSITIONS */
+html,
+body,
+#__next,
+main,
+.app-container,
+.layout-container,
+[data-theme="light"] {
+  background-color: white !important;
+  transition: none !important;
+}
+
+.dark html,
+.dark body,
+.dark #__next,
+.dark main,
+.dark .app-container,
+.dark .layout-container,
+.dark [data-theme="dark"] {
+  background-color: rgb(3, 7, 18) !important;
+  transition: none !important;
+}
+
+/* Header and navigation fix - NO TRANSITIONS */
+header,
+nav,
+.app-header,
+.header-container,
+.nav-container {
+  background-color: white !important;
+  transition: none !important;
+}
+
+.dark header,
+.dark nav,
+.dark .app-header,
+.dark .header-container,
+.dark .nav-container {
+  background-color: rgb(15, 23, 42) !important; /* slate-800 */
+  transition: none !important;
+}
+
+/* Component styles */
+@layer components {
+  /* Auth button - Clean, focused styling */
+  .auth-button {
+    @apply bg-accent text-white font-semibold px-4 py-2 rounded-md 
+           inline-flex items-center gap-2 shadow-sm hover:bg-accent/90;
+  }
+
+  .dark .auth-button {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90;
+  }
+
+  /* Get started button - US Flag navy blue with white text */
+  .get-started-btn {
+    background-color: #002868 !important;
+    color: white !important;
+    @apply font-bold px-6 py-3 rounded-lg inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-200;
+  }
+
+  .get-started-btn:hover {
+    background-color: #001a4d !important;
+  }
+
+  .get-started-btn > * {
+    @apply text-white;
+  }
+
+  .get-started-btn svg {
+    @apply text-white transition-transform duration-200;
+  }
+
+  .get-started-btn:hover svg {
+    @apply translate-x-0.5;
+  }
+
+  .dark .get-started-btn {
+    background-color: #002868 !important;
+    color: white !important;
+  }
+
+  .dark .get-started-btn:hover {
+    background-color: #001a4d !important;
+  }
+
+  /* Force white text on main CTA button */
+  button[style*="color: white"],
+  button[style*="color: white"] *,
+  button[style*="color: white"] span,
+  button[style*="color: white"] svg {
+    color: white !important;
+    text-shadow: none !important;
+    -webkit-text-stroke: none !important;
+    text-decoration: none !important;
+  }
+
+  /* State browse cards - Consistent dark mode */
+  .state-browse-card {
+    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white 
+           font-medium p-3 rounded-lg shadow-sm hover:shadow-md
+           text-center border border-gray-200 dark:border-gray-700
+           hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200;
+  }
+
+  /* Glass effect - Used moderately */
+  .glass-effect {
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-md;
+  }
+
+  /* Glass cards - Override default card styles with higher specificity */
+  .glass-card,
+  .dark .glass-card,
+  html.dark .glass-card,
+  [data-theme="dark"] .glass-card {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* Ensure glass cards work on hover */
+  .dark .glass-card:hover,
+  html.dark .glass-card:hover,
+  [data-theme="dark"] .glass-card:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 12px 40px 0 rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-2px);
+  }
+
+  /* Consistent card styling */
+  .card {
+    @apply bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600;
+  }
+
+
+
+  /* Consistent button styling - US Flag Navy Blue */
+  .btn-primary {
+    background-color: #002868 !important;
+    color: white !important;
+    @apply text-white;
+  }
+
+  .btn-primary:hover {
+    background-color: #001a4d !important;
+  }
+
+  .dark .btn-primary {
+    background-color: #002868 !important;
+    color: white !important;
+  }
+
+  .dark .btn-primary:hover {
+    background-color: #001a4d !important;
+  }
+
+  /* Override all blue button variants with US Flag Navy Blue */
+  button[class*="bg-blue-600"],
+  button[class*="bg-blue-700"],
+  .bg-blue-600,
+  .bg-blue-700,
+  [class*="bg-blue-600"],
+  [class*="bg-blue-700"] {
+    background-color: #002868 !important;
+    color: white !important;
+  }
+
+  button[class*="bg-blue-600"]:hover,
+  button[class*="bg-blue-700"]:hover,
+  .bg-blue-600:hover,
+  .bg-blue-700:hover,
+  [class*="bg-blue-600"]:hover,
+  [class*="bg-blue-700"]:hover {
+    background-color: #001a4d !important;
+  }
+
+  .dark button[class*="bg-blue-600"],
+  .dark button[class*="bg-blue-700"],
+  .dark .bg-blue-600,
+  .dark .bg-blue-700,
+  .dark [class*="bg-blue-600"],
+  .dark [class*="bg-blue-700"] {
+    background-color: #002868 !important;
+    color: white !important;
+  }
+
+  .dark button[class*="bg-blue-600"]:hover,
+  .dark button[class*="bg-blue-700"]:hover,
+  .dark .bg-blue-600:hover,
+  .dark .bg-blue-700:hover,
+  .dark [class*="bg-blue-600"]:hover,
+  .dark [class*="bg-blue-700"]:hover {
+    background-color: #001a4d !important;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-900 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white;
+  }
+
+  .btn-outline {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 
+           text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Text styles */
+  .gradient-text {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .dark .gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Card styles */
+  .patriot-card {
+    @apply bg-white dark:bg-slate-800 border border-gray-200 
+           dark:border-slate-600 rounded-lg shadow-md text-gray-900 dark:text-slate-100;
+  }
+
+  /* Link styles */
+  .patriot-link {
+    @apply text-blue-600 dark:text-blue-400 hover:text-blue-700 
+           dark:hover:text-blue-300 font-medium;
+  }
+
+  /* Consistent text colors */
+  .text-primary-content {
+    @apply text-gray-900 dark:text-slate-100;
+  }
+
+  .text-secondary-content {
+    @apply text-gray-600 dark:text-slate-300;
+  }
+
+  .text-muted-content {
+    @apply text-gray-500 dark:text-slate-400;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Prevent yellow outlines on interactive elements */
+*:focus,
+*:focus-visible,
+svg:focus,
+button:focus,
+.card:focus,
+div:focus,
+[role="button"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+}
+
+/* TARGETED BUTTON HOVER FIX - Only remove yellow/amber hover effects */
+*[class*="yellow"]:hover,
+*[class*="amber"]:hover,
+*[style*="yellow"]:hover,
+*[style*="amber"]:hover {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+/* COMPREHENSIVE COLOR FIX - Remove all pink/magenta colors */
+*[class*="pink"],
+*[class*="magenta"],
+*[class*="fuchsia"],
+*[style*="pink"],
+*[style*="magenta"],
+*[style*="fuchsia"] {
+  color: rgb(37, 99, 235) !important; /* blue-600 */
+  background-color: transparent !important;
+  border-color: rgb(37, 99, 235) !important;
+}
+
+.dark *[class*="pink"],
+.dark *[class*="magenta"],
+.dark *[class*="fuchsia"],
+.dark *[style*="pink"],
+.dark *[style*="magenta"],
+.dark *[style*="fuchsia"] {
+  color: rgb(96, 165, 250) !important; /* blue-400 */
+  background-color: transparent !important;
+  border-color: rgb(96, 165, 250) !important;
+}
+
+/* Fix input focus borders */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgb(0, 40, 104) !important; /* US Flag Navy Blue */
+  border-color: rgb(0, 40, 104) !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  box-shadow: 0 0 0 2px rgb(0, 40, 104) !important; /* US Flag Navy Blue */
+  border-color: rgb(0, 40, 104) !important;
+}
+
+/* Override any Tailwind default focus styles */
+.focus\:border-patriot-blue-600:focus {
+  border-color: rgb(0, 40, 104) !important;
+}
+
+.dark .focus\:border-patriot-blue-400:focus,
+.dark .dark\:focus\:border-patriot-blue-400:focus {
+  border-color: rgb(0, 40, 104) !important;
+}
+
+/* MINIMAL BUTTON STYLING - Only fix specific issues */
+button:hover {
+  text-decoration: none !important;
+}
+
+/* Fix any remaining focus ring issues */
+*:focus-visible {
+  outline: 2px solid rgb(0, 40, 104) !important; /* US Flag Navy Blue */
+  outline-offset: 2px !important;
+}
+
+.dark *:focus-visible {
+  outline: 2px solid rgb(0, 40, 104) !important; /* US Flag Navy Blue */
+  outline-offset: 2px !important;
+}
+
+/* Specifically target map elements */
+.map-container,
+.map-container *,
+.map-container svg,
+.map-container path,
+.map-container div {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Override any Tailwind focus styles */
+.map-container:focus-within,
+.map-container:focus,
+.map-container *:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Nuclear option - remove ALL outlines and borders from map */
+.map-container,
+.map-container *,
+.map-container *::before,
+.map-container *::after {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Restore only the borders we actually want */
+.map-container.border-black\/10 {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.dark .map-container.border-black\/10 {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Force glass effect in dark mode - highest specificity */
+html.dark div.glass-card,
+html.dark [data-radix-collection-item].glass-card,
+.dark div.glass-card,
+.dark [data-radix-collection-item].glass-card {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure consistent modal and dialog styling */
+.dark [data-radix-dialog-content],
+.dark [data-radix-popover-content],
+.dark [data-radix-dropdown-menu-content] {
+  background-color: rgb(31, 41, 55) !important; /* gray-800 */
+  border-color: rgb(75, 85, 99) !important; /* gray-600 */
+  color: rgb(255, 255, 255) !important;
+}
+
+/* Ensure consistent sheet/sidebar styling */
+.dark [data-radix-sheet-content] {
+  background-color: rgb(31, 41, 55) !important; /* gray-800 */
+  border-color: rgb(75, 85, 99) !important; /* gray-600 */
+  color: rgb(255, 255, 255) !important;
+}
+
+/* Fix any remaining white backgrounds in dark mode */
+.dark .bg-white {
+  background-color: rgb(31, 41, 55) !important; /* gray-800 */
+}
+
+.dark .text-gray-900 {
+  color: rgb(255, 255, 255) !important;
+}
+
+  .dark .text-gray-600 {
+    color: rgb(148, 163, 184) !important; /* slate-400 for better contrast */
+  }
+
+  /* Improve dark mode text readability */
+  .dark .text-gray-500 {
+    color: rgb(148, 163, 184) !important; /* slate-400 */
+  }
+
+  .dark .text-gray-700 {
+    color: rgb(203, 213, 225) !important; /* slate-300 */
+  }
+
+  .dark .text-gray-800 {
+    color: rgb(226, 232, 240) !important; /* slate-200 */
+  }
+
+  .dark .text-muted-foreground {
+    color: rgb(148, 163, 184) !important; /* slate-400 */
+  }
+
+  /* Comprehensive dark mode text fixes */
+  .dark .text-gray-400 {
+    color: rgb(156, 163, 175) !important; /* gray-400 */
+  }
+
+  .dark .text-gray-300 {
+    color: rgb(209, 213, 219) !important; /* gray-300 */
+  }
+
+  .dark .text-gray-200 {
+    color: rgb(229, 231, 235) !important; /* gray-200 */
+  }
+
+  .dark .text-gray-100 {
+    color: rgb(243, 244, 246) !important; /* gray-100 */
+  }
+
+  /* Fix any remaining low contrast text */
+  .dark .text-black\/60 {
+    color: rgb(203, 213, 225) !important; /* slate-300 */
+  }
+
+  .dark .text-black\/80 {
+    color: rgb(226, 232, 240) !important; /* slate-200 */
+  }
+
+  .dark .text-white\/60 {
+    color: rgb(203, 213, 225) !important; /* slate-300 */
+  }
+
+  .dark .text-white\/80 {
+    color: rgb(226, 232, 240) !important; /* slate-200 */
+  }
+
+  /* FIX LOGIN BUTTON VISIBILITY IN DARK MODE */
+  .dark button[class*="bg-white"] {
+    background-color: rgb(51, 65, 85) !important; /* slate-600 */
+    color: rgb(248, 250, 252) !important;
+    border-color: rgb(71, 85, 105) !important; /* slate-500 */
+  }
+
+  .dark button[class*="bg-white"]:hover {
+    background-color: rgb(71, 85, 105) !important; /* slate-500 */
+    color: rgb(248, 250, 252) !important;
+  }
+
+  /* ELIMINATE ALL PINK/ROSE/MAGENTA BUTTON COLORS */
+  button[class*="pink"],
+  button[class*="rose"],
+  button[class*="magenta"],
+  button[class*="fuchsia"],
+  .btn-pink,
+  .btn-rose,
+  .btn-magenta,
+  .btn-fuchsia,
+  [style*="background-color: pink"],
+  [style*="background-color: rose"],
+  [style*="background-color: magenta"],
+  [style*="background-color: fuchsia"],
+  [style*="background: pink"],
+  [style*="background: rose"],
+  [style*="background: magenta"],
+  [style*="background: fuchsia"] {
+    background-color: rgb(37, 99, 235) !important; /* blue-600 */
+    color: white !important;
+    border-color: rgb(37, 99, 235) !important;
+  }
+
+  .dark button[class*="pink"],
+  .dark button[class*="rose"],
+  .dark button[class*="magenta"],
+  .dark button[class*="fuchsia"],
+  .dark .btn-pink,
+  .dark .btn-rose,
+  .dark .btn-magenta,
+  .dark .btn-fuchsia,
+  .dark [style*="background-color: pink"],
+  .dark [style*="background-color: rose"],
+  .dark [style*="background-color: magenta"],
+  .dark [style*="background-color: fuchsia"],
+  .dark [style*="background: pink"],
+  .dark [style*="background: rose"],
+  .dark [style*="background: magenta"],
+  .dark [style*="background: fuchsia"] {
+    background-color: rgb(96, 165, 250) !important; /* blue-400 */
+    color: rgb(3, 7, 18) !important;
+    border-color: rgb(96, 165, 250) !important;
+  }
+
+  /* Ensure all buttons have proper contrast in dark mode */
+  .dark button {
+    color: inherit !important;
+  }
+
+  .dark button:not([class*="bg-"]):not([style*="background"]) {
+    background-color: rgb(51, 65, 85) !important; /* slate-600 */
+    color: rgb(248, 250, 252) !important;
+    border-color: rgb(71, 85, 105) !important; /* slate-500 */
+  }
+
+.dark .border-gray-200 {
+  border-color: rgb(75, 85, 99) !important; /* gray-600 */
+}
+
+/* COMPREHENSIVE PLACEHOLDER FIX */
+input::placeholder,
+textarea::placeholder,
+select::placeholder,
+*::placeholder {
+  color: rgb(107, 114, 128) !important; /* gray-500 */
+  opacity: 1 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder,
+.dark select::placeholder,
+.dark *::placeholder {
+  color: rgb(156, 163, 175) !important; /* gray-400 */
+  opacity: 1 !important;
+}
+
+/* FINAL COMPREHENSIVE DARK MODE FIXES */
+.dark * {
+  transition: none !important;
+  animation-duration: 0s !important;
+}
+
+/* Ensure all text elements have proper contrast in dark mode */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: rgb(248, 250, 252) !important; /* slate-50 */
+}
+
+.dark p, .dark span, .dark div:not([class*="bg-"]) {
+  color: rgb(226, 232, 240) !important; /* slate-200 */
+}
+
+.dark label {
+  color: rgb(226, 232, 240) !important; /* slate-200 */
+}
+
+/* Fix any remaining card backgrounds */
+.dark .card, .dark [class*="card"] {
+  background-color: rgb(30, 41, 59) !important; /* slate-700 */
+  border-color: rgb(51, 65, 85) !important; /* slate-600 */
+  color: rgb(248, 250, 252) !important; /* slate-50 */
+}
+
+/* COMPREHENSIVE TEXT COLOR FIX */
+input,
+textarea,
+select,
+button,
+span,
+div,
+p,
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+
+/* Ensure all inputs have consistent styling */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  background-color: white !important;
+  color: rgb(17, 24, 39) !important; /* gray-900 */
+  border-color: rgb(229, 231, 235) !important; /* gray-200 */
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark textarea,
+.dark select {
+  background-color: rgb(31, 41, 55) !important; /* gray-800 */
+  color: rgb(255, 255, 255) !important;
+  border-color: rgb(75, 85, 99) !important; /* gray-600 */
+}
+
+/* REMOVE ALL TRANSITIONS FOR INSTANT THEME SWITCHING */
+*,
+*::before,
+*::after {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  animation-duration: 0s !important;
+  -webkit-animation-duration: 0s !important;
+  transform: none !important;
+}
+
+/* Override all Tailwind transition classes */
+.transition-all,
+.transition-colors,
+.transition-shadow,
+.transition-transform,
+.transition-opacity,
+.transition,
+.duration-75,
+.duration-100,
+.duration-150,
+.duration-200,
+.duration-300,
+.duration-500,
+.duration-700,
+.duration-1000 {
+  transition: none !important;
+  animation-duration: 0s !important;
+}
+
+/* NUCLEAR OPTION - ELIMINATE ALL PINK/MAGENTA COLORS */
+*,
+*::before,
+*::after,
+input,
+textarea,
+select,
+button,
+div,
+span,
+p,
+h1, h2, h3, h4, h5, h6,
+label,
+a,
+li,
+td,
+th {
+  color: inherit !important;
+}
+
+/* Force specific color overrides for any pink/magenta elements */
+*[style*="color: rgb(236, 72, 153)"],
+*[style*="color: rgb(219, 39, 119)"],
+*[style*="color: rgb(190, 24, 93)"],
+*[style*="color: #ec4899"],
+*[style*="color: #db2777"],
+*[style*="color: #be185d"],
+*[style*="color: pink"],
+*[style*="color: magenta"],
+*[style*="color: fuchsia"],
+*[class*="text-pink"],
+*[class*="text-magenta"],
+*[class*="text-fuchsia"],
+*[class*="text-rose"] {
+  color: rgb(17, 24, 39) !important; /* gray-900 */
+}
+
+.dark *[style*="color: rgb(236, 72, 153)"],
+.dark *[style*="color: rgb(219, 39, 119)"],
+.dark *[style*="color: rgb(190, 24, 93)"],
+.dark *[style*="color: #ec4899"],
+.dark *[style*="color: #db2777"],
+.dark *[style*="color: #be185d"],
+.dark *[style*="color: pink"],
+.dark *[style*="color: magenta"],
+.dark *[style*="color: fuchsia"],
+.dark *[class*="text-pink"],
+.dark *[class*="text-magenta"],
+.dark *[class*="text-fuchsia"],
+.dark *[class*="text-rose"] {
+  color: rgb(255, 255, 255) !important; /* white */
+}
+
+/* COMPREHENSIVE PLACEHOLDER FIX */
+input::placeholder,
+textarea::placeholder,
+select::placeholder,
+*::placeholder {
+  color: rgb(107, 114, 128) !important; /* gray-500 */
+  opacity: 1 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder,
+.dark select::placeholder,
+.dark *::placeholder {
+  color: rgb(156, 163, 175) !important; /* gray-400 */
+  opacity: 1 !important;
+}
+
+/* COMPREHENSIVE TEXT COLOR FIX */
+input,
+textarea,
+select,
+button,
+span,
+div,
+p,
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+
+/* Ensure all inputs have consistent styling */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  background-color: white !important;
+  color: rgb(17, 24, 39) !important; /* gray-900 */
+  border-color: rgb(229, 231, 235) !important; /* gray-200 */
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark textarea,
+.dark select {
+  background-color: rgb(31, 41, 55) !important; /* gray-800 */
+  color: rgb(255, 255, 255) !important;
+  border-color: rgb(75, 85, 99) !important; /* gray-600 */
+}

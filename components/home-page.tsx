@@ -89,33 +89,33 @@ export function HomePage() {
       {/* Location Display Section - Show when location is set */}
       {location && (
         <section className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border-b border-green-200 dark:border-green-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex items-center justify-between">
+          <div className="container-responsive padding-responsive-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Your Civic Hub</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white truncate">Your Civic Hub</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 truncate">
                       Personalized for {location.city}, {location.state}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <Button
                   onClick={handleChangeLocation}
                   variant="outline"
                   size="sm"
-                  className="bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800 border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white"
+                  className="bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800 border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white btn-mobile"
                 >
                   <Edit className="h-4 w-4 mr-2" />
                   Change Location
                 </Button>
-                <Button onClick={handleGetStarted} size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                <Button onClick={handleGetStarted} size="sm" className="bg-green-600 hover:bg-green-700 text-white btn-mobile">
                   <ArrowRight className="h-4 w-4 mr-2" />
                   Continue to Dashboard
                 </Button>
@@ -123,7 +123,7 @@ export function HomePage() {
             </div>
 
             {/* Simple Dashboard Preview */}
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="mt-6 grid-responsive-cards">
               <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/40 dark:border-gray-700/40 shadow-sm">
                 <CardContent className="p-4 text-center">
                   <div className="flex items-center justify-center mb-2">
@@ -189,53 +189,53 @@ export function HomePage() {
       )}
 
       {/* Hero Section - Your Voice in American Democracy */}
-      <section className="relative bg-white dark:bg-black py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+      <section className="relative bg-white dark:bg-black padding-responsive">
+        <div className="container-responsive">
+          <div className="grid-responsive-2col items-center">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h1 className="text-responsive-xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <span className="block">Your Voice in</span>
                   <span className="block gradient-text">American Democracy</span>
                 </h1>
-                <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
+                <p className="mt-6 text-responsive-sm text-gray-600 dark:text-gray-300 max-w-2xl">
                   Stay informed, engaged, and empowered with personalized civic information tailored to your location.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button onClick={handleGetStarted} className="get-started-btn">
+                <button onClick={handleGetStarted} className="get-started-btn btn-mobile-lg">
                   {location ? "Go to Dashboard" : "Get Started with Your Address"}
                   <ChevronRight className="h-5 w-5" />
                 </button>
                 {!user && (
-                  <button onClick={handleSignIn} className="auth-button">
+                  <button onClick={handleSignIn} className="auth-button btn-mobile-lg">
                     Sign In / Sign Up
                   </button>
                 )}
               </div>
 
               <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
-                <Shield className="h-4 w-4 mr-2" />
+                <Shield className="h-4 w-4 mr-2 flex-shrink-0" />
                 <span>Free access to essential civic information. No credit card required.</span>
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               {/* Map container with proper dark mode styling */}
               <div className="relative bg-white dark:bg-white/10 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Interactive US Map</h3>
                     {location && (
-                      <Button onClick={handleChangeLocation} variant="outline" size="sm" className="text-xs">
+                      <Button onClick={handleChangeLocation} variant="outline" size="sm" className="text-xs btn-mobile">
                         <ArrowLeft className="h-3 w-3 mr-1" />
                         Change
                       </Button>
                     )}
                   </div>
 
-                  <div className="w-full h-[400px] md:h-[500px]">
+                  <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
                     <LeafletMap
                       onStateClick={handleMapStateClick}
                       onCountyClick={handleMapCountyClick}
@@ -255,16 +255,16 @@ export function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Everything You Need to Stay Engaged</h2>
-            <p className="mt-4 text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+      <section className="bg-gray-50 dark:bg-gray-900 padding-responsive">
+        <div className="container-responsive">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-responsive-lg font-bold text-gray-900 dark:text-white">Everything You Need to Stay Engaged</h2>
+            <p className="mt-4 text-responsive-sm text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Citizen provides all the tools and information you need to participate meaningfully in democracy.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid-responsive-cards">
             {[
               {
                 icon: Scale,
@@ -314,16 +314,16 @@ export function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-red-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+      <section className="bg-gradient-to-r from-blue-600 to-red-600 padding-responsive">
+        <div className="container-responsive text-center">
+          <h2 className="text-responsive-lg font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-responsive-sm text-white/90 max-w-3xl mx-auto mb-8">
             Join thousands of citizens who are making a difference in their communities.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={handleGetStarted}
-              className="bg-white text-patriot-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center"
+              className="bg-white text-patriot-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center btn-mobile-lg"
             >
               {location ? "Go to Dashboard" : "Get Started"}
               <ChevronRight className="ml-2 h-5 w-5" />
@@ -331,7 +331,7 @@ export function HomePage() {
             {!user && (
               <button
                 onClick={handleSignIn}
-                className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition-all duration-200 inline-flex items-center justify-center"
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition-all duration-200 inline-flex items-center justify-center btn-mobile-lg"
               >
                 Sign In / Sign Up
               </button>

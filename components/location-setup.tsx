@@ -87,7 +87,7 @@ function PreferenceCarousel() {
       subtitle: "Never miss what matters",
       description: "Get alerts about local school board votes, city council meetings, and legislation that affects your daily life.",
       example: "🏫 School Board Meeting Tomorrow: Budget Vote",
-      color: "from-blue-500 to-blue-600"
+      color: "bg-blue-500 dark:bg-blue-600"
     },
     {
       icon: Users,
@@ -95,7 +95,7 @@ function PreferenceCarousel() {
       subtitle: "Make your voice heard",
       description: "Contact your representatives with one click. Join campaigns and connect with like-minded citizens in your area.",
       example: "📞 Contact Rep. Johnson about Bill HR-1234",
-      color: "from-green-500 to-green-600"
+      color: "bg-green-500 dark:bg-green-600"
     },
     {
       icon: MapPin,
@@ -103,7 +103,7 @@ function PreferenceCarousel() {
       subtitle: "Personalized to your location",
       description: "Track multiple addresses - home, work, family. Get updates for all the places that matter to you.",
       example: "📍 3 locations saved • 12 active alerts",
-      color: "from-purple-500 to-purple-600"
+      color: "bg-purple-500 dark:bg-purple-600"
     }
   ]
 
@@ -121,7 +121,7 @@ function PreferenceCarousel() {
     <div className="max-w-lg mx-auto text-center text-white px-8">
       {/* Main Content */}
       <div className="mb-8">
-        <div className={`w-24 h-24 bg-gradient-to-br ${currentSlideData.color} rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl transform transition-all duration-500 hover:scale-105`}>
+        <div className={`w-24 h-24 ${currentSlideData.color} rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl transform transition-all duration-500 hover:scale-105`}>
           <IconComponent className="h-12 w-12 text-white" />
         </div>
         
@@ -214,9 +214,9 @@ function SignupForm({
     <div className="space-y-6">
       {/* Location Summary Section */}
       {validatedAddress && (
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-200 dark:border-blue-800 overflow-hidden">
+        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800 overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3">
+          <div className="bg-blue-600 dark:bg-blue-700 px-4 py-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-white" />
@@ -363,7 +363,7 @@ function SignupForm({
           <Button
             onClick={onSignup}
             disabled={loading || !email || !zipCode}
-            className="w-full bg-gradient-to-r from-patriot-blue-600 to-patriot-red-600 hover:from-patriot-blue-700 hover:to-patriot-red-700 text-white font-semibold py-4 text-base rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="w-full bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white font-semibold py-4 text-base rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
             {loading ? (
               <div className="flex items-center justify-center">
@@ -932,77 +932,77 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "welcome") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-patriot-blue-50 via-white to-patriot-red-50 dark:from-patriot-gray-950 dark:via-patriot-gray-900 dark:to-patriot-gray-950 flex items-center justify-center p-4 pt-12">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex items-center justify-center padding-responsive-sm pt-12">
         {/* Theme Toggle */}
         <div className="absolute top-4 right-4">
           <ThemeToggle />
         </div>
-        <div className="max-w-4xl w-full">
+        <div className="container-responsive max-w-4xl">
           {/* Hero Section */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <div className="flex items-center justify-center mb-6">
               <div className="relative">
-                <img src="/logo.png" alt="Citizen Logo" className="h-20 w-auto max-w-20 shadow-xl rounded-2xl object-contain" />
+                <img src="/logo.png" alt="Citizen Logo" className="h-16 sm:h-20 w-auto max-w-16 sm:max-w-20 shadow-xl rounded-2xl object-contain" />
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-patriot-gray-900"></div>
               </div>
             </div>
-            <h1 className="text-5xl font-bold text-black dark:text-white mb-4 tracking-tight">
+            <h1 className="text-responsive-xl font-bold text-black dark:text-white mb-4 tracking-tight">
               Welcome to{" "}
-              <span className="bg-gradient-to-r from-patriot-blue-600 to-patriot-red-600 bg-clip-text text-transparent">
+              <span className="text-patriot-blue-600 dark:text-patriot-blue-400">
                 Citizen
               </span>
             </h1>
-            <p className="text-xl text-black dark:text-white mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-responsive-sm text-black dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
               Stay Informed. Stay Empowered. Stay Engaged.
             </p>
 
             {/* Feature highlights */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="grid-responsive-cards mb-8 sm:mb-12">
               <div 
-                className="flex flex-col items-center p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
+                className="flex flex-col items-center p-4 sm:p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
                 style={{
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
                   boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
                 }}
               >
-                <div className="w-16 h-16 bg-patriot-blue-100/70 dark:bg-patriot-blue-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                  <Globe2 className="h-8 w-8 text-patriot-blue-600 dark:text-patriot-blue-400" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-patriot-blue-100/70 dark:bg-patriot-blue-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
+                  <Globe2 className="h-6 w-6 sm:h-8 sm:w-8 text-patriot-blue-600 dark:text-patriot-blue-400" />
                 </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2">Location-Based</h3>
-                <p className="text-black/80 dark:text-white/80 text-sm text-center">
+                <h3 className="font-semibold text-black dark:text-white mb-2 text-sm sm:text-base">Location-Based</h3>
+                <p className="text-black/80 dark:text-white/80 text-xs sm:text-sm text-center">
                   Track legislation and news that directly affects your community.
                 </p>
               </div>
               <div 
-                className="flex flex-col items-center p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
+                className="flex flex-col items-center p-4 sm:p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
                 style={{
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
                   boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
                 }}
               >
-                <div className="w-16 h-16 bg-green-100/70 dark:bg-green-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                  <TrendingUp className="h-8 w-8 text-green-600 dark:text-green-400" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100/70 dark:bg-green-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
+                  <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-green-600 dark:text-green-400" />
                 </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2">Real-Time Updates</h3>
-                <p className="text-black/80 dark:text-white/80 text-sm text-center">
+                <h3 className="font-semibold text-black dark:text-white mb-2 text-sm sm:text-base">Real-Time Updates</h3>
+                <p className="text-black/80 dark:text-white/80 text-xs sm:text-sm text-center">
                   Follow bills and headlines as they unfold — no noise, just facts.
                 </p>
               </div>
               <div 
-                className="flex flex-col items-center p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
+                className="flex flex-col items-center p-4 sm:p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
                 style={{
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
                   boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
                 }}
               >
-                <div className="w-16 h-16 bg-patriot-red-100/70 dark:bg-patriot-red-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                  <Users className="h-8 w-8 text-patriot-red-600 dark:text-patriot-red-400" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-patriot-red-100/70 dark:bg-patriot-red-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 sm:h-8 sm:w-8 text-patriot-red-600 dark:text-patriot-red-400" />
                 </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2">Take Action</h3>
-                <p className="text-black/80 dark:text-white/80 text-sm text-center">
+                <h3 className="font-semibold text-black dark:text-white mb-2 text-sm sm:text-base">Take Action</h3>
+                <p className="text-black/80 dark:text-white/80 text-xs sm:text-sm text-center">
                   Contact representatives and join campaigns that matter to you
                 </p>
               </div>
@@ -1011,19 +1011,10 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             <div className="space-y-4">
               <button
                 onClick={() => setStep("address")}
-                className="group relative inline-flex items-center justify-center gap-3 font-bold px-12 py-6 text-xl rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 ease-out"
-                style={{ 
-                  backgroundColor: '#002868',
-                  color: 'white',
-                  textShadow: 'none',
-                  WebkitTextStroke: 'none',
-                  textDecoration: 'none'
-                }}
-                onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#001a4d'}
-                onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#002868'}
+                className="group relative inline-flex items-center justify-center gap-3 font-bold px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 ease-out bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white btn-mobile-lg w-full sm:w-auto"
               >
-                <span className="relative z-10" style={{ color: 'white', textShadow: 'none', WebkitTextStroke: 'none' }}>Get Started with Your Address</span>
-                <ChevronRight className="h-6 w-6 flex-shrink-0 relative z-10 group-hover:translate-x-1 transition-transform duration-200" style={{ color: 'white' }} />
+                <span className="relative z-10">Get Started with Your Address</span>
+                <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 relative z-10 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                 <button
@@ -1031,7 +1022,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                     setAuthModalTab("signup")
                     setAuthModalOpen(true)
                   }}
-                  className="inline-flex items-center justify-center gap-2 bg-patriot-red-600/90 hover:bg-patriot-red-700 active:bg-patriot-red-800 text-white font-semibold px-8 py-3 text-lg rounded-xl shadow-xl hover:shadow-2xl backdrop-blur-sm border border-white/10"
+                  className="inline-flex items-center justify-center gap-2 bg-patriot-red-600 hover:bg-patriot-red-700 active:bg-patriot-red-800 dark:bg-patriot-red-700 dark:hover:bg-patriot-red-800 dark:active:bg-patriot-red-900 text-white font-semibold px-6 sm:px-8 py-3 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl border border-white/10 btn-mobile w-full sm:w-auto"
                 >
                   <UserPlus className="h-5 w-5" />
                   Sign Up
@@ -1041,7 +1032,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                     setAuthModalTab("signin")
                     setAuthModalOpen(true)
                   }}
-                  className="inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white/90 active:bg-white/95 dark:bg-slate-600 dark:hover:bg-slate-500 dark:active:bg-slate-400 text-black dark:text-white font-semibold px-8 py-3 text-lg rounded-xl shadow-xl hover:shadow-2xl backdrop-blur-sm border border-white/40 dark:border-slate-500"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 active:bg-gray-100 dark:bg-slate-600 dark:hover:bg-slate-500 dark:active:bg-slate-400 text-black dark:text-white font-semibold px-6 sm:px-8 py-3 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl border border-gray-200 dark:border-slate-500 btn-mobile w-full sm:w-auto"
                 >
                   <Shield className="h-5 w-5" />
                   Login
@@ -1065,16 +1056,16 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "auth-prompt") {
     return (
-      <div className="preferences-v2 min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden">
+      <div className="preferences-v2 min-h-screen bg-slate-50 dark:bg-slate-950 overflow-hidden">
         {/* Theme Toggle */}
         <div className="absolute top-6 right-6 z-50">
           <ThemeToggle />
         </div>
         
-        {/* Split Screen Layout */}
-        <div className="flex min-h-screen">
-          {/* Left Panel - Visual Storytelling (60%) */}
-          <div className="w-3/5 relative bg-gradient-to-br from-patriot-blue-600 via-patriot-blue-700 to-patriot-red-600 flex items-center justify-center overflow-hidden">
+        {/* Split Screen Layout - Stack on mobile */}
+        <div className="flex flex-col lg:flex-row min-h-screen">
+          {/* Left Panel - Visual Storytelling (60% on desktop, full width on mobile) */}
+          <div className="w-full lg:w-3/5 relative bg-patriot-blue-600 dark:bg-patriot-blue-800 flex items-center justify-center overflow-hidden min-h-[40vh] lg:min-h-screen">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-pulse"></div>
@@ -1086,15 +1077,15 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             <PreferenceCarousel />
           </div>
 
-          {/* Right Panel - Signup/Action Area (40%) */}
-          <div className="w-2/5 bg-white dark:bg-slate-900 flex flex-col">
+          {/* Right Panel - Signup/Action Area (40% on desktop, full width on mobile) */}
+          <div className="w-full lg:w-2/5 bg-white dark:bg-slate-900 flex flex-col">
             {/* Header */}
-            <div className="p-8 border-b border-slate-200 dark:border-slate-700">
+            <div className="p-6 sm:p-8 border-b border-slate-200 dark:border-slate-700">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-patriot-blue-600 to-patriot-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-patriot-blue-600 dark:bg-patriot-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+                <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">
                   Create Your Civic Dashboard
                 </h1>
                 <p className="text-slate-600 dark:text-slate-400 text-sm">
@@ -1104,7 +1095,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             </div>
 
             {/* Main Content Area */}
-            <div className="flex-1 p-8">
+            <div className="flex-1 p-6 sm:p-8">
               <SignupForm 
                 validatedAddress={validatedAddress}
                 onSignup={() => setAuthModalOpen(true)}
@@ -1114,8 +1105,8 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             </div>
 
             {/* Bottom Bar */}
-            <div className="p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50">
-              <div className="flex items-center justify-between text-sm">
+            <div className="p-4 sm:p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+              <div className="flex flex-col sm:flex-row items-center justify-between text-sm gap-3 sm:gap-0">
                 <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
                   <Shield className="h-4 w-4" />
                   <span>We don't sell your data</span>
@@ -1144,32 +1135,32 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "address") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-patriot-blue-50 via-white to-patriot-red-50 dark:from-patriot-gray-950 dark:via-patriot-gray-900 dark:to-patriot-gray-950 flex">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex">
         {/* Theme Toggle */}
         <div className="absolute top-6 right-6 z-50">
           <ThemeToggle />
         </div>
         
         {/* Left Panel - Address Input & Information */}
-        <div className="w-1/3 min-h-screen bg-white/90 dark:bg-patriot-gray-900/90 backdrop-blur-xl border-r border-patriot-gray-200/50 dark:border-patriot-gray-700/50 flex flex-col">
+        <div className="w-1/3 min-h-screen bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 flex flex-col">
           {/* Header Section */}
-          <div className="p-8 border-b border-patriot-gray-200/50 dark:border-patriot-gray-700/50">
+          <div className="p-8 border-b border-slate-200 dark:border-slate-700">
             <Button
               variant="ghost"
               onClick={() => setStep("welcome")}
-              className="mb-6 text-patriot-gray-600 dark:text-patriot-gray-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 transition-all duration-200"
+              className="mb-6 text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 transition-all duration-200"
             >
               ← Back to Welcome
             </Button>
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-patriot-blue-600 to-patriot-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-patriot-blue-600 dark:bg-patriot-blue-700 rounded-xl flex items-center justify-center shadow-lg">
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-patriot-gray-900 dark:text-white">Find Your Location</h1>
-                  <p className="text-patriot-gray-600 dark:text-patriot-gray-400">Discover your civic information</p>
+                  <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Find Your Location</h1>
+                  <p className="text-slate-600 dark:text-slate-400">Discover your civic information</p>
                 </div>
               </div>
             </div>
@@ -1224,7 +1215,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             {/* Address Input */}
             <div className="space-y-4">
               <div>
-                <label htmlFor="address" className="block text-sm font-semibold text-patriot-gray-700 dark:text-patriot-gray-300 mb-2">
+                <label htmlFor="address" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                   Enter Your Full Address
                 </label>
                 <div className="relative">
@@ -1236,7 +1227,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                     onKeyPress={(e) => e.key === "Enter" && !loading && handleAddressSubmit()}
                     onFocus={() => address.length > 2 && setShowSuggestions(true)}
                     onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-                    className={`text-base py-4 px-4 rounded-xl border-2 bg-white dark:bg-patriot-gray-800 text-patriot-gray-900 dark:text-white placeholder:text-patriot-gray-500 dark:placeholder:text-patriot-gray-400 focus:outline-none focus:ring-0 transition-all duration-200 ${
+                    className={`text-base py-4 px-4 rounded-xl border-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-0 transition-all duration-200 ${
                       validationError
                         ? "border-patriot-red-400 dark:border-patriot-red-500 focus:border-patriot-red-500 dark:focus:border-patriot-red-400"
                         : "border-patriot-gray-300 dark:border-patriot-gray-600 focus:border-patriot-blue-500 dark:focus:border-patriot-blue-400 hover:border-patriot-gray-400 dark:hover:border-patriot-gray-500"
@@ -1247,16 +1238,16 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
                   {/* Address Suggestions Dropdown */}
                   {showSuggestions && addressSuggestions.length > 0 && (
-                    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-patriot-gray-800 border-2 border-patriot-gray-300 dark:border-patriot-gray-600 rounded-xl shadow-xl z-20 max-h-48 overflow-y-auto">
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 rounded-xl shadow-xl z-20 max-h-48 overflow-y-auto">
                       {addressSuggestions.map((suggestion, index) => (
                         <button
                           key={index}
                           type="button"
                           onClick={() => handleSuggestionClick(suggestion)}
-                          className="w-full text-left px-4 py-3 hover:bg-patriot-gray-50 dark:hover:bg-patriot-gray-700 transition-colors text-sm text-patriot-gray-900 dark:text-white first:rounded-t-xl last:rounded-b-xl border-b border-patriot-gray-200 dark:border-patriot-gray-600 last:border-b-0"
+                          className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-sm text-slate-900 dark:text-white first:rounded-t-xl last:rounded-b-xl border-b border-slate-200 dark:border-slate-600 last:border-b-0"
                         >
                           <div className="flex items-center">
-                            <MapPin className="h-4 w-4 mr-3 text-patriot-gray-500 dark:text-patriot-gray-400" />
+                            <MapPin className="h-4 w-4 mr-3 text-slate-500 dark:text-slate-400" />
                             <span className="truncate">{suggestion}</span>
                           </div>
                         </button>
@@ -1271,7 +1262,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 <Button
                   onClick={handleAddressSubmit}
                   disabled={loading || !address.trim()}
-                  className="w-full font-semibold py-4 text-base rounded-xl bg-gradient-to-r from-patriot-blue-600 to-patriot-blue-700 hover:from-patriot-blue-700 hover:to-patriot-blue-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full font-semibold py-4 text-base rounded-xl bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {loading ? (
                     <div className="flex items-center justify-center">
@@ -1290,7 +1281,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                   <Button
                     onClick={handleTryAgain}
                     variant="outline"
-                    className="w-full py-4 text-base rounded-xl border-patriot-gray-300 dark:border-patriot-gray-600 hover:bg-patriot-gray-50 dark:hover:bg-patriot-gray-800 text-patriot-gray-700 dark:text-patriot-gray-300"
+                    className="w-full py-4 text-base rounded-xl border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300"
                   >
                     Try Different Address
                   </Button>
@@ -1299,9 +1290,9 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             </div>
 
             {/* Alternative Options */}
-            <div className="pt-6 border-t border-patriot-gray-200 dark:border-patriot-gray-700">
+            <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
               <div className="text-center space-y-4">
-                <p className="text-sm text-patriot-gray-600 dark:text-patriot-gray-400 font-medium">
+                <p className="text-sm text-slate-600 dark:text-slate-400 font-medium">
                   Alternative Options
                 </p>
                 
@@ -1310,7 +1301,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                     onClick={handleUseMyLocation}
                     variant="outline"
                     disabled={loading}
-                    className="w-full py-3 text-sm rounded-lg border-patriot-gray-300 dark:border-patriot-gray-600 hover:bg-patriot-gray-50 dark:hover:bg-patriot-gray-800 text-patriot-gray-700 dark:text-patriot-gray-300"
+                    className="w-full py-3 text-sm rounded-lg border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300"
                   >
                     <Globe2 className="h-4 w-4 mr-2" />
                     Use My Current Location
@@ -1319,7 +1310,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                   <Button
                     onClick={() => setStep("state")}
                     variant="ghost"
-                    className="w-full py-3 text-sm rounded-lg text-patriot-gray-600 dark:text-patriot-gray-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20"
+                    className="w-full py-3 text-sm rounded-lg text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20"
                   >
                     Browse by State Instead
                   </Button>
@@ -1329,7 +1320,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
             {/* Information Cards */}
             <div className="pt-6 space-y-4">
-              <h3 className="text-sm font-semibold text-patriot-gray-700 dark:text-patriot-gray-300">
+              <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                 What You'll Discover
               </h3>
               
@@ -1448,7 +1439,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "state") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-patriot-blue-50 via-white to-patriot-red-50 dark:from-patriot-gray-950 dark:via-patriot-gray-900 dark:to-patriot-gray-950 p-4">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-4">
         {/* Theme Toggle */}
         <div className="absolute top-4 right-4">
           <ThemeToggle />

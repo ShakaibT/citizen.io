@@ -15,6 +15,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Citizen - Your Voice in American Democracy",
   description: "Stay informed, engaged, and empowered with personalized civic information tailored to your location.",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   icons: {
     icon: [
       {

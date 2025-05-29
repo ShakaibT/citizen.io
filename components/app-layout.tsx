@@ -88,12 +88,12 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-white dark:bg-black">
       {/* Top Navigation */}
       <nav className="fixed top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-sm">
-        <div className="px-4 sm:px-6 lg:px-8">
+        <div className="container-responsive">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="lg:hidden">
+                  <Button variant="ghost" size="icon" className="lg:hidden btn-mobile">
                     <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
                   </Button>
                 </SheetTrigger>
@@ -116,7 +116,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                           <Link
                             key={item.name}
                             href={item.href}
-                            className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                            className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 btn-mobile ${
                               isActive
                                 ? "bg-patriot-blue-50 dark:bg-patriot-blue-900/30 text-patriot-blue-700 dark:text-patriot-blue-300 border border-patriot-blue-200 dark:border-patriot-blue-700"
                                 : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-200"
@@ -150,7 +150,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
               <Link href="/" className="flex items-center space-x-2 ml-4 lg:ml-0">
                 <img src="/logo.png" alt="Citizen Logo" className="h-8 w-auto" />
-                <span className="text-xl font-bold gradient-text">Citizen</span>
+                <span className="text-xl font-bold gradient-text hidden sm:block">Citizen</span>
               </Link>
 
               {/* Desktop Navigation */}
@@ -174,7 +174,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               </nav>
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               {/* Theme Toggle - Desktop */}
               <div className="hidden md:block">
                 <ThemeToggle />
@@ -185,13 +185,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 <Button
                   variant="ghost"
                   onClick={() => setLocationModalOpen(true)}
-                  className="hidden md:flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 px-3 py-2 rounded-lg transition-all duration-200"
+                  className="hidden sm:flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 px-3 py-2 rounded-lg transition-all duration-200 btn-mobile"
                 >
-                  <MapPin className="h-4 w-4 mr-1 text-red-500" />
-                  <span>
+                  <MapPin className="h-4 w-4 mr-1 text-red-500 flex-shrink-0" />
+                  <span className="truncate max-w-[120px] lg:max-w-none">
                     {location.city}, {location.state}
                   </span>
-                  <Settings className="h-3 w-3 ml-2 opacity-60" />
+                  <Settings className="h-3 w-3 ml-2 opacity-60 flex-shrink-0" />
                 </Button>
               )}
 

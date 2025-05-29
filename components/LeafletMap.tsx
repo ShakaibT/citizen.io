@@ -6,7 +6,7 @@ import L from 'leaflet'
 import * as d3 from 'd3'
 import { feature } from 'topojson-client'
 import { scaleQuantize } from 'd3-scale'
-import { ZoomIn, ZoomOut, RotateCcw, ArrowLeft } from 'lucide-react'
+import { ZoomIn, ZoomOut, RotateCcw, ArrowLeft, Plus, Minus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { usePopulationData, useCountyPopulationData } from '@/hooks/usePopulationData'
 import { useOfficialsData } from '@/hooks/useOfficialsData'
@@ -174,49 +174,37 @@ function MapControls({
   showBack?: boolean
 }) {
   return (
-    <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-2">
-      {showBack && (
-        <Button
-          variant="outline"
-          size="icon"
+    <div className="absolute top-2 sm:top-4 right-2 sm:right-4 z-[1000] flex flex-col gap-1 sm:gap-2">
+      {showBack && onBack && (
+        <button
           onClick={onBack}
-          className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-xl border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800"
-          aria-label="Back to states"
-          tabIndex={0}
+          className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors touch-manipulation"
+          title="Back to States"
         >
-          <ArrowLeft className="h-4 w-4" />
-        </Button>
+          <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+        </button>
       )}
-      <Button
-        variant="outline"
-        size="icon"
+      <button
         onClick={onZoomIn}
-        className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-xl border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800"
-        aria-label="Zoom in"
-        tabIndex={0}
+        className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors touch-manipulation"
+        title="Zoom In"
       >
-        <ZoomIn className="h-4 w-4" />
-      </Button>
-      <Button
-        variant="outline"
-        size="icon"
+        <Plus className="h-4 w-4 sm:h-5 sm:w-5" />
+      </button>
+      <button
         onClick={onZoomOut}
-        className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-xl border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800"
-        aria-label="Zoom out"
-        tabIndex={0}
+        className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors touch-manipulation"
+        title="Zoom Out"
       >
-        <ZoomOut className="h-4 w-4" />
-      </Button>
-      <Button
-        variant="outline"
-        size="icon"
+        <Minus className="h-4 w-4 sm:h-5 sm:w-5" />
+      </button>
+      <button
         onClick={onReset}
-        className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-xl border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800"
-        aria-label="Reset view"
-        tabIndex={0}
+        className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors touch-manipulation"
+        title="Reset View"
       >
-        <RotateCcw className="h-4 w-4" />
-      </Button>
+        <RotateCcw className="h-4 w-4 sm:h-5 sm:w-5" />
+      </button>
     </div>
   )
 }
@@ -231,46 +219,33 @@ function Legend({
   totalPopulation: number
   statePopData: any[]
 }) {
-  // Simplified population ranges for cleaner legend
-  const populationRanges = [
-    { min: 0, max: 1000000, label: '<1M' },
-    { min: 1000000, max: 3000000, label: '1M-3M' },
-    { min: 3000000, max: 5000000, label: '3M-5M' },
-    { min: 5000000, max: 10000000, label: '5M-10M' },
-    { min: 10000000, max: 20000000, label: '10M-20M' },
-    { min: 20000000, max: 50000000, label: '>20M' }
-  ]
-
   const formatPopulation = (num: number): string => {
-    if (num >= 1000000000) return `${(num / 1000000000).toFixed(1)}B`
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`
-    if (num >= 1000) return `${(num / 1000).toFixed(0)}K`
+    if (num >= 1000000) {
+      return `${(num / 1000000).toFixed(1)}M`
+    } else if (num >= 1000) {
+      return `${(num / 1000).toFixed(0)}K`
+    }
     return num.toString()
   }
 
+  const maxPop = Math.max(...statePopData.map(d => d.population))
+  const minPop = Math.min(...statePopData.map(d => d.population))
+
   return (
-    <div className="absolute bottom-12 left-4 z-[1000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200/50 dark:border-gray-700/50 p-3 max-w-[200px]">
-      <div className="space-y-2">
-        <div className="text-center">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white">US Population</h3>
-          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-            {formatPopulation(totalPopulation)}
-          </div>
-        </div>
-        
-        <div className="space-y-1">
-          {populationRanges.map((range, index) => (
-            <div key={index} className="flex items-center space-x-2">
-              <div 
-                className="w-3 h-3 rounded-sm border border-gray-300 dark:border-gray-600 flex-shrink-0"
-                style={{ backgroundColor: colorScale((range.min + range.max) / 2) }}
-              />
-              <span className="text-xs text-gray-700 dark:text-gray-300">
-                {range.label}
-              </span>
-            </div>
+    <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 z-[1000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-2 sm:p-3">
+      <div className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white mb-1 sm:mb-2">Population</div>
+      <div className="flex items-center space-x-1 sm:space-x-2">
+        <span className="text-xs text-gray-600 dark:text-gray-400">{formatPopulation(minPop)}</span>
+        <div className="flex space-x-0.5 sm:space-x-1">
+          {[0, 0.25, 0.5, 0.75, 1].map((t) => (
+            <div
+              key={t}
+              className="w-3 h-3 sm:w-4 sm:h-4 border border-gray-300 dark:border-gray-600"
+              style={{ backgroundColor: colorScale(minPop + t * (maxPop - minPop)) }}
+            />
           ))}
         </div>
+        <span className="text-xs text-gray-600 dark:text-gray-400">{formatPopulation(maxPop)}</span>
       </div>
     </div>
   )
@@ -292,116 +267,94 @@ function HoverInfo({
 }) {
   if (!feature) return null
 
-  const isState = feature.properties?.NAME && !feature.properties?.COUNTYFP
-  const name = feature.properties?.NAME || feature.properties?.name
-  
-  let populationData
-  let enhancedData
-  if (isState) {
-    populationData = statePopData.find(s => s.name === name)
-    enhancedData = enhancedStateData.find(s => s.name === name)
-  } else {
-    populationData = countyPopData.find(c => c.name === name)
-  }
-
   const formatPopulation = (num: number): string => {
+    if (num >= 1000000000) return `${(num / 1000000000).toFixed(1)}B`
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`
-    if (num >= 1000) return `${(num / 1000).toFixed(1)}K`
+    if (num >= 1000) return `${(num / 1000).toFixed(0)}K`
     return num.toString()
   }
 
-  // Get representatives data for states
-  const representatives = isState ? stateRepresentatives[name] : null
-
-  // Current year for data display - dynamically determined
   const getCurrentCensusYear = () => {
     const currentYear = new Date().getFullYear()
-    // Census data is typically released with a 1-year delay
-    return currentYear >= 2024 ? 2024 : 2023
+    return currentYear >= 2020 ? 2020 : 2010
   }
-  const currentYear = getCurrentCensusYear()
 
-  // Debug logging to see what data we have
-  if (isState) {
-    console.log('HoverInfo Debug:', {
-      stateName: name,
-      populationData,
-      enhancedData,
-      representatives,
-      enhancedStateDataLength: enhancedStateData.length
-    })
+  // Get enhanced data for states
+  const enhancedData = enhancedStateData?.find(
+    (item: any) => item.state === feature.properties?.NAME
+  )
+
+  // Calculate position to keep tooltip on screen
+  const tooltipWidth = 280
+  const tooltipHeight = 120
+  const viewportWidth = window.innerWidth
+  const viewportHeight = window.innerHeight
+  
+  let adjustedX = position.x + 10
+  let adjustedY = position.y - 10
+  
+  // Adjust for mobile screens
+  if (viewportWidth < 640) {
+    // On mobile, center the tooltip and position it at the top
+    adjustedX = Math.max(10, Math.min(viewportWidth - tooltipWidth - 10, position.x - tooltipWidth / 2))
+    adjustedY = Math.max(10, position.y - tooltipHeight - 20)
+  } else {
+    // Desktop positioning
+    if (adjustedX + tooltipWidth > viewportWidth) {
+      adjustedX = position.x - tooltipWidth - 10
+    }
+    if (adjustedY + tooltipHeight > viewportHeight) {
+      adjustedY = position.y - tooltipHeight - 10
+    }
   }
 
   return (
-    <div 
-      className="fixed bg-white/98 backdrop-blur-md border border-gray-300 rounded-xl p-4 shadow-2xl z-[1001] pointer-events-none max-w-sm"
+    <div
+      className="fixed z-[2000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-3 pointer-events-none max-w-[280px] sm:max-w-xs"
       style={{
-        left: position.x + 15,
-        top: position.y - 10,
-        transform: 'translateY(-100%)'
+        left: `${adjustedX}px`,
+        top: `${adjustedY}px`,
       }}
     >
-      <div className="font-bold text-base text-black mb-2">{name}</div>
-      
-      {isState ? (
-        <div className="space-y-2 text-sm">
-          <div className="text-xs text-gray-700 font-semibold mb-2">
-            {currentYear} Census Data
-          </div>
-          
-          {(populationData?.population || enhancedData?.population) && (
-            <div className="flex justify-between">
-              <span className="text-gray-800 font-medium">Population:</span>
-              <span className="font-bold text-black">{formatPopulation(populationData?.population || enhancedData?.population || 0)}</span>
-            </div>
+      <div className="space-y-2">
+        <div>
+          <h3 className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">
+            {feature.properties?.NAME || feature.name}
+          </h3>
+          {feature.properties?.STATEFP && (
+            <p className="text-xs text-gray-600 dark:text-gray-400">
+              State FIPS: {feature.properties.STATEFP}
+            </p>
           )}
-          
-          {enhancedData?.countyCount && (
-            <div className="flex justify-between">
-              <span className="text-gray-800 font-medium">Counties:</span>
-              <span className="font-bold text-black">{enhancedData.countyCount}</span>
-            </div>
-          )}
-          
-          {representatives && (
-            <div className="space-y-1">
-              <div className="flex justify-between">
-                <span className="text-gray-800 font-medium">House Reps:</span>
-                <span className="font-bold text-black">{representatives.house}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-800 font-medium">Senators:</span>
-                <span className="font-bold text-black">{representatives.senate}</span>
-              </div>
-            </div>
-          )}
-          
-          <div className="pt-2 border-t border-gray-300">
-            <div className="text-xs text-blue-700 font-semibold">
-              Click to view counties →
-            </div>
-          </div>
         </div>
-      ) : (
-        <div className="space-y-2 text-sm">
-          <div className="text-xs text-gray-700 font-semibold mb-2">
-            {currentYear} Census Data
-          </div>
-          
-          {populationData && (
+
+        {enhancedData && (
+          <div className="space-y-1 text-xs sm:text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-800 font-medium">Population:</span>
-              <span className="font-bold text-black">{formatPopulation(populationData.population)}</span>
+              <span className="text-gray-600 dark:text-gray-400">Population:</span>
+              <span className="font-medium text-gray-900 dark:text-white">
+                {formatPopulation(enhancedData.population)}
+              </span>
             </div>
-          )}
-          
-          <div className="pt-2 border-t border-gray-300">
-            <div className="text-xs text-gray-700 font-medium">
-              County in {feature.properties?.STATEFP ? 'State' : 'Unknown State'}
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">Density:</span>
+              <span className="font-medium text-gray-900 dark:text-white">
+                {enhancedData.density?.toFixed(1)} /mi²
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">Counties:</span>
+              <span className="font-medium text-gray-900 dark:text-white">
+                {enhancedData.counties}
+              </span>
             </div>
           </div>
+        )}
+
+        <div className="text-xs text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-600 pt-2">
+          Census {getCurrentCensusYear()} • Click to explore
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -783,7 +736,7 @@ export default function LeafletMap({
     })
   }, [getCountyStyle, onCountyClick, selectedState])
 
-  const mapHeight = mode === 'dashboard' ? 'h-[600px]' : 'h-[500px]'
+  const mapHeight = mode === 'dashboard' ? 'h-[400px] sm:h-[500px] lg:h-[600px]' : 'h-[300px] sm:h-[400px] lg:h-[500px]'
   
   // US bounds for limiting zoom out
   const usBounds: L.LatLngBoundsExpression = [

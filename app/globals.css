@@ -115,10 +115,61 @@ nav,
 
 /* Component styles */
 @layer components {
+  /* Mobile-first responsive utilities */
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .text-responsive-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  .text-responsive-md {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  
+  .text-responsive-sm {
+    @apply text-base sm:text-lg;
+  }
+  
+  .grid-responsive-cards {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+  
+  .grid-responsive-2col {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12;
+  }
+  
+  .flex-responsive-stack {
+    @apply flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6;
+  }
+  
+  .padding-responsive {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+  
+  .padding-responsive-sm {
+    @apply py-4 sm:py-6 md:py-8;
+  }
+  
+  /* Mobile-optimized buttons */
+  .btn-mobile {
+    @apply min-h-[44px] px-4 py-2 text-base font-medium rounded-lg touch-manipulation;
+  }
+  
+  .btn-mobile-lg {
+    @apply min-h-[48px] px-6 py-3 text-lg font-semibold rounded-lg touch-manipulation;
+  }
+
   /* Auth button - Clean, focused styling */
   .auth-button {
     @apply bg-accent text-white font-semibold px-4 py-2 rounded-md 
-           inline-flex items-center gap-2 shadow-sm hover:bg-accent/90;
+           inline-flex items-center gap-2 shadow-sm hover:bg-accent/90
+           min-h-[44px] touch-manipulation;
   }
 
   .dark .auth-button {
@@ -524,4 +575,77 @@ html.dark [data-radix-collection-item].glass-card,
   align-items: center !important;
   justify-content: center !important;
   padding: 0 0.75rem !important;
+}
+
+/* Map container and mobile optimizations */
+.map-container,
+.leaflet-container {
+  @apply w-full h-full rounded-lg overflow-hidden;
+  touch-action: manipulation;
+}
+
+.map-container:focus-within,
+.leaflet-container:focus-within {
+  @apply ring-2 ring-patriot-blue-500 ring-offset-2;
+}
+
+/* Mobile-specific map styles */
+@media (max-width: 640px) {
+  .leaflet-control-container {
+    display: none !important;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    border-radius: 8px !important;
+    padding: 8px !important;
+  }
+  
+  .leaflet-popup-content {
+    margin: 8px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Touch-friendly interactive elements */
+.touch-target {
+  @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+}
+
+/* Responsive text utilities */
+.text-mobile-sm {
+  @apply text-sm sm:text-base;
+}
+
+.text-mobile-base {
+  @apply text-base sm:text-lg;
+}
+
+.text-mobile-lg {
+  @apply text-lg sm:text-xl;
+}
+
+/* Mobile-optimized spacing */
+.space-mobile-x {
+  @apply space-x-2 sm:space-x-4;
+}
+
+.space-mobile-y {
+  @apply space-y-2 sm:space-y-4;
+}
+
+/* Responsive grid utilities */
+.grid-mobile-1 {
+  @apply grid grid-cols-1;
+}
+
+.grid-mobile-2 {
+  @apply grid grid-cols-1 sm:grid-cols-2;
+}
+
+.grid-mobile-3 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.grid-mobile-4 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
 }

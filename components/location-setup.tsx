@@ -1135,47 +1135,47 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "address") {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col lg:flex-row">
         {/* Theme Toggle */}
-        <div className="absolute top-6 right-6 z-50">
+        <div className="absolute top-4 right-4 lg:top-6 lg:right-6 z-50">
           <ThemeToggle />
         </div>
         
         {/* Left Panel - Address Input & Information */}
-        <div className="w-1/3 min-h-screen bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 flex flex-col">
+        <div className="w-full lg:w-1/3 min-h-screen bg-white dark:bg-slate-900 lg:border-r border-slate-200 dark:border-slate-700 flex flex-col">
           {/* Header Section */}
-          <div className="p-8 border-b border-slate-200 dark:border-slate-700">
+          <div className="p-4 sm:p-6 lg:p-8 border-b border-slate-200 dark:border-slate-700">
             <Button
               variant="ghost"
               onClick={() => setStep("welcome")}
-              className="mb-6 text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 transition-all duration-200"
+              className="mb-4 lg:mb-6 text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 transition-all duration-200 btn-mobile"
             >
               ← Back to Welcome
             </Button>
             
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-patriot-blue-600 dark:bg-patriot-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                  <MapPin className="h-6 w-6 text-white" />
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-patriot-blue-600 dark:bg-patriot-blue-700 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
+                  <MapPin className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
                 </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Find Your Location</h1>
-                  <p className="text-slate-600 dark:text-slate-400">Discover your civic information</p>
+                <div className="min-w-0">
+                  <h1 className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white truncate">Your Location</h1>
+                  <p className="text-sm lg:text-base text-slate-600 dark:text-slate-400 truncate">Discover your civic information</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Address Input Section */}
-          <div className="flex-1 p-8 space-y-6 overflow-y-auto">
+          <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-4 lg:space-y-6 overflow-y-auto">
             {/* Status Messages */}
             {validatedAddress && (
               <Alert className="border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 shadow-sm">
                 <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
                 <AlertDescription className="text-green-800 dark:text-green-300">
                   <div className="space-y-2">
-                    <div className="font-semibold">✅ Address Validated!</div>
-                    <div className="text-sm bg-green-100 dark:bg-green-800/30 p-3 rounded-lg border border-green-200 dark:border-green-700">
+                    <div className="font-semibold text-sm lg:text-base">✅ Address Validated!</div>
+                    <div className="text-xs lg:text-sm bg-green-100 dark:bg-green-800/30 p-2 lg:p-3 rounded-lg border border-green-200 dark:border-green-700">
                       <strong>Confirmed Address:</strong><br />
                       {validatedAddress}
                     </div>
@@ -1190,7 +1190,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             {validationError && (
               <Alert variant="destructive" className="shadow-sm">
                 <AlertCircle className="h-4 w-4" />
-                <AlertDescription>
+                <AlertDescription className="text-sm lg:text-base">
                   <strong>Validation Error:</strong> {validationError}
                 </AlertDescription>
               </Alert>
@@ -1203,7 +1203,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                   <strong>Suggestions to improve your search:</strong>
                   <ul className="mt-2 list-disc list-inside space-y-1">
                     {suggestions.map((suggestion, index) => (
-                      <li key={index} className="text-sm">
+                      <li key={index} className="text-xs lg:text-sm">
                         {suggestion}
                       </li>
                     ))}
@@ -1213,7 +1213,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             )}
 
             {/* Address Input */}
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               <div>
                 <label htmlFor="address" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                   Enter Your Full Address
@@ -1221,13 +1221,13 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 <div className="relative">
                   <Input
                     id="address"
-                    placeholder="123 Main Street, City, State 12345"
+                    placeholder="123 Main St, City, State 12345"
                     value={address}
                     onChange={(e) => handleAddressChange(e.target.value)}
                     onKeyPress={(e) => e.key === "Enter" && !loading && handleAddressSubmit()}
                     onFocus={() => address.length > 2 && setShowSuggestions(true)}
                     onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-                    className={`text-base py-4 px-4 rounded-xl border-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-0 transition-all duration-200 ${
+                    className={`text-sm lg:text-base py-3 lg:py-4 px-3 lg:px-4 rounded-xl border-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-0 transition-all duration-200 btn-mobile ${
                       validationError
                         ? "border-patriot-red-400 dark:border-patriot-red-500 focus:border-patriot-red-500 dark:focus:border-patriot-red-400"
                         : "border-patriot-gray-300 dark:border-patriot-gray-600 focus:border-patriot-blue-500 dark:focus:border-patriot-blue-400 hover:border-patriot-gray-400 dark:hover:border-patriot-gray-500"
@@ -1244,11 +1244,11 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                           key={index}
                           type="button"
                           onClick={() => handleSuggestionClick(suggestion)}
-                          className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-sm text-slate-900 dark:text-white first:rounded-t-xl last:rounded-b-xl border-b border-slate-200 dark:border-slate-600 last:border-b-0"
+                          className="w-full text-left px-3 lg:px-4 py-2 lg:py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-xs lg:text-sm text-slate-900 dark:text-white first:rounded-t-xl last:rounded-b-xl border-b border-slate-200 dark:border-slate-600 last:border-b-0 btn-mobile"
                         >
                           <div className="flex items-center">
-                            <MapPin className="h-4 w-4 mr-3 text-slate-500 dark:text-slate-400" />
-                            <span className="truncate">{suggestion}</span>
+                            <MapPin className="h-3 w-3 lg:h-4 lg:w-4 mr-2 lg:mr-3 text-slate-500 dark:text-slate-400 flex-shrink-0" />
+                            <span className="truncate text-xs lg:text-sm">{suggestion}</span>
                           </div>
                         </button>
                       ))}
@@ -1262,17 +1262,17 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 <Button
                   onClick={handleAddressSubmit}
                   disabled={loading || !address.trim()}
-                  className="w-full font-semibold py-4 text-base rounded-xl bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full font-semibold py-3 lg:py-4 text-sm lg:text-base rounded-xl bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none btn-mobile-lg"
                 >
                   {loading ? (
                     <div className="flex items-center justify-center">
-                      <Loader2 className="animate-spin h-5 w-5 mr-2" />
-                      Validating Address...
+                      <Loader2 className="animate-spin h-4 w-4 lg:h-5 lg:w-5 mr-2" />
+                      <span className="text-sm lg:text-base">Validating...</span>
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
-                      <CheckCircle className="h-5 w-5 mr-2" />
-                      Validate & Locate
+                      <CheckCircle className="h-4 w-4 lg:h-5 lg:w-5 mr-2" />
+                      <span className="text-sm lg:text-base">Validate & Locate</span>
                     </div>
                   )}
                 </Button>
@@ -1281,7 +1281,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                   <Button
                     onClick={handleTryAgain}
                     variant="outline"
-                    className="w-full py-4 text-base rounded-xl border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300"
+                    className="w-full py-3 lg:py-4 text-sm lg:text-base rounded-xl border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 btn-mobile-lg"
                   >
                     Try Different Address
                   </Button>
@@ -1290,27 +1290,27 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             </div>
 
             {/* Alternative Options */}
-            <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
-              <div className="text-center space-y-4">
-                <p className="text-sm text-slate-600 dark:text-slate-400 font-medium">
+            <div className="pt-4 lg:pt-6 border-t border-slate-200 dark:border-slate-700">
+              <div className="text-center space-y-3 lg:space-y-4">
+                <p className="text-xs lg:text-sm text-slate-600 dark:text-slate-400 font-medium">
                   Alternative Options
                 </p>
                 
-                <div className="space-y-3">
+                <div className="space-y-2 lg:space-y-3">
                   <Button
                     onClick={handleUseMyLocation}
                     variant="outline"
                     disabled={loading}
-                    className="w-full py-3 text-sm rounded-lg border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300"
+                    className="w-full py-2 lg:py-3 text-xs lg:text-sm rounded-lg border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 btn-mobile"
                   >
-                    <Globe2 className="h-4 w-4 mr-2" />
+                    <Globe2 className="h-3 w-3 lg:h-4 lg:w-4 mr-2" />
                     Use My Current Location
                   </Button>
                   
                   <Button
                     onClick={() => setStep("state")}
                     variant="ghost"
-                    className="w-full py-3 text-sm rounded-lg text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20"
+                    className="w-full py-2 lg:py-3 text-xs lg:text-sm rounded-lg text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 btn-mobile"
                   >
                     Browse by State Instead
                   </Button>
@@ -1318,8 +1318,8 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
               </div>
             </div>
 
-            {/* Information Cards */}
-            <div className="pt-6 space-y-4">
+            {/* Information Cards - Hide on mobile to save space */}
+            <div className="hidden lg:block pt-6 space-y-4">
               <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                 What You'll Discover
               </h3>
@@ -1365,16 +1365,16 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
         </div>
 
         {/* Right Panel - Map */}
-        <div className="w-2/3 min-h-screen relative bg-patriot-gray-100 dark:bg-patriot-gray-800">
+        <div className="w-full lg:w-2/3 min-h-[50vh] lg:min-h-screen relative bg-patriot-gray-100 dark:bg-patriot-gray-800">
           {/* Map Header Overlay */}
           <div className="absolute top-0 left-0 right-0 z-30 bg-gradient-to-b from-white/90 via-white/70 to-transparent dark:from-patriot-gray-900/90 dark:via-patriot-gray-900/70 dark:to-transparent backdrop-blur-sm">
-            <div className="p-6">
-              <div className="flex items-center justify-between">
+            <div className="p-3 lg:p-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
                 <div>
-                  <h2 className="text-xl font-bold text-patriot-gray-900 dark:text-white">
+                  <h2 className="text-lg lg:text-xl font-bold text-patriot-gray-900 dark:text-white">
                     Interactive Map
                   </h2>
-                  <p className="text-sm text-patriot-gray-600 dark:text-patriot-gray-400">
+                  <p className="text-xs lg:text-sm text-patriot-gray-600 dark:text-patriot-gray-400">
                     {selectedLocationPin 
                       ? "Your location is marked on the map" 
                       : "Type an address to see it on the map"
@@ -1383,9 +1383,9 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 </div>
                 
                 {selectedLocationPin && (
-                  <div className="bg-white dark:bg-patriot-gray-800 rounded-lg px-4 py-2 shadow-lg border border-patriot-gray-200 dark:border-patriot-gray-700">
+                  <div className="bg-white dark:bg-patriot-gray-800 rounded-lg px-3 lg:px-4 py-2 shadow-lg border border-patriot-gray-200 dark:border-patriot-gray-700">
                     <div className="text-xs text-patriot-gray-500 dark:text-patriot-gray-400">Coordinates</div>
-                    <div className="text-sm font-mono text-patriot-gray-900 dark:text-white">
+                    <div className="text-xs lg:text-sm font-mono text-patriot-gray-900 dark:text-white">
                       {selectedLocationPin.lat.toFixed(4)}, {selectedLocationPin.lng.toFixed(4)}
                     </div>
                   </div>
@@ -1414,18 +1414,18 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
           {/* Map Status Overlay */}
           {!selectedLocationPin && (
-            <div className="absolute bottom-6 left-6 right-6 z-30">
-              <div className="bg-white/90 dark:bg-patriot-gray-900/90 backdrop-blur-md rounded-xl p-4 shadow-xl border border-patriot-gray-200/50 dark:border-patriot-gray-700/50">
+            <div className="absolute bottom-3 lg:bottom-6 left-3 lg:left-6 right-3 lg:right-6 z-30">
+              <div className="bg-white/90 dark:bg-patriot-gray-900/90 backdrop-blur-md rounded-xl p-3 lg:p-4 shadow-xl border border-patriot-gray-200/50 dark:border-patriot-gray-700/50">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-patriot-blue-500 to-patriot-blue-600 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-white" />
+                  <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-patriot-blue-500 to-patriot-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                   </div>
-                  <div>
-                    <div className="text-sm font-medium text-patriot-gray-900 dark:text-white">
+                  <div className="min-w-0">
+                    <div className="text-xs lg:text-sm font-medium text-patriot-gray-900 dark:text-white">
                       Enter an address to get started
                     </div>
                     <div className="text-xs text-patriot-gray-600 dark:text-patriot-gray-400">
-                      We'll show your exact location and surrounding civic information
+                      We'll show your location and civic info
                     </div>
                   </div>
                 </div>
@@ -1439,40 +1439,40 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "state") {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-4">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-2 sm:p-4">
         {/* Theme Toggle */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
           <ThemeToggle />
         </div>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8 pt-8">
+          <div className="text-center mb-6 sm:mb-8 pt-6 sm:pt-8">
             <Button
               variant="ghost"
               onClick={() => setStep("welcome")}
-              className="mb-4 text-black/80 dark:text-white/80 hover:text-white hover:bg-patriot-blue-600 hover:border-patriot-blue-600 border border-transparent transition-all duration-200"
+              className="mb-3 sm:mb-4 text-black/80 dark:text-white/80 hover:text-white hover:bg-patriot-blue-600 hover:border-patriot-blue-600 border border-transparent transition-all duration-200 btn-mobile"
             >
               ← Back
             </Button>
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-4">Select Your State</h2>
-            <p className="text-black/80 dark:text-white/80">
+            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-3 sm:mb-4">Select Your State</h2>
+            <p className="text-sm sm:text-base text-black/80 dark:text-white/80">
               Choose your state to get started with general civic information
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {/* Interactive Map */}
             <Card className="patriot-card shadow-2xl">
-              <CardHeader>
-                <CardTitle className="flex items-center text-black dark:text-white">
-                  <Globe2 className="h-5 w-5 mr-2 text-patriot-blue-600 dark:text-patriot-blue-400" />
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="flex items-center text-black dark:text-white text-lg sm:text-xl">
+                  <Globe2 className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-patriot-blue-600 dark:text-patriot-blue-400" />
                   Interactive US Map
                 </CardTitle>
-                <CardDescription className="text-black/80 dark:text-white/80">
+                <CardDescription className="text-black/80 dark:text-white/80 text-sm">
                   Click on any state to get started • Zoom and pan to explore
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="relative w-full h-[650px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
+              <CardContent className="p-4 sm:p-6">
+                <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[650px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
                   <LeafletMap
                     onStateClick={handleStateSelect}
                     onCountyClick={handleCountySelect}
@@ -1492,29 +1492,29 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
             {/* State List */}
             <Card className="patriot-card shadow-2xl">
-              <CardHeader>
-                <CardTitle className="flex items-center text-black dark:text-white">
-                  <MapPin className="h-5 w-5 mr-2 text-patriot-red-600 dark:text-patriot-red-400" />
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="flex items-center text-black dark:text-white text-lg sm:text-xl">
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-patriot-red-600 dark:text-patriot-red-400" />
                   All States & Territories
                 </CardTitle>
-                <CardDescription className="text-black/80 dark:text-white/80">
+                <CardDescription className="text-black/80 dark:text-white/80 text-sm">
                   Search and sort by name or population
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 sm:p-6">
                 <StateSelector onStateSelect={handleStateSelect} />
               </CardContent>
             </Card>
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-sm text-black/80 dark:text-white/80 mb-4">
+          <div className="mt-6 sm:mt-8 text-center">
+            <p className="text-xs sm:text-sm text-black/80 dark:text-white/80 mb-3 sm:mb-4">
               Want more precise information for your area?
             </p>
             <Button
               variant="outline"
               onClick={() => setStep("address")}
-              className="rounded-xl border-patriot-gray-300 dark:border-patriot-gray-600"
+              className="rounded-xl border-patriot-gray-300 dark:border-patriot-gray-600 btn-mobile"
             >
               Enter Your Full Address Instead
             </Button>

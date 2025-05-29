@@ -1,5 +1,5 @@
 import React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import "leaflet/dist/leaflet.css"
@@ -15,7 +15,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Citizen - Your Voice in American Democracy",
   description: "Stay informed, engaged, and empowered with personalized civic information tailored to your location.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   icons: {
     icon: [
       {
@@ -37,6 +36,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({

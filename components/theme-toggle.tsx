@@ -31,8 +31,8 @@ export function ThemeToggle() {
       <Moon 
         className={`absolute h-5 w-5 transition-all duration-500 ease-in-out ${
           theme === "dark" 
-            ? "rotate-0 scale-100 opacity-100 text-blue-400" 
-            : "-rotate-90 scale-0 opacity-0 text-blue-400"
+            ? "rotate-0 scale-100 opacity-100 text-patriot-blue-400"
+            : "-rotate-90 scale-0 opacity-0 text-patriot-blue-400"
         }`} 
       />
     </Button>

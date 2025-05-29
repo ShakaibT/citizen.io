@@ -29,7 +29,7 @@ interface NewsArticle {
 }
 
 const leaningColors = {
-  left: "bg-blue-100 text-blue-800",
+  left: "bg-patriot-blue-100 text-patriot-blue-800",
   center: "bg-gray-100 text-gray-800",
   right: "bg-red-100 text-red-800",
 }
@@ -270,7 +270,7 @@ export function NewsAggregator() {
                 <div className="flex items-center space-x-2 ml-2">
                   <Button variant="ghost" size="icon" onClick={() => toggleSave(article.id)}>
                     {article.saved ? (
-                      <BookmarkCheck className="h-4 w-4 text-blue-600" />
+                      <BookmarkCheck className="h-4 w-4 text-patriot-blue-600" />
                     ) : (
                       <Bookmark className="h-4 w-4" />
                     )}

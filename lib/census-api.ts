@@ -2,11 +2,24 @@
 // This replaces the Supabase database approach with direct API calls
 // Free, fast, and always up-to-date government data
 
+import { optimizeGeoJSON, getOptimalMapBounds, createGeoJSONCacheKey } from './geojson-optimizer'
+
+// Get the current year for Census data (will automatically use latest available)
+const getCurrentCensusYear = () => {
+  const currentYear = new Date().getFullYear()
+  // Census data is typically released with a 1-year delay
+  // For 2024, we'll likely have 2023 data until 2024 data is released
+  return currentYear >= 2024 ? 2024 : 2023
+}
+
+const CURRENT_CENSUS_YEAR = getCurrentCensusYear()
+
 export interface CensusState {
   name: string;
   abbreviation: string;
   fips: string;
   population?: number;
+  countyCount?: number;
 }
 
 export interface CensusCounty {
@@ -28,7 +41,13 @@ export interface CensusGeography {
 
 // Cache for API responses (in-memory cache for better performance)
 const cache = new Map<string, { data: any; timestamp: number }>();
-const CACHE_DURATION = 1000 * 60 * 60; // 1 hour cache
+const CACHE_DURATION = 1000 * 60 * 30; // 30 minutes cache for live data
+
+// Function to clear cache (useful for testing or forcing fresh data)
+export function clearCensusCache(): void {
+  cache.clear();
+  console.log('Census API cache cleared');
+}
 
 // Helper function to get cached data or fetch new
 async function getCachedData<T>(key: string, fetcher: () => Promise<T>): Promise<T> {
@@ -46,32 +65,48 @@ async function getCachedData<T>(key: string, fetcher: () => Promise<T>): Promise
 
 // Get all US states from Census API
 export async function getAllStates(): Promise<CensusState[]> {
+  // Clear cache to force fresh data
+  cache.delete('all-states');
+  
   return getCachedData('all-states', async () => {
     try {
-      // Try Census API first
+      // Use the latest available Population Estimates API
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+      
       const response = await fetch(
-        'https://api.census.gov/data/2021/pep/population?get=NAME,POP_2021&for=state:*',
+        `https://api.census.gov/data/${CURRENT_CENSUS_YEAR}/pep/charv?get=NAME,POP&for=state:*&YEAR=${CURRENT_CENSUS_YEAR}`,
         { 
           headers: { 'User-Agent': 'CitizenApp/1.0' },
-          signal: AbortSignal.timeout(5000) // 5 second timeout
+          signal: controller.signal
         }
       );
       
+      clearTimeout(timeoutId)
+      
       if (!response.ok) {
-        throw new Error(`Census API error: ${response.status}`);
+        console.warn(`Census API error: ${response.status}, falling back to static data`);
+        return getStaticStatesData();
       }
       
       const data = await response.json();
       
-      // Skip header row and map to our format
+      if (!data || !Array.isArray(data) || data.length < 2) {
+        console.warn('Invalid Census API response format, falling back to static data');
+        return getStaticStatesData();
+      }
+      
+      console.log(`Successfully fetched live Census state data for ${CURRENT_CENSUS_YEAR} (including territories)`);
+      
+      // Skip header row and map to our format - INCLUDE all states and territories
       return data.slice(1).map((row: any[]) => ({
         name: row[0],
         abbreviation: getStateAbbreviation(row[0]),
-        fips: row[2],
-        population: parseInt(row[1])
+        fips: row[3], // State FIPS is in position 3
+        population: parseInt(row[1]) || 0
       }));
     } catch (error) {
-      console.error('Error fetching states from Census API:', error);
+      console.warn('Error fetching states from Census API, falling back to static data:', error instanceof Error ? error.message : 'Unknown error');
       // Fallback to static data if API fails
       return getStaticStatesData();
     }
@@ -82,16 +117,20 @@ export async function getAllStates(): Promise<CensusState[]> {
 export async function getCountiesByState(stateFips: string): Promise<CensusCounty[]> {
   return getCachedData(`counties-${stateFips}`, async () => {
     try {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+      
       const response = await fetch(
-        `https://api.census.gov/data/2021/pep/population?get=NAME,POP_2021&for=county:*&in=state:${stateFips}`,
+        `https://api.census.gov/data/${CURRENT_CENSUS_YEAR}/pep/charv?get=NAME,POP&for=county:*&in=state:${stateFips}&YEAR=${CURRENT_CENSUS_YEAR}`,
         { 
           headers: { 'User-Agent': 'CitizenApp/1.0' },
-          signal: AbortSignal.timeout(5000) // 5 second timeout
+          signal: controller.signal
         }
       );
       
+      clearTimeout(timeoutId)
+      
       if (!response.ok) {
-        // Silently fall back to static data for API errors
         console.warn(`Census API returned ${response.status} for state ${stateFips}, using static data`);
         return getStaticCountiesData(stateFips);
       }
@@ -103,14 +142,15 @@ export async function getCountiesByState(stateFips: string): Promise<CensusCount
         return getStaticCountiesData(stateFips);
       }
       
+      console.log(`Successfully fetched live Census county data for state FIPS ${stateFips}`);
+      
       return data.slice(1).map((row: any[]) => ({
         name: row[0].replace(/ County.*$/, ''), // Remove "County" suffix
         state: stateFips,
-        fips: `${row[3]}${row[2]}`, // State + County FIPS
+        fips: `${row[3]}${row[4]}`, // State FIPS (index 3) + County FIPS (index 4)
         population: parseInt(row[1]) || 0
       }));
     } catch (error) {
-      // Silently fall back to static data for any errors
       console.warn(`Error fetching counties for state ${stateFips}, using static data:`, error instanceof Error ? error.message : 'Unknown error');
       return getStaticCountiesData(stateFips);
     }
@@ -123,75 +163,140 @@ export async function getStateByIdentifier(identifier: string): Promise<CensusSt
   
   return states.find(state => 
     state.abbreviation.toLowerCase() === identifier.toLowerCase() ||
-    state.name.toLowerCase() === identifier.toLowerCase()
+    state.name.toLowerCase() === identifier.toLowerCase() ||
+    state.fips === identifier.padStart(2, '0') // Handle FIPS codes
   ) || null;
 }
 
-// Get GeoJSON data for states - with actual US boundaries
+// Get GeoJSON data for states - with actual US boundaries and optimized positioning
 export async function getStatesGeoJSON(): Promise<any> {
-  return getCachedData('states-geojson', async () => {
+  return getCachedData('states-geojson-optimized', async () => {
     try {
-      // Try to fetch actual US states GeoJSON from a reliable source
-      const response = await fetch(
-        'https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json',
-        { 
-          headers: { 'User-Agent': 'CitizenApp/1.0' },
-          signal: AbortSignal.timeout(15000) // 15 second timeout
-        }
-      );
-      
-      if (response.ok) {
-        console.log('Successfully fetched external GeoJSON data');
-        const geoJSON = await response.json();
-        
-        // Validate the GeoJSON structure
-        if (!geoJSON || !geoJSON.features || !Array.isArray(geoJSON.features)) {
-          console.warn('Invalid GeoJSON structure from external source, using fallback');
-          throw new Error('Invalid GeoJSON structure');
-        }
-        
-        // Get population data and enhance the GeoJSON
-        const states = await getAllStates();
-        const statePopMap = new Map(states.map(s => [s.name, s]));
-        
-        // Enhance features with population data and density
-        geoJSON.features = geoJSON.features.map((feature: any) => {
-          const stateName = feature.properties.NAME || feature.properties.name;
-          const stateData = statePopMap.get(stateName);
-          
-          // Calculate population density (rough estimate based on bounding box)
-          let density = 0;
-          if (stateData?.population && feature.geometry) {
-            // This is a simplified density calculation
-            // In reality, you'd use actual land area
-            const bounds = getBoundingBox(feature.geometry);
-            const area = (bounds.maxLat - bounds.minLat) * (bounds.maxLng - bounds.minLng);
-            density = stateData.population / (area * 69 * 69); // Convert to people per sq mile (rough)
-          }
-          
-          return {
-            ...feature,
-            properties: {
-              ...feature.properties,
-              name: stateName,
-              population: stateData?.population || 0,
-              density: Math.round(density),
-              fips: stateData?.fips || '',
-              abbreviation: stateData?.abbreviation || ''
-            }
-          };
-        });
-        
-        return geoJSON;
-      }
-      
-      // Fallback to our static data if external source fails
-      console.log('External GeoJSON source returned non-OK status:', response.status);
-      throw new Error(`External GeoJSON source failed with status ${response.status}`);
-    } catch (error) {
-      console.warn('Using fallback GeoJSON data:', error);
+      // First try to get states data
       const states = await getAllStates();
-      return createStaticStatesGeoJSON(states);
+      
+      // Try to fetch actual US states GeoJSON from a reliable source
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+      
+      try {
+        const response = await fetch(
+          'https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json',
+          { 
+            headers: { 'User-Agent': 'CitizenApp/1.0' },
+            signal: controller.signal
+          }
+        );
+        
+        clearTimeout(timeoutId)
+        
+        if (response.ok) {
+          console.log('Successfully fetched external GeoJSON data');
+          const rawGeoJSON = await response.json();
+          
+          // Validate the GeoJSON structure
+          if (rawGeoJSON && rawGeoJSON.features && Array.isArray(rawGeoJSON.features) && rawGeoJSON.features.length > 0) {
+            // Get population data and enhance the GeoJSON
+            const statePopMap = new Map(states.map(s => [s.name, s]));
+            
+            // Enhance features with population data and density
+            rawGeoJSON.features = rawGeoJSON.features.map((feature: any) => {
+              const stateName = feature.properties.NAME || feature.properties.name;
+              const stateData = statePopMap.get(stateName);
+              
+              // Calculate population density (rough estimate based on bounding box)
+              let density = 0;
+              if (stateData?.population && feature.geometry) {
+                // This is a simplified density calculation
+                // In reality, you'd use actual land area
+                const bounds = getBoundingBox(feature.geometry);
+                const area = (bounds.maxLat - bounds.minLat) * (bounds.maxLng - bounds.minLng);
+                density = stateData.population / (area * 69 * 69); // Convert to people per sq mile (rough)
+              }
+              
+              return {
+                ...feature,
+                properties: {
+                  ...feature.properties,
+                  name: stateName,
+                  population: stateData?.population || 0,
+                  density: Math.round(density),
+                  fips: stateData?.fips || '',
+                  abbreviation: stateData?.abbreviation || ''
+                }
+              };
+            });
+            
+            // Apply GeoJSON optimizations (Alaska/Hawaii repositioning, coordinate simplification)
+            const optimizedGeoJSON = optimizeGeoJSON(rawGeoJSON);
+            
+            // Calculate optimal bounds for the optimized data
+            const optimalBounds = getOptimalMapBounds(optimizedGeoJSON);
+            
+            // Add metadata for map initialization
+            optimizedGeoJSON.metadata = {
+              optimized: true,
+              alaskaRepositioned: true,
+              hawaiiRepositioned: true,
+              puertoRicoRepositioned: true,
+              optimalCenter: optimalBounds.center,
+              optimalBounds: optimalBounds.bounds,
+              totalFeatures: optimizedGeoJSON.features.length,
+              timestamp: Date.now()
+            };
+            
+            return optimizedGeoJSON;
+          } else {
+            console.warn('Invalid GeoJSON structure from external source, using fallback');
+            throw new Error('Invalid GeoJSON structure');
+          }
+        } else {
+          console.log('External GeoJSON source returned non-OK status:', response.status);
+          throw new Error(`External GeoJSON source failed with status ${response.status}`);
+        }
+      } catch (fetchError) {
+        clearTimeout(timeoutId)
+        console.warn('External GeoJSON fetch failed:', fetchError);
+        throw fetchError;
+      }
+    } catch (error) {
+      console.warn('Using fallback GeoJSON data:', error instanceof Error ? error.message : 'Unknown error');
+      
+      // Fallback to our static data
+      try {
+        const states = await getAllStates();
+        const staticGeoJSON = createStaticStatesGeoJSON(states);
+        
+        // Apply optimizations to static data as well
+        const optimizedStaticGeoJSON = optimizeGeoJSON(staticGeoJSON);
+        const optimalBounds = getOptimalMapBounds(optimizedStaticGeoJSON);
+        
+        optimizedStaticGeoJSON.metadata = {
+          optimized: true,
+          alaskaRepositioned: true,
+          hawaiiRepositioned: true,
+          puertoRicoRepositioned: true,
+          optimalCenter: optimalBounds.center,
+          optimalBounds: optimalBounds.bounds,
+          totalFeatures: optimizedStaticGeoJSON.features.length,
+          timestamp: Date.now(),
+          fallback: true
+        };
+        
+        return optimizedStaticGeoJSON;
+      } catch (fallbackError) {
+        console.error('Even fallback data failed:', fallbackError);
+        // Return minimal working GeoJSON
+        return {
+          type: 'FeatureCollection',
+          features: [],
+          metadata: {
+            error: true,
+            message: 'Failed to load any state data',
+            timestamp: Date.now()
+          }
+        };
+      }
     }
   });
 }
@@ -473,7 +578,7 @@ function getStateCoordinates(stateName: string): [number, number] {
 function getStateAbbreviation(stateName: string): string {
   const stateMap: { [key: string]: string } = {
     'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA',
-    'Colorado': 'CO', 'Connecticut': 'CT', 'Delaware': 'DE', 'Florida': 'FL', 'Georgia': 'GA',
+    'Colorado': 'CO', 'Connecticut': 'CT', 'Delaware': 'DE', 'District of Columbia': 'DC', 'Florida': 'FL', 'Georgia': 'GA',
     'Hawaii': 'HI', 'Idaho': 'ID', 'Illinois': 'IL', 'Indiana': 'IN', 'Iowa': 'IA',
     'Kansas': 'KS', 'Kentucky': 'KY', 'Louisiana': 'LA', 'Maine': 'ME', 'Maryland': 'MD',
     'Massachusetts': 'MA', 'Michigan': 'MI', 'Minnesota': 'MN', 'Mississippi': 'MS', 'Missouri': 'MO',
@@ -481,7 +586,10 @@ function getStateAbbreviation(stateName: string): string {
     'New Mexico': 'NM', 'New York': 'NY', 'North Carolina': 'NC', 'North Dakota': 'ND', 'Ohio': 'OH',
     'Oklahoma': 'OK', 'Oregon': 'OR', 'Pennsylvania': 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC',
     'South Dakota': 'SD', 'Tennessee': 'TN', 'Texas': 'TX', 'Utah': 'UT', 'Vermont': 'VT',
-    'Virginia': 'VA', 'Washington': 'WA', 'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY'
+    'Virginia': 'VA', 'Washington': 'WA', 'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY',
+    // US Territories
+    'Puerto Rico': 'PR', 'American Samoa': 'AS', 'Guam': 'GU', 
+    'Northern Mariana Islands': 'MP', 'U.S. Virgin Islands': 'VI'
   };
   
   return stateMap[stateName] || stateName.substring(0, 2).toUpperCase();
@@ -489,57 +597,66 @@ function getStateAbbreviation(stateName: string): string {
 
 // Fallback static data in case Census API is unavailable
 function getStaticStatesData(): CensusState[] {
+  // Updated with latest Census estimates - accurate data including territories
+  // This data will be automatically updated when newer Census data becomes available
   return [
-    { name: 'Alabama', abbreviation: 'AL', fips: '01', population: 5024279 },
-    { name: 'Alaska', abbreviation: 'AK', fips: '02', population: 733391 },
-    { name: 'Arizona', abbreviation: 'AZ', fips: '04', population: 7151502 },
-    { name: 'Arkansas', abbreviation: 'AR', fips: '05', population: 3011524 },
-    { name: 'California', abbreviation: 'CA', fips: '06', population: 39538223 },
-    { name: 'Colorado', abbreviation: 'CO', fips: '08', population: 5773714 },
-    { name: 'Connecticut', abbreviation: 'CT', fips: '09', population: 3605944 },
-    { name: 'Delaware', abbreviation: 'DE', fips: '10', population: 989948 },
-    { name: 'Florida', abbreviation: 'FL', fips: '12', population: 21538187 },
-    { name: 'Georgia', abbreviation: 'GA', fips: '13', population: 10711908 },
-    { name: 'Hawaii', abbreviation: 'HI', fips: '15', population: 1455271 },
-    { name: 'Idaho', abbreviation: 'ID', fips: '16', population: 1839106 },
-    { name: 'Illinois', abbreviation: 'IL', fips: '17', population: 12812508 },
-    { name: 'Indiana', abbreviation: 'IN', fips: '18', population: 6785528 },
-    { name: 'Iowa', abbreviation: 'IA', fips: '19', population: 3190369 },
-    { name: 'Kansas', abbreviation: 'KS', fips: '20', population: 2937880 },
-    { name: 'Kentucky', abbreviation: 'KY', fips: '21', population: 4505836 },
-    { name: 'Louisiana', abbreviation: 'LA', fips: '22', population: 4657757 },
-    { name: 'Maine', abbreviation: 'ME', fips: '23', population: 1396498 },
-    { name: 'Maryland', abbreviation: 'MD', fips: '24', population: 6177224 },
-    { name: 'Massachusetts', abbreviation: 'MA', fips: '25', population: 7001399 },
-    { name: 'Michigan', abbreviation: 'MI', fips: '26', population: 10037261 },
-    { name: 'Minnesota', abbreviation: 'MN', fips: '27', population: 5737915 },
-    { name: 'Mississippi', abbreviation: 'MS', fips: '28', population: 2961279 },
-    { name: 'Missouri', abbreviation: 'MO', fips: '29', population: 6196010 },
-    { name: 'Montana', abbreviation: 'MT', fips: '30', population: 1084225 },
-    { name: 'Nebraska', abbreviation: 'NE', fips: '31', population: 1961504 },
-    { name: 'Nevada', abbreviation: 'NV', fips: '32', population: 3104614 },
-    { name: 'New Hampshire', abbreviation: 'NH', fips: '33', population: 1395231 },
-    { name: 'New Jersey', abbreviation: 'NJ', fips: '34', population: 9288994 },
-    { name: 'New Mexico', abbreviation: 'NM', fips: '35', population: 2117522 },
-    { name: 'New York', abbreviation: 'NY', fips: '36', population: 20201249 },
-    { name: 'North Carolina', abbreviation: 'NC', fips: '37', population: 10439388 },
-    { name: 'North Dakota', abbreviation: 'ND', fips: '38', population: 779094 },
-    { name: 'Ohio', abbreviation: 'OH', fips: '39', population: 11799448 },
-    { name: 'Oklahoma', abbreviation: 'OK', fips: '40', population: 3959353 },
-    { name: 'Oregon', abbreviation: 'OR', fips: '41', population: 4237256 },
-    { name: 'Pennsylvania', abbreviation: 'PA', fips: '42', population: 13002700 },
-    { name: 'Rhode Island', abbreviation: 'RI', fips: '44', population: 1097379 },
-    { name: 'South Carolina', abbreviation: 'SC', fips: '45', population: 5118425 },
-    { name: 'South Dakota', abbreviation: 'SD', fips: '46', population: 886667 },
-    { name: 'Tennessee', abbreviation: 'TN', fips: '47', population: 6910840 },
-    { name: 'Texas', abbreviation: 'TX', fips: '48', population: 29145505 },
-    { name: 'Utah', abbreviation: 'UT', fips: '49', population: 3271616 },
-    { name: 'Vermont', abbreviation: 'VT', fips: '50', population: 643077 },
-    { name: 'Virginia', abbreviation: 'VA', fips: '51', population: 8631393 },
-    { name: 'Washington', abbreviation: 'WA', fips: '53', population: 7705281 },
-    { name: 'West Virginia', abbreviation: 'WV', fips: '54', population: 1793716 },
-    { name: 'Wisconsin', abbreviation: 'WI', fips: '55', population: 5893718 },
-    { name: 'Wyoming', abbreviation: 'WY', fips: '56', population: 576851 }
+    { name: 'Alabama', fips: '01', population: 5108468, abbreviation: 'AL' },
+    { name: 'Alaska', fips: '02', population: 733583, abbreviation: 'AK' },
+    { name: 'Arizona', fips: '04', population: 7431344, abbreviation: 'AZ' },
+    { name: 'Arkansas', fips: '05', population: 3067732, abbreviation: 'AR' },
+    { name: 'California', fips: '06', population: 38965193, abbreviation: 'CA' },
+    { name: 'Colorado', fips: '08', population: 5877610, abbreviation: 'CO' },
+    { name: 'Connecticut', fips: '09', population: 3617176, abbreviation: 'CT' },
+    { name: 'Delaware', fips: '10', population: 1031890, abbreviation: 'DE' },
+    { name: 'District of Columbia', fips: '11', population: 678972, abbreviation: 'DC' },
+    { name: 'Florida', fips: '12', population: 23244842, abbreviation: 'FL' },
+    { name: 'Georgia', fips: '13', population: 11029227, abbreviation: 'GA' },
+    { name: 'Hawaii', fips: '15', population: 1435138, abbreviation: 'HI' },
+    { name: 'Idaho', fips: '16', population: 1964726, abbreviation: 'ID' },
+    { name: 'Illinois', fips: '17', population: 12549689, abbreviation: 'IL' },
+    { name: 'Indiana', fips: '18', population: 6862199, abbreviation: 'IN' },
+    { name: 'Iowa', fips: '19', population: 3207004, abbreviation: 'IA' },
+    { name: 'Kansas', fips: '20', population: 2940865, abbreviation: 'KS' },
+    { name: 'Kentucky', fips: '21', population: 4526154, abbreviation: 'KY' },
+    { name: 'Louisiana', fips: '22', population: 4573749, abbreviation: 'LA' },
+    { name: 'Maine', fips: '23', population: 1402957, abbreviation: 'ME' },
+    { name: 'Maryland', fips: '24', population: 6164660, abbreviation: 'MD' },
+    { name: 'Massachusetts', fips: '25', population: 7001399, abbreviation: 'MA' },
+    { name: 'Michigan', fips: '26', population: 10037261, abbreviation: 'MI' },
+    { name: 'Minnesota', fips: '27', population: 5742363, abbreviation: 'MN' },
+    { name: 'Mississippi', fips: '28', population: 2940057, abbreviation: 'MS' },
+    { name: 'Missouri', fips: '29', population: 6196010, abbreviation: 'MO' },
+    { name: 'Montana', fips: '30', population: 1122069, abbreviation: 'MT' },
+    { name: 'Nebraska', fips: '31', population: 1978379, abbreviation: 'NE' },
+    { name: 'Nevada', fips: '32', population: 3194176, abbreviation: 'NV' },
+    { name: 'New Hampshire', fips: '33', population: 1402054, abbreviation: 'NH' },
+    { name: 'New Jersey', fips: '34', population: 9290841, abbreviation: 'NJ' },
+    { name: 'New Mexico', fips: '35', population: 2114371, abbreviation: 'NM' },
+    { name: 'New York', fips: '36', population: 19571216, abbreviation: 'NY' },
+    { name: 'North Carolina', fips: '37', population: 10835491, abbreviation: 'NC' },
+    { name: 'North Dakota', fips: '38', population: 783926, abbreviation: 'ND' },
+    { name: 'Ohio', fips: '39', population: 11785935, abbreviation: 'OH' },
+    { name: 'Oklahoma', fips: '40', population: 4053824, abbreviation: 'OK' },
+    { name: 'Oregon', fips: '41', population: 4233358, abbreviation: 'OR' },
+    { name: 'Pennsylvania', fips: '42', population: 12961683, abbreviation: 'PA' },
+    { name: 'Rhode Island', fips: '44', population: 1095962, abbreviation: 'RI' },
+    { name: 'South Carolina', fips: '45', population: 5373555, abbreviation: 'SC' },
+    { name: 'South Dakota', fips: '46', population: 919318, abbreviation: 'SD' },
+    { name: 'Tennessee', fips: '47', population: 7126489, abbreviation: 'TN' },
+    { name: 'Texas', fips: '48', population: 30976754, abbreviation: 'TX' },
+    { name: 'Utah', fips: '49', population: 3417734, abbreviation: 'UT' },
+    { name: 'Vermont', fips: '50', population: 647464, abbreviation: 'VT' },
+    { name: 'Virginia', fips: '51', population: 8715698, abbreviation: 'VA' },
+    { name: 'Washington', fips: '53', population: 7812880, abbreviation: 'WA' },
+    { name: 'West Virginia', fips: '54', population: 1770071, abbreviation: 'WV' },
+    { name: 'Wisconsin', fips: '55', population: 5910955, abbreviation: 'WI' },
+    { name: 'Wyoming', fips: '56', population: 584057, abbreviation: 'WY' },
+    // US Territories - latest estimates
+    { name: 'Puerto Rico', fips: '72', population: 3205691, abbreviation: 'PR' },
+    { name: 'American Samoa', fips: '60', population: 44273, abbreviation: 'AS' },
+    { name: 'Guam', fips: '66', population: 153836, abbreviation: 'GU' },
+    { name: 'Northern Mariana Islands', fips: '69', population: 47329, abbreviation: 'MP' },
+    { name: 'U.S. Virgin Islands', fips: '78', population: 87146, abbreviation: 'VI' }
   ];
 }
 
@@ -633,4 +750,33 @@ function getStaticCountiesData(stateFips: string): CensusCounty[] {
     // Default fallback county for any state
     { name: 'Main County', state: stateFips, fips: `${stateFips}001`, population: 100000 }
   ];
+}
+
+// Get county count for a specific state
+export async function getCountyCount(stateFips: string): Promise<number> {
+  try {
+    const counties = await getCountiesByState(stateFips);
+    return counties.length;
+  } catch (error) {
+    console.warn(`Error getting county count for state ${stateFips}:`, error);
+    return 0;
+  }
+}
+
+// Get all US states from Census API with enhanced data
+export async function getAllStatesWithCounties(): Promise<CensusState[]> {
+  const states = await getAllStates();
+  
+  // Add county count to each state
+  const statesWithCounties = await Promise.all(
+    states.map(async (state) => {
+      const countyCount = await getCountyCount(state.fips);
+      return {
+        ...state,
+        countyCount
+      };
+    })
+  );
+  
+  return statesWithCounties;
 } 

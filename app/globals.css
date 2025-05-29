@@ -209,8 +209,6 @@ nav,
     @apply bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600;
   }
 
-
-
   /* Consistent button styling - US Flag Navy Blue */
   .btn-primary {
     background-color: #002868 !important;
@@ -238,8 +236,7 @@ nav,
   .bg-blue-700,
   [class*="bg-blue-600"],
   [class*="bg-blue-700"] {
-    background-color: #002868 !important;
-    color: white !important;
+    background-color: rgb(37, 99, 235) !important; /* patriot-blue-600 */
   }
 
   button[class*="bg-blue-600"]:hover,
@@ -248,7 +245,7 @@ nav,
   .bg-blue-700:hover,
   [class*="bg-blue-600"]:hover,
   [class*="bg-blue-700"]:hover {
-    background-color: #001a4d !important;
+    background-color: rgb(29, 78, 216) !important; /* patriot-blue-700 */
   }
 
   .dark button[class*="bg-blue-600"],
@@ -257,8 +254,7 @@ nav,
   .dark .bg-blue-700,
   .dark [class*="bg-blue-600"],
   .dark [class*="bg-blue-700"] {
-    background-color: #002868 !important;
-    color: white !important;
+    background-color: rgb(37, 99, 235) !important; /* patriot-blue-600 */
   }
 
   .dark button[class*="bg-blue-600"]:hover,
@@ -267,7 +263,7 @@ nav,
   .dark .bg-blue-700:hover,
   .dark [class*="bg-blue-600"]:hover,
   .dark [class*="bg-blue-700"]:hover {
-    background-color: #001a4d !important;
+    background-color: rgb(29, 78, 216) !important; /* patriot-blue-700 */
   }
 
   .btn-secondary {
@@ -307,8 +303,8 @@ nav,
 
   /* Link styles */
   .patriot-link {
-    @apply text-blue-600 dark:text-blue-400 hover:text-blue-700 
-           dark:hover:text-blue-300 font-medium;
+    @apply text-patriot-blue-600 dark:text-patriot-blue-400 hover:text-patriot-blue-700
+    dark:hover:text-patriot-blue-300 font-medium;
   }
 
   /* Consistent text colors */
@@ -481,7 +477,13 @@ html.dark [data-radix-collection-item].glass-card,
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Ensure consistent modal and dialog styling */
+/* Only show leaflet containers that are properly nested in our components */
+.relative .leaflet-container,
+[class*="map"] .leaflet-container {
+  display: block !important;
+}
+
+/* Dark mode dialog and popover styles */
 .dark [data-radix-dialog-content],
 .dark [data-radix-popover-content],
 .dark [data-radix-dropdown-menu-content] {
@@ -490,346 +492,36 @@ html.dark [data-radix-collection-item].glass-card,
   color: rgb(255, 255, 255) !important;
 }
 
-/* Ensure consistent sheet/sidebar styling */
 .dark [data-radix-sheet-content] {
   background-color: rgb(31, 41, 55) !important; /* gray-800 */
   border-color: rgb(75, 85, 99) !important; /* gray-600 */
   color: rgb(255, 255, 255) !important;
 }
 
-/* Fix any remaining white backgrounds in dark mode */
-.dark .bg-white {
-  background-color: rgb(31, 41, 55) !important; /* gray-800 */
+/* Auth modal form field icon alignment fixes */
+[data-radix-dialog-content] .relative .absolute {
+  position: absolute !important;
+  left: 0.75rem !important; /* 12px */
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 1rem !important; /* 16px */
+  height: 1rem !important; /* 16px */
+  pointer-events: none !important;
 }
 
-.dark .text-gray-900 {
-  color: rgb(255, 255, 255) !important;
+/* Ensure input padding is correct for icons */
+[data-radix-dialog-content] .relative input[class*="pl-10"] {
+  padding-left: 2.5rem !important; /* 40px */
 }
 
-  .dark .text-gray-600 {
-    color: rgb(148, 163, 184) !important; /* slate-400 for better contrast */
-  }
-
-  /* Improve dark mode text readability */
-  .dark .text-gray-500 {
-    color: rgb(148, 163, 184) !important; /* slate-400 */
-  }
-
-  .dark .text-gray-700 {
-    color: rgb(203, 213, 225) !important; /* slate-300 */
-  }
-
-  .dark .text-gray-800 {
-    color: rgb(226, 232, 240) !important; /* slate-200 */
-  }
-
-  .dark .text-muted-foreground {
-    color: rgb(148, 163, 184) !important; /* slate-400 */
-  }
-
-  /* Comprehensive dark mode text fixes */
-  .dark .text-gray-400 {
-    color: rgb(156, 163, 175) !important; /* gray-400 */
-  }
-
-  .dark .text-gray-300 {
-    color: rgb(209, 213, 219) !important; /* gray-300 */
-  }
-
-  .dark .text-gray-200 {
-    color: rgb(229, 231, 235) !important; /* gray-200 */
-  }
-
-  .dark .text-gray-100 {
-    color: rgb(243, 244, 246) !important; /* gray-100 */
-  }
-
-  /* Fix any remaining low contrast text */
-  .dark .text-black\/60 {
-    color: rgb(203, 213, 225) !important; /* slate-300 */
-  }
-
-  .dark .text-black\/80 {
-    color: rgb(226, 232, 240) !important; /* slate-200 */
-  }
-
-  .dark .text-white\/60 {
-    color: rgb(203, 213, 225) !important; /* slate-300 */
-  }
-
-  .dark .text-white\/80 {
-    color: rgb(226, 232, 240) !important; /* slate-200 */
-  }
-
-  /* FIX LOGIN BUTTON VISIBILITY IN DARK MODE */
-  .dark button[class*="bg-white"] {
-    background-color: rgb(51, 65, 85) !important; /* slate-600 */
-    color: rgb(248, 250, 252) !important;
-    border-color: rgb(71, 85, 105) !important; /* slate-500 */
-  }
-
-  .dark button[class*="bg-white"]:hover {
-    background-color: rgb(71, 85, 105) !important; /* slate-500 */
-    color: rgb(248, 250, 252) !important;
-  }
-
-  /* ELIMINATE ALL PINK/ROSE/MAGENTA BUTTON COLORS */
-  button[class*="pink"],
-  button[class*="rose"],
-  button[class*="magenta"],
-  button[class*="fuchsia"],
-  .btn-pink,
-  .btn-rose,
-  .btn-magenta,
-  .btn-fuchsia,
-  [style*="background-color: pink"],
-  [style*="background-color: rose"],
-  [style*="background-color: magenta"],
-  [style*="background-color: fuchsia"],
-  [style*="background: pink"],
-  [style*="background: rose"],
-  [style*="background: magenta"],
-  [style*="background: fuchsia"] {
-    background-color: rgb(37, 99, 235) !important; /* blue-600 */
-    color: white !important;
-    border-color: rgb(37, 99, 235) !important;
-  }
-
-  .dark button[class*="pink"],
-  .dark button[class*="rose"],
-  .dark button[class*="magenta"],
-  .dark button[class*="fuchsia"],
-  .dark .btn-pink,
-  .dark .btn-rose,
-  .dark .btn-magenta,
-  .dark .btn-fuchsia,
-  .dark [style*="background-color: pink"],
-  .dark [style*="background-color: rose"],
-  .dark [style*="background-color: magenta"],
-  .dark [style*="background-color: fuchsia"],
-  .dark [style*="background: pink"],
-  .dark [style*="background: rose"],
-  .dark [style*="background: magenta"],
-  .dark [style*="background: fuchsia"] {
-    background-color: rgb(96, 165, 250) !important; /* blue-400 */
-    color: rgb(3, 7, 18) !important;
-    border-color: rgb(96, 165, 250) !important;
-  }
-
-  /* Ensure all buttons have proper contrast in dark mode */
-  .dark button {
-    color: inherit !important;
-  }
-
-  .dark button:not([class*="bg-"]):not([style*="background"]) {
-    background-color: rgb(51, 65, 85) !important; /* slate-600 */
-    color: rgb(248, 250, 252) !important;
-    border-color: rgb(71, 85, 105) !important; /* slate-500 */
-  }
-
-.dark .border-gray-200 {
-  border-color: rgb(75, 85, 99) !important; /* gray-600 */
-}
-
-/* COMPREHENSIVE PLACEHOLDER FIX */
-input::placeholder,
-textarea::placeholder,
-select::placeholder,
-*::placeholder {
-  color: rgb(107, 114, 128) !important; /* gray-500 */
-  opacity: 1 !important;
-}
-
-.dark input::placeholder,
-.dark textarea::placeholder,
-.dark select::placeholder,
-.dark *::placeholder {
-  color: rgb(156, 163, 175) !important; /* gray-400 */
-  opacity: 1 !important;
-}
-
-/* FINAL COMPREHENSIVE DARK MODE FIXES */
-.dark * {
-  transition: none !important;
-  animation-duration: 0s !important;
-}
-
-/* Ensure all text elements have proper contrast in dark mode */
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: rgb(248, 250, 252) !important; /* slate-50 */
-}
-
-.dark p, .dark span, .dark div:not([class*="bg-"]) {
-  color: rgb(226, 232, 240) !important; /* slate-200 */
-}
-
-.dark label {
-  color: rgb(226, 232, 240) !important; /* slate-200 */
-}
-
-/* Fix any remaining card backgrounds */
-.dark .card, .dark [class*="card"] {
-  background-color: rgb(30, 41, 59) !important; /* slate-700 */
-  border-color: rgb(51, 65, 85) !important; /* slate-600 */
-  color: rgb(248, 250, 252) !important; /* slate-50 */
-}
-
-/* COMPREHENSIVE TEXT COLOR FIX */
-input,
-textarea,
-select,
-button,
-span,
-div,
-p,
-h1, h2, h3, h4, h5, h6 {
-  color: inherit;
-}
-
-/* Ensure all inputs have consistent styling */
-input:not([type="checkbox"]):not([type="radio"]),
-textarea,
-select {
-  background-color: white !important;
-  color: rgb(17, 24, 39) !important; /* gray-900 */
-  border-color: rgb(229, 231, 235) !important; /* gray-200 */
-}
-
-.dark input:not([type="checkbox"]):not([type="radio"]),
-.dark textarea,
-.dark select {
-  background-color: rgb(31, 41, 55) !important; /* gray-800 */
-  color: rgb(255, 255, 255) !important;
-  border-color: rgb(75, 85, 99) !important; /* gray-600 */
-}
-
-/* REMOVE ALL TRANSITIONS FOR INSTANT THEME SWITCHING */
-*,
-*::before,
-*::after {
-  transition: none !important;
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  animation-duration: 0s !important;
-  -webkit-animation-duration: 0s !important;
-  transform: none !important;
-}
-
-/* Override all Tailwind transition classes */
-.transition-all,
-.transition-colors,
-.transition-shadow,
-.transition-transform,
-.transition-opacity,
-.transition,
-.duration-75,
-.duration-100,
-.duration-150,
-.duration-200,
-.duration-300,
-.duration-500,
-.duration-700,
-.duration-1000 {
-  transition: none !important;
-  animation-duration: 0s !important;
-}
-
-/* NUCLEAR OPTION - ELIMINATE ALL PINK/MAGENTA COLORS */
-*,
-*::before,
-*::after,
-input,
-textarea,
-select,
-button,
-div,
-span,
-p,
-h1, h2, h3, h4, h5, h6,
-label,
-a,
-li,
-td,
-th {
-  color: inherit !important;
-}
-
-/* Force specific color overrides for any pink/magenta elements */
-*[style*="color: rgb(236, 72, 153)"],
-*[style*="color: rgb(219, 39, 119)"],
-*[style*="color: rgb(190, 24, 93)"],
-*[style*="color: #ec4899"],
-*[style*="color: #db2777"],
-*[style*="color: #be185d"],
-*[style*="color: pink"],
-*[style*="color: magenta"],
-*[style*="color: fuchsia"],
-*[class*="text-pink"],
-*[class*="text-magenta"],
-*[class*="text-fuchsia"],
-*[class*="text-rose"] {
-  color: rgb(17, 24, 39) !important; /* gray-900 */
-}
-
-.dark *[style*="color: rgb(236, 72, 153)"],
-.dark *[style*="color: rgb(219, 39, 119)"],
-.dark *[style*="color: rgb(190, 24, 93)"],
-.dark *[style*="color: #ec4899"],
-.dark *[style*="color: #db2777"],
-.dark *[style*="color: #be185d"],
-.dark *[style*="color: pink"],
-.dark *[style*="color: magenta"],
-.dark *[style*="color: fuchsia"],
-.dark *[class*="text-pink"],
-.dark *[class*="text-magenta"],
-.dark *[class*="text-fuchsia"],
-.dark *[class*="text-rose"] {
-  color: rgb(255, 255, 255) !important; /* white */
-}
-
-/* COMPREHENSIVE PLACEHOLDER FIX */
-input::placeholder,
-textarea::placeholder,
-select::placeholder,
-*::placeholder {
-  color: rgb(107, 114, 128) !important; /* gray-500 */
-  opacity: 1 !important;
-}
-
-.dark input::placeholder,
-.dark textarea::placeholder,
-.dark select::placeholder,
-.dark *::placeholder {
-  color: rgb(156, 163, 175) !important; /* gray-400 */
-  opacity: 1 !important;
-}
-
-/* COMPREHENSIVE TEXT COLOR FIX */
-input,
-textarea,
-select,
-button,
-span,
-div,
-p,
-h1, h2, h3, h4, h5, h6 {
-  color: inherit;
-}
-
-/* Ensure all inputs have consistent styling */
-input:not([type="checkbox"]):not([type="radio"]),
-textarea,
-select {
-  background-color: white !important;
-  color: rgb(17, 24, 39) !important; /* gray-900 */
-  border-color: rgb(229, 231, 235) !important; /* gray-200 */
-}
-
-.dark input:not([type="checkbox"]):not([type="radio"]),
-.dark textarea,
-.dark select {
-  background-color: rgb(31, 41, 55) !important; /* gray-800 */
-  color: rgb(255, 255, 255) !important;
-  border-color: rgb(75, 85, 99) !important; /* gray-600 */
+/* Ensure password toggle buttons are positioned correctly */
+[data-radix-dialog-content] .relative button[class*="absolute"][class*="right-0"] {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 0.75rem !important;
 }

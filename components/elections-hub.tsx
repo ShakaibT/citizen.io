@@ -71,7 +71,7 @@ const mockElections: Election[] = [
 ]
 
 const partyColors = {
-  Democratic: "bg-blue-100 text-blue-800",
+  Democratic: "bg-patriot-blue-100 text-patriot-blue-800",
   Republican: "bg-red-100 text-red-800",
   Independent: "bg-purple-100 text-purple-800",
   Nonpartisan: "bg-gray-100 text-gray-800",

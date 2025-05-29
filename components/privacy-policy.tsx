@@ -35,7 +35,7 @@ export function PrivacyPolicy() {
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <UserCheck className="h-5 w-5 mt-0.5 text-blue-600 dark:text-blue-400" />
+                <UserCheck className="h-5 w-5 mt-0.5 text-patriot-blue-600 dark:text-patriot-blue-400" />
                 <div>
                   <h4 className="font-semibold text-black dark:text-white">Account Information</h4>
                   <p>If you create an account, we store your email and preferences to provide personalized civic updates.</p>

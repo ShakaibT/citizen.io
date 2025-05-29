@@ -23,26 +23,32 @@ if (isSupabaseConfigured) {
     }
   })
 } else {
-  // Create a mock client that throws helpful errors
+  // Create a mock client that returns promises instead of throwing
   supabaseClient = {
     auth: {
       getSession: () => {
-        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        console.warn("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        return Promise.resolve({ data: { session: null }, error: null })
       },
       signInWithOAuth: () => {
-        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        console.warn("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        return Promise.reject(new Error("Supabase is not configured"))
       },
       signInWithPassword: () => {
-        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        console.warn("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        return Promise.reject(new Error("Supabase is not configured"))
       },
       signUp: () => {
-        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        console.warn("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        return Promise.reject(new Error("Supabase is not configured"))
       },
       signOut: () => {
-        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        console.warn("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        return Promise.reject(new Error("Supabase is not configured"))
       },
       resetPasswordForEmail: () => {
-        throw new Error("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        console.warn("Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables.")
+        return Promise.reject(new Error("Supabase is not configured"))
       },
       onAuthStateChange: () => {
         return { data: { subscription: { unsubscribe: () => {} } } }

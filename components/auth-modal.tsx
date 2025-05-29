@@ -73,12 +73,7 @@ export function AuthModal({ open, onOpenChange, defaultTab = "signin", title, de
     setError(null)
     try {
       if (provider === "google") {
-        // For now, show a message that Google auth needs to be configured
-        toast({
-          title: "Setup Required",
-          description: "Google authentication needs to be configured in Supabase first.",
-        })
-        return
+        await signInWithGoogle()
       } else if (provider === "github") {
         await signInWithGitHub()
       } else if (provider === "discord") {
@@ -96,7 +91,12 @@ export function AuthModal({ open, onOpenChange, defaultTab = "signin", title, de
         description: `Redirecting to ${provider} for authentication.`,
       })
     } catch (error: any) {
-      setError(error.message || `Failed to sign in with ${provider}`)
+      console.error(`${provider} auth error:`, error)
+      if (error.message?.includes('OAuth') || error.message?.includes('provider')) {
+        setError(`${provider.charAt(0).toUpperCase() + provider.slice(1)} authentication is not configured yet. Please contact support.`)
+      } else {
+        setError(error.message || `Failed to sign in with ${provider}`)
+      }
     } finally {
       setLoading(false)
     }
@@ -183,12 +183,11 @@ export function AuthModal({ open, onOpenChange, defaultTab = "signin", title, de
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-[480px] max-h-[90vh] overflow-y-auto backdrop-blur-md bg-white dark:bg-patriot-gray-900 border border-black/10 dark:border-white/20 [&>button]:absolute [&>button]:right-4 [&>button]:top-4 [&>button]:text-black [&>button]:dark:text-white [&>button]:hover:text-black [&>button]:dark:hover:text-white [&>button]:hover:bg-transparent [&>button]:data-[state=open]:bg-transparent [&>button]:data-[state=open]:text-black [&>button]:dark:data-[state=open]:text-white">
+      <DialogContent className="bg-white dark:bg-patriot-gray-900 border border-black/10 dark:border-white/20 shadow-2xl max-h-[85vh] overflow-y-auto">
         <DialogHeader className="pt-4 pb-6">
           <DialogTitle className="text-black dark:text-white text-2xl font-bold">{title || "Join Citizen"}</DialogTitle>
-          <DialogDescription className="text-black/80 dark:text-white/80 mt-3 text-base leading-relaxed">
-            {description ||
-              "Sign in to track legislation, save articles, contact representatives, and get personalized civic updates."}
+          <DialogDescription className="text-black/70 dark:text-white/70 text-base">
+            Join thousands of engaged citizens staying informed about their democracy.
           </DialogDescription>
         </DialogHeader>
 
@@ -311,7 +310,7 @@ export function AuthModal({ open, onOpenChange, defaultTab = "signin", title, de
                 </div>
               </div>
 
-              <Button type="submit" className="w-full bg-patriot-blue-600 hover:bg-patriot-blue-700 text-white" disabled={loading}>
+              <Button type="submit" className="w-full text-white" style={{backgroundColor: '#002868'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#001a4d'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#002868'} disabled={loading}>
                 {loading ? "Signing in..." : "Sign In"}
               </Button>
             </form>
@@ -470,7 +469,7 @@ export function AuthModal({ open, onOpenChange, defaultTab = "signin", title, de
                 </div>
               </div>
 
-              <Button type="submit" className="w-full bg-patriot-blue-600 hover:bg-patriot-blue-700 text-white" disabled={loading}>
+              <Button type="submit" className="w-full text-white" style={{backgroundColor: '#002868'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#001a4d'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#002868'} disabled={loading}>
                 {loading ? "Creating account..." : "Create Account"}
               </Button>
             </form>
@@ -502,7 +501,7 @@ export function AuthModal({ open, onOpenChange, defaultTab = "signin", title, de
                   </div>
                 </div>
 
-                <Button type="submit" className="w-full bg-patriot-blue-600 hover:bg-patriot-blue-700 text-white" disabled={loading}>
+                <Button type="submit" className="w-full text-white" style={{backgroundColor: '#002868'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#001a4d'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#002868'} disabled={loading}>
                   {loading ? "Sending..." : "Send Reset Link"}
                 </Button>
               </form>

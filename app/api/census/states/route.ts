@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
-import { getAllStates, getStatesGeoJSON } from '@/lib/census-api';
+import { getAllStates, getAllStatesWithCounties, getStatesGeoJSON } from '@/lib/census-api';
 
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const format = searchParams.get('format');
+    const includeCounties = searchParams.get('includeCounties') === 'true';
     
     if (format === 'geojson') {
       // Return GeoJSON format for mapping
@@ -12,7 +13,7 @@ export async function GET(request: Request) {
       return NextResponse.json(geoData);
     } else {
       // Return simple array format
-      const states = await getAllStates();
+      const states = includeCounties ? await getAllStatesWithCounties() : await getAllStates();
       return NextResponse.json(states);
     }
   } catch (error) {

@@ -2,12 +2,13 @@ import React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import "./leaflet.css"
+import "leaflet/dist/leaflet.css"
 import { AuthProvider } from "../components/auth-provider"
 import { LocationProvider } from "../components/location-provider"
 import { ThemeProvider } from "../components/theme-provider"
 import { ThemeBackground } from "../components/theme-background"
 import { Toaster } from "../components/ui/toaster"
+import { AuthDebug } from "../components/auth-debug"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -51,6 +52,7 @@ export default function RootLayout({
             <LocationProvider>
               {children}
               <Toaster />
+              <AuthDebug />
             </LocationProvider>
           </AuthProvider>
         </ThemeProvider>

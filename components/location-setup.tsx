@@ -28,9 +28,19 @@ import { useAuth } from "@/components/auth-provider"
 import { useToast } from "@/hooks/use-toast"
 import { useDebounce } from "@/hooks/use-debounce"
 import React from "react"
-import LeafletMap from "@/components/leaflet-map"
+import dynamic from "next/dynamic"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useTheme } from "next-themes"
+
+// Dynamic import to prevent SSR issues
+const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-gray-50 rounded-lg">
+      <div className="text-gray-600">Loading map...</div>
+    </div>
+  )
+})
 
 // Add Google Maps API type declarations
 declare global {
@@ -64,6 +74,354 @@ interface LocationData {
 
 interface LocationSetupProps {
   onLocationSet: (location: LocationData) => void
+}
+
+// Visual Narrative Carousel Component
+function PreferenceCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  
+  const slides = [
+    {
+      icon: Bell,
+      title: "Stay Informed",
+      subtitle: "Never miss what matters",
+      description: "Get alerts about local school board votes, city council meetings, and legislation that affects your daily life.",
+      example: "🏫 School Board Meeting Tomorrow: Budget Vote",
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: Users,
+      title: "Take Action",
+      subtitle: "Make your voice heard",
+      description: "Contact your representatives with one click. Join campaigns and connect with like-minded citizens in your area.",
+      example: "📞 Contact Rep. Johnson about Bill HR-1234",
+      color: "from-green-500 to-green-600"
+    },
+    {
+      icon: MapPin,
+      title: "Stay Connected",
+      subtitle: "Personalized to your location",
+      description: "Track multiple addresses - home, work, family. Get updates for all the places that matter to you.",
+      example: "📍 3 locations saved • 12 active alerts",
+      color: "from-purple-500 to-purple-600"
+    }
+  ]
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 6000)
+    return () => clearInterval(timer)
+  }, [slides.length])
+
+  const currentSlideData = slides[currentSlide]
+  const IconComponent = currentSlideData.icon
+
+  return (
+    <div className="max-w-lg mx-auto text-center text-white px-8">
+      {/* Main Content */}
+      <div className="mb-8">
+        <div className={`w-24 h-24 bg-gradient-to-br ${currentSlideData.color} rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl transform transition-all duration-500 hover:scale-105`}>
+          <IconComponent className="h-12 w-12 text-white" />
+        </div>
+        
+        <h2 className="text-4xl font-bold mb-3 transition-all duration-500">
+          {currentSlideData.title}
+        </h2>
+        
+        <p className="text-xl text-blue-100 mb-4 font-medium">
+          {currentSlideData.subtitle}
+        </p>
+        
+        <p className="text-blue-200 text-lg leading-relaxed mb-6">
+          {currentSlideData.description}
+        </p>
+        
+        {/* Example Preview */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+          <div className="text-sm text-blue-100 mb-1">Example:</div>
+          <div className="text-white font-medium">{currentSlideData.example}</div>
+        </div>
+      </div>
+
+      {/* Progress Indicators */}
+      <div className="flex justify-center space-x-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-white shadow-lg' 
+                : 'bg-white/30 hover:bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// Signup Form Component
+function SignupForm({ 
+  validatedAddress, 
+  onSignup, 
+  onContinueAsGuest,
+  onChangeLocation 
+}: { 
+  validatedAddress: string | null
+  onSignup: () => void
+  onContinueAsGuest: () => void
+  onChangeLocation?: () => void
+}) {
+  const [activeTab, setActiveTab] = useState<'signup' | 'guest'>('signup')
+  const [email, setEmail] = useState('')
+  const [zipCode, setZipCode] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [locationFacts, setLocationFacts] = useState<any>(null)
+
+  // Mock function to get location facts - in real app this would call an API
+  const getLocationFacts = (address: string) => {
+    // Extract state from address for demo purposes
+    const stateMatch = address.match(/,\s*([A-Z]{2})\s*\d{5}/)
+    const state = stateMatch ? stateMatch[1] : 'Unknown'
+    
+    // Mock data - in real app this would come from Census API
+    const mockFacts = {
+      'CA': { population: '39.5M', counties: 58, founded: 1850, nickname: 'Golden State' },
+      'TX': { population: '30.0M', counties: 254, founded: 1845, nickname: 'Lone Star State' },
+      'NY': { population: '19.3M', counties: 62, founded: 1788, nickname: 'Empire State' },
+      'FL': { population: '22.6M', counties: 67, founded: 1845, nickname: 'Sunshine State' },
+      'IL': { population: '12.6M', counties: 102, founded: 1818, nickname: 'Prairie State' },
+    }
+    
+    return mockFacts[state as keyof typeof mockFacts] || { 
+      population: '2.1M', 
+      counties: 64, 
+      founded: 1876, 
+      nickname: 'Great State' 
+    }
+  }
+
+  React.useEffect(() => {
+    if (validatedAddress) {
+      const facts = getLocationFacts(validatedAddress)
+      setLocationFacts(facts)
+    }
+  }, [validatedAddress])
+
+  return (
+    <div className="space-y-6">
+      {/* Location Summary Section */}
+      {validatedAddress && (
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-200 dark:border-blue-800 overflow-hidden">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-5 w-5 text-white" />
+                <span className="text-white font-semibold">Your Location</span>
+              </div>
+              <button
+                onClick={onChangeLocation}
+                className="text-blue-100 hover:text-white text-sm font-medium hover:underline transition-colors"
+              >
+                Change Location
+              </button>
+            </div>
+          </div>
+          
+          {/* Location Details */}
+          <div className="p-4">
+            <div className="mb-4">
+              <div className="text-sm text-blue-600 dark:text-blue-400 font-medium mb-1">Validated Address</div>
+              <div className="text-slate-900 dark:text-white font-semibold">{validatedAddress}</div>
+            </div>
+            
+            {/* County Facts */}
+            {locationFacts && (
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white dark:bg-slate-800 rounded-lg p-3 border border-blue-200 dark:border-blue-700">
+                  <div className="text-xs text-slate-600 dark:text-slate-400 mb-1">State Population</div>
+                  <div className="text-lg font-bold text-blue-600 dark:text-blue-400">{locationFacts.population}</div>
+                </div>
+                
+                <div className="bg-white dark:bg-slate-800 rounded-lg p-3 border border-blue-200 dark:border-blue-700">
+                  <div className="text-xs text-slate-600 dark:text-slate-400 mb-1">Counties</div>
+                  <div className="text-lg font-bold text-green-600 dark:text-green-400">{locationFacts.counties}</div>
+                </div>
+                
+                <div className="bg-white dark:bg-slate-800 rounded-lg p-3 border border-blue-200 dark:border-blue-700">
+                  <div className="text-xs text-slate-600 dark:text-slate-400 mb-1">Statehood</div>
+                  <div className="text-lg font-bold text-purple-600 dark:text-purple-400">{locationFacts.founded}</div>
+                </div>
+                
+                <div className="bg-white dark:bg-slate-800 rounded-lg p-3 border border-blue-200 dark:border-blue-700">
+                  <div className="text-xs text-slate-600 dark:text-slate-400 mb-1">Nickname</div>
+                  <div className="text-sm font-semibold text-slate-700 dark:text-slate-300">{locationFacts.nickname}</div>
+                </div>
+              </div>
+            )}
+            
+            {/* Quick Stats */}
+            <div className="mt-4 p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-700">
+              <div className="flex items-center space-x-2 mb-2">
+                <TrendingUp className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                <span className="text-sm font-medium text-blue-900 dark:text-blue-100">What you'll discover:</span>
+              </div>
+              <div className="text-xs text-blue-800 dark:text-blue-200 space-y-1">
+                <div>• Your federal and state representatives</div>
+                <div>• Local legislation and ballot measures</div>
+                <div>• Upcoming elections and voting locations</div>
+                <div>• Community meetings and civic events</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Tab Navigation */}
+      <div className="flex bg-slate-100 dark:bg-slate-800 rounded-xl p-1">
+        <button
+          onClick={() => setActiveTab('signup')}
+          className={`flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
+            activeTab === 'signup'
+              ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+          }`}
+        >
+          Create Account
+        </button>
+        <button
+          onClick={() => setActiveTab('guest')}
+          className={`flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
+            activeTab === 'guest'
+              ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+          }`}
+        >
+          Continue as Guest
+        </button>
+      </div>
+
+      {/* Tab Content */}
+      {activeTab === 'signup' ? (
+        <div className="space-y-4">
+          {/* Benefits Preview */}
+          <div className="grid gap-3 mb-6">
+            <div className="flex items-center space-x-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <Star className="h-4 w-4 text-white" />
+              </div>
+              <div>
+                <div className="text-sm font-medium text-slate-900 dark:text-white">Save & track legislation</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">Bookmark bills that matter to you</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+              <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                <Bell className="h-4 w-4 text-white" />
+              </div>
+              <div>
+                <div className="text-sm font-medium text-slate-900 dark:text-white">Smart notifications</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">Only get alerts you care about</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Form Fields */}
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                Email Address
+              </label>
+              <Input
+                type="email"
+                placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                ZIP Code
+              </label>
+              <Input
+                type="text"
+                placeholder="12345"
+                value={zipCode}
+                onChange={(e) => setZipCode(e.target.value)}
+                className="w-full"
+              />
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <Button
+            onClick={onSignup}
+            disabled={loading || !email || !zipCode}
+            className="w-full bg-gradient-to-r from-patriot-blue-600 to-patriot-red-600 hover:from-patriot-blue-700 hover:to-patriot-red-700 text-white font-semibold py-4 text-base rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          >
+            {loading ? (
+              <div className="flex items-center justify-center">
+                <Loader2 className="animate-spin h-5 w-5 mr-2" />
+                Creating Account...
+              </div>
+            ) : (
+              <div className="flex items-center justify-center">
+                <UserPlus className="h-5 w-5 mr-2" />
+                Start Your Dashboard
+              </div>
+            )}
+          </Button>
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {/* Guest Benefits */}
+          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
+            <div className="flex items-start space-x-3">
+              <Globe2 className="h-5 w-5 text-amber-600 dark:text-amber-400 mt-0.5" />
+              <div>
+                <div className="text-sm font-medium text-amber-900 dark:text-amber-100">
+                  Explore without signing up
+                </div>
+                <div className="text-xs text-amber-700 dark:text-amber-300 mt-1">
+                  Browse civic info for your area • Create account anytime to save progress
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ZIP Code Input */}
+          <div>
+            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              ZIP Code (Optional)
+            </label>
+            <Input
+              type="text"
+              placeholder="Enter ZIP to see local info"
+              value={zipCode}
+              onChange={(e) => setZipCode(e.target.value)}
+              className="w-full"
+            />
+          </div>
+
+          {/* Guest CTA */}
+          <Button
+            onClick={onContinueAsGuest}
+            variant="outline"
+            className="w-full py-4 text-base rounded-xl border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold"
+          >
+            <Globe2 className="h-5 w-5 mr-2" />
+            Explore Without Account
+          </Button>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export function LocationSetup({ onLocationSet }: LocationSetupProps) {
@@ -106,12 +464,6 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
     boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
   }
 
-
-
-
-
-
-
   // Handle debounced address geocoding for real-time map updates
   React.useEffect(() => {
     if (debouncedAddress.length > 10 && window.google && window.google.maps) {
@@ -151,8 +503,16 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
     console.log("Google Maps API Key check:", { 
       hasKey: !!apiKey, 
       keyStart: apiKey?.substring(0, 10),
-      googleLoaded: !!window.google 
+      googleLoaded: !!window.google,
+      existingScript: !!document.querySelector('script[src*="maps.googleapis.com"]')
     })
+    
+    // Check if Google Maps script is already loaded or loading
+    const existingScript = document.querySelector('script[src*="maps.googleapis.com"]')
+    if (existingScript) {
+      console.log("Google Maps script already exists, skipping load")
+      return
+    }
     
     if (!window.google) {
       if (!apiKey) {
@@ -169,6 +529,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
       script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`
       script.async = true
       script.defer = true
+      script.id = "google-maps-script" // Add ID to prevent duplicates
       script.onload = () => {
         console.log("Google Maps API loaded successfully")
         // Test if the API is working
@@ -541,6 +902,14 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
     }
   }
 
+  const handleChangeLocation = () => {
+    setValidatedAddress(null)
+    setPendingLocationData(null)
+    setSelectedLocationPin(null)
+    setMapZoomLocation(null)
+    setStep("address")
+  }
+
   const handleAuthSuccess = () => {
     setAuthModalOpen(false)
     if (pendingLocationData) {
@@ -696,79 +1065,70 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "auth-prompt") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-patriot-blue-50 via-white to-patriot-red-50 dark:from-patriot-gray-950 dark:via-patriot-gray-900 dark:to-patriot-gray-950 flex items-center justify-center p-4">
+      <div className="preferences-v2 min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden">
         {/* Theme Toggle */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-6 right-6 z-50">
           <ThemeToggle />
         </div>
-        <div className="max-w-2xl w-full">
-          <Card className="patriot-card shadow-2xl">
-            <CardHeader className="text-center pb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-patriot-blue-600 to-patriot-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-white" />
-              </div>
-              <CardTitle className="text-2xl text-black dark:text-white">Save Your Preferences</CardTitle>
-              <CardDescription className="text-base text-black/80 dark:text-white/80">
-                Create an account to save your location and get personalized civic updates
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {validatedAddress && (
-                <Alert className="border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20">
-                  <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
-                  <AlertDescription className="text-green-800 dark:text-green-300">
-                    <strong>Location Validated:</strong> {validatedAddress}
-                  </AlertDescription>
-                </Alert>
-              )}
+        
+        {/* Split Screen Layout */}
+        <div className="flex min-h-screen">
+          {/* Left Panel - Visual Storytelling (60%) */}
+          <div className="w-3/5 relative bg-gradient-to-br from-patriot-blue-600 via-patriot-blue-700 to-patriot-red-600 flex items-center justify-center overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+              <div className="absolute bottom-32 right-32 w-24 h-24 bg-white rounded-full animate-pulse delay-1000"></div>
+              <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full animate-pulse delay-2000"></div>
+            </div>
+            
+            {/* Visual Narrative Carousel */}
+            <PreferenceCarousel />
+          </div>
 
-              {/* Benefits of creating an account */}
-              <div className="space-y-4">
-                <h3 className="font-semibold text-black dark:text-white">With an account, you can:</h3>
-                <div className="grid gap-3">
-                  <div className="flex items-center space-x-3 p-3 bg-patriot-blue-50 dark:bg-patriot-blue-900/20 rounded-lg border border-patriot-blue-200 dark:border-patriot-blue-800">
-                    <Star className="h-5 w-5 text-patriot-blue-600 dark:text-patriot-blue-400" />
-                    <span className="text-sm text-black/80 dark:text-white/80">
-                      Track legislation and save articles
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
-                    <Bell className="h-5 w-5 text-green-600 dark:text-green-400" />
-                    <span className="text-sm text-black/80 dark:text-white/80">Get personalized notifications</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-patriot-red-50 dark:bg-patriot-red-900/20 rounded-lg border border-patriot-red-200 dark:border-patriot-red-800">
-                    <Users className="h-5 w-5 text-patriot-red-600 dark:text-patriot-red-400" />
-                    <span className="text-sm text-black/80 dark:text-white/80">Contact your representatives</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
-                    <MapPin className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
-                    <span className="text-sm text-black/80 dark:text-white/80">Save multiple addresses</span>
-                  </div>
+          {/* Right Panel - Signup/Action Area (40%) */}
+          <div className="w-2/5 bg-white dark:bg-slate-900 flex flex-col">
+            {/* Header */}
+            <div className="p-8 border-b border-slate-200 dark:border-slate-700">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-patriot-blue-600 to-patriot-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Shield className="h-8 w-8 text-white" />
                 </div>
+                <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+                  Create Your Civic Dashboard
+                </h1>
+                <p className="text-slate-600 dark:text-slate-400 text-sm">
+                  Join thousands staying informed about their democracy
+                </p>
               </div>
+            </div>
 
-              <div className="space-y-3">
-                <Button
+            {/* Main Content Area */}
+            <div className="flex-1 p-8">
+              <SignupForm 
+                validatedAddress={validatedAddress}
+                onSignup={() => setAuthModalOpen(true)}
+                onContinueAsGuest={handleContinueWithoutAccount}
+                onChangeLocation={handleChangeLocation}
+              />
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50">
+              <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
+                  <Shield className="h-4 w-4" />
+                  <span>We don't sell your data</span>
+                </div>
+                <button
                   onClick={() => setAuthModalOpen(true)}
-                  className="w-full patriot-button-primary py-6 text-lg rounded-xl shadow-xl"
+                  className="text-patriot-blue-600 dark:text-patriot-blue-400 hover:underline font-medium"
                 >
-                  Create Account & Save Location
-                </Button>
-
-                <Button
-                  onClick={handleContinueWithoutAccount}
-                  variant="outline"
-                  className="w-full py-6 text-lg rounded-xl border-patriot-gray-300 dark:border-patriot-gray-600"
-                >
-                  Continue Without Account
-                </Button>
+                  Already have an account?
+                </button>
               </div>
-
-              <p className="text-xs text-black/80 dark:text-white/80 text-center">
-                You can always create an account later from the main navigation
-              </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
 
         <AuthModal
@@ -784,243 +1144,303 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "address") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-patriot-blue-50 via-white to-patriot-red-50 dark:from-patriot-gray-950 dark:via-patriot-gray-900 dark:to-patriot-gray-950 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-patriot-blue-50 via-white to-patriot-red-50 dark:from-patriot-gray-950 dark:via-patriot-gray-900 dark:to-patriot-gray-950 flex">
         {/* Theme Toggle */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-6 right-6 z-50">
           <ThemeToggle />
         </div>
-        <div className="max-w-6xl w-full">
-          <div className="text-center mb-8">
+        
+        {/* Left Panel - Address Input & Information */}
+        <div className="w-1/3 min-h-screen bg-white/90 dark:bg-patriot-gray-900/90 backdrop-blur-xl border-r border-patriot-gray-200/50 dark:border-patriot-gray-700/50 flex flex-col">
+          {/* Header Section */}
+          <div className="p-8 border-b border-patriot-gray-200/50 dark:border-patriot-gray-700/50">
             <Button
               variant="ghost"
               onClick={() => setStep("welcome")}
-              className="mb-4 text-black/80 dark:text-white/80 hover:text-white hover:bg-blue-600 hover:border-blue-600 border border-transparent transition-all duration-200"
+              className="mb-6 text-patriot-gray-600 dark:text-patriot-gray-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 transition-all duration-200"
             >
-              ← Back
+              ← Back to Welcome
             </Button>
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-4">Enter Your Address</h2>
-            <p className="text-black/80 dark:text-white/80">
-              We'll validate and find your representatives and local civic information
-            </p>
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-patriot-blue-600 to-patriot-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                  <MapPin className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold text-patriot-gray-900 dark:text-white">Find Your Location</h1>
+                  <p className="text-patriot-gray-600 dark:text-patriot-gray-400">Discover your civic information</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Your Location Card */}
-            <Card className="patriot-card shadow-2xl">
-              <CardHeader className="text-center pb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-patriot-blue-600 to-patriot-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-xl text-black dark:text-white">Your Location</CardTitle>
-                <CardDescription className="text-black/80 dark:text-white/80">
-                  Get personalized political updates based on where you live
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                {/* What You'll Unlock Section */}
-                <div className="p-4 bg-gradient-to-br from-patriot-blue-50 to-patriot-red-50 dark:from-patriot-blue-900/20 dark:to-patriot-red-900/20 rounded-xl border border-patriot-blue-200 dark:border-patriot-blue-800">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-3 flex items-center">
-                    🧭 What You'll Unlock
-                  </h3>
+          {/* Address Input Section */}
+          <div className="flex-1 p-8 space-y-6 overflow-y-auto">
+            {/* Status Messages */}
+            {validatedAddress && (
+              <Alert className="border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 shadow-sm">
+                <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
+                <AlertDescription className="text-green-800 dark:text-green-300">
                   <div className="space-y-2">
-                    <div className="flex items-center space-x-2 text-sm text-black/80 dark:text-white/80">
-                      <span>🏛</span>
-                      <span>Your Representatives & Voting Records</span>
+                    <div className="font-semibold">✅ Address Validated!</div>
+                    <div className="text-sm bg-green-100 dark:bg-green-800/30 p-3 rounded-lg border border-green-200 dark:border-green-700">
+                      <strong>Confirmed Address:</strong><br />
+                      {validatedAddress}
                     </div>
-                    <div className="flex items-center space-x-2 text-sm text-black/80 dark:text-white/80">
-                      <span>📜</span>
-                      <span>Relevant Bills & Local Legislation</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-black/80 dark:text-white/80">
-                      <span>🗳</span>
-                      <span>Upcoming Elections & Sample Ballots</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-black/80 dark:text-white/80">
-                      <span>📬</span>
-                      <span>One-Click Contact Tools</span>
+                    <div className="text-xs text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-800/30 p-2 rounded border border-green-200 dark:border-green-700">
+                      🏛️ Loading congressional district information...
                     </div>
                   </div>
-                </div>
+                </AlertDescription>
+              </Alert>
+            )}
 
-                {/* Privacy & Security Section */}
-                <div className="p-4 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl border border-green-200 dark:border-green-800">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-3 flex items-center">
-                    🔒 Privacy & Security
-                  </h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2 text-sm text-black/80 dark:text-white/80">
-                      <span>🛡️</span>
-                      <span>Your address is encrypted and never shared</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-black/80 dark:text-white/80">
-                      <span>🔐</span>
-                      <span>Only used to find your representatives</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-black/80 dark:text-white/80">
-                      <span>❌</span>
-                      <span>No marketing or data selling - ever</span>
-                    </div>
-                  </div>
-                </div>
+            {validationError && (
+              <Alert variant="destructive" className="shadow-sm">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>
+                  <strong>Validation Error:</strong> {validationError}
+                </AlertDescription>
+              </Alert>
+            )}
 
-                {/* Keep all the existing validation alerts, input field, buttons, and other content below this */}
-                {/* Validation Success */}
-                {validatedAddress && (
-                  <Alert className="border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20">
-                    <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
-                    <AlertDescription className="text-green-800 dark:text-green-300">
-                      <div className="space-y-2">
-                        <div className="font-semibold">✅ Address Validated Successfully!</div>
-                        <div className="text-sm">{validatedAddress}</div>
-                        <div className="text-xs bg-green-100 dark:bg-green-800/30 p-2 rounded border border-green-200 dark:border-green-700">
-                          🏛️ Loading your congressional district information...
-                        </div>
-                      </div>
-                    </AlertDescription>
-                  </Alert>
-                )}
+            {suggestions.length > 0 && (
+              <Alert className="border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-900/20 shadow-sm">
+                <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+                <AlertDescription className="text-amber-800 dark:text-amber-300">
+                  <strong>Suggestions to improve your search:</strong>
+                  <ul className="mt-2 list-disc list-inside space-y-1">
+                    {suggestions.map((suggestion, index) => (
+                      <li key={index} className="text-sm">
+                        {suggestion}
+                      </li>
+                    ))}
+                  </ul>
+                </AlertDescription>
+              </Alert>
+            )}
 
-                {/* Validation Error */}
-                {validationError && (
-                  <Alert variant="destructive">
-                    <AlertCircle className="h-4 w-4" />
-                    <AlertDescription>
-                      <strong>Validation Error:</strong> {validationError}
-                    </AlertDescription>
-                  </Alert>
-                )}
-
-                {/* Suggestions */}
-                {suggestions.length > 0 && (
-                  <Alert className="border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/20">
-                    <AlertCircle className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
-                    <AlertDescription className="text-yellow-800 dark:text-yellow-300">
-                      <strong>Suggestions:</strong>
-                      <ul className="mt-2 list-disc list-inside space-y-1">
-                        {suggestions.map((suggestion, index) => (
-                          <li key={index} className="text-sm">
-                            {suggestion}
-                          </li>
-                        ))}
-                      </ul>
-                    </AlertDescription>
-                  </Alert>
-                )}
-
+            {/* Address Input */}
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="address" className="block text-sm font-semibold text-patriot-gray-700 dark:text-patriot-gray-300 mb-2">
+                  Enter Your Full Address
+                </label>
                 <div className="relative">
                   <Input
                     id="address"
-                    placeholder="Start typing your address..."
+                    placeholder="123 Main Street, City, State 12345"
                     value={address}
                     onChange={(e) => handleAddressChange(e.target.value)}
                     onKeyPress={(e) => e.key === "Enter" && !loading && handleAddressSubmit()}
                     onFocus={() => address.length > 2 && setShowSuggestions(true)}
                     onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-                    className={`text-lg py-6 px-4 rounded-xl border-2 backdrop-blur-md bg-white/70 dark:bg-gray-800/70 text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-0 ${
+                    className={`text-base py-4 px-4 rounded-xl border-2 bg-white dark:bg-patriot-gray-800 text-patriot-gray-900 dark:text-white placeholder:text-patriot-gray-500 dark:placeholder:text-patriot-gray-400 focus:outline-none focus:ring-0 transition-all duration-200 ${
                       validationError
-                        ? "border-red-500 dark:border-red-400 focus:border-red-500 dark:focus:border-red-400"
-                        : "border-black/20 dark:border-white/30 focus:border-patriot-blue-600 dark:focus:border-patriot-blue-400 hover:border-black/30 dark:hover:border-white/40"
+                        ? "border-patriot-red-400 dark:border-patriot-red-500 focus:border-patriot-red-500 dark:focus:border-patriot-red-400"
+                        : "border-patriot-gray-300 dark:border-patriot-gray-600 focus:border-patriot-blue-500 dark:focus:border-patriot-blue-400 hover:border-patriot-gray-400 dark:hover:border-patriot-gray-500"
                     }`}
                     disabled={loading}
-                    aria-describedby={validationError ? "address-error" : "address-help"}
-                    aria-invalid={validationError ? "true" : "false"}
-                    style={{
-                      boxShadow: "none",
-                      outline: "none",
-                    }}
+                    style={{ boxShadow: "none" }}
                   />
 
                   {/* Address Suggestions Dropdown */}
                   {showSuggestions && addressSuggestions.length > 0 && (
-                    <div className="absolute top-full left-0 right-0 mt-1 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-2 border-black/20 dark:border-white/30 rounded-xl shadow-xl z-10 max-h-48 overflow-y-auto">
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-patriot-gray-800 border-2 border-patriot-gray-300 dark:border-patriot-gray-600 rounded-xl shadow-xl z-20 max-h-48 overflow-y-auto">
                       {addressSuggestions.map((suggestion, index) => (
                         <button
                           key={index}
                           type="button"
                           onClick={() => handleSuggestionClick(suggestion)}
-                          className="w-full text-left px-4 py-3 hover:bg-blue-50/80 dark:hover:bg-blue-900/40 transition-colors text-sm text-black dark:text-white first:rounded-t-xl last:rounded-b-xl border-b border-gray-200/50 dark:border-gray-600/50 last:border-b-0"
+                          className="w-full text-left px-4 py-3 hover:bg-patriot-gray-50 dark:hover:bg-patriot-gray-700 transition-colors text-sm text-patriot-gray-900 dark:text-white first:rounded-t-xl last:rounded-b-xl border-b border-patriot-gray-200 dark:border-patriot-gray-600 last:border-b-0"
                         >
                           <div className="flex items-center">
-                            <MapPin className="h-4 w-4 mr-2 text-gray-500 dark:text-gray-400" />
-                            {suggestion}
+                            <MapPin className="h-4 w-4 mr-3 text-patriot-gray-500 dark:text-patriot-gray-400" />
+                            <span className="truncate">{suggestion}</span>
                           </div>
                         </button>
                       ))}
                     </div>
                   )}
                 </div>
+              </div>
 
+              {/* Action Buttons */}
+              <div className="space-y-3">
+                <Button
+                  onClick={handleAddressSubmit}
+                  disabled={loading || !address.trim()}
+                  className="w-full font-semibold py-4 text-base rounded-xl bg-gradient-to-r from-patriot-blue-600 to-patriot-blue-700 hover:from-patriot-blue-700 hover:to-patriot-blue-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
+                  {loading ? (
+                    <div className="flex items-center justify-center">
+                      <Loader2 className="animate-spin h-5 w-5 mr-2" />
+                      Validating Address...
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center">
+                      <CheckCircle className="h-5 w-5 mr-2" />
+                      Validate & Locate
+                    </div>
+                  )}
+                </Button>
+
+                {(validationError || suggestions.length > 0) && (
+                  <Button
+                    onClick={handleTryAgain}
+                    variant="outline"
+                    className="w-full py-4 text-base rounded-xl border-patriot-gray-300 dark:border-patriot-gray-600 hover:bg-patriot-gray-50 dark:hover:bg-patriot-gray-800 text-patriot-gray-700 dark:text-patriot-gray-300"
+                  >
+                    Try Different Address
+                  </Button>
+                )}
+              </div>
+            </div>
+
+            {/* Alternative Options */}
+            <div className="pt-6 border-t border-patriot-gray-200 dark:border-patriot-gray-700">
+              <div className="text-center space-y-4">
+                <p className="text-sm text-patriot-gray-600 dark:text-patriot-gray-400 font-medium">
+                  Alternative Options
+                </p>
+                
                 <div className="space-y-3">
-                  <div className="flex space-x-3">
-                    <Button
-                      onClick={handleAddressSubmit}
-                      disabled={loading || !address.trim()}
-                      className="flex-1 font-bold py-6 text-lg rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                      style={{ 
-                        backgroundColor: '#002868',
-                        color: 'white'
-                      }}
-                      onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#001a4d'}
-                      onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#002868'}
-                    >
-                      {loading ? (
-                        <div className="flex items-center">
-                          <Loader2 className="animate-spin h-5 w-5 mr-2" />
-                          Validating...
-                        </div>
-                      ) : (
-                        <>
-                          <CheckCircle className="h-5 w-5 mr-2" />
-                          Validate Address
-                        </>
-                      )}
-                    </Button>
+                  <Button
+                    onClick={handleUseMyLocation}
+                    variant="outline"
+                    disabled={loading}
+                    className="w-full py-3 text-sm rounded-lg border-patriot-gray-300 dark:border-patriot-gray-600 hover:bg-patriot-gray-50 dark:hover:bg-patriot-gray-800 text-patriot-gray-700 dark:text-patriot-gray-300"
+                  >
+                    <Globe2 className="h-4 w-4 mr-2" />
+                    Use My Current Location
+                  </Button>
+                  
+                  <Button
+                    onClick={() => setStep("state")}
+                    variant="ghost"
+                    className="w-full py-3 text-sm rounded-lg text-patriot-gray-600 dark:text-patriot-gray-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20"
+                  >
+                    Browse by State Instead
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-                    {(validationError || suggestions.length > 0) && (
-                      <Button
-                        onClick={handleTryAgain}
-                        variant="outline"
-                        className="px-6 py-6 rounded-xl border-patriot-gray-300 dark:border-patriot-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-black dark:text-white hover:text-black dark:hover:text-white hover:border-patriot-gray-400 dark:hover:border-patriot-gray-500"
-                      >
-                        Try Again
-                      </Button>
-                    )}
+            {/* Information Cards */}
+            <div className="pt-6 space-y-4">
+              <h3 className="text-sm font-semibold text-patriot-gray-700 dark:text-patriot-gray-300">
+                What You'll Discover
+              </h3>
+              
+              <div className="grid gap-3">
+                <div className="flex items-start space-x-3 p-3 bg-patriot-blue-50 dark:bg-patriot-blue-900/20 rounded-lg border border-patriot-blue-200 dark:border-patriot-blue-800">
+                  <Flag className="h-5 w-5 text-patriot-blue-600 dark:text-patriot-blue-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="text-sm font-medium text-patriot-blue-900 dark:text-patriot-blue-100">
+                      Your Representatives</div>
+                    <div className="text-xs text-patriot-blue-700 dark:text-patriot-blue-300">
+                      Federal, state, and local officials
+                    </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Interactive Map Card */}
-            <Card className="patriot-card shadow-2xl">
-              <CardHeader>
-                <CardTitle className="flex items-center text-black dark:text-white">
-                  <Globe2 className="h-5 w-5 mr-2 text-blue-600" />
-                  Interactive Map
-                </CardTitle>
-                <CardDescription className="text-black/80 dark:text-white/80">
-                  Explore your state's representation — or verify your address for local-level insights
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-
-                <div className="relative w-full h-[500px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
-                  <LeafletMap
-                    selectedState={selectedState}
-                    onStateClick={handleStateSelect}
-                    onCountyClick={handleCountySelect}
-                    selectedLocationPin={selectedLocationPin}
-                    zoomToLocation={mapZoomLocation}
-                    onReset={() => {
-                      setSelectedLocationPin(null)
-                      setMapZoomLocation(null)
-                    }}
-                    onError={(error) => console.error("Map Error:", error)}
-                    onHover={(feature) => console.log("Hovering on:", feature)}
-                  />
+                
+                <div className="flex items-start space-x-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+                  <TrendingUp className="h-5 w-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="text-sm font-medium text-green-900 dark:text-green-100">
+                      Local Legislation
+                    </div>
+                    <div className="text-xs text-green-700 dark:text-green-300">
+                      Bills and measures affecting you
+                    </div>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
+                
+                <div className="flex items-start space-x-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+                  <Users className="h-5 w-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="text-sm font-medium text-purple-900 dark:text-purple-100">
+                      Civic Information
+                    </div>
+                    <div className="text-xs text-purple-700 dark:text-purple-300">
+                      Voting locations, districts, and more
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Right Panel - Map */}
+        <div className="w-2/3 min-h-screen relative bg-patriot-gray-100 dark:bg-patriot-gray-800">
+          {/* Map Header Overlay */}
+          <div className="absolute top-0 left-0 right-0 z-30 bg-gradient-to-b from-white/90 via-white/70 to-transparent dark:from-patriot-gray-900/90 dark:via-patriot-gray-900/70 dark:to-transparent backdrop-blur-sm">
+            <div className="p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-xl font-bold text-patriot-gray-900 dark:text-white">
+                    Interactive Map
+                  </h2>
+                  <p className="text-sm text-patriot-gray-600 dark:text-patriot-gray-400">
+                    {selectedLocationPin 
+                      ? "Your location is marked on the map" 
+                      : "Type an address to see it on the map"
+                    }
+                  </p>
+                </div>
+                
+                {selectedLocationPin && (
+                  <div className="bg-white dark:bg-patriot-gray-800 rounded-lg px-4 py-2 shadow-lg border border-patriot-gray-200 dark:border-patriot-gray-700">
+                    <div className="text-xs text-patriot-gray-500 dark:text-patriot-gray-400">Coordinates</div>
+                    <div className="text-sm font-mono text-patriot-gray-900 dark:text-white">
+                      {selectedLocationPin.lat.toFixed(4)}, {selectedLocationPin.lng.toFixed(4)}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Full Map - No padding, fills entire container */}
+          <div className="absolute inset-0 w-full h-full">
+            <LeafletMap
+              selectedState={selectedState}
+              onStateClick={handleStateSelect}
+              onCountyClick={handleCountySelect}
+              selectedLocationPin={selectedLocationPin}
+              zoomToLocation={mapZoomLocation}
+              onReset={() => {
+                setSelectedLocationPin(null)
+                setMapZoomLocation(null)
+              }}
+              onError={(error) => console.error("Map Error:", error)}
+              onHover={(feature) => console.log("Hovering on:", feature)}
+              className="w-full h-full"
+            />
+          </div>
+
+          {/* Map Status Overlay */}
+          {!selectedLocationPin && (
+            <div className="absolute bottom-6 left-6 right-6 z-30">
+              <div className="bg-white/90 dark:bg-patriot-gray-900/90 backdrop-blur-md rounded-xl p-4 shadow-xl border border-patriot-gray-200/50 dark:border-patriot-gray-700/50">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-patriot-blue-500 to-patriot-blue-600 rounded-lg flex items-center justify-center">
+                    <MapPin className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-patriot-gray-900 dark:text-white">
+                      Enter an address to get started
+                    </div>
+                    <div className="text-xs text-patriot-gray-600 dark:text-patriot-gray-400">
+                      We'll show your exact location and surrounding civic information
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     )
@@ -1038,7 +1458,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             <Button
               variant="ghost"
               onClick={() => setStep("welcome")}
-              className="mb-4 text-black/80 dark:text-white/80 hover:text-white hover:bg-blue-600 hover:border-blue-600 border border-transparent transition-all duration-200"
+              className="mb-4 text-black/80 dark:text-white/80 hover:text-white hover:bg-patriot-blue-600 hover:border-patriot-blue-600 border border-transparent transition-all duration-200"
             >
               ← Back
             </Button>
@@ -1061,7 +1481,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="relative w-full h-[500px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
+                <div className="relative w-full h-[650px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
                   <LeafletMap
                     onStateClick={handleStateSelect}
                     onCountyClick={handleCountySelect}

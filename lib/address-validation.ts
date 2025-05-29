@@ -122,23 +122,12 @@ async function mockAddressValidation(address: string): Promise<ValidationResult>
 }
 
 function generateMockValidatedAddress(address: string, match: RegExpMatchArray): ValidationResult {
-  // Extract components based on the match
-  let streetNumber = ""
-  let route = ""
-  let locality = ""
-  let state = ""
-  let postalCode = ""
+  const streetNumber = match[1] || ""
+  const route = match[2] || ""
+  const locality = match[3] || ""
+  const state = match[4] || ""
+  const postalCode = match[5] || ""
 
-  if (match.length >= 5) {
-    // Full address pattern
-    streetNumber = match[1]
-    route = match[2]
-    locality = match[3]
-    state = getStateCode(match[4]) || match[4]
-    postalCode = match[5] || ""
-  }
-
-  // Generate realistic coordinates for the area
   const coordinates = getMockCoordinates(locality, state)
 
   return {
@@ -148,7 +137,7 @@ function generateMockValidatedAddress(address: string, match: RegExpMatchArray):
       street_number: streetNumber,
       route: route,
       locality: locality,
-      administrative_area_level_1: getStateName(state),
+      administrative_area_level_1: getStateName(state) || undefined,
       country: "United States",
       postal_code: postalCode,
       latitude: coordinates.lat,
@@ -168,7 +157,7 @@ function generateMockCityValidation(city: string, stateCode: string): Validation
     data: {
       formatted_address: `${city}, ${stateName}, USA`,
       locality: city,
-      administrative_area_level_1: stateName,
+      administrative_area_level_1: stateName || undefined,
       country: "United States",
       latitude: coordinates.lat,
       longitude: coordinates.lng,

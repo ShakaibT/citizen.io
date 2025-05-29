@@ -17,20 +17,30 @@ import {
 import { useAuth } from "@/components/auth-provider"
 import { useLocation } from "@/components/location-provider"
 import { AuthModal } from "@/components/auth-modal"
-import LeafletMap from "@/components/leaflet-map"
+import dynamic from "next/dynamic"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
+// Dynamic import to prevent SSR issues
+const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-gray-50 rounded-lg">
+      <div className="text-gray-600">Loading map...</div>
+    </div>
+  )
+})
+
 export function HomePage() {
   const { user } = useAuth()
-  const { location, setLocation, clearLocation } = useLocation()
+  const { location, setLocation, clearLocation, setShowLocationSetup } = useLocation()
   const [authModalOpen, setAuthModalOpen] = useState(false)
   const [authModalTab, setAuthModalTab] = useState<"signin" | "signup">("signin")
 
   const handleGetStarted = () => {
     if (!location) {
-      // If no location is set, redirect to location setup
-      window.location.href = "/location-setup"
+      // If no location is set, show location setup
+      setShowLocationSetup(true)
     } else {
       // If location is set, redirect to dashboard
       window.location.href = "/dashboard"
@@ -117,12 +127,12 @@ export function HomePage() {
               <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/40 dark:border-gray-700/40 shadow-sm">
                 <CardContent className="p-4 text-center">
                   <div className="flex items-center justify-center mb-2">
-                    <Scale className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                    <Scale className="h-6 w-6 text-patriot-blue-600 dark:text-patriot-blue-400" />
                   </div>
                   <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">3 Active Bills</div>
                   <div className="text-xs text-gray-600 dark:text-gray-400">2 need your action</div>
                   <div className="mt-2">
-                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300">
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-patriot-blue-100 dark:bg-patriot-blue-900/30 text-patriot-blue-800 dark:text-patriot-blue-300">
                       Urgent: Climate Bill
                     </span>
                   </div>
@@ -231,6 +241,7 @@ export function HomePage() {
                       onCountyClick={handleMapCountyClick}
                       selectedState={location?.state || null}
                       zoomToLocation={location ? { lat: location.latitude, lng: location.longitude } : null}
+                      selectedLocationPin={location ? { lat: location.latitude, lng: location.longitude, address: location.address } : null}
                       onReset={() => clearLocation()}
                       onError={(error) => console.error("Map Error:", error)}
                       onHover={(feature) => console.log("Hovering on:", feature)}
@@ -291,7 +302,7 @@ export function HomePage() {
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{feature.description}</p>
                 <Link
                   href={feature.href}
-                  className="inline-flex items-center text-primary dark:text-blue-400 font-medium hover:text-primary/80 dark:hover:text-blue-300"
+                  className="inline-flex items-center text-primary dark:text-patriot-blue-400 font-medium hover:text-primary/80 dark:hover:text-patriot-blue-300"
                 >
                   Learn more
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -312,7 +323,7 @@ export function HomePage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={handleGetStarted}
-              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center"
+              className="bg-white text-patriot-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center"
             >
               {location ? "Go to Dashboard" : "Get Started"}
               <ChevronRight className="ml-2 h-5 w-5" />

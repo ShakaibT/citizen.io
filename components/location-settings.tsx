@@ -20,7 +20,7 @@ interface LocationData {
 }
 
 export function LocationSettings() {
-  const { location, setLocation, clearLocation } = useLocation()
+  const { location, setLocation, clearLocation, setShowLocationSetup } = useLocation()
   const [isEditing, setIsEditing] = useState(false)
   const [newAddress, setNewAddress] = useState(location?.address || "")
   const [loading, setLoading] = useState(false)
@@ -69,7 +69,7 @@ export function LocationSettings() {
     <Card className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
       <CardHeader>
         <CardTitle className="flex items-center text-gray-900 dark:text-white">
-          <MapPin className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
+          <MapPin className="h-5 w-5 mr-2 text-patriot-blue-600 dark:text-patriot-blue-400" />
           Location Settings
         </CardTitle>
         <CardDescription className="text-gray-600 dark:text-gray-400">Manage your location for personalized civic information</CardDescription>
@@ -95,7 +95,7 @@ export function LocationSettings() {
                           size="sm"
                           onClick={handleUpdateLocation}
                           disabled={loading || !newAddress.trim()}
-                          className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-600 dark:hover:bg-blue-700"
+                          className="bg-patriot-blue-600 hover:bg-patriot-blue-700 text-white dark:bg-patriot-blue-600 dark:hover:bg-patriot-blue-700"
                         >
                           {loading ? (
                             "Updating..."
@@ -157,7 +157,7 @@ export function LocationSettings() {
                 variant="outline"
                 className="w-full justify-start bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
                 onClick={() => {
-                  clearLocation()
+                  setShowLocationSetup(true)
                 }}
               >
                 <Search className="h-4 w-4 mr-2" />

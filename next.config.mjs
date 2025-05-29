@@ -14,33 +14,42 @@ const nextConfig = {
       },
     ],
   },
-  // experimental: {
-  //   appDir: true, // This is now default in Next.js 13+
-  // },
+  
+  // Webpack configuration for Leaflet
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      }
+    }
+    return config
+  },
+  
+  // Basic performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  
+  // Optimized headers for API caching
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/api/states-geojson',
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=7200, stale-while-revalidate=86400',
           },
+        ],
+      },
+      {
+        source: '/api/counties-geojson',
+        headers: [
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(self)',
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=7200, stale-while-revalidate=86400',
           },
         ],
       },

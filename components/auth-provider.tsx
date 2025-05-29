@@ -47,7 +47,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
         // Get initial session
         const { data: { session }, error: sessionError } = await supabase.auth.getSession()
-        if (sessionError) throw sessionError
+        if (sessionError) {
+          console.error('Session error:', sessionError)
+          // Don't throw here, just log and continue
+        }
 
         if (mounted) {
           setUser(session?.user ?? null)
@@ -55,7 +58,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
 
         // Listen for auth changes
-        const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
           if (mounted) {
             setUser(session?.user ?? null)
             setLoading(false)
@@ -75,7 +78,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
+    // Add a timeout to ensure loading doesn't get stuck
+    const timeout = setTimeout(() => {
+      if (mounted && loading) {
+        console.warn('Auth initialization timeout - setting loading to false')
+        setLoading(false)
+      }
+    }, 5000) // 5 second timeout
+
     initializeAuth()
+
+    return () => {
+      mounted = false
+      clearTimeout(timeout)
+    }
   }, [])
 
   const handleAuthError = (err: unknown) => {
@@ -95,7 +111,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           redirectTo: `${window.location.origin}/auth/callback`,
         },
       })
-      if (error) throw error
+      if (error) {
+        console.error('Google OAuth error:', error)
+        if (error.message?.includes('OAuth') || error.message?.includes('provider')) {
+          throw new Error('Google authentication is not configured. Please contact support.')
+        }
+        throw error
+      }
     } catch (err) {
       handleAuthError(err)
     }
@@ -112,7 +134,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           redirectTo: `${window.location.origin}/auth/callback`,
         },
       })
-      if (error) throw error
+      if (error) {
+        console.error('GitHub OAuth error:', error)
+        if (error.message?.includes('OAuth') || error.message?.includes('provider')) {
+          throw new Error('GitHub authentication is not configured. Please contact support.')
+        }
+        throw error
+      }
     } catch (err) {
       handleAuthError(err)
     }
@@ -129,7 +157,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           redirectTo: `${window.location.origin}/auth/callback`,
         },
       })
-      if (error) throw error
+      if (error) {
+        console.error('Discord OAuth error:', error)
+        if (error.message?.includes('OAuth') || error.message?.includes('provider')) {
+          throw new Error('Discord authentication is not configured. Please contact support.')
+        }
+        throw error
+      }
     } catch (err) {
       handleAuthError(err)
     }

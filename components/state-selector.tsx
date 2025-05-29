@@ -74,12 +74,12 @@ const getPopulationCategory = (population: string) => {
   if (actualPop >= 10) return { category: "Large", color: "bg-orange-100 text-orange-800", priority: 4 }
   if (actualPop >= 5) return { category: "Medium", color: "bg-yellow-100 text-yellow-800", priority: 3 }
   if (actualPop >= 2) return { category: "Small", color: "bg-green-100 text-green-800", priority: 2 }
-  return { category: "Very Small", color: "bg-blue-100 text-blue-800", priority: 1 }
+  return { category: "Very Small", color: "bg-patriot-blue-100 text-patriot-blue-800", priority: 1 }
 }
 
 const getRegionColor = (region: string) => {
   const colors = {
-    Northeast: "bg-blue-50 text-blue-700",
+    Northeast: "bg-patriot-blue-50 text-patriot-blue-700",
     South: "bg-green-50 text-green-700",
     Midwest: "bg-yellow-50 text-yellow-700",
     West: "bg-purple-50 text-purple-700",

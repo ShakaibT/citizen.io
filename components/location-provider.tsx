@@ -24,6 +24,8 @@ interface LocationContextType {
   isLocationSet: boolean
   isLoading: boolean
   error: Error | null
+  showLocationSetup: boolean
+  setShowLocationSetup: (show: boolean) => void
 }
 
 const LocationContext = createContext<LocationContextType | undefined>(undefined)
@@ -33,6 +35,7 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
   const [isLocationSet, setIsLocationSet] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
+  const [showLocationSetup, setShowLocationSetup] = useState(false)
   const { user, loading: authLoading, isConfigured } = useAuth()
 
   useEffect(() => {
@@ -121,6 +124,7 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
     setLocationState(null)
     setIsLocationSet(false)
     setError(null)
+    setShowLocationSetup(true)
     try {
       localStorage.removeItem("citizen-location")
     } catch (err) {
@@ -153,7 +157,7 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
           <p className="text-gray-600 mb-4">Failed to load location information</p>
           <button
             onClick={() => window.location.reload()}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 bg-patriot-blue-600 text-white rounded-lg hover:bg-patriot-blue-700 transition-colors"
           >
             Retry
           </button>
@@ -162,12 +166,25 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (!isLocationSet) {
-    return <LocationSetup onLocationSet={setLocation} />
+  // Show location setup only when explicitly requested
+  if (showLocationSetup) {
+    return <LocationSetup onLocationSet={(newLocation) => {
+      setLocation(newLocation)
+      setShowLocationSetup(false)
+    }} />
   }
 
   return (
-    <LocationContext.Provider value={{ location, setLocation, clearLocation, isLocationSet, isLoading, error }}>
+    <LocationContext.Provider value={{ 
+      location, 
+      setLocation, 
+      clearLocation, 
+      isLocationSet, 
+      isLoading, 
+      error,
+      showLocationSetup,
+      setShowLocationSetup
+    }}>
       {children}
     </LocationContext.Provider>
   )

@@ -44,12 +44,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme(newTheme)
   }
 
-  // Prevent hydration mismatch
-  if (!mounted) {
-    return <div className="opacity-0">{children}</div>
+  // Always provide the context with proper values
+  const contextValue = {
+    theme,
+    toggleTheme,
+    setTheme
   }
 
-  return <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>{children}</ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={contextValue}>
+      {children}
+    </ThemeContext.Provider>
+  )
 }
 
 export function useTheme() {

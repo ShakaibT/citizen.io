@@ -5,14 +5,14 @@
 import { optimizeGeoJSON, getOptimalMapBounds, createGeoJSONCacheKey } from './geojson-optimizer'
 
 // Get the current year for Census data (will automatically use latest available)
-const getCurrentCensusYear = () => {
+export const getCurrentCensusYear = () => {
   const currentYear = new Date().getFullYear()
   // Census data is typically released with a 1-year delay
   // For 2024, we'll likely have 2023 data until 2024 data is released
   return currentYear >= 2024 ? 2024 : 2023
 }
 
-const CURRENT_CENSUS_YEAR = getCurrentCensusYear()
+export const CURRENT_CENSUS_YEAR = getCurrentCensusYear()
 
 export interface CensusState {
   name: string;

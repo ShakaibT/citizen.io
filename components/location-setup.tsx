@@ -30,7 +30,7 @@ import { useDebounce } from "@/hooks/use-debounce"
 import React from "react"
 import dynamic from "next/dynamic"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { useTheme } from "next-themes"
+import { useTheme } from "@/components/theme-provider"
 
 // Dynamic import to prevent SSR issues
 const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
@@ -443,13 +443,13 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   const { user } = useAuth()
   const { toast } = useToast()
-  const { theme, resolvedTheme } = useTheme()
+  const { theme } = useTheme()
   
   // Debounce address for real-time geocoding
   const debouncedAddress = useDebounce(address, 1000)
 
   // Glass card styles that adapt to light/dark mode
-  const isDark = theme === 'dark' || resolvedTheme === 'dark'
+  const isDark = theme === 'dark'
   const glassCardStyle = isDark ? {
     backgroundColor: 'rgba(255, 255, 255, 0.15)',
     backdropFilter: 'blur(16px)',
@@ -1365,7 +1365,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
         </div>
 
         {/* Right Panel - Map */}
-        <div className="w-full lg:w-2/3 min-h-[50vh] lg:min-h-screen relative bg-patriot-gray-100 dark:bg-patriot-gray-800">
+        <div className="w-full lg:w-2/3 h-[60vh] lg:h-[70vh] relative bg-patriot-gray-100 dark:bg-patriot-gray-800">
           {/* Map Header Overlay */}
           <div className="absolute top-0 left-0 right-0 z-30 bg-gradient-to-b from-white/90 via-white/70 to-transparent dark:from-patriot-gray-900/90 dark:via-patriot-gray-900/70 dark:to-transparent backdrop-blur-sm">
             <div className="p-3 lg:p-6">
@@ -1409,6 +1409,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
               onError={(error) => console.error("Map Error:", error)}
               onHover={(feature) => console.log("Hovering on:", feature)}
               className="w-full h-full"
+              fullHeight={true}
             />
           </div>
 
@@ -1472,7 +1473,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-6">
-                <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[650px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
+                <div className="relative w-full h-[50vh] sm:h-[55vh] lg:h-[60vh] max-h-[600px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
                   <LeafletMap
                     onStateClick={handleStateSelect}
                     onCountyClick={handleCountySelect}
@@ -1485,6 +1486,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                     }}
                     onError={(error) => console.error("Map Error:", error)}
                     onHover={(feature) => console.log("Hovering on:", feature)}
+                    fullHeight={true}
                   />
                 </div>
               </CardContent>

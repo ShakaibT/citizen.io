@@ -37,13 +37,14 @@ export default function TestMapV2() {
           )}
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden h-[500px] lg:h-[600px] max-h-[600px]">
           <Map
             mode="default"
             onStateClick={handleStateClick}
             onCountyClick={handleCountyClick}
             onReset={handleReset}
             selectedState={selectedState}
+            fullHeight={true}
           />
         </div>
 

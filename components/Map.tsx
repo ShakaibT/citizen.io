@@ -22,6 +22,7 @@ interface MapProps {
   zoomToLocation?: { lat: number; lng: number } | null
   className?: string
   mode?: 'default' | 'dashboard'
+  fullHeight?: boolean
 }
 
 export default function Map({
@@ -32,7 +33,8 @@ export default function Map({
   selectedLocationPin,
   zoomToLocation,
   className,
-  mode = 'default'
+  mode = 'default',
+  fullHeight
 }: MapProps) {
   const [currentSelectedState, setCurrentSelectedState] = useState<string | null>(selectedState || null)
 
@@ -56,6 +58,7 @@ export default function Map({
       selectedLocationPin={selectedLocationPin}
       zoomToLocation={zoomToLocation}
       className={className}
+      fullHeight={fullHeight}
     />
   )
 }

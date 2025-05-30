@@ -132,20 +132,6 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  // Show loading state while determining auth and location
-  if (authLoading || isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-navy-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
-            <span className="text-white font-bold text-2xl">C</span>
-          </div>
-          <p className="text-gray-600">Loading your civic information...</p>
-        </div>
-      </div>
-    )
-  }
-
   // Show error state if there's an error
   if (error) {
     return (
@@ -180,7 +166,7 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
       setLocation, 
       clearLocation, 
       isLocationSet, 
-      isLoading, 
+      isLoading: authLoading || isLoading,
       error,
       showLocationSetup,
       setShowLocationSetup

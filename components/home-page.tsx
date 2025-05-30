@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import {
   ChevronRight,
@@ -36,6 +36,25 @@ export function HomePage() {
   const { location, setLocation, clearLocation, setShowLocationSetup } = useLocation()
   const [authModalOpen, setAuthModalOpen] = useState(false)
   const [authModalTab, setAuthModalTab] = useState<"signin" | "signup">("signin")
+  
+  // Force welcome screen to always show on the home page
+  const [showWelcome, setShowWelcome] = useState(true)
+  const [selectedState, setSelectedState] = useState<string | null>(null)
+
+  // Clear any saved location data and force welcome screen
+  useEffect(() => {
+    // Clear all location-related storage
+    localStorage.removeItem("citizen-location")
+    sessionStorage.removeItem("citizen-location")
+    localStorage.removeItem("citizen-seen-welcome")
+    sessionStorage.removeItem("citizen-seen-welcome")
+    
+    // Clear the location from the location provider
+    clearLocation()
+    
+    // Force welcome screen to show
+    setShowWelcome(true)
+  }, [clearLocation])
 
   const handleGetStarted = () => {
     if (!location) {
@@ -45,6 +64,8 @@ export function HomePage() {
       // If location is set, redirect to dashboard
       window.location.href = "/dashboard"
     }
+    
+    setShowWelcome(false)
   }
 
   const handleSignIn = () => {
@@ -58,6 +79,9 @@ export function HomePage() {
   }
 
   const handleMapStateClick = (stateName: string) => {
+    // Set the selected state for the Officials legend
+    setSelectedState(stateName)
+    
     // Create a basic location object for state-level selection
     const stateLocation = {
       address: `${stateName}, USA`,
@@ -71,6 +95,9 @@ export function HomePage() {
   }
 
   const handleMapCountyClick = (countyName: string, stateName: string) => {
+    // Keep the selected state for the Officials legend
+    setSelectedState(stateName)
+    
     // Create a location object for county-level selection
     const countyLocation = {
       address: `${countyName}, ${stateName}, USA`,
@@ -82,6 +109,171 @@ export function HomePage() {
       county: countyName,
     }
     setLocation(countyLocation)
+  }
+
+  const handleMapReset = () => {
+    // Clear the selected state when reset is clicked
+    setSelectedState(null)
+  }
+
+  // Show welcome page first, regardless of saved location
+  if (showWelcome) {
+    return (
+      <>
+        {/* Hero Section - Your Voice in American Democracy */}
+        <section className="relative bg-white dark:bg-black padding-responsive-sm">
+          <div className="container-responsive">
+            {/* Mobile: Flex column reverse to show map first, Desktop: Grid with proper order */}
+            <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center min-h-[300px] lg:min-h-[400px]">
+              <div className="space-y-4 lg:space-y-6 lg:pr-8 flex flex-col justify-center">
+                <div>
+                  <h1 className="text-responsive-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
+                    <span className="block">Your Voice in</span>
+                    <span className="block gradient-text">American Democracy</span>
+                  </h1>
+                  <p className="mt-4 lg:mt-6 text-responsive-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Stay informed, engaged, and empowered with personalized civic information tailored to your location.
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button 
+                    onClick={handleGetStarted} 
+                    className="get-started-btn btn-mobile-lg"
+                  >
+                    Get Started with Your Address
+                    <ChevronRight className="h-5 w-5" />
+                  </button>
+                  {!user && (
+                    <button onClick={handleSignIn} className="auth-button btn-mobile-lg">
+                      Sign In / Sign Up
+                    </button>
+                  )}
+                </div>
+
+                <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                  <Shield className="h-4 w-4 mr-2 flex-shrink-0" />
+                  <span>Free access to essential civic information. No credit card required.</span>
+                </div>
+              </div>
+
+              <div className="relative flex items-center justify-center mb-6 lg:mb-0">
+                {/* Map container with proper dark mode styling */}
+                <div className="relative bg-white dark:bg-white/10 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md w-full max-w-lg lg:max-w-none">
+                  <div className="p-3 sm:p-4 lg:p-6">
+                    <div className="mb-3 lg:mb-4 flex items-center justify-between">
+                      <h3 className="text-base lg:text-lg font-semibold text-gray-900 dark:text-white">Interactive US Map</h3>
+                    </div>
+
+                    <div className="w-full h-[30vh] sm:h-[35vh] lg:h-[40vh] max-h-[400px]">
+                      <LeafletMap
+                        onStateClick={handleMapStateClick}
+                        onCountyClick={handleMapCountyClick}
+                        selectedState={selectedState}
+                        zoomToLocation={null}
+                        selectedLocationPin={null}
+                        onReset={handleMapReset}
+                        onError={(error) => console.error("Map Error:", error)}
+                        onHover={(feature) => console.log("Hovering on:", feature)}
+                        fullHeight={true}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="bg-gray-50 dark:bg-gray-900 padding-responsive-sm">
+          <div className="container-responsive">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-responsive-lg font-bold text-gray-900 dark:text-white">Everything You Need to Stay Engaged</h2>
+              <p className="mt-3 text-responsive-sm text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Citizen provides all the tools and information you need to participate meaningfully in democracy.
+              </p>
+            </div>
+
+            <div className="grid-responsive-cards">
+              {[
+                {
+                  icon: Scale,
+                  title: "Legislation",
+                  description: "Track bills and laws that matter to you at local, state, and federal levels.",
+                  href: "/legislation",
+                },
+                {
+                  icon: Newspaper,
+                  title: "News",
+                  description: "Get balanced, fact-based news about civic issues relevant to your community.",
+                  href: "/news",
+                },
+                {
+                  icon: Vote,
+                  title: "Elections",
+                  description: "Stay informed about upcoming elections, candidates, and voting information.",
+                  href: "/elections",
+                },
+                {
+                  icon: Megaphone,
+                  title: "Action Center",
+                  description: "Find opportunities to make your voice heard through civic engagement.",
+                  href: "/action-center",
+                },
+              ].map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white dark:bg-gray-900 rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 h-full flex flex-col"
+                >
+                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-md mb-4 flex-shrink-0">
+                    <feature.icon className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-3 flex-grow">{feature.description}</p>
+                  <Link
+                    href={feature.href}
+                    className="inline-flex items-center text-primary dark:text-patriot-blue-400 font-medium hover:text-primary/80 dark:hover:text-patriot-blue-300 mt-auto"
+                  >
+                    Learn more
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-red-600 padding-responsive-sm">
+          <div className="container-responsive text-center">
+            <h2 className="text-responsive-lg font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-responsive-sm text-white/90 max-w-3xl mx-auto mb-6">
+              Join thousands of citizens who are making a difference in their communities.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <button
+                onClick={handleGetStarted}
+                className="get-started-btn btn-mobile-lg"
+              >
+                Get Started
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </button>
+              {!user && (
+                <button
+                  onClick={handleSignIn}
+                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition-all duration-200 inline-flex items-center justify-center btn-mobile-lg"
+                >
+                  Sign In / Sign Up
+                </button>
+              )}
+            </div>
+          </div>
+        </section>
+
+        <AuthModal open={authModalOpen} onOpenChange={setAuthModalOpen} defaultTab={authModalTab} />
+      </>
+    )
   }
 
   return (
@@ -189,22 +381,26 @@ export function HomePage() {
       )}
 
       {/* Hero Section - Your Voice in American Democracy */}
-      <section className="relative bg-white dark:bg-black padding-responsive">
+      <section className="relative bg-white dark:bg-black padding-responsive-sm">
         <div className="container-responsive">
-          <div className="grid-responsive-2col items-center">
-            <div className="space-y-6 sm:space-y-8">
+          {/* Mobile: Flex column reverse to show map first, Desktop: Grid with proper order */}
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center min-h-[300px] lg:min-h-[400px]">
+            <div className="space-y-4 lg:space-y-6 lg:pr-8 flex flex-col justify-center">
               <div>
-                <h1 className="text-responsive-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h1 className="text-responsive-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
                   <span className="block">Your Voice in</span>
                   <span className="block gradient-text">American Democracy</span>
                 </h1>
-                <p className="mt-6 text-responsive-sm text-gray-600 dark:text-gray-300 max-w-2xl">
+                <p className="mt-4 lg:mt-6 text-responsive-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   Stay informed, engaged, and empowered with personalized civic information tailored to your location.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button onClick={handleGetStarted} className="get-started-btn btn-mobile-lg">
+                <button 
+                  onClick={handleGetStarted} 
+                  className="get-started-btn btn-mobile-lg"
+                >
                   {location ? "Go to Dashboard" : "Get Started with Your Address"}
                   <ChevronRight className="h-5 w-5" />
                 </button>
@@ -221,12 +417,12 @@ export function HomePage() {
               </div>
             </div>
 
-            <div className="relative mt-8 lg:mt-0">
+            <div className="relative flex items-center justify-center mb-6 lg:mb-0">
               {/* Map container with proper dark mode styling */}
-              <div className="relative bg-white dark:bg-white/10 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
-                <div className="p-4 sm:p-6">
-                  <div className="mb-4 flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Interactive US Map</h3>
+              <div className="relative bg-white dark:bg-white/10 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md w-full max-w-lg lg:max-w-none">
+                <div className="p-3 sm:p-4 lg:p-6">
+                  <div className="mb-3 lg:mb-4 flex items-center justify-between">
+                    <h3 className="text-base lg:text-lg font-semibold text-gray-900 dark:text-white">Interactive US Map</h3>
                     {location && (
                       <Button onClick={handleChangeLocation} variant="outline" size="sm" className="text-xs btn-mobile">
                         <ArrowLeft className="h-3 w-3 mr-1" />
@@ -235,16 +431,17 @@ export function HomePage() {
                     )}
                   </div>
 
-                  <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
+                  <div className="w-full h-[30vh] sm:h-[35vh] lg:h-[40vh] max-h-[400px]">
                     <LeafletMap
                       onStateClick={handleMapStateClick}
                       onCountyClick={handleMapCountyClick}
-                      selectedState={location?.state || null}
-                      zoomToLocation={location ? { lat: location.latitude, lng: location.longitude } : null}
-                      selectedLocationPin={location ? { lat: location.latitude, lng: location.longitude, address: location.address } : null}
-                      onReset={() => clearLocation()}
+                      selectedState={selectedState}
+                      zoomToLocation={null}
+                      selectedLocationPin={null}
+                      onReset={handleMapReset}
                       onError={(error) => console.error("Map Error:", error)}
                       onHover={(feature) => console.log("Hovering on:", feature)}
+                      fullHeight={true}
                     />
                   </div>
                 </div>
@@ -255,11 +452,11 @@ export function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-gray-50 dark:bg-gray-900 padding-responsive">
+      <section className="bg-gray-50 dark:bg-gray-900 padding-responsive-sm">
         <div className="container-responsive">
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-responsive-lg font-bold text-gray-900 dark:text-white">Everything You Need to Stay Engaged</h2>
-            <p className="mt-4 text-responsive-sm text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="mt-3 text-responsive-sm text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Citizen provides all the tools and information you need to participate meaningfully in democracy.
             </p>
           </div>
@@ -293,16 +490,16 @@ export function HomePage() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                className="bg-white dark:bg-gray-900 rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 h-full flex flex-col"
               >
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-md mb-6">
-                  <feature.icon className="h-6 w-6 text-white" />
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-md mb-4 flex-shrink-0">
+                  <feature.icon className="h-5 w-5 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{feature.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-3 flex-grow">{feature.description}</p>
                 <Link
                   href={feature.href}
-                  className="inline-flex items-center text-primary dark:text-patriot-blue-400 font-medium hover:text-primary/80 dark:hover:text-patriot-blue-300"
+                  className="inline-flex items-center text-primary dark:text-patriot-blue-400 font-medium hover:text-primary/80 dark:hover:text-patriot-blue-300 mt-auto"
                 >
                   Learn more
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -314,16 +511,16 @@ export function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-red-600 padding-responsive">
+      <section className="bg-gradient-to-r from-blue-600 to-red-600 padding-responsive-sm">
         <div className="container-responsive text-center">
-          <h2 className="text-responsive-lg font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-responsive-sm text-white/90 max-w-3xl mx-auto mb-8">
+          <h2 className="text-responsive-lg font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-responsive-sm text-white/90 max-w-3xl mx-auto mb-6">
             Join thousands of citizens who are making a difference in their communities.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={handleGetStarted}
-              className="bg-white text-patriot-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center btn-mobile-lg"
+              className="get-started-btn btn-mobile-lg"
             >
               {location ? "Go to Dashboard" : "Get Started"}
               <ChevronRight className="ml-2 h-5 w-5" />

@@ -166,4 +166,168 @@ Make sure to update all URLs when deploying to production!
 - Never commit your `.env.local` file to version control
 - Use different Supabase projects for development and production
 - Regularly rotate your service role keys
-- Enable Row Level Security (RLS) on all tables containing user data 
+- Enable Row Level Security (RLS) on all tables containing user data
+
+# Supabase Setup for Real-Time Officials Data
+
+This guide will help you set up the Supabase database table needed for the real-time officials data system.
+
+## Prerequisites
+
+1. A Supabase account and project
+2. Access to the Supabase SQL Editor
+
+## Step 1: Create the Officials Table
+
+Go to your Supabase dashboard → SQL Editor → New Query, and run this SQL:
+
+```sql
+-- Create the officials table
+CREATE TABLE officials (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  name TEXT NOT NULL,
+  office TEXT NOT NULL,
+  party TEXT,
+  phone TEXT,
+  email TEXT,
+  website TEXT,
+  photo_url TEXT,
+  address TEXT,
+  state TEXT NOT NULL,
+  district TEXT,
+  level TEXT NOT NULL CHECK (level IN ('federal', 'state', 'local')),
+  office_type TEXT NOT NULL CHECK (office_type IN ('executive', 'legislative', 'judicial')),
+  term_start DATE,
+  term_end DATE,
+  last_updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  source TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Create indexes for better performance
+CREATE INDEX idx_officials_state ON officials(state);
+CREATE INDEX idx_officials_level ON officials(level);
+CREATE INDEX idx_officials_last_updated ON officials(last_updated);
+CREATE INDEX idx_officials_office_type ON officials(office_type);
+
+-- Create a function to automatically update the updated_at timestamp
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.updated_at = NOW();
+    RETURN NEW;
+END;
+$$ language 'plpgsql';
+
+-- Create a trigger to automatically update updated_at
+CREATE TRIGGER update_officials_updated_at 
+    BEFORE UPDATE ON officials 
+    FOR EACH ROW 
+    EXECUTE FUNCTION update_updated_at_column();
+```
+
+## Step 2: Set Row Level Security (RLS)
+
+```sql
+-- Enable RLS on the officials table
+ALTER TABLE officials ENABLE ROW LEVEL SECURITY;
+
+-- Allow public read access (since this is public officials data)
+CREATE POLICY "Allow public read access" ON officials
+    FOR SELECT USING (true);
+
+-- Allow service role to insert/update/delete (for the daily updates)
+CREATE POLICY "Allow service role full access" ON officials
+    FOR ALL USING (auth.role() = 'service_role');
+```
+
+## Step 3: Environment Variables
+
+Make sure your `.env.local` file has these variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+NEXT_PUBLIC_GOOGLE_CIVIC_API_KEY=your_google_civic_api_key
+CRON_SECRET=your_secure_random_string
+```
+
+## Step 4: Test the Setup
+
+1. Start your development server: `npm run dev`
+2. Visit: `http://localhost:3000/api/officials/update` to manually trigger an update
+3. Check your Supabase dashboard to see if officials data was inserted
+
+## Step 5: Set Up Daily Updates (Production)
+
+For production, set up a daily cron job to update the officials data:
+
+### Option A: Vercel Cron Jobs (Recommended)
+
+Create `vercel.json` in your project root:
+
+```json
+{
+  "crons": [
+    {
+      "path": "/api/officials/update",
+      "schedule": "0 6 * * *"
+    }
+  ]
+}
+```
+
+### Option B: External Cron Service
+
+Use a service like cron-job.org to call your update endpoint daily:
+
+```
+URL: https://your-domain.com/api/officials/update
+Method: POST
+Headers: Authorization: Bearer your_cron_secret
+Schedule: Daily at 6:00 AM
+```
+
+## Data Structure
+
+The officials table will contain:
+
+- **Federal Officials**: President, Senators, Representatives
+- **State Officials**: Governor, State Legislators
+- **Local Officials**: Mayors, City Council (where available)
+
+Each record includes:
+- Name, office, party affiliation
+- Contact information (phone, email, website)
+- Term information
+- Data source and last update timestamp
+
+## Benefits
+
+✅ **Always Up-to-Date**: Daily automatic updates from Google Civic Information API
+✅ **Fast Performance**: Local database queries, no API rate limits during user sessions
+✅ **Cost-Effective**: Free tier covers all usage
+✅ **Reliable**: Fallback data ensures the app always works
+✅ **Accurate**: Real-time data from authoritative government sources
+
+## Troubleshooting
+
+### Table Creation Issues
+- Make sure you have the correct permissions in Supabase
+- Check the SQL syntax in the Supabase SQL Editor
+
+### API Key Issues
+- Verify your Google Civic Information API key is valid
+- Check that the API is enabled in Google Cloud Console
+
+### Update Issues
+- Check the server logs for error messages
+- Verify the CRON_SECRET matches in your environment variables
+- Test the manual update endpoint first
+
+### Data Not Showing
+- Check if the officials table has data in Supabase
+- Verify the API endpoints are working: `/api/officials?state=PA`
+- Check browser console for any JavaScript errors 

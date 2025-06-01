@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button'
 import { usePopulationData, useCountyPopulationData } from '@/hooks/usePopulationData'
 import { useOfficialsData } from '@/hooks/useOfficialsData'
 import { getCurrentCensusYear } from '@/lib/census-api'
+import useSWR from 'swr'
 
 // Fix Leaflet default markers
 delete (L.Icon.Default.prototype as any)._getIconUrl
@@ -269,7 +270,7 @@ function PopulationLegend({
   }
 
   if (currentView === 'counties' && selectedState) {
-    // County view legend
+    // County view legend - position it below the OfficialsLegend to avoid overlap
     const stateData = statePopData.find(s => s.name === selectedState)
     const statePopulation = stateData?.population || 0
     
@@ -284,7 +285,7 @@ function PopulationLegend({
     ]
 
     return (
-      <div className="absolute left-2 sm:left-4 z-[1000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-5 max-w-[300px]" style={{ top: selectedState ? '400px' : 'auto', bottom: selectedState ? 'auto' : '16px' }}>
+      <div className="absolute left-2 sm:left-4 z-[1000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-5 max-w-[300px]" style={{ top: '480px' }}>
         <div className="space-y-3">
           {/* State Title */}
           <div className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
@@ -378,409 +379,8 @@ function OfficialsLegend({
   selectedState?: string | null
   statePopData: any[]
 }) {
-  // Expanded state officials data with more states
-  const stateOfficials: { [key: string]: { governor: string; party: string; senators: Array<{name: string; party: string}> } } = {
-    'Alabama': {
-      governor: 'Kay Ivey',
-      party: 'Republican',
-      senators: [
-        { name: 'Richard Shelby', party: 'Republican' },
-        { name: 'Tommy Tuberville', party: 'Republican' }
-      ]
-    },
-    'Alaska': {
-      governor: 'Mike Dunleavy',
-      party: 'Republican',
-      senators: [
-        { name: 'Lisa Murkowski', party: 'Republican' },
-        { name: 'Dan Sullivan', party: 'Republican' }
-      ]
-    },
-    'Arizona': {
-      governor: 'Katie Hobbs',
-      party: 'Democratic',
-      senators: [
-        { name: 'Kyrsten Sinema', party: 'Independent' },
-        { name: 'Mark Kelly', party: 'Democratic' }
-      ]
-    },
-    'Arkansas': {
-      governor: 'Sarah Huckabee Sanders',
-      party: 'Republican',
-      senators: [
-        { name: 'John Boozman', party: 'Republican' },
-        { name: 'Tom Cotton', party: 'Republican' }
-      ]
-    },
-    'California': {
-      governor: 'Gavin Newsom',
-      party: 'Democratic',
-      senators: [
-        { name: 'Dianne Feinstein', party: 'Democratic' },
-        { name: 'Alex Padilla', party: 'Democratic' }
-      ]
-    },
-    'Colorado': {
-      governor: 'Jared Polis',
-      party: 'Democratic',
-      senators: [
-        { name: 'Michael Bennet', party: 'Democratic' },
-        { name: 'John Hickenlooper', party: 'Democratic' }
-      ]
-    },
-    'Connecticut': {
-      governor: 'Ned Lamont',
-      party: 'Democratic',
-      senators: [
-        { name: 'Richard Blumenthal', party: 'Democratic' },
-        { name: 'Chris Murphy', party: 'Democratic' }
-      ]
-    },
-    'Delaware': {
-      governor: 'John Carney',
-      party: 'Democratic',
-      senators: [
-        { name: 'Tom Carper', party: 'Democratic' },
-        { name: 'Chris Coons', party: 'Democratic' }
-      ]
-    },
-    'Florida': {
-      governor: 'Ron DeSantis',
-      party: 'Republican',
-      senators: [
-        { name: 'Marco Rubio', party: 'Republican' },
-        { name: 'Rick Scott', party: 'Republican' }
-      ]
-    },
-    'Georgia': {
-      governor: 'Brian Kemp',
-      party: 'Republican',
-      senators: [
-        { name: 'Jon Ossoff', party: 'Democratic' },
-        { name: 'Raphael Warnock', party: 'Democratic' }
-      ]
-    },
-    'Hawaii': {
-      governor: 'Josh Green',
-      party: 'Democratic',
-      senators: [
-        { name: 'Brian Schatz', party: 'Democratic' },
-        { name: 'Mazie Hirono', party: 'Democratic' }
-      ]
-    },
-    'Idaho': {
-      governor: 'Brad Little',
-      party: 'Republican',
-      senators: [
-        { name: 'Mike Crapo', party: 'Republican' },
-        { name: 'James Risch', party: 'Republican' }
-      ]
-    },
-    'Illinois': {
-      governor: 'J.B. Pritzker',
-      party: 'Democratic',
-      senators: [
-        { name: 'Dick Durbin', party: 'Democratic' },
-        { name: 'Tammy Duckworth', party: 'Democratic' }
-      ]
-    },
-    'Indiana': {
-      governor: 'Eric Holcomb',
-      party: 'Republican',
-      senators: [
-        { name: 'Todd Young', party: 'Republican' },
-        { name: 'Mike Braun', party: 'Republican' }
-      ]
-    },
-    'Iowa': {
-      governor: 'Kim Reynolds',
-      party: 'Republican',
-      senators: [
-        { name: 'Chuck Grassley', party: 'Republican' },
-        { name: 'Joni Ernst', party: 'Republican' }
-      ]
-    },
-    'Kansas': {
-      governor: 'Laura Kelly',
-      party: 'Democratic',
-      senators: [
-        { name: 'Jerry Moran', party: 'Republican' },
-        { name: 'Roger Marshall', party: 'Republican' }
-      ]
-    },
-    'Kentucky': {
-      governor: 'Andy Beshear',
-      party: 'Democratic',
-      senators: [
-        { name: 'Mitch McConnell', party: 'Republican' },
-        { name: 'Rand Paul', party: 'Republican' }
-      ]
-    },
-    'Louisiana': {
-      governor: 'John Bel Edwards',
-      party: 'Democratic',
-      senators: [
-        { name: 'Bill Cassidy', party: 'Republican' },
-        { name: 'John Kennedy', party: 'Republican' }
-      ]
-    },
-    'Maine': {
-      governor: 'Janet Mills',
-      party: 'Democratic',
-      senators: [
-        { name: 'Susan Collins', party: 'Republican' },
-        { name: 'Angus King', party: 'Independent' }
-      ]
-    },
-    'Maryland': {
-      governor: 'Wes Moore',
-      party: 'Democratic',
-      senators: [
-        { name: 'Ben Cardin', party: 'Democratic' },
-        { name: 'Chris Van Hollen', party: 'Democratic' }
-      ]
-    },
-    'Massachusetts': {
-      governor: 'Maura Healey',
-      party: 'Democratic',
-      senators: [
-        { name: 'Elizabeth Warren', party: 'Democratic' },
-        { name: 'Ed Markey', party: 'Democratic' }
-      ]
-    },
-    'Michigan': {
-      governor: 'Gretchen Whitmer',
-      party: 'Democratic',
-      senators: [
-        { name: 'Debbie Stabenow', party: 'Democratic' },
-        { name: 'Gary Peters', party: 'Democratic' }
-      ]
-    },
-    'Minnesota': {
-      governor: 'Tim Walz',
-      party: 'Democratic',
-      senators: [
-        { name: 'Amy Klobuchar', party: 'Democratic' },
-        { name: 'Tina Smith', party: 'Democratic' }
-      ]
-    },
-    'Mississippi': {
-      governor: 'Tate Reeves',
-      party: 'Republican',
-      senators: [
-        { name: 'Roger Wicker', party: 'Republican' },
-        { name: 'Cindy Hyde-Smith', party: 'Republican' }
-      ]
-    },
-    'Missouri': {
-      governor: 'Mike Parson',
-      party: 'Republican',
-      senators: [
-        { name: 'Roy Blunt', party: 'Republican' },
-        { name: 'Josh Hawley', party: 'Republican' }
-      ]
-    },
-    'Montana': {
-      governor: 'Greg Gianforte',
-      party: 'Republican',
-      senators: [
-        { name: 'Jon Tester', party: 'Democratic' },
-        { name: 'Steve Daines', party: 'Republican' }
-      ]
-    },
-    'Nebraska': {
-      governor: 'Pete Ricketts',
-      party: 'Republican',
-      senators: [
-        { name: 'Deb Fischer', party: 'Republican' },
-        { name: 'Ben Sasse', party: 'Republican' }
-      ]
-    },
-    'Nevada': {
-      governor: 'Joe Lombardo',
-      party: 'Republican',
-      senators: [
-        { name: 'Catherine Cortez Masto', party: 'Democratic' },
-        { name: 'Jacky Rosen', party: 'Democratic' }
-      ]
-    },
-    'New Hampshire': {
-      governor: 'Chris Sununu',
-      party: 'Republican',
-      senators: [
-        { name: 'Jeanne Shaheen', party: 'Democratic' },
-        { name: 'Maggie Hassan', party: 'Democratic' }
-      ]
-    },
-    'New Jersey': {
-      governor: 'Phil Murphy',
-      party: 'Democratic',
-      senators: [
-        { name: 'Bob Menendez', party: 'Democratic' },
-        { name: 'Cory Booker', party: 'Democratic' }
-      ]
-    },
-    'New Mexico': {
-      governor: 'Michelle Lujan Grisham',
-      party: 'Democratic',
-      senators: [
-        { name: 'Martin Heinrich', party: 'Democratic' },
-        { name: 'Ben Ray Luján', party: 'Democratic' }
-      ]
-    },
-    'New York': {
-      governor: 'Kathy Hochul',
-      party: 'Democratic',
-      senators: [
-        { name: 'Chuck Schumer', party: 'Democratic' },
-        { name: 'Kirsten Gillibrand', party: 'Democratic' }
-      ]
-    },
-    'North Carolina': {
-      governor: 'Roy Cooper',
-      party: 'Democratic',
-      senators: [
-        { name: 'Richard Burr', party: 'Republican' },
-        { name: 'Thom Tillis', party: 'Republican' }
-      ]
-    },
-    'North Dakota': {
-      governor: 'Doug Burgum',
-      party: 'Republican',
-      senators: [
-        { name: 'John Hoeven', party: 'Republican' },
-        { name: 'Kevin Cramer', party: 'Republican' }
-      ]
-    },
-    'Ohio': {
-      governor: 'Mike DeWine',
-      party: 'Republican',
-      senators: [
-        { name: 'Sherrod Brown', party: 'Democratic' },
-        { name: 'J.D. Vance', party: 'Republican' }
-      ]
-    },
-    'Oklahoma': {
-      governor: 'Kevin Stitt',
-      party: 'Republican',
-      senators: [
-        { name: 'James Lankford', party: 'Republican' },
-        { name: 'Markwayne Mullin', party: 'Republican' }
-      ]
-    },
-    'Oregon': {
-      governor: 'Tina Kotek',
-      party: 'Democratic',
-      senators: [
-        { name: 'Ron Wyden', party: 'Democratic' },
-        { name: 'Jeff Merkley', party: 'Democratic' }
-      ]
-    },
-    'Pennsylvania': {
-      governor: 'Josh Shapiro',
-      party: 'Democratic',
-      senators: [
-        { name: 'Bob Casey Jr.', party: 'Democratic' },
-        { name: 'John Fetterman', party: 'Democratic' }
-      ]
-    },
-    'Rhode Island': {
-      governor: 'Dan McKee',
-      party: 'Democratic',
-      senators: [
-        { name: 'Jack Reed', party: 'Democratic' },
-        { name: 'Sheldon Whitehouse', party: 'Democratic' }
-      ]
-    },
-    'South Carolina': {
-      governor: 'Henry McMaster',
-      party: 'Republican',
-      senators: [
-        { name: 'Lindsey Graham', party: 'Republican' },
-        { name: 'Tim Scott', party: 'Republican' }
-      ]
-    },
-    'South Dakota': {
-      governor: 'Kristi Noem',
-      party: 'Republican',
-      senators: [
-        { name: 'John Thune', party: 'Republican' },
-        { name: 'Mike Rounds', party: 'Republican' }
-      ]
-    },
-    'Tennessee': {
-      governor: 'Bill Lee',
-      party: 'Republican',
-      senators: [
-        { name: 'Marsha Blackburn', party: 'Republican' },
-        { name: 'Bill Hagerty', party: 'Republican' }
-      ]
-    },
-    'Texas': {
-      governor: 'Greg Abbott',
-      party: 'Republican',
-      senators: [
-        { name: 'John Cornyn', party: 'Republican' },
-        { name: 'Ted Cruz', party: 'Republican' }
-      ]
-    },
-    'Utah': {
-      governor: 'Spencer Cox',
-      party: 'Republican',
-      senators: [
-        { name: 'Mike Lee', party: 'Republican' },
-        { name: 'Mitt Romney', party: 'Republican' }
-      ]
-    },
-    'Vermont': {
-      governor: 'Phil Scott',
-      party: 'Republican',
-      senators: [
-        { name: 'Patrick Leahy', party: 'Democratic' },
-        { name: 'Bernie Sanders', party: 'Independent' }
-      ]
-    },
-    'Virginia': {
-      governor: 'Glenn Youngkin',
-      party: 'Republican',
-      senators: [
-        { name: 'Mark Warner', party: 'Democratic' },
-        { name: 'Tim Kaine', party: 'Democratic' }
-      ]
-    },
-    'Washington': {
-      governor: 'Jay Inslee',
-      party: 'Democratic',
-      senators: [
-        { name: 'Patty Murray', party: 'Democratic' },
-        { name: 'Maria Cantwell', party: 'Democratic' }
-      ]
-    },
-    'West Virginia': {
-      governor: 'Jim Justice',
-      party: 'Republican',
-      senators: [
-        { name: 'Joe Manchin', party: 'Democratic' },
-        { name: 'Shelley Moore Capito', party: 'Republican' }
-      ]
-    },
-    'Wisconsin': {
-      governor: 'Tony Evers',
-      party: 'Democratic',
-      senators: [
-        { name: 'Ron Johnson', party: 'Republican' },
-        { name: 'Tammy Baldwin', party: 'Democratic' }
-      ]
-    },
-    'Wyoming': {
-      governor: 'Mark Gordon',
-      party: 'Republican',
-      senators: [
-        { name: 'John Barrasso', party: 'Republican' },
-        { name: 'Cynthia Lummis', party: 'Republican' }
-      ]
-    }
-  }
+  // Use the real-time officials data hook
+  const { data: officialsData, error, isLoading } = useOfficialsData(selectedState || null)
 
   // Helper function to get party colors
   const getPartyColor = (party: string) => {
@@ -812,12 +412,49 @@ function OfficialsLegend({
 
   // Show officials legend when a state is selected (both states and counties view)
   if (selectedState && (currentView === 'states' || currentView === 'counties')) {
-    const officials = stateOfficials[selectedState]
-    
-    if (!officials) {
-      return null // Don't show legend if no officials data available
+    // Show loading state
+    if (isLoading) {
+      return (
+        <div className="absolute top-20 sm:top-24 left-2 sm:left-4 z-[1000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-5 max-w-[300px]">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-red-500 rounded-full"></div>
+              <div className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+                {selectedState}
+              </div>
+            </div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              Loading officials data...
+            </div>
+          </div>
+        </div>
+      )
     }
 
+    // Show error state with fallback
+    if (error || !officialsData?.officials?.length) {
+      return (
+        <div className="absolute top-20 sm:top-24 left-2 sm:left-4 z-[1000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-5 max-w-[300px]">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-red-500 rounded-full"></div>
+              <div className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+                {selectedState}
+              </div>
+            </div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              Officials data temporarily unavailable
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    // Process the real-time officials data
+    const officials = officialsData.officials
+    const governor = officials.find(o => o.office.toLowerCase().includes('governor'))
+    const senators = officials.filter(o => o.office.toLowerCase().includes('senator'))
+    
     return (
       <div className="absolute top-20 sm:top-24 left-2 sm:left-4 z-[1000] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-5 max-w-[300px]">
         <div className="space-y-4">
@@ -829,63 +466,88 @@ function OfficialsLegend({
             </div>
           </div>
           
+          {/* Data source indicator */}
+          <div className="text-xs text-gray-500 dark:text-gray-400">
+            {officialsData.source === 'google_civic_api' && '🔴 Live Data'}
+            {officialsData.source === 'supabase_cache' && '🟡 Cached Data'}
+            {officialsData.source === 'fallback_data' && '🟠 Fallback Data'}
+            {officialsData.lastUpdated && (
+              <span className="ml-2">
+                Updated: {new Date(officialsData.lastUpdated).toLocaleDateString()}
+              </span>
+            )}
+          </div>
+          
           {/* Governor */}
-          <div className="space-y-2.5">
-            <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Governor</div>
-            <div className="flex items-center space-x-3">
-              <div 
-                className="w-1 h-8 rounded-full"
-                style={{ backgroundColor: getPartyColor(officials.party) }}
-              />
-              <div className="flex-1">
-                <div className="text-sm text-gray-900 dark:text-white font-medium">
-                  {officials.governor}
-                </div>
-                <div className="flex items-center space-x-2 mt-1.5">
-                  <span 
-                    className="text-xs px-2 py-0.5 rounded-full text-white font-medium"
-                    style={{ backgroundColor: getPartyColor(officials.party) }}
-                  >
-                    {getPartyAbbr(officials.party)}
-                  </span>
-                  <span className="text-xs text-gray-600 dark:text-gray-400">
-                    {officials.party}
-                  </span>
+          {governor && (
+            <div className="space-y-2.5">
+              <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Governor</div>
+              <div className="flex items-center space-x-3">
+                <div 
+                  className="w-1 h-8 rounded-full"
+                  style={{ backgroundColor: getPartyColor(governor.party || '') }}
+                />
+                <div className="flex-1">
+                  <div className="text-sm text-gray-900 dark:text-white font-medium">
+                    {governor.name}
+                  </div>
+                  <div className="flex items-center space-x-2 mt-1.5">
+                    <span 
+                      className="text-xs px-2 py-0.5 rounded-full text-white font-medium"
+                      style={{ backgroundColor: getPartyColor(governor.party || '') }}
+                    >
+                      {getPartyAbbr(governor.party || '')}
+                    </span>
+                    <span className="text-xs text-gray-600 dark:text-gray-400">
+                      {governor.party || 'Unknown'}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
           
           {/* Senators */}
-          <div className="space-y-2.5 pt-3 border-t border-gray-200 dark:border-gray-600">
-            <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Senators</div>
-            <div className="space-y-3.5">
-              {officials.senators.map((senator, idx) => (
-                <div key={idx} className="flex items-center space-x-3">
-                  <div 
-                    className="w-1 h-8 rounded-full"
-                    style={{ backgroundColor: getPartyColor(senator.party) }}
-                  />
-                  <div className="flex-1">
-                    <div className="text-sm text-gray-900 dark:text-white font-medium">
-                      {senator.name}
-                    </div>
-                    <div className="flex items-center space-x-2 mt-1.5">
-                      <span 
-                        className="text-xs px-2 py-0.5 rounded-full text-white font-medium"
-                        style={{ backgroundColor: getPartyColor(senator.party) }}
-                      >
-                        {getPartyAbbr(senator.party)}
-                      </span>
-                      <span className="text-xs text-gray-600 dark:text-gray-400">
-                        {senator.party}
-                      </span>
+          {senators.length > 0 && (
+            <div className="space-y-2.5 pt-3 border-t border-gray-200 dark:border-gray-600">
+              <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                Senators ({senators.length})
+              </div>
+              <div className="space-y-3.5">
+                {senators.map((senator, idx) => (
+                  <div key={idx} className="flex items-center space-x-3">
+                    <div 
+                      className="w-1 h-8 rounded-full"
+                      style={{ backgroundColor: getPartyColor(senator.party || '') }}
+                    />
+                    <div className="flex-1">
+                      <div className="text-sm text-gray-900 dark:text-white font-medium">
+                        {senator.name}
+                      </div>
+                      <div className="flex items-center space-x-2 mt-1.5">
+                        <span 
+                          className="text-xs px-2 py-0.5 rounded-full text-white font-medium"
+                          style={{ backgroundColor: getPartyColor(senator.party || '') }}
+                        >
+                          {getPartyAbbr(senator.party || '')}
+                        </span>
+                        <span className="text-xs text-gray-600 dark:text-gray-400">
+                          {senator.party || 'Unknown'}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* Additional officials count */}
+          {officials.length > (governor ? 1 : 0) + senators.length && (
+            <div className="text-xs text-gray-500 dark:text-gray-400 pt-2 border-t border-gray-200 dark:border-gray-600">
+              +{officials.length - (governor ? 1 : 0) - senators.length} other officials
+            </div>
+          )}
         </div>
       </div>
     )
@@ -1134,6 +796,222 @@ function DashboardDrawer({
   )
 }
 
+// Custom tile layer component for NYT-style responsive mapping
+function ResponsiveTileLayer({ 
+  currentZoom, 
+  statePopData, 
+  countyPopData, 
+  selectedState,
+  currentView 
+}: {
+  currentZoom: number
+  statePopData: any[]
+  countyPopData: any[]
+  selectedState?: string | null
+  currentView: 'states' | 'counties'
+}) {
+  const map = useMap()
+  
+  // Define different tile sources for different zoom levels and contexts
+  const getTileConfig = useCallback(() => {
+    // Base map style - clean, minimal for civic data
+    const baseStyle = {
+      url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }
+    
+    // For high zoom levels (street level), use detailed OSM
+    if (currentZoom >= 10) {
+      return {
+        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains: 'abc',
+        maxZoom: 19
+      }
+    }
+    
+    // For medium zoom (city/county level), use clean CartoDB
+    if (currentZoom >= 6) {
+      return {
+        url: "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }
+    }
+    
+    // For low zoom (state/national level), use minimal base
+    return baseStyle
+  }, [currentZoom])
+  
+  const tileConfig = getTileConfig()
+  
+  return (
+    <TileLayer
+      key={`${currentZoom}-${currentView}`}
+      url={tileConfig.url}
+      attribution={tileConfig.attribution}
+      subdomains={tileConfig.subdomains}
+      maxZoom={tileConfig.maxZoom}
+      opacity={currentZoom >= 10 ? 1 : 0.8}
+      className="responsive-tile-layer"
+    />
+  )
+}
+
+// Enhanced GeoJSON layer with NYT-style styling
+function EnhancedGeoJSONLayer({
+  data,
+  currentZoom,
+  currentView,
+  statePopData,
+  countyPopData,
+  selectedState,
+  selectedCounty,
+  onFeatureClick,
+  onFeatureHover,
+  onFeatureMouseOut
+}: {
+  data: any
+  currentZoom: number
+  currentView: 'states' | 'counties'
+  statePopData: any[]
+  countyPopData: any[]
+  selectedState?: string | null
+  selectedCounty?: string | null
+  onFeatureClick: (feature: any, event: L.LeafletMouseEvent) => void
+  onFeatureHover: (feature: any, event: L.LeafletMouseEvent) => void
+  onFeatureMouseOut: (feature: any, event: L.LeafletMouseEvent) => void
+}) {
+  
+  // NYT-style color scales with better contrast
+  const getPopulationColor = useCallback((population: number, isState: boolean) => {
+    if (isState) {
+      // State-level colors - civic blue palette
+      if (population < 1000000) return '#f0f9ff'        // Very light blue
+      if (population < 3000000) return '#e0f2fe'        // Light blue  
+      if (population < 5000000) return '#bae6fd'        // Medium light blue
+      if (population < 10000000) return '#7dd3fc'       // Medium blue
+      if (population < 20000000) return '#38bdf8'       // Medium dark blue
+      return '#0ea5e9'                                  // Dark blue
+    } else {
+      // County-level colors - warmer civic palette
+      if (population < 5000) return '#fef3c7'          // Very light amber
+      if (population < 15000) return '#fde68a'         // Light amber
+      if (population < 50000) return '#fcd34d'         // Medium amber
+      if (population < 100000) return '#f59e0b'        // Medium orange
+      if (population < 250000) return '#d97706'        // Dark orange
+      if (population < 500000) return '#b45309'        // Darker orange
+      return '#92400e'                                 // Darkest orange
+    }
+  }, [])
+  
+  // Enhanced styling function
+  const getFeatureStyle = useCallback((feature: any) => {
+    const isState = currentView === 'states'
+    const featureName = feature.properties?.NAME || feature.properties?.name || ''
+    
+    let population = 0
+    let isSelected = false
+    
+    if (isState) {
+      const stateData = statePopData.find(s => s.name === featureName)
+      population = stateData?.population || 0
+      isSelected = selectedState === featureName
+    } else {
+      const countyData = countyPopData.find(c => c.name === featureName)
+      population = countyData?.population || 0
+      isSelected = selectedCounty === featureName
+    }
+    
+    const baseColor = getPopulationColor(population, isState)
+    
+    return {
+      fillColor: baseColor,
+      weight: isSelected ? 3 : 2,
+      opacity: 1,
+      color: isSelected ? '#1e40af' : '#6b7280',
+      fillOpacity: 0.7,
+      cursor: 'pointer'
+    }
+  }, [currentView, currentZoom, statePopData, countyPopData, selectedState, selectedCounty, getPopulationColor])
+  
+  // Enhanced event handlers
+  const onEachFeature = useCallback((feature: any, layer: L.Layer) => {
+    layer.on({
+      mouseover: (e: L.LeafletMouseEvent) => {
+        const layer = e.target
+        const currentStyle = getFeatureStyle(feature)
+        
+        // Apply prominent hover style with scaling effect
+        layer.setStyle({
+          ...currentStyle,
+          weight: currentStyle.weight + 2,
+          fillOpacity: Math.min(currentStyle.fillOpacity + 0.2, 0.9),
+          color: '#1e40af',
+          dashArray: '' // Ensure no dashed lines
+        })
+        
+        // Add scaling effect via CSS transform
+        if (layer.getElement) {
+          const element = layer.getElement()
+          if (element) {
+            element.style.transform = 'scale(1.05)'
+            element.style.transformOrigin = 'center'
+            element.style.transition = 'transform 0.2s ease-out'
+            element.style.filter = 'brightness(1.1)'
+            element.style.zIndex = '1000'
+          }
+        }
+        
+        // Bring to front
+        layer.bringToFront()
+        
+        onFeatureHover(feature, e)
+      },
+      mouseout: (e: L.LeafletMouseEvent) => {
+        const layer = e.target
+        
+        // Reset scaling effect
+        if (layer.getElement) {
+          const element = layer.getElement()
+          if (element) {
+            element.style.transform = 'scale(1)'
+            element.style.transition = 'transform 0.2s ease-out'
+            element.style.filter = 'none'
+            element.style.zIndex = 'auto'
+          }
+        }
+        
+        // Completely reset to fresh style
+        const resetStyle = getFeatureStyle(feature)
+        layer.setStyle({
+          ...resetStyle,
+          dashArray: '' // Explicitly remove any dashed lines
+        })
+        
+        onFeatureMouseOut(feature, e)
+      },
+      click: (e: L.LeafletMouseEvent) => {
+        onFeatureClick(feature, e)
+      }
+    })
+  }, [getFeatureStyle, onFeatureClick, onFeatureHover, onFeatureMouseOut])
+  
+  if (!data) return null
+  
+  return (
+    <GeoJSON
+      key={`${currentView}-layer`}
+      data={data}
+      style={getFeatureStyle}
+      onEachFeature={onEachFeature}
+    />
+  )
+}
+
 export default function LeafletMap({
   mode = 'default',
   onStateClick,
@@ -1151,57 +1029,21 @@ export default function LeafletMap({
   const [statesData, setStatesData] = useState<any>(null)
   const [countiesData, setCountiesData] = useState<any>(null)
   const [currentView, setCurrentView] = useState<'states' | 'counties'>('states')
-  const [hoveredFeature, setHoveredFeature] = useState<any>(null)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [drawerOpen, setDrawerOpen] = useState(false)
-  const [selectedOcdId, setSelectedOcdId] = useState<string | null>(null)
-  const [enhancedStateData, setEnhancedStateData] = useState<any[]>([])
   const [selectedCounty, setSelectedCounty] = useState<string | null>(null)
+  const [hoveredFeature, setHoveredFeature] = useState<any>(null)
+  const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null)
+  const [drawerOpen, setDrawerOpen] = useState(false)
+  const [currentZoom, setCurrentZoom] = useState(4) // Track current zoom level
+  const [isMapReady, setIsMapReady] = useState(false)
 
-  // Fetch population data
-  const { statePopData, totalPopulation, isLoading: popLoading, error: popError } = usePopulationData()
-  const { countyPopData, isLoading: countyLoading, error: countyError } = useCountyPopulationData(selectedState || undefined)
-  const selectedStateFips = useMemo(() => {
-    if (!selectedState) return undefined
-    const state = statePopData.find(s => s.name === selectedState)
-    return state?.fips
-  }, [selectedState, statePopData])
+  // Data hooks
+  const { statePopData = [], isLoading: statePopLoading } = usePopulationData()
+  const { countyPopData = [], isLoading: countyPopLoading } = useCountyPopulationData(selectedState || '')
+  const { data: countyHouseReps = {} } = useOfficialsData(selectedState || null)
 
-  const { data: officialsData } = useOfficialsData(selectedOcdId)
-
-  // Load enhanced state data with county counts
-  useEffect(() => {
-    const loadEnhancedStateData = async () => {
-      try {
-        const response = await fetch('/api/census/states?includeCounties=true')
-        if (response.ok) {
-          const data = await response.json()
-          setEnhancedStateData(data)
-        }
-      } catch (error) {
-        console.error('Error loading enhanced state data:', error)
-      }
-    }
-
-    loadEnhancedStateData()
-  }, [])
-
-  // Create color scale for population
-  const colorScale = useMemo(() => {
-    if (!statePopData || statePopData.length === 0) {
-      // Return a more visible default color instead of gray when data is loading
-      return () => '#93c5fd' // Light blue instead of gray
-    }
-    
-    // Define the color scale to match the legend ranges
-    return (population: number) => {
-      if (population < 1000000) return '#dbeafe'        // <1M - lightest blue
-      if (population < 3000000) return '#bfdbfe'        // 1M-3M
-      if (population < 5000000) return '#93c5fd'        // 3M-5M  
-      if (population < 10000000) return '#60a5fa'       // 5M-10M
-      if (population < 20000000) return '#3b82f6'       // 10M-20M
-      return '#2563eb'                                  // >20M - darkest blue
-    }
+  // Calculate total population
+  const totalPopulation = useMemo(() => {
+    return statePopData.reduce((sum: number, state: any) => sum + (state.population || 0), 0)
   }, [statePopData])
 
   // Load states data from local API
@@ -1225,82 +1067,96 @@ export default function LeafletMap({
     loadStatesData()
   }, [onError])
 
-  // Load counties data when state is selected
+  // Load counties data when a state is selected AND we're in counties view
   useEffect(() => {
-    if (selectedState && selectedStateFips) {
+    if (selectedState && currentView === 'counties') {
       const loadCountiesData = async () => {
         try {
+          console.log(`Loading counties for ${selectedState}...`)
           const response = await fetch(`/api/counties-geojson?state=${encodeURIComponent(selectedState)}`)
           if (!response.ok) {
             throw new Error(`Failed to load counties data: ${response.status}`)
           }
           const data = await response.json()
+          console.log(`Loaded ${data.features?.length || 0} counties for ${selectedState}`)
           setCountiesData(data)
-          setCurrentView('counties')
-          // Clear selected county when switching states
-          setSelectedCounty(null)
         } catch (error) {
           console.error('Error loading counties data:', error)
           if (onError) {
-            onError('Failed to load county data')
+            onError('Failed to load counties data')
           }
         }
       }
 
       loadCountiesData()
-    }
-  }, [selectedState, selectedStateFips, onError])
-
-  // Clear hover state when view changes
-  useEffect(() => {
-    setHoveredFeature(null)
-    // Clear selected county when going back to states view
-    if (currentView === 'states') {
+    } else if (currentView === 'states') {
+      // Clear counties data when switching back to states view
+      setCountiesData(null)
       setSelectedCounty(null)
     }
-  }, [currentView])
+  }, [selectedState, currentView, onError])
 
-  // Handle zoom to location with smooth animation - DISABLED
-  // This was causing unwanted street-level zooming when clicking states/counties
+  // Handle zoom to location
   useEffect(() => {
-    // Disabled to prevent automatic zooming behavior
-    // if (zoomToLocation && mapRef.current) {
-    //   const { lat, lng, zoom = 12 } = zoomToLocation
-    //   mapRef.current.flyTo([lat, lng], zoom, {
-    //     duration: 1.0,
-    //     easeLinearity: 0.1
-    //   })
-    // }
-  }, [zoomToLocation])
+    if (zoomToLocation && mapRef.current && isMapReady) {
+      const { lat, lng, zoom = 12 } = zoomToLocation
+      mapRef.current.flyTo([lat, lng], zoom, {
+        duration: 1.2,
+        easeLinearity: 0.1
+      })
+    }
+  }, [zoomToLocation, isMapReady])
 
-  // Handle state click
-  const handleStateClick = useCallback((feature: StateFeature) => {
-    const stateName = feature.properties.NAME
-    onStateClick?.(stateName)
+  // Enhanced feature click handler
+  const handleFeatureClick = useCallback((feature: any, event: L.LeafletMouseEvent) => {
+    const featureName = feature.properties?.NAME || feature.properties?.name || ''
     
-    if (mode === 'dashboard') {
-      const ocdId = `ocd-division/country:us/state:${stateName.toLowerCase().replace(/\s+/g, '_')}`
-      setSelectedOcdId(ocdId)
-      setDrawerOpen(true)
+    if (currentView === 'states') {
+      if (featureName && onStateClick) {
+        onStateClick(featureName)
+        
+        // Always switch to counties view when clicking a state
+        setCurrentView('counties')
+        
+        // Zoom to state bounds with proper padding
+        const layer = event.target
+        if (mapRef.current && layer.getBounds) {
+          // Use a timeout to ensure the counties data loads first
+          setTimeout(() => {
+            mapRef.current?.flyToBounds(layer.getBounds(), { 
+              padding: [20, 20],
+              duration: 1.0,
+              easeLinearity: 0.1,
+              maxZoom: 8 // Prevent over-zooming
+            })
+          }, 100)
+        }
+      }
+    } else if (currentView === 'counties') {
+      if (featureName && selectedState) {
+        setSelectedCounty(featureName)
+        
+        if (onCountyClick) {
+          onCountyClick(featureName, selectedState)
+        }
+      }
     }
-  }, [onStateClick, mode])
+  }, [currentView, onStateClick, onCountyClick, selectedState])
 
-  // Handle county click
-  const handleCountyClick = useCallback((feature: CountyFeature) => {
-    const countyName = feature.properties.NAME
-    onCountyClick?.(countyName, selectedState || '')
-  }, [onCountyClick, selectedState])
-
-  // Handle feature hover
-  const handleFeatureHover = useCallback((feature: any, event?: L.LeafletMouseEvent) => {
-    if (event) {
-      setMousePosition({ x: event.originalEvent.clientX, y: event.originalEvent.clientY })
-    }
+  // Enhanced feature hover handler
+  const handleFeatureHover = useCallback((feature: any, event: L.LeafletMouseEvent) => {
     setHoveredFeature(feature)
+    setMousePosition({ x: event.originalEvent.clientX, y: event.originalEvent.clientY })
     onHover?.(feature)
   }, [onHover])
 
-  // Map controls handlers
+  // Feature mouse out handler
+  const handleFeatureMouseOut = useCallback((feature: any, event: L.LeafletMouseEvent) => {
+    setHoveredFeature(null)
+    setMousePosition(null)
+  }, [])
+
+  // Map controls handlers with zoom tracking
   const handleZoomIn = useCallback(() => {
     if (mapRef.current) {
       const currentZoom = mapRef.current.getZoom()
@@ -1325,13 +1181,16 @@ export default function LeafletMap({
 
   const handleResetView = useCallback(() => {
     if (mapRef.current) {
-      mapRef.current.flyToBounds([
-        [24.396308, -125.0],
-        [49.384358, -66.93]
-      ], { 
+      // Simple reset to initial view without restrictive bounds
+      const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+      const resetCenter: [number, number] = isMobile 
+        ? [45.0, -95.0] // Mobile center
+        : [39.8283, -98.5795] // Desktop center
+      const resetZoom = isMobile ? 3.8 : 4
+      
+      mapRef.current.flyTo(resetCenter, resetZoom, { 
         duration: 0.8,
-        easeLinearity: 0.1,
-        padding: [20, 20]
+        easeLinearity: 0.1
       })
     }
     setCurrentView('states')
@@ -1349,215 +1208,22 @@ export default function LeafletMap({
     handleResetView()
   }, [handleResetView])
 
-  // Style functions - improved to handle different property names
-  const getStateStyle = useCallback((feature: any) => {
-    const stateName = feature.properties?.NAME || feature.properties?.name
-    const stateData = statePopData.find(s => s.name === stateName)
-    const population = stateData?.population || 0
-    
-    return {
-      fillColor: colorScale(population),
-      weight: 2,
-      opacity: 1,
-      color: '#64748b',
-      fillOpacity: 0.8, // Increased opacity to make colors more visible
-      cursor: 'pointer'
-    }
-  }, [statePopData, colorScale])
-
-  const getCountyStyle = useCallback((feature: any) => {
-    const countyName = feature.properties?.NAME || feature.properties?.name
-    const countyData = countyPopData.find(c => c.name === countyName)
-    const population = countyData?.population || 0
-    
-    // Calculate population density (people per square mile)
-    // We'll need to estimate area or use a density calculation
-    // For now, we'll use population ranges similar to states but scaled for counties
-    const getCountyColor = (pop: number) => {
-      if (pop < 5000) return '#f0f9ff'        // <5K - very light blue
-      if (pop < 15000) return '#e0f2fe'       // 5K-15K
-      if (pop < 50000) return '#bae6fd'       // 15K-50K
-      if (pop < 100000) return '#7dd3fc'      // 50K-100K
-      if (pop < 250000) return '#38bdf8'      // 100K-250K
-      if (pop < 500000) return '#0ea5e9'      // 250K-500K
-      return '#0284c7'                        // >500K - darkest blue
-    }
-    
-    // Check if this county is selected
-    const isSelected = selectedCounty === countyName
-    
-    return {
-      fillColor: getCountyColor(population),
-      weight: isSelected ? 3 : 1.5, // Thicker border for selected county
-      opacity: 1,
-      color: isSelected ? '#1e40af' : '#64748b', // Blue border for selected, gray for others
-      fillOpacity: isSelected ? 0.9 : 0.7, // Higher opacity for selected
-      cursor: 'pointer'
-    }
-  }, [countyPopData, selectedCounty])
-
-  // Event handlers for states
-  const onEachStateFeature = useCallback((feature: any, layer: L.Layer) => {
-    layer.on({
-      mouseover: (e: L.LeafletMouseEvent) => {
-        // Only show hover if we're in states view
-        if (currentView !== 'states') return
-        
-        const layer = e.target
-        const stateName = feature.properties?.NAME || feature.properties?.name
-        const stateData = statePopData.find(s => s.name === stateName)
-        const population = stateData?.population || 0
-        const originalFillColor = colorScale(population)
-        
-        layer.setStyle({
-          fillColor: originalFillColor, // Use the calculated color directly
-          weight: 4,
-          opacity: 1,
-          color: '#1e40af',
-          fillOpacity: 0.9,
-          cursor: 'pointer'
-        })
-        
-        // Bring to front
-        if (layer.bringToFront) {
-          layer.bringToFront()
-        }
-        
-        setHoveredFeature(feature)
-        setMousePosition({ x: e.originalEvent.clientX, y: e.originalEvent.clientY })
-        
-        if (onHover) {
-          onHover(feature)
-        }
-      },
-      mouseout: (e: L.LeafletMouseEvent) => {
-        const layer = e.target
-        // Reset to original style
-        layer.setStyle(getStateStyle(feature))
-        setHoveredFeature(null)
-      },
-      mousemove: (e: L.LeafletMouseEvent) => {
-        // Only update position if we're in states view
-        if (currentView === 'states') {
-          setMousePosition({ x: e.originalEvent.clientX, y: e.originalEvent.clientY })
-        }
-      },
-      click: (e: L.LeafletMouseEvent) => {
-        const stateName = feature.properties?.NAME || feature.properties?.name
-        
-        // Clear hover state immediately when clicking
-        setHoveredFeature(null)
-        
-        if (stateName && onStateClick) {
-          onStateClick(stateName)
-          setCurrentView('counties')
-          
-          // Zoom to state bounds to show the state overview with counties
-          const layer = e.target
-          if (mapRef.current && layer.getBounds) {
-            mapRef.current.flyToBounds(layer.getBounds(), { 
-              padding: [30, 30],
-              duration: 0.8,
-              easeLinearity: 0.1
-            })
-          }
-        }
-      }
-    })
-  }, [getStateStyle, onStateClick, onHover, currentView, statePopData, colorScale])
-
-  // Event handlers for counties
-  const onEachCountyFeature = useCallback((feature: any, layer: L.Layer) => {
-    layer.on({
-      mouseover: (e: L.LeafletMouseEvent) => {
-        // Only show hover if we're in counties view
-        if (currentView !== 'counties') return
-        
-        const layer = e.target
-        const countyName = feature.properties?.NAME || feature.properties?.name
-        const countyData = countyPopData.find(c => c.name === countyName)
-        const population = countyData?.population || 0
-        
-        // Calculate county color directly
-        const getCountyColor = (pop: number) => {
-          if (pop < 5000) return '#f0f9ff'        // <5K - very light blue
-          if (pop < 15000) return '#e0f2fe'       // 5K-15K
-          if (pop < 50000) return '#bae6fd'       // 15K-50K
-          if (pop < 100000) return '#7dd3fc'      // 50K-100K
-          if (pop < 250000) return '#38bdf8'      // 100K-250K
-          if (pop < 500000) return '#0ea5e9'      // 250K-500K
-          return '#0284c7'                        // >500K - darkest blue
-        }
-        
-        const originalFillColor = getCountyColor(population)
-        const isSelected = selectedCounty === countyName
-        
-        layer.setStyle({
-          fillColor: originalFillColor, // Use the calculated color directly
-          weight: 4,
-          opacity: 1,
-          color: '#1e40af',
-          fillOpacity: 0.95,
-          cursor: 'pointer'
-        })
-        
-        if (layer.bringToFront) {
-          layer.bringToFront()
-        }
-        
-        setHoveredFeature(feature)
-        setMousePosition({ x: e.originalEvent.clientX, y: e.originalEvent.clientY })
-      },
-      mouseout: (e: L.LeafletMouseEvent) => {
-        const layer = e.target
-        // Reset to original style
-        layer.setStyle(getCountyStyle(feature))
-        setHoveredFeature(null)
-      },
-      mousemove: (e: L.LeafletMouseEvent) => {
-        // Only update position if we're in counties view
-        if (currentView === 'counties') {
-          setMousePosition({ x: e.originalEvent.clientX, y: e.originalEvent.clientY })
-        }
-      },
-      click: (e: L.LeafletMouseEvent) => {
-        const countyName = feature.properties?.NAME
-        if (countyName && selectedState) {
-          // Set the selected county
-          setSelectedCounty(countyName)
-          
-          // Clear hover state
-          setHoveredFeature(null)
-          
-          // Call the callback if provided - this will navigate to the next page
-          if (onCountyClick) {
-            onCountyClick(countyName, selectedState)
-          }
-          
-          // Remove zoom behavior - just call the callback without zooming
-          // This allows the parent component to handle navigation
-        }
-      }
-    })
-  }, [getCountyStyle, onCountyClick, selectedState, currentView, countyPopData, selectedCounty])
-
-  // Get representatives data for counties
-  const getCountyReps = (stateName: string, countyName: string) => {
-    return countyHouseReps[stateName]?.[countyName] || []
-  }
-
+  // Map height configuration
   const mapHeight = fullHeight 
     ? 'h-screen' 
     : mode === 'dashboard' 
       ? 'h-[60vh] sm:h-[65vh] lg:h-[70vh]' 
       : 'h-[50vh] sm:h-[55vh] lg:h-[60vh] xl:h-[65vh]'
   
-  // US bounds for limiting zoom out - expanded to include Alaska and Hawaii
-  const usBounds: L.LatLngBoundsExpression = [
-    [15.0, -180.0], // Southwest corner (includes Hawaii and western Alaska)
-    [72.0, -60.0]   // Northeast corner (includes northern Alaska)
-  ]
+  // Mobile-responsive initial view settings
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const initialCenter: [number, number] = isMobile 
+    ? [45.0, -95.0] // Much higher latitude for mobile to push US states up significantly
+    : [39.8283, -98.5795] // Keep original desktop center unchanged
+  const initialZoom = isMobile ? 3.8 : 4 // Slightly lower zoom for mobile to fit more content
   
+  // Removed problematic window resize handler that was interfering with zoom
+
   return (
     <div className={`relative ${mapHeight} ${className}`}>
       <MapContainer
@@ -1565,97 +1231,35 @@ export default function LeafletMap({
           if (map) {
             mapRef.current = map
             
-            // Implement smooth wheel zoom
+            // Set initial view after map is ready
             setTimeout(() => {
-              if (map.scrollWheelZoom) {
-                // Disable default scroll wheel zoom
-                map.scrollWheelZoom.disable()
-                
-                // Add custom smooth wheel zoom handler
-                let isWheeling = false
-                let wheelMousePosition: L.Point
-                let centerPoint: L.Point
-                let startLatLng: L.LatLng
-                let wheelStartLatLng: L.LatLng
-                let startZoom: number
-                let goalZoom: number
-                let prevCenter: L.LatLng
-                let prevZoom: number
-                let zoomAnimationId: number
-                let timeoutId: NodeJS.Timeout
-                
-                const onWheelScroll = (e: WheelEvent) => {
-                  e.preventDefault()
-                  
-                  if (!isWheeling) {
-                    // Start wheeling
-                    isWheeling = true
-                    wheelMousePosition = map.mouseEventToContainerPoint(e as any)
-                    centerPoint = map.getSize().divideBy(2)
-                    startLatLng = map.containerPointToLatLng(centerPoint)
-                    wheelStartLatLng = map.containerPointToLatLng(wheelMousePosition)
-                    startZoom = map.getZoom()
-                    goalZoom = map.getZoom()
-                    prevCenter = map.getCenter()
-                    prevZoom = map.getZoom()
-                    
-                    map.stop()
-                    if ((map as any)._panAnim) (map as any)._panAnim.stop()
-                    
-                    zoomAnimationId = requestAnimationFrame(updateWheelZoom)
-                  }
-                  
-                  // Update goal zoom
-                  goalZoom = goalZoom - e.deltaY * 0.003 * 1.5 // sensitivity
-                  goalZoom = Math.max(map.getMinZoom(), Math.min(map.getMaxZoom(), goalZoom))
-                  wheelMousePosition = map.mouseEventToContainerPoint(e as any)
-                  
-                  clearTimeout(timeoutId)
-                  timeoutId = setTimeout(() => {
-                    isWheeling = false
-                    cancelAnimationFrame(zoomAnimationId)
-                  }, 200)
-                }
-                
-                const updateWheelZoom = () => {
-                  if ((!map.getCenter().equals(prevCenter)) || map.getZoom() !== prevZoom) return
-                  
-                  const currentZoom = map.getZoom() + (goalZoom - map.getZoom()) * 0.3
-                  const zoom = Math.floor(currentZoom * 100) / 100
-                  const delta = wheelMousePosition.subtract(centerPoint)
-                  
-                  if (delta.x === 0 && delta.y === 0) return
-                  
-                  const center = map.unproject(map.project(wheelStartLatLng, zoom).subtract(delta), zoom)
-                  
-                  map.setView(center, zoom, { animate: false })
-                  
-                  prevCenter = map.getCenter()
-                  prevZoom = map.getZoom()
-                  
-                  if (isWheeling) {
-                    zoomAnimationId = requestAnimationFrame(updateWheelZoom)
-                  }
-                }
-                
-                // Add wheel event listener
-                map.getContainer().addEventListener('wheel', onWheelScroll, { passive: false })
-              }
+              const isMobile = window.innerWidth < 768
+              const center: [number, number] = isMobile 
+                ? [45.0, -95.0] // Much higher latitude for mobile to push US states up significantly
+                : [39.8283, -98.5795] // Keep original desktop center unchanged
+              const zoom = isMobile ? 3.8 : 4 // Slightly lower zoom for mobile to fit more content
+              
+              map.setView(center, zoom, { animate: false })
+              setCurrentZoom(zoom)
+              setIsMapReady(true)
             }, 100)
+            
+            // Add zoom change listener
+            map.on('zoomend', () => {
+              setCurrentZoom(map.getZoom())
+            })
           }
         }}
-        center={[39.8283, -98.5795]}
-        zoom={4}
-        minZoom={3}
-        maxZoom={10}
-        maxBounds={usBounds}
-        maxBoundsViscosity={0.3}
-        className="w-full h-full"
+        center={initialCenter}
+        zoom={initialZoom}
+        minZoom={2} // Allow wide zoom out
+        maxZoom={18} // Allow street-level zoom in
+        className="w-full h-full nyt-style-map"
         zoomControl={false}
         attributionControl={false}
-        scrollWheelZoom={false}
-        zoomSnap={0.1}
-        zoomDelta={0.3}
+        scrollWheelZoom={true} // Enable scroll wheel zoom
+        zoomSnap={0.25} // Smoother zoom increments
+        zoomDelta={0.5} // Reasonable zoom delta
         zoomAnimation={true}
         fadeAnimation={true}
         markerZoomAnimation={true}
@@ -1663,36 +1267,51 @@ export default function LeafletMap({
         inertiaDeceleration={2000}
         inertiaMaxSpeed={1000}
       >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        {/* Responsive Tile Layer */}
+        <ResponsiveTileLayer
+          currentZoom={currentZoom}
+          statePopData={statePopData}
+          countyPopData={countyPopData}
+          selectedState={selectedState}
+          currentView={currentView}
         />
         
-        {/* States layer */}
+        {/* Enhanced States Layer */}
         {currentView === 'states' && statesData && (
-          <GeoJSON
-            key="states"
+          <EnhancedGeoJSONLayer
             data={statesData}
-            style={getStateStyle}
-            onEachFeature={onEachStateFeature}
+            currentZoom={currentZoom}
+            currentView={currentView}
+            statePopData={statePopData}
+            countyPopData={countyPopData}
+            selectedState={selectedState}
+            selectedCounty={selectedCounty}
+            onFeatureClick={handleFeatureClick}
+            onFeatureHover={handleFeatureHover}
+            onFeatureMouseOut={handleFeatureMouseOut}
           />
         )}
         
-        {/* Counties layer */}
+        {/* Enhanced Counties Layer */}
         {currentView === 'counties' && countiesData && (
-          <GeoJSON
-            key="counties"
+          <EnhancedGeoJSONLayer
             data={countiesData}
-            style={getCountyStyle}
-            onEachFeature={onEachCountyFeature}
+            currentZoom={currentZoom}
+            currentView={currentView}
+            statePopData={statePopData}
+            countyPopData={countyPopData}
+            selectedState={selectedState}
+            selectedCounty={selectedCounty}
+            onFeatureClick={handleFeatureClick}
+            onFeatureHover={handleFeatureHover}
+            onFeatureMouseOut={handleFeatureMouseOut}
           />
         )}
         
-        {/* Selected location pin - DISABLED */}
-        {/* Disabled to prevent pins from appearing when clicking states/counties */}
-        {/* {selectedLocationPin && (
+        {/* Selected location pin - only show when explicitly set */}
+        {selectedLocationPin && currentZoom >= 8 && (
           <Marker position={[selectedLocationPin.lat, selectedLocationPin.lng]} />
-        )} */}
+        )}
       </MapContainer>
 
       {/* Map Controls */}
@@ -1706,7 +1325,7 @@ export default function LeafletMap({
 
       {/* Population Legend */}
       <PopulationLegend
-        colorScale={colorScale}
+        colorScale={() => '#93c5fd'} // Simplified for now
         totalPopulation={totalPopulation}
         statePopData={statePopData}
         censusYear={getCurrentCensusYear()}
@@ -1723,40 +1342,42 @@ export default function LeafletMap({
         statePopData={statePopData}
       />
 
-      {/* Hover Info */}
-      {hoveredFeature && (
-        <HoverInfo
-          feature={hoveredFeature}
-          position={mousePosition}
-          statePopData={statePopData || []}
-          countyPopData={countyPopData || []}
-          enhancedStateData={enhancedStateData}
-          currentView={currentView}
-          selectedState={selectedState}
-          getCountyReps={getCountyReps}
-        />
+      {/* Enhanced Hover Info */}
+      {hoveredFeature && mousePosition && (
+        <div
+          className="fixed z-[2000] pointer-events-none bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3 max-w-xs"
+          style={{
+            left: mousePosition.x + 10,
+            top: mousePosition.y - 10,
+            transform: mousePosition.x > window.innerWidth - 200 ? 'translateX(-100%)' : 'none'
+          }}
+        >
+          <div className="text-sm font-semibold text-gray-900 dark:text-white">
+            {hoveredFeature.properties?.NAME || hoveredFeature.properties?.name}
+          </div>
+          {currentView === 'states' && (
+            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+              {(() => {
+                const stateName = hoveredFeature.properties?.NAME || hoveredFeature.properties?.name
+                const stateData = statePopData.find((s: any) => s.name === stateName)
+                return stateData ? `Population: ${stateData.population.toLocaleString()}` : 'Loading...'
+              })()}
+            </div>
+          )}
+          {currentView === 'counties' && (
+            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+              {(() => {
+                const countyName = hoveredFeature.properties?.NAME || hoveredFeature.properties?.name
+                const countyData = countyPopData.find((c: any) => c.name === countyName)
+                return countyData ? `Population: ${countyData.population.toLocaleString()}` : 'Loading...'
+              })()}
+            </div>
+          )}
+          <div className="text-xs text-blue-600 dark:text-blue-400 mt-1">
+            Zoom: {currentZoom.toFixed(1)}x • Click to {currentView === 'states' ? 'explore counties' : 'select'}
+          </div>
+        </div>
       )}
-
-      {/* Dashboard Drawer */}
-      {mode === 'dashboard' && (
-        <DashboardDrawer
-          isOpen={drawerOpen}
-          onClose={() => setDrawerOpen(false)}
-          officials={officialsData.officials}
-          stateName={selectedState || ''}
-        />
-      )}
-
-      {/* ARIA Live Region for accessibility */}
-      <div 
-        className="sr-only" 
-        aria-live="polite" 
-        aria-atomic="true"
-      >
-        {hoveredFeature && (
-          `${hoveredFeature.name}: ${hoveredFeature.population?.toLocaleString() || 'N/A'} people, ${hoveredFeature.density?.toFixed(1) || 'N/A'} people per square mile`
-        )}
-      </div>
     </div>
   )
 }

@@ -946,13 +946,13 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-patriot-gray-900"></div>
               </div>
             </div>
-            <h1 className="text-responsive-xl font-bold text-black dark:text-white mb-4 tracking-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white mb-4 tracking-tight">
               Welcome to{" "}
               <span className="text-patriot-blue-600 dark:text-patriot-blue-400">
                 Citizen
               </span>
             </h1>
-            <p className="text-responsive-sm text-black dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-black dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
               Stay Informed. Stay Empowered. Stay Engaged.
             </p>
 
@@ -969,8 +969,8 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-patriot-blue-100/70 dark:bg-patriot-blue-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
                   <Globe2 className="h-6 w-6 sm:h-8 sm:w-8 text-patriot-blue-600 dark:text-patriot-blue-400" />
                 </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2 text-sm sm:text-base">Location-Based</h3>
-                <p className="text-black/80 dark:text-white/80 text-xs sm:text-sm text-center">
+                <h3 className="font-semibold text-black dark:text-white mb-2 text-lg sm:text-xl">Location-Based</h3>
+                <p className="text-black/80 dark:text-white/80 text-base sm:text-lg text-center">
                   Track legislation and news that directly affects your community.
                 </p>
               </div>
@@ -985,8 +985,8 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100/70 dark:bg-green-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
                   <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-green-600 dark:text-green-400" />
                 </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2 text-sm sm:text-base">Real-Time Updates</h3>
-                <p className="text-black/80 dark:text-white/80 text-xs sm:text-sm text-center">
+                <h3 className="font-semibold text-black dark:text-white mb-2 text-lg sm:text-xl">Real-Time Updates</h3>
+                <p className="text-black/80 dark:text-white/80 text-base sm:text-lg text-center">
                   Follow bills and headlines as they unfold — no noise, just facts.
                 </p>
               </div>
@@ -1001,8 +1001,8 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-patriot-red-100/70 dark:bg-patriot-red-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 sm:h-8 sm:w-8 text-patriot-red-600 dark:text-patriot-red-400" />
                 </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2 text-sm sm:text-base">Take Action</h3>
-                <p className="text-black/80 dark:text-white/80 text-xs sm:text-sm text-center">
+                <h3 className="font-semibold text-black dark:text-white mb-2 text-lg sm:text-xl">Take Action</h3>
+                <p className="text-black/80 dark:text-white/80 text-base sm:text-lg text-center">
                   Contact representatives and join campaigns that matter to you
                 </p>
               </div>
@@ -1077,47 +1077,25 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             <PreferenceCarousel />
           </div>
 
-          {/* Right Panel - Signup/Action Area (40% on desktop, full width on mobile) */}
-          <div className="w-full lg:w-2/5 bg-white dark:bg-slate-900 flex flex-col">
-            {/* Header */}
-            <div className="p-6 sm:p-8 border-b border-slate-200 dark:border-slate-700">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-patriot-blue-600 dark:bg-patriot-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Shield className="h-8 w-8 text-white" />
-                </div>
-                <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">
-                  Create Your Civic Dashboard
-                </h1>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">
-                  Join thousands staying informed about their democracy
-                </p>
-              </div>
-            </div>
-
-            {/* Main Content Area */}
-            <div className="flex-1 p-6 sm:p-8">
-              <SignupForm 
-                validatedAddress={validatedAddress}
-                onSignup={() => setAuthModalOpen(true)}
-                onContinueAsGuest={handleContinueWithoutAccount}
-                onChangeLocation={handleChangeLocation}
+          {/* Right Panel - Map */}
+          <div className="w-full lg:w-2/3 h-[40vh] lg:h-full relative bg-patriot-gray-100 dark:bg-patriot-gray-800 flex-1">
+            {/* Full Map - No padding, fills entire container */}
+            <div className="absolute inset-0 w-full h-full">
+              <LeafletMap
+                selectedState={selectedState}
+                onStateClick={handleStateSelect}
+                onCountyClick={handleCountySelect}
+                selectedLocationPin={selectedLocationPin}
+                zoomToLocation={mapZoomLocation}
+                onReset={() => {
+                  setSelectedLocationPin(null)
+                  setMapZoomLocation(null)
+                }}
+                onError={(error) => console.error("Map Error:", error)}
+                onHover={(feature) => console.log("Hovering on:", feature)}
+                className="w-full h-full"
+                fullHeight={true}
               />
-            </div>
-
-            {/* Bottom Bar */}
-            <div className="p-4 sm:p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
-              <div className="flex flex-col sm:flex-row items-center justify-between text-sm gap-3 sm:gap-0">
-                <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
-                  <Shield className="h-4 w-4" />
-                  <span>We don't sell your data</span>
-                </div>
-                <button
-                  onClick={() => setAuthModalOpen(true)}
-                  className="text-patriot-blue-600 dark:text-patriot-blue-400 hover:underline font-medium"
-                >
-                  Already have an account?
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -1135,46 +1113,45 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "address") {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col lg:flex-row">
-        {/* Theme Toggle */}
-        <div className="absolute top-4 right-4 lg:top-6 lg:right-6 z-50">
-          <ThemeToggle />
-        </div>
-        
+      <div className="h-screen bg-slate-50 dark:bg-slate-950 flex flex-col lg:flex-row overflow-hidden">
         {/* Left Panel - Address Input & Information */}
-        <div className="w-full lg:w-1/3 min-h-screen bg-white dark:bg-slate-900 lg:border-r border-slate-200 dark:border-slate-700 flex flex-col">
+        <div className="w-full lg:w-1/3 h-auto lg:h-full bg-white dark:bg-slate-900 lg:border-r border-slate-200 dark:border-slate-700 flex flex-col max-h-[60vh] lg:max-h-none">
           {/* Header Section */}
-          <div className="p-4 sm:p-6 lg:p-8 border-b border-slate-200 dark:border-slate-700">
-            <Button
-              variant="ghost"
-              onClick={() => setStep("welcome")}
-              className="mb-4 lg:mb-6 text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 transition-all duration-200 btn-mobile"
-            >
-              ← Back to Welcome
-            </Button>
+          <div className="p-3 sm:p-4 lg:p-8 border-b border-slate-200 dark:border-slate-700 flex-shrink-0">
+            {/* Top row with back button and theme toggle */}
+            <div className="flex items-center justify-between mb-3 lg:mb-6">
+              <Button
+                variant="ghost"
+                onClick={() => setStep("welcome")}
+                className="text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 transition-all duration-200 btn-mobile text-sm lg:text-base"
+              >
+                ← Back to Welcome
+              </Button>
+              <ThemeToggle />
+            </div>
             
-            <div className="space-y-3 lg:space-y-4">
+            <div className="space-y-2 lg:space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-patriot-blue-600 dark:bg-patriot-blue-700 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-                  <MapPin className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
+                <div className="w-8 h-8 lg:w-12 lg:h-12 bg-patriot-blue-600 dark:bg-patriot-blue-700 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
+                  <MapPin className="h-4 w-4 lg:h-6 lg:w-6 text-white" />
                 </div>
                 <div className="min-w-0">
-                  <h1 className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white truncate">Your Location</h1>
-                  <p className="text-sm lg:text-base text-slate-600 dark:text-slate-400 truncate">Discover your civic information</p>
+                  <h1 className="text-lg lg:text-2xl font-bold text-slate-900 dark:text-white truncate">Your Location</h1>
+                  <p className="text-xs lg:text-base text-slate-600 dark:text-slate-400 truncate">Discover your civic information</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Address Input Section */}
-          <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-4 lg:space-y-6 overflow-y-auto">
+          {/* Address Input Section - Scrollable on mobile, compact */}
+          <div className="flex-1 p-3 sm:p-4 lg:p-8 space-y-3 lg:space-y-6 overflow-y-auto">
             {/* Status Messages */}
             {validatedAddress && (
               <Alert className="border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 shadow-sm">
                 <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
                 <AlertDescription className="text-green-800 dark:text-green-300">
                   <div className="space-y-2">
-                    <div className="font-semibold text-sm lg:text-base">✅ Address Validated!</div>
+                    <div className="font-semibold text-xs lg:text-base">✅ Address Validated!</div>
                     <div className="text-xs lg:text-sm bg-green-100 dark:bg-green-800/30 p-2 lg:p-3 rounded-lg border border-green-200 dark:border-green-700">
                       <strong>Confirmed Address:</strong><br />
                       {validatedAddress}
@@ -1190,7 +1167,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             {validationError && (
               <Alert variant="destructive" className="shadow-sm">
                 <AlertCircle className="h-4 w-4" />
-                <AlertDescription className="text-sm lg:text-base">
+                <AlertDescription className="text-xs lg:text-base">
                   <strong>Validation Error:</strong> {validationError}
                 </AlertDescription>
               </Alert>
@@ -1213,9 +1190,9 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             )}
 
             {/* Address Input */}
-            <div className="space-y-3 lg:space-y-4">
+            <div className="space-y-2 lg:space-y-4">
               <div>
-                <label htmlFor="address" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                <label htmlFor="address" className="block text-xs lg:text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1 lg:mb-2">
                   Enter Your Full Address
                 </label>
                 <div className="relative">
@@ -1227,7 +1204,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                     onKeyPress={(e) => e.key === "Enter" && !loading && handleAddressSubmit()}
                     onFocus={() => address.length > 2 && setShowSuggestions(true)}
                     onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-                    className={`text-sm lg:text-base py-3 lg:py-4 px-3 lg:px-4 rounded-xl border-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-0 transition-all duration-200 btn-mobile ${
+                    className={`text-xs lg:text-base py-2 lg:py-4 px-3 lg:px-4 rounded-xl border-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-0 transition-all duration-200 btn-mobile ${
                       validationError
                         ? "border-patriot-red-400 dark:border-patriot-red-500 focus:border-patriot-red-500 dark:focus:border-patriot-red-400"
                         : "border-patriot-gray-300 dark:border-patriot-gray-600 focus:border-patriot-blue-500 dark:focus:border-patriot-blue-400 hover:border-patriot-gray-400 dark:hover:border-patriot-gray-500"
@@ -1238,7 +1215,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
                   {/* Address Suggestions Dropdown */}
                   {showSuggestions && addressSuggestions.length > 0 && (
-                    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 rounded-xl shadow-xl z-20 max-h-48 overflow-y-auto">
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 rounded-xl shadow-xl z-20 max-h-32 lg:max-h-48 overflow-y-auto">
                       {addressSuggestions.map((suggestion, index) => (
                         <button
                           key={index}
@@ -1258,21 +1235,21 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
               </div>
 
               {/* Action Buttons */}
-              <div className="space-y-3">
+              <div className="space-y-2 lg:space-y-3">
                 <Button
                   onClick={handleAddressSubmit}
                   disabled={loading || !address.trim()}
-                  className="w-full font-semibold py-3 lg:py-4 text-sm lg:text-base rounded-xl bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none btn-mobile-lg"
+                  className="w-full font-semibold py-2 lg:py-4 text-xs lg:text-base rounded-xl bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none btn-mobile-lg"
                 >
                   {loading ? (
                     <div className="flex items-center justify-center">
-                      <Loader2 className="animate-spin h-4 w-4 lg:h-5 lg:w-5 mr-2" />
-                      <span className="text-sm lg:text-base">Validating...</span>
+                      <Loader2 className="animate-spin h-3 w-3 lg:h-5 lg:w-5 mr-2" />
+                      <span className="text-xs lg:text-base">Validating...</span>
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 lg:h-5 lg:w-5 mr-2" />
-                      <span className="text-sm lg:text-base">Validate & Locate</span>
+                      <CheckCircle className="h-3 w-3 lg:h-5 lg:w-5 mr-2" />
+                      <span className="text-xs lg:text-base">Validate & Locate</span>
                     </div>
                   )}
                 </Button>
@@ -1281,7 +1258,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                   <Button
                     onClick={handleTryAgain}
                     variant="outline"
-                    className="w-full py-3 lg:py-4 text-sm lg:text-base rounded-xl border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 btn-mobile-lg"
+                    className="w-full py-2 lg:py-4 text-xs lg:text-base rounded-xl border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 btn-mobile-lg"
                   >
                     Try Different Address
                   </Button>
@@ -1289,19 +1266,19 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
               </div>
             </div>
 
-            {/* Alternative Options */}
-            <div className="pt-4 lg:pt-6 border-t border-slate-200 dark:border-slate-700">
-              <div className="text-center space-y-3 lg:space-y-4">
+            {/* Alternative Options - Compact on mobile */}
+            <div className="pt-2 lg:pt-6 border-t border-slate-200 dark:border-slate-700">
+              <div className="text-center space-y-2 lg:space-y-4">
                 <p className="text-xs lg:text-sm text-slate-600 dark:text-slate-400 font-medium">
                   Alternative Options
                 </p>
                 
-                <div className="space-y-2 lg:space-y-3">
+                <div className="space-y-1 lg:space-y-3">
                   <Button
                     onClick={handleUseMyLocation}
                     variant="outline"
                     disabled={loading}
-                    className="w-full py-2 lg:py-3 text-xs lg:text-sm rounded-lg border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 btn-mobile"
+                    className="w-full py-1.5 lg:py-3 text-xs lg:text-sm rounded-lg border-patriot-blue-300 dark:border-patriot-blue-600 bg-white dark:bg-slate-800 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 hover:text-patriot-blue-700 dark:hover:text-patriot-blue-300 text-patriot-blue-600 dark:text-patriot-blue-400 hover:border-patriot-blue-400 dark:hover:border-patriot-blue-500 transition-all duration-200 btn-mobile"
                   >
                     <Globe2 className="h-3 w-3 lg:h-4 lg:w-4 mr-2" />
                     Use My Current Location
@@ -1310,7 +1287,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                   <Button
                     onClick={() => setStep("state")}
                     variant="ghost"
-                    className="w-full py-2 lg:py-3 text-xs lg:text-sm rounded-lg text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 btn-mobile"
+                    className="w-full py-1.5 lg:py-3 text-xs lg:text-sm rounded-lg text-slate-600 dark:text-slate-400 hover:text-patriot-blue-600 dark:hover:text-patriot-blue-400 hover:bg-patriot-blue-50 dark:hover:bg-patriot-blue-900/20 btn-mobile"
                   >
                     Browse by State Instead
                   </Button>
@@ -1365,35 +1342,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
         </div>
 
         {/* Right Panel - Map */}
-        <div className="w-full lg:w-2/3 h-[60vh] lg:h-[70vh] relative bg-patriot-gray-100 dark:bg-patriot-gray-800">
-          {/* Map Header Overlay */}
-          <div className="absolute top-0 left-0 right-0 z-30 bg-gradient-to-b from-white/90 via-white/70 to-transparent dark:from-patriot-gray-900/90 dark:via-patriot-gray-900/70 dark:to-transparent backdrop-blur-sm">
-            <div className="p-3 lg:p-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
-                <div>
-                  <h2 className="text-lg lg:text-xl font-bold text-patriot-gray-900 dark:text-white">
-                    Interactive Map
-                  </h2>
-                  <p className="text-xs lg:text-sm text-patriot-gray-600 dark:text-patriot-gray-400">
-                    {selectedLocationPin 
-                      ? "Your location is marked on the map" 
-                      : "Type an address to see it on the map"
-                    }
-                  </p>
-                </div>
-                
-                {selectedLocationPin && (
-                  <div className="bg-white dark:bg-patriot-gray-800 rounded-lg px-3 lg:px-4 py-2 shadow-lg border border-patriot-gray-200 dark:border-patriot-gray-700">
-                    <div className="text-xs text-patriot-gray-500 dark:text-patriot-gray-400">Coordinates</div>
-                    <div className="text-xs lg:text-sm font-mono text-patriot-gray-900 dark:text-white">
-                      {selectedLocationPin.lat.toFixed(4)}, {selectedLocationPin.lng.toFixed(4)}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
+        <div className="w-full lg:w-2/3 h-[40vh] lg:h-full relative bg-patriot-gray-100 dark:bg-patriot-gray-800 flex-1">
           {/* Full Map - No padding, fills entire container */}
           <div className="absolute inset-0 w-full h-full">
             <LeafletMap
@@ -1412,27 +1361,6 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
               fullHeight={true}
             />
           </div>
-
-          {/* Map Status Overlay */}
-          {!selectedLocationPin && (
-            <div className="absolute bottom-3 lg:bottom-6 left-3 lg:left-6 right-3 lg:right-6 z-30">
-              <div className="bg-white/90 dark:bg-patriot-gray-900/90 backdrop-blur-md rounded-xl p-3 lg:p-4 shadow-xl border border-patriot-gray-200/50 dark:border-patriot-gray-700/50">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-patriot-blue-500 to-patriot-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-xs lg:text-sm font-medium text-patriot-gray-900 dark:text-white">
-                      Enter an address to get started
-                    </div>
-                    <div className="text-xs text-patriot-gray-600 dark:text-patriot-gray-400">
-                      We'll show your location and civic info
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     )
@@ -1465,7 +1393,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             <Card className="patriot-card shadow-2xl">
               <CardHeader className="p-4 sm:p-6">
                 <CardTitle className="flex items-center text-black dark:text-white text-lg sm:text-xl">
-                  <Globe2 className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-patriot-blue-600 dark:text-patriot-blue-400" />
+                  <Globe2 className="h-4 sm:h-5 sm:w-5 mr-2 text-patriot-blue-600 dark:text-patriot-blue-400" />
                   Interactive US Map
                 </CardTitle>
                 <CardDescription className="text-black/80 dark:text-white/80 text-sm">
@@ -1473,7 +1401,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-6">
-                <div className="relative w-full h-[50vh] sm:h-[55vh] lg:h-[60vh] max-h-[600px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
+                <div className="relative w-full h-[40vh] sm:h-[45vh] lg:h-[60vh] max-h-[600px] bg-white dark:bg-white/10 rounded-xl overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md">
                   <LeafletMap
                     onStateClick={handleStateSelect}
                     onCountyClick={handleCountySelect}
@@ -1496,7 +1424,7 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             <Card className="patriot-card shadow-2xl">
               <CardHeader className="p-4 sm:p-6">
                 <CardTitle className="flex items-center text-black dark:text-white text-lg sm:text-xl">
-                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-patriot-red-600 dark:text-patriot-red-400" />
+                  <MapPin className="h-4 sm:h-5 sm:w-5 mr-2 text-patriot-red-600 dark:text-patriot-red-400" />
                   All States & Territories
                 </CardTitle>
                 <CardDescription className="text-black/80 dark:text-white/80 text-sm">

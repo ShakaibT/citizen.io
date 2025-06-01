@@ -6,10 +6,8 @@ import { optimizeGeoJSON, getOptimalMapBounds, createGeoJSONCacheKey } from './g
 
 // Get the current year for Census data (will automatically use latest available)
 export const getCurrentCensusYear = () => {
-  const currentYear = new Date().getFullYear()
-  // Census data is typically released with a 1-year delay
-  // For 2024, we'll likely have 2023 data until 2024 data is released
-  return currentYear >= 2024 ? 2024 : 2023
+  // Use 2023 as it's the latest available vintage with working API
+  return 2023
 }
 
 export const CURRENT_CENSUS_YEAR = getCurrentCensusYear()
@@ -70,12 +68,12 @@ export async function getAllStates(): Promise<CensusState[]> {
   
   return getCachedData('all-states', async () => {
     try {
-      // Use the latest available Population Estimates API
+      // Use the latest working Population Estimates API (2023 vintage)
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
       
       const response = await fetch(
-        `https://api.census.gov/data/${CURRENT_CENSUS_YEAR}/pep/charv?get=NAME,POP&for=state:*&YEAR=${CURRENT_CENSUS_YEAR}`,
+        `https://api.census.gov/data/2023/pep/charv?get=NAME,POP&for=state:*&YEAR=2023`,
         { 
           headers: { 'User-Agent': 'CitizenApp/1.0' },
           signal: controller.signal
@@ -102,7 +100,7 @@ export async function getAllStates(): Promise<CensusState[]> {
       return data.slice(1).map((row: any[]) => ({
         name: row[0],
         abbreviation: getStateAbbreviation(row[0]),
-        fips: row[3], // State FIPS is in position 3
+        fips: row[3], // State FIPS is in position 3 for the new API
         population: parseInt(row[1]) || 0
       }));
     } catch (error) {
@@ -120,8 +118,12 @@ export async function getCountiesByState(stateFips: string): Promise<CensusCount
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
       
+      // Get the state name from FIPS code
+      const stateInfo = await getStateByFips(stateFips)
+      const stateName = stateInfo?.name || 'Unknown State'
+      
       const response = await fetch(
-        `https://api.census.gov/data/${CURRENT_CENSUS_YEAR}/pep/charv?get=NAME,POP&for=county:*&in=state:${stateFips}&YEAR=${CURRENT_CENSUS_YEAR}`,
+        `https://api.census.gov/data/2023/pep/charv?get=NAME,POP&for=county:*&in=state:${stateFips}&YEAR=2023`,
         { 
           headers: { 'User-Agent': 'CitizenApp/1.0' },
           signal: controller.signal
@@ -142,11 +144,11 @@ export async function getCountiesByState(stateFips: string): Promise<CensusCount
         return getStaticCountiesData(stateFips);
       }
       
-      console.log(`Successfully fetched live Census county data for state FIPS ${stateFips}`);
+      console.log(`Successfully fetched live Census county data for state FIPS ${stateFips} (${stateName})`);
       
       return data.slice(1).map((row: any[]) => ({
         name: row[0].replace(/ County.*$/, ''), // Remove "County" suffix
-        state: stateFips,
+        state: stateName, // Use actual state name instead of FIPS
         fips: `${row[3]}${row[4]}`, // State FIPS (index 3) + County FIPS (index 4)
         population: parseInt(row[1]) || 0
       }));
@@ -166,6 +168,12 @@ export async function getStateByIdentifier(identifier: string): Promise<CensusSt
     state.name.toLowerCase() === identifier.toLowerCase() ||
     state.fips === identifier.padStart(2, '0') // Handle FIPS codes
   ) || null;
+}
+
+// Get state by FIPS code
+export async function getStateByFips(fips: string): Promise<CensusState | null> {
+  const states = await getAllStates();
+  return states.find(state => state.fips === fips.padStart(2, '0')) || null;
 }
 
 // Get GeoJSON data for states - with actual US boundaries and optimized positioning
@@ -665,90 +673,94 @@ function getStaticCountiesData(stateFips: string): CensusCounty[] {
   // Return some basic counties for major states
   const countiesData: { [key: string]: CensusCounty[] } = {
     '48': [ // Texas
-      { name: 'Harris', state: '48', fips: '48201', population: 4731145 },
-      { name: 'Dallas', state: '48', fips: '48113', population: 2613539 },
-      { name: 'Tarrant', state: '48', fips: '48439', population: 2110640 },
-      { name: 'Bexar', state: '48', fips: '48029', population: 2009324 },
-      { name: 'Travis', state: '48', fips: '48453', population: 1290188 },
-      { name: 'Collin', state: '48', fips: '48085', population: 1056924 },
-      { name: 'Hidalgo', state: '48', fips: '48215', population: 870781 },
-      { name: 'El Paso', state: '48', fips: '48141', population: 865657 }
+      { name: 'Harris', state: 'Texas', fips: '48201', population: 4731145 },
+      { name: 'Dallas', state: 'Texas', fips: '48113', population: 2613539 },
+      { name: 'Tarrant', state: 'Texas', fips: '48439', population: 2110640 },
+      { name: 'Bexar', state: 'Texas', fips: '48029', population: 2009324 },
+      { name: 'Travis', state: 'Texas', fips: '48453', population: 1290188 },
+      { name: 'Collin', state: 'Texas', fips: '48085', population: 1056924 },
+      { name: 'Hidalgo', state: 'Texas', fips: '48215', population: 870781 },
+      { name: 'El Paso', state: 'Texas', fips: '48141', population: 865657 }
     ],
     '06': [ // California
-      { name: 'Los Angeles', state: '06', fips: '06037', population: 10014009 },
-      { name: 'San Diego', state: '06', fips: '06073', population: 3298634 },
-      { name: 'Orange', state: '06', fips: '06059', population: 3186989 },
-      { name: 'Riverside', state: '06', fips: '06065', population: 2418185 },
-      { name: 'San Bernardino', state: '06', fips: '06071', population: 2180085 },
-      { name: 'Santa Clara', state: '06', fips: '06085', population: 1927852 },
-      { name: 'Alameda', state: '06', fips: '06001', population: 1682353 },
-      { name: 'Sacramento', state: '06', fips: '06067', population: 1585055 }
+      { name: 'Los Angeles', state: 'California', fips: '06037', population: 10014009 },
+      { name: 'San Diego', state: 'California', fips: '06073', population: 3298634 },
+      { name: 'Orange', state: 'California', fips: '06059', population: 3186989 },
+      { name: 'Riverside', state: 'California', fips: '06065', population: 2418185 },
+      { name: 'San Bernardino', state: 'California', fips: '06071', population: 2180085 },
+      { name: 'Santa Clara', state: 'California', fips: '06085', population: 1927852 },
+      { name: 'Alameda', state: 'California', fips: '06001', population: 1682353 },
+      { name: 'Sacramento', state: 'California', fips: '06067', population: 1585055 }
     ],
     '12': [ // Florida
-      { name: 'Miami-Dade', state: '12', fips: '12086', population: 2716940 },
-      { name: 'Broward', state: '12', fips: '12011', population: 1944375 },
-      { name: 'Palm Beach', state: '12', fips: '12099', population: 1492191 },
-      { name: 'Hillsborough', state: '12', fips: '12057', population: 1459762 },
-      { name: 'Orange', state: '12', fips: '12095', population: 1393452 },
-      { name: 'Pinellas', state: '12', fips: '12103', population: 959107 },
-      { name: 'Duval', state: '12', fips: '12031', population: 957755 },
-      { name: 'Lee', state: '12', fips: '12071', population: 760822 }
+      { name: 'Miami-Dade', state: 'Florida', fips: '12086', population: 2716940 },
+      { name: 'Broward', state: 'Florida', fips: '12011', population: 1944375 },
+      { name: 'Palm Beach', state: 'Florida', fips: '12099', population: 1492191 },
+      { name: 'Hillsborough', state: 'Florida', fips: '12057', population: 1459762 },
+      { name: 'Orange', state: 'Florida', fips: '12095', population: 1393452 },
+      { name: 'Pinellas', state: 'Florida', fips: '12103', population: 959107 },
+      { name: 'Duval', state: 'Florida', fips: '12031', population: 957755 },
+      { name: 'Lee', state: 'Florida', fips: '12071', population: 760822 }
     ],
     '36': [ // New York
-      { name: 'Kings', state: '36', fips: '36047', population: 2736074 },
-      { name: 'Queens', state: '36', fips: '36081', population: 2405464 },
-      { name: 'New York', state: '36', fips: '36061', population: 1694251 },
-      { name: 'Suffolk', state: '36', fips: '36103', population: 1525920 },
-      { name: 'Bronx', state: '36', fips: '36005', population: 1472654 },
-      { name: 'Nassau', state: '36', fips: '36059', population: 1395774 },
-      { name: 'Westchester', state: '36', fips: '36119', population: 1004457 },
-      { name: 'Erie', state: '36', fips: '36029', population: 954236 }
+      { name: 'Kings', state: 'New York', fips: '36047', population: 2736074 },
+      { name: 'Queens', state: 'New York', fips: '36081', population: 2405464 },
+      { name: 'New York', state: 'New York', fips: '36061', population: 1694251 },
+      { name: 'Suffolk', state: 'New York', fips: '36103', population: 1525920 },
+      { name: 'Bronx', state: 'New York', fips: '36005', population: 1472654 },
+      { name: 'Nassau', state: 'New York', fips: '36059', population: 1395774 },
+      { name: 'Westchester', state: 'New York', fips: '36119', population: 1004457 },
+      { name: 'Erie', state: 'New York', fips: '36029', population: 954236 }
     ],
     '42': [ // Pennsylvania
-      { name: 'Philadelphia', state: '42', fips: '42101', population: 1603797 },
-      { name: 'Allegheny', state: '42', fips: '42003', population: 1250578 },
-      { name: 'Montgomery', state: '42', fips: '42091', population: 856553 },
-      { name: 'Bucks', state: '42', fips: '42017', population: 646538 },
-      { name: 'Chester', state: '42', fips: '42029', population: 534413 },
-      { name: 'Delaware', state: '42', fips: '42045', population: 576830 },
-      { name: 'Lancaster', state: '42', fips: '42071', population: 552984 },
-      { name: 'York', state: '42', fips: '42133', population: 456438 }
+      { name: 'Philadelphia', state: 'Pennsylvania', fips: '42101', population: 1603797 },
+      { name: 'Allegheny', state: 'Pennsylvania', fips: '42003', population: 1250578 },
+      { name: 'Montgomery', state: 'Pennsylvania', fips: '42091', population: 856553 },
+      { name: 'Bucks', state: 'Pennsylvania', fips: '42017', population: 646538 },
+      { name: 'Chester', state: 'Pennsylvania', fips: '42029', population: 534413 },
+      { name: 'Delaware', state: 'Pennsylvania', fips: '42045', population: 576830 },
+      { name: 'Lancaster', state: 'Pennsylvania', fips: '42071', population: 552984 },
+      { name: 'York', state: 'Pennsylvania', fips: '42133', population: 456438 }
     ],
     '17': [ // Illinois
-      { name: 'Cook', state: '17', fips: '17031', population: 5275541 },
-      { name: 'DuPage', state: '17', fips: '17043', population: 932877 },
-      { name: 'Lake', state: '17', fips: '17097', population: 714342 },
-      { name: 'Will', state: '17', fips: '17197', population: 696355 },
-      { name: 'Kane', state: '17', fips: '17089', population: 516522 },
-      { name: 'McHenry', state: '17', fips: '17111', population: 310229 },
-      { name: 'Winnebago', state: '17', fips: '17201', population: 285350 },
-      { name: 'St. Clair', state: '17', fips: '17163', population: 257400 }
+      { name: 'Cook', state: 'Illinois', fips: '17031', population: 5275541 },
+      { name: 'DuPage', state: 'Illinois', fips: '17043', population: 932877 },
+      { name: 'Lake', state: 'Illinois', fips: '17097', population: 714342 },
+      { name: 'Will', state: 'Illinois', fips: '17197', population: 696355 },
+      { name: 'Kane', state: 'Illinois', fips: '17089', population: 516522 },
+      { name: 'McHenry', state: 'Illinois', fips: '17111', population: 310229 },
+      { name: 'Winnebago', state: 'Illinois', fips: '17201', population: 285350 },
+      { name: 'St. Clair', state: 'Illinois', fips: '17163', population: 257400 }
     ],
     '39': [ // Ohio
-      { name: 'Cuyahoga', state: '39', fips: '39035', population: 1264817 },
-      { name: 'Franklin', state: '39', fips: '39049', population: 1323807 },
-      { name: 'Hamilton', state: '39', fips: '39061', population: 830639 },
-      { name: 'Summit', state: '39', fips: '39153', population: 540428 },
-      { name: 'Montgomery', state: '39', fips: '39113', population: 537309 },
-      { name: 'Lucas', state: '39', fips: '39095', population: 431279 },
-      { name: 'Stark', state: '39', fips: '39151', population: 374853 },
-      { name: 'Butler', state: '39', fips: '39017', population: 390357 }
+      { name: 'Cuyahoga', state: 'Ohio', fips: '39035', population: 1264817 },
+      { name: 'Franklin', state: 'Ohio', fips: '39049', population: 1323807 },
+      { name: 'Hamilton', state: 'Ohio', fips: '39061', population: 830639 },
+      { name: 'Summit', state: 'Ohio', fips: '39153', population: 540428 },
+      { name: 'Montgomery', state: 'Ohio', fips: '39113', population: 537309 },
+      { name: 'Lucas', state: 'Ohio', fips: '39095', population: 431279 },
+      { name: 'Stark', state: 'Ohio', fips: '39151', population: 374853 },
+      { name: 'Butler', state: 'Ohio', fips: '39017', population: 390357 }
     ],
     '13': [ // Georgia
-      { name: 'Fulton', state: '13', fips: '13121', population: 1066710 },
-      { name: 'Gwinnett', state: '13', fips: '13135', population: 957062 },
-      { name: 'Cobb', state: '13', fips: '13067', population: 766149 },
-      { name: 'DeKalb', state: '13', fips: '13089', population: 764382 },
-      { name: 'Clayton', state: '13', fips: '13063', population: 297595 },
-      { name: 'Cherokee', state: '13', fips: '13057', population: 266737 },
-      { name: 'Henry', state: '13', fips: '13151', population: 240712 },
-      { name: 'Forsyth', state: '13', fips: '13117', population: 251283 }
+      { name: 'Fulton', state: 'Georgia', fips: '13121', population: 1066710 },
+      { name: 'Gwinnett', state: 'Georgia', fips: '13135', population: 957062 },
+      { name: 'Cobb', state: 'Georgia', fips: '13067', population: 766149 },
+      { name: 'DeKalb', state: 'Georgia', fips: '13089', population: 764382 },
+      { name: 'Clayton', state: 'Georgia', fips: '13063', population: 297595 },
+      { name: 'Cherokee', state: 'Georgia', fips: '13057', population: 266737 },
+      { name: 'Henry', state: 'Georgia', fips: '13151', population: 240712 },
+      { name: 'Forsyth', state: 'Georgia', fips: '13117', population: 251283 }
     ]
   };
   
+  // Get the state name for the fallback county
+  const stateInfo = getStaticStatesData().find(s => s.fips === stateFips.padStart(2, '0'));
+  const stateName = stateInfo?.name || 'Unknown State';
+  
   return countiesData[stateFips] || [
     // Default fallback county for any state
-    { name: 'Main County', state: stateFips, fips: `${stateFips}001`, population: 100000 }
+    { name: 'Main County', state: stateName, fips: `${stateFips}001`, population: 100000 }
   ];
 }
 

@@ -1,0 +1,30 @@
+# Scripts and pipeline directories
+scripts/dataPipeline/
+scripts/backup*
+scripts/populate-officials.js
+scripts/setup-*
+scripts/test-*
+
+# Database files
+database-*.sql
+supabase-*.sql
+*.sql
+
+# Backup files
+backups/
+*.tar.gz
+*.meta
+*_backup*
+*_restore*
+
+# Documentation files that might have build issues
+temp-home-page.txt
+*.md
+
+# Test files
+test-*.js
+**/test/
+
+# Cache directories
+.monitor/
+.DS_Store 

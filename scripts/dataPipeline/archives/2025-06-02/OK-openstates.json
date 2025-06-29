@@ -1,0 +1,283 @@
+[
+  {
+    "id": "ocd-person/78900b72-692c-4b5f-ac8b-290577d6abd4",
+    "name": "Aaron Reinhardt",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "37",
+      "division_id": "ocd-division/country:us/state:ok/sldu:37"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Reinhardt",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Aaron_Reinhardt_20241023_121244.jpeg",
+    "email": "aaron.reinhardt@oksenate.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T21:57:20.705295+00:00",
+    "updated_at": "2025-02-04T04:24:57.954189+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-reinhardt-3fUuHniwPJxZVFF3b61hLQ/"
+  },
+  {
+    "id": "ocd-person/7e356581-ff96-4e5d-b6bc-94b3c8e0005c",
+    "name": "Adam Pugh",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "41",
+      "division_id": "ocd-division/country:us/state:ok/sldu:41"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Pugh",
+    "image": "https://oksenate.gov/sites/default/files/pugh.jpg",
+    "email": "pugh@oksenate.gov",
+    "gender": "Male",
+    "birth_date": "1977-10-12",
+    "death_date": "",
+    "extras": {
+      "email": "pugh@oksenate.gov"
+    },
+    "created_at": "2018-10-18T14:57:30.348815+00:00",
+    "updated_at": "2025-02-04T04:23:19.978421+00:00",
+    "openstates_url": "https://openstates.org/person/adam-pugh-3q9Qzy50RwCDA9CD7BxWRQ/"
+  },
+  {
+    "id": "ocd-person/719605ed-1748-4c0b-bc6a-79330db17af1",
+    "name": "Ajay Pittman",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "99",
+      "division_id": "ocd-division/country:us/state:ok/sldl:99"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Ajay",
+    "family_name": "Pittman",
+    "image": "https://www.okhouse.gov/Members/Pictures/HiRes/Ajay-Pittman.jpg",
+    "email": "ajay.pittman@okhouse.gov",
+    "gender": "Female",
+    "birth_date": "1993-09-10",
+    "death_date": "",
+    "extras": {
+      "email": "ajay.pittman@okhouse.gov",
+      "_scraped_name": "Pittman, Ajay"
+    },
+    "created_at": "2019-01-07T05:09:21.029218+00:00",
+    "updated_at": "2025-02-04T04:24:37.331117+00:00",
+    "openstates_url": "https://openstates.org/person/ajay-pittman-3SKh0ewiPbZY5khlFn1TKz/"
+  },
+  {
+    "id": "ocd-person/0e3e261d-437a-4e04-8328-70adb16c82d9",
+    "name": "Ally Seifried",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "2",
+      "division_id": "ocd-division/country:us/state:ok/sldu:2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Ally",
+    "family_name": "Seifried",
+    "image": "https://oksenate.gov/sites/default/files/Seifried%2C%20Ally%20Flags%202022.jpg",
+    "email": "alexandra.seifried@oksenate.gov",
+    "gender": "Female",
+    "birth_date": "1992-09-27",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-06T00:44:52.448049+00:00",
+    "updated_at": "2025-02-04T04:24:13.356255+00:00",
+    "openstates_url": "https://openstates.org/person/ally-seifried-QsIGoamfzJRMFIAYRFlRR/"
+  },
+  {
+    "id": "ocd-person/987fd457-5b14-4300-95f1-e92f7cd5f748",
+    "name": "Andy Fugate",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "94",
+      "division_id": "ocd-division/country:us/state:ok/sldl:94"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Fugate",
+    "image": "https://www.okhouse.gov/Members/Pictures/HiRes/Fugate,%20Andy.jpg",
+    "email": "andy.fugate@okhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "email": "andy.fugate@okhouse.gov",
+      "_scraped_name": "Fugate, Andy"
+    },
+    "created_at": "2019-01-07T05:09:19.132445+00:00",
+    "updated_at": "2025-02-04T04:25:17.096976+00:00",
+    "openstates_url": "https://openstates.org/person/andy-fugate-4dlFcPNp4ZBRz9YU9QSKee/"
+  },
+  {
+    "id": "ocd-person/3a5828d9-b8bf-491c-adfe-19f5331d1e20",
+    "name": "Annie Menz",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:ok/sldl:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Annie",
+    "family_name": "Menz",
+    "image": "https://www.okhouse.gov/Members/Pictures/HiRes/Menz,%20Annie.jpg",
+    "email": "annie.menz@okhouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-06T00:44:38.778694+00:00",
+    "updated_at": "2025-02-04T04:24:42.440104+00:00",
+    "openstates_url": "https://openstates.org/person/annie-menz-1m5qKLNlmGe5YzC8HWHjjk/"
+  },
+  {
+    "id": "ocd-person/c1f71291-89c1-4109-a15c-2483743d333a",
+    "name": "Anthony Moore",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "57",
+      "division_id": "ocd-division/country:us/state:ok/sldl:57"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Moore",
+    "image": "https://www.okhouse.gov/Members/Pictures/HiRes/Moore,%20Anthony.jpg",
+    "email": "anthony.moore@okhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-05T06:15:03.676990+00:00",
+    "updated_at": "2025-02-04T04:25:00.485249+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-moore-5u0QkxcRKcGvDFdkvWAUDC/"
+  },
+  {
+    "id": "ocd-person/4d0b52d3-ad1f-45c9-b46e-3676194ef82c",
+    "name": "Arturo Alonso",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "89",
+      "division_id": "ocd-division/country:us/state:ok/sldl:89"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Arturo",
+    "family_name": "Alonso",
+    "image": "https://www.okhouse.gov/Members/Pictures/HiRes/Alonso,%20Arturo.jpg",
+    "email": "arturo.alonso@okhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-06T00:44:43.055852+00:00",
+    "updated_at": "2025-02-10T22:44:27.694093+00:00",
+    "openstates_url": "https://openstates.org/person/arturo-alonso-2LNaD5mc0GBXVZMsnrSjJE/"
+  },
+  {
+    "id": "ocd-person/f2bc8c9d-050a-4531-84eb-1f233ad7042a",
+    "name": "Avery Frix",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "9",
+      "division_id": "ocd-division/country:us/state:ok/sldu:9"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Avery",
+    "family_name": "Frix",
+    "image": "https://www.okhouse.gov/Members/Pictures/HiRes/Frix,%20Avery.jpg",
+    "email": "avery.frix@oksenate.gov",
+    "gender": "Male",
+    "birth_date": "1994-03-29",
+    "death_date": "",
+    "extras": {
+      "email": "avery.frix@okhouse.gov",
+      "_scraped_name": "Frix, Avery"
+    },
+    "created_at": "2018-10-18T14:57:43.308346+00:00",
+    "updated_at": "2025-03-05T08:33:46.098567+00:00",
+    "openstates_url": "https://openstates.org/person/avery-frix-7O2JF8Fbr6N2g5HyphKo94/"
+  },
+  {
+    "id": "ocd-person/446468ba-e7a8-49ff-8edc-e9f96da9d613",
+    "name": "Bill Coleman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:ok/sldu:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ok/government",
+      "name": "Oklahoma",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Coleman",
+    "image": "https://oksenate.gov/sites/default/files/Coleman%2C%20Bill%20Flags%202022.jpg",
+    "email": "bill.coleman@oksenate.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-07T05:09:17.941939+00:00",
+    "updated_at": "2025-02-04T04:24:08.293496+00:00",
+    "openstates_url": "https://openstates.org/person/bill-coleman-253MeIgPGVDbdZzY9Q2gfD/"
+  }
+]

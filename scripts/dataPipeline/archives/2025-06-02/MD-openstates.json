@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/5037901c-64bd-472c-a440-a440841cbb13",
+    "name": "Aaron Kaufman",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "18",
+      "division_id": "ocd-division/country:us/state:md/sldl:18"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Kaufman",
+    "image": "https://mgaleg.maryland.gov/2023RS/images/kaufman01.jpg",
+    "email": "aaron.kaufman@house.state.md.us",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-20T00:24:42.268171+00:00",
+    "updated_at": "2025-03-29T00:58:15.311976+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-kaufman-2RMmGW3i8H9FeWo0iEXzz1/"
+  },
+  {
+    "id": "ocd-person/a1a2b050-266e-4d44-9463-be3a02e16e41",
+    "name": "Adrian Boafo",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:md/sldl:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Boafo",
+    "image": "https://msa.maryland.gov/msa/mdmanual/06hse/images/1198-1-10818b.jpg",
+    "email": "adrian.boafo@house.state.md.us",
+    "gender": "Male",
+    "birth_date": "1994-05-10",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-20T00:24:29.673485+00:00",
+    "updated_at": "2025-03-29T00:58:39.366304+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-boafo-4v072fpvK53nttTgkWuzz7/"
+  },
+  {
+    "id": "ocd-person/4bf0680f-fd5c-48a1-b6d3-73672f71048a",
+    "name": "Adrienne Jones",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:md/sldl:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Adrienne",
+    "family_name": "Jones",
+    "image": "http://mgaleg.maryland.gov/2019RS/images/jones.jpg",
+    "email": "adrienne.jones@house.state.md.us",
+    "gender": "Female",
+    "birth_date": "1954-11-20",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:47:30.706583+00:00",
+    "updated_at": "2025-03-29T00:58:51.175805+00:00",
+    "openstates_url": "https://openstates.org/person/adrienne-jones-2JII13pno5yl1V687mzGbS/"
+  },
+  {
+    "id": "ocd-person/311ecab9-74b4-4c0f-849b-c077dfbb291f",
+    "name": "Aletheia McCaskill",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "44B",
+      "division_id": "ocd-division/country:us/state:md/sldl:44b"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Aletheia",
+    "family_name": "McCaskill",
+    "image": "https://mgaleg.maryland.gov/2023RS/images/mccaskill01.jpg",
+    "email": "aletheia.mccaskill@house.state.md.us",
+    "gender": "Female",
+    "birth_date": "1971-09-30",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-20T00:24:27.938064+00:00",
+    "updated_at": "2025-03-29T00:58:12.202396+00:00",
+    "openstates_url": "https://openstates.org/person/aletheia-mccaskill-1Ugh9FugPSZtvcfq8fXdEN/"
+  },
+  {
+    "id": "ocd-person/0ddc9257-e4a4-4414-b21d-3467c8285806",
+    "name": "Alonzo Washington",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:md/sldu:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Alonzo",
+    "family_name": "Washington",
+    "image": "https://mgaleg.maryland.gov/2023RS/images/washington02.jpg",
+    "email": "alonzo.washington@senate.state.md.us",
+    "gender": "Male",
+    "birth_date": "1983-09-02",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:47:32.875314+00:00",
+    "updated_at": "2025-03-29T00:58:13.049324+00:00",
+    "openstates_url": "https://openstates.org/person/alonzo-washington-Q9hVdPbEci2CEpA8aEz9K/"
+  },
+  {
+    "id": "ocd-person/ecb19095-2750-4bef-bb87-1f646818a9b1",
+    "name": "Andre Johnson",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "34A",
+      "division_id": "ocd-division/country:us/state:md/sldl:34a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Andre",
+    "family_name": "Johnson",
+    "image": "https://msa.maryland.gov/msa/mdmanual/36loc/ha/leg/images/1198-1-09406b.jpg",
+    "email": "andre.johnson@house.state.md.us",
+    "gender": "Male",
+    "birth_date": "1971-06-19",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-20T00:24:22.812743+00:00",
+    "updated_at": "2025-03-29T00:57:46.834699+00:00",
+    "openstates_url": "https://openstates.org/person/andre-johnson-7CdKrUx73QWBvrt1xLKYwD/"
+  },
+  {
+    "id": "ocd-person/7636786f-1db3-4094-8527-e339576314d6",
+    "name": "Andrea Harrison",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "24",
+      "division_id": "ocd-division/country:us/state:md/sldl:24"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Andrea",
+    "family_name": "Harrison",
+    "image": "http://mgaleg.maryland.gov/2019RS/images/harrison01.jpg",
+    "email": "andreafletcher.harrison@house.state.md.us",
+    "gender": "Female",
+    "birth_date": "1963-09-20",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-10T04:28:15.047370+00:00",
+    "updated_at": "2025-03-29T00:59:29.028645+00:00",
+    "openstates_url": "https://openstates.org/person/andrea-harrison-3b3zEW4gi4dlhHjPJICdwE/"
+  },
+  {
+    "id": "ocd-person/7c57193f-f7af-4f7b-9b5f-cf17a7f51f25",
+    "name": "Andrew Pruski",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "33A",
+      "division_id": "ocd-division/country:us/state:md/sldl:33a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Pruski",
+    "image": "https://mgaleg.maryland.gov/2023RS/images/pruski01.jpg",
+    "email": "andrew.pruski@house.state.md.us",
+    "gender": "Male",
+    "birth_date": "1978-11-11",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-20T00:24:39.613919+00:00",
+    "updated_at": "2025-03-29T00:57:48.544515+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-pruski-3mcqru2utCuQJXQcjifvrJ/"
+  },
+  {
+    "id": "ocd-person/7bcb723d-68c2-4826-acab-0437aa27471f",
+    "name": "Anne Healey",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:md/sldl:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Healey",
+    "image": "http://mgaleg.maryland.gov/2016RS/images/healey.jpg",
+    "email": "anne.healey@house.state.md.us",
+    "gender": "Female",
+    "birth_date": "1951-01-02",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:47:36.245694+00:00",
+    "updated_at": "2025-03-29T00:59:30.764018+00:00",
+    "openstates_url": "https://openstates.org/person/anne-healey-3lb1wl8NQ82Ei4JNE4XgVz/"
+  },
+  {
+    "id": "ocd-person/88aa2d42-9bca-4df7-b961-1516d5c1f73a",
+    "name": "Anne Kaiser",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "14",
+      "division_id": "ocd-division/country:us/state:md/sldl:14"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:md/government",
+      "name": "Maryland",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Kaiser",
+    "image": "http://mgaleg.maryland.gov/2016RS/images/kaiser.jpg",
+    "email": "anne.kaiser@house.state.md.us",
+    "gender": "Female",
+    "birth_date": "1968-02-10",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:47:30.385687+00:00",
+    "updated_at": "2025-03-29T00:59:20.642241+00:00",
+    "openstates_url": "https://openstates.org/person/anne-kaiser-49sj6RowtuDsdlNCpTHzac/"
+  }
+]

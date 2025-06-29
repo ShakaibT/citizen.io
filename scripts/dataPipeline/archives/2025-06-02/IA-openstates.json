@@ -1,0 +1,291 @@
+[
+  {
+    "id": "ocd-person/c29c02a4-8429-4846-bc19-817f545f3935",
+    "name": "Adam Zabner",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "90",
+      "division_id": "ocd-division/country:us/state:ia/sldl:90"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Zabner",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=33993",
+    "email": "adam.zabner@legis.iowa.gov",
+    "gender": "Male",
+    "birth_date": "1999-05-24",
+    "death_date": "",
+    "extras": {
+      "home email": "adam.zabner@gmail.com",
+      "occupation": "Organizer"
+    },
+    "created_at": "2023-01-19T02:29:04.982354+00:00",
+    "updated_at": "2025-04-25T00:33:46.085450+00:00",
+    "openstates_url": "https://openstates.org/person/adam-zabner-5vDo7Ixu5CsFtWQNMS7tqv/"
+  },
+  {
+    "id": "ocd-person/9788064e-fad9-4130-9084-69e829884d9c",
+    "name": "Adrian Dickey",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "44",
+      "division_id": "ocd-division/country:us/state:ia/sldu:44"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Dickey",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=31094",
+    "email": "adrian.dickey@legis.iowa.gov",
+    "gender": "Male",
+    "birth_date": "1973-10-23",
+    "death_date": "",
+    "extras": {
+      "occupation": "President of Dickey Transport, Volunteer Fire Fighter"
+    },
+    "created_at": "2021-03-10T00:06:27.780742+00:00",
+    "updated_at": "2025-04-24T00:33:36.511622+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-dickey-4bw0IUSJfKiPFvIwnWpcTs/"
+  },
+  {
+    "id": "ocd-person/e0883366-eaba-4dc1-9a66-4c35cb1d0290",
+    "name": "Aime Wichtendahl",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "80",
+      "division_id": "ocd-division/country:us/state:ia/sldl:80"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Aime",
+    "family_name": "Wichtendahl",
+    "image": "https://aimeforiowa.org/wp-content/uploads/2024/01/Aime-Wichtendahl-1.jpg",
+    "email": "aime.wichtendahl@legis.iowa.gov",
+    "gender": "Female",
+    "birth_date": "1979-12-31",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:30:09.204555+00:00",
+    "updated_at": "2025-04-25T00:33:50.397633+00:00",
+    "openstates_url": "https://openstates.org/person/aime-wichtendahl-6pgWYn0Un08xa2CpFEYrfU/"
+  },
+  {
+    "id": "ocd-person/0ed1d7f1-1471-4055-b674-582bf19c28b3",
+    "name": "Amy Nielsen",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "85",
+      "division_id": "ocd-division/country:us/state:ia/sldl:85"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Nielsen",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=18050",
+    "email": "amy.nielsen@legis.iowa.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-19T02:31:24.190148+00:00",
+    "updated_at": "2025-04-25T00:33:25.197435+00:00",
+    "openstates_url": "https://openstates.org/person/amy-nielsen-Rxn3tQ0s4yujq9M0kKfWF/"
+  },
+  {
+    "id": "ocd-person/8e969687-4903-4f3c-a76f-2e35a2232d09",
+    "name": "Amy Sinclair",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:ia/sldu:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Sinclair",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=10729",
+    "email": "amy.sinclair@legis.iowa.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "cell phone": "641.870.0199",
+      "home address": "1255 King Rd, Allerton, IA 50008",
+      "capitol phone": "515.281.3371"
+    },
+    "created_at": "2018-10-18T14:42:09.694370+00:00",
+    "updated_at": "2025-04-25T00:33:52.373141+00:00",
+    "openstates_url": "https://openstates.org/person/amy-sinclair-4L3jDaReXAr4T6iBFqnEkL/"
+  },
+  {
+    "id": "ocd-person/17e291e9-2484-4e94-a99f-0c12d6269349",
+    "name": "Angel Ramirez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "78",
+      "division_id": "ocd-division/country:us/state:ia/sldl:78"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Angel",
+    "family_name": "Ramirez",
+    "image": "https://ramirezforiowa.com/assets/angel.png",
+    "email": "angel.ramirez@legis.iowa.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-05-09T00:31:31.567424+00:00",
+    "updated_at": "2025-05-23T12:32:37.524629+00:00",
+    "openstates_url": "https://openstates.org/person/angel-ramirez-j4MhzcEcVtGsCFYayVNNJ/"
+  },
+  {
+    "id": "ocd-person/f8bf5332-b8b7-4d55-8652-e9b883cae35e",
+    "name": "Ann Meyer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:ia/sldl:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Meyer",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=27019",
+    "email": "ann.meyer@legis.iowa.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "home email": "annmeyer@frontiernet.net",
+      "occupation": "Registered Nurse"
+    },
+    "created_at": "2019-01-13T06:06:29.450243+00:00",
+    "updated_at": "2025-04-25T00:33:32.014159+00:00",
+    "openstates_url": "https://openstates.org/person/ann-meyer-7ZNX2J9iZA3vJmwMWkDI4c/"
+  },
+  {
+    "id": "ocd-person/79eacd35-8caf-466e-b75f-0d878dcf5221",
+    "name": "Annette Sweeney",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:ia/sldu:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Annette",
+    "family_name": "Sweeney",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=6585",
+    "email": "annette.sweeney@legis.iowa.gov",
+    "gender": "Female",
+    "birth_date": "1957-12-09",
+    "death_date": "",
+    "extras": {
+      "occupation": "Farmer"
+    },
+    "created_at": "2018-10-18T14:42:14.172627+00:00",
+    "updated_at": "2025-04-25T00:33:10.251840+00:00",
+    "openstates_url": "https://openstates.org/person/annette-sweeney-3i3NK5yi7i6kVcEq9tfLaD/"
+  },
+  {
+    "id": "ocd-person/57925a0b-3010-440d-a012-c8465535c13e",
+    "name": "Art Staed",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:ia/sldu:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Art",
+    "family_name": "Staed",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=10743",
+    "email": "art.staed@legis.iowa.gov",
+    "gender": "Male",
+    "birth_date": "1949-04-21",
+    "death_date": "",
+    "extras": {
+      "home email": "artstaed@gmail.com",
+      "occupation": "Retired Educator"
+    },
+    "created_at": "2018-10-18T14:42:10.208074+00:00",
+    "updated_at": "2025-04-25T00:33:10.914369+00:00",
+    "openstates_url": "https://openstates.org/person/art-staed-2fFDLuKjCY6n5UR52ii5ss/"
+  },
+  {
+    "id": "ocd-person/9aa42801-ba2e-4f2e-9448-cf5e6114fba7",
+    "name": "Austin Baeth",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "36",
+      "division_id": "ocd-division/country:us/state:ia/sldl:36"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ia/government",
+      "name": "Iowa",
+      "classification": "state"
+    },
+    "given_name": "Austin",
+    "family_name": "Baeth",
+    "image": "https://www.legis.iowa.gov/photo?action=getPhoto&ga=90&pid=33976",
+    "email": "austin.baeth@legis.iowa.gov",
+    "gender": "Male",
+    "birth_date": "1984-10-19",
+    "death_date": "",
+    "extras": {
+      "occupation": "Physician"
+    },
+    "created_at": "2023-01-19T02:30:50.162909+00:00",
+    "updated_at": "2025-04-25T00:32:55.537640+00:00",
+    "openstates_url": "https://openstates.org/person/austin-baeth-4hnpxD1vOh0oFX4OAfs63r/"
+  }
+]

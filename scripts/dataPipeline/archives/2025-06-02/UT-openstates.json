@@ -1,0 +1,353 @@
+[
+  {
+    "id": "ocd-person/eac36970-1c63-4b4c-81b1-3a39536bd69d",
+    "name": "Andrew Stoddard",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:ut/sldl:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Stoddard",
+    "image": "https://le.utah.gov/images/legislator/STODDA.jpg",
+    "email": "astoddard@le.utah.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "B.A., Psychology, University of Utah; J.D., Brigham Young University",
+      "cell phone": "385-256-3281",
+      "profession": "City Prosecutor",
+      "service start": "January 1, 2019",
+      "counties represented": [
+        "Salt Lake"
+      ]
+    },
+    "created_at": "2019-01-04T05:21:49.753709+00:00",
+    "updated_at": "2025-03-05T09:17:55.650965+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-stoddard-78zVUhgPOsxcIY47MXHy8r/"
+  },
+  {
+    "id": "ocd-person/d987aff4-abcf-4f2a-826d-b5741d065d44",
+    "name": "Angela Romero",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:ut/sldl:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Romero",
+    "image": "https://le.utah.gov/images/legislator/ROMERAY.jpg",
+    "email": "angelaromero@le.utah.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Minority Leader",
+      "education": "B.S., Political Science and Chicano Studies, University of Utah; M.P.A., University of Utah",
+      "cell phone": "801-722-4972",
+      "profession": "Program Manager",
+      "service start": "January 1, 2013",
+      "counties represented": [
+        "Salt Lake"
+      ]
+    },
+    "created_at": "2018-10-18T16:12:55.383850+00:00",
+    "updated_at": "2025-03-05T09:17:59.019649+00:00",
+    "openstates_url": "https://openstates.org/person/angela-romero-6cTLLFXB127Im3dnJNd8AW/"
+  },
+  {
+    "id": "ocd-person/6b86542a-9b8a-418f-a275-6c261cdd86d2",
+    "name": "Ann Millner",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "5",
+      "division_id": "ocd-division/country:us/state:ut/sldu:5"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Millner",
+    "image": "https://le.utah.gov/images/legislator/MILLNA.jpg",
+    "email": "amillner@le.utah.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Majority Whip",
+      "education": "B.S., University of TN; M.S., Texas State; Ed.D., Education Admin., BYU",
+      "profession": "Higher Education",
+      "service start": "January 2015-Present",
+      "counties represented": [
+        "Davis",
+        "Morgan",
+        "Weber"
+      ]
+    },
+    "created_at": "2018-10-18T16:12:55.455999+00:00",
+    "updated_at": "2025-03-05T09:18:38.745554+00:00",
+    "openstates_url": "https://openstates.org/person/ann-millner-3GtZB7Xn8QC1VP9EQILD5m/"
+  },
+  {
+    "id": "ocd-person/7c0df02d-1ef0-4fa9-b708-ccafff35649e",
+    "name": "Anthony Loubet",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:ut/sldl:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Loubet",
+    "image": "https://le.utah.gov/images/legislator/LOUBEA.jpg",
+    "email": "aloubet@le.utah.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Juris Doctor, J. Reuben Clark Law School, BYU; Bachelor of Science in Business Management, California Lutheran University",
+      "cell phone": "801-657-0466",
+      "home phone": "801-657-0466",
+      "profession": "Chief Legal Officer and General Counsel",
+      "service start": "January 1, 2023",
+      "counties represented": [
+        "Salt Lake"
+      ]
+    },
+    "created_at": "2023-01-19T11:47:10.764089+00:00",
+    "updated_at": "2025-03-29T02:34:58.655185+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-loubet-3m5Pw0U3QJD9C00mdKh42A/"
+  },
+  {
+    "id": "ocd-person/6d3d4043-1ec3-454c-a517-4036722c50ee",
+    "name": "Ariel Defay",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "15",
+      "division_id": "ocd-division/country:us/state:ut/sldl:15"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Ariel",
+    "family_name": "Defay",
+    "image": "https://le.utah.gov/images/legislator/DEFAYA.jpg",
+    "email": "adefay@le.utah.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "B.A., Political Science, Utah State University; M.P.A. Public Administration, Ohio University",
+      "cell phone": "801-793-8944",
+      "home phone": "801-793-8944",
+      "profession": "Small business owner",
+      "service start": "November 15, 2023",
+      "counties represented": [
+        "Davis"
+      ]
+    },
+    "created_at": "2024-01-10T23:25:15.237175+00:00",
+    "updated_at": "2025-03-05T09:17:42.261714+00:00",
+    "openstates_url": "https://openstates.org/person/ariel-defay-3K89dVBal9PVTMiYxRtc9G/"
+  },
+  {
+    "id": "ocd-person/8a770a9d-d24e-4468-9194-fa2ff1f422e3",
+    "name": "Ashlee Matthews",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "37",
+      "division_id": "ocd-division/country:us/state:ut/sldl:37"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Ashlee",
+    "family_name": "Matthews",
+    "image": "https://le.utah.gov/images/legislator/MATTHA.jpg",
+    "email": "amatthews@le.utah.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "cell phone": "385-264-2024",
+      "profession": "Office Manager",
+      "service start": "January 1, 2021",
+      "counties represented": [
+        "Salt Lake"
+      ]
+    },
+    "created_at": "2021-01-14T00:19:05.757002+00:00",
+    "updated_at": "2025-03-05T09:18:30.871374+00:00",
+    "openstates_url": "https://openstates.org/person/ashlee-matthews-4DHLHMulC0y1y7qESKWsz5/"
+  },
+  {
+    "id": "ocd-person/b8751ce0-ba9b-44a0-8658-9cc9dc5f4c2c",
+    "name": "Brady Brammer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:ut/sldu:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Brady",
+    "family_name": "Brammer",
+    "image": "https://le.utah.gov/images/legislator/BRAMMB.jpg",
+    "email": "bbrammer@le.utah.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "House Rules Chair",
+      "education": "B.A., Brigham Young University; J.D. Brigham Young University; M.P.A, Brigham Young University",
+      "cell phone": "801-709-1790",
+      "home phone": "801-709-1790",
+      "profession": "Attorney",
+      "service start": "January 1, 2019",
+      "counties represented": [
+        "Utah"
+      ]
+    },
+    "created_at": "2019-01-04T05:21:49.526662+00:00",
+    "updated_at": "2025-03-05T09:17:39.547278+00:00",
+    "openstates_url": "https://openstates.org/person/brady-brammer-5c46kTxWVINsJvpU59ohLA/"
+  },
+  {
+    "id": "ocd-person/3e388e2d-1b4a-49dc-9aa5-38353166e08f",
+    "name": "Bridger Bolinder",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "29",
+      "division_id": "ocd-division/country:us/state:ut/sldl:29"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Bridger",
+    "family_name": "Bolinder",
+    "image": "https://le.utah.gov/images/legislator/BOLINB.jpg",
+    "email": "bbolinder@le.utah.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Grantsville High School",
+      "cell phone": "435-255-3093",
+      "home phone": "435-255-3093",
+      "profession": "Business",
+      "service start": "January 1, 2023",
+      "counties represented": [
+        "Juab",
+        "Millard",
+        "Tooele"
+      ]
+    },
+    "created_at": "2023-01-19T11:48:17.720922+00:00",
+    "updated_at": "2025-03-05T09:17:09.796547+00:00",
+    "openstates_url": "https://openstates.org/person/bridger-bolinder-1tPMwrcNUchbTM6XRrbsRb/"
+  },
+  {
+    "id": "ocd-person/036ab735-ad82-450e-a5ca-098b1436cb90",
+    "name": "Cal Musselman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "4",
+      "division_id": "ocd-division/country:us/state:ut/sldu:4"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Cal",
+    "family_name": "Musselman",
+    "image": "https://le.utah.gov/images/legislator/MUSSECR.jpg",
+    "email": "cmusselman@le.utah.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Associates of Science",
+      "cell phone": "801-941-6188",
+      "profession": "Real Estate Sales",
+      "service start": "January 1, 2019",
+      "counties represented": [
+        "Weber"
+      ]
+    },
+    "created_at": "2019-01-04T05:21:47.997578+00:00",
+    "updated_at": "2025-03-29T02:35:31.583321+00:00",
+    "openstates_url": "https://openstates.org/person/cal-musselman-6RkGIR1pKMxrwtZk7R6tE/"
+  },
+  {
+    "id": "ocd-person/8e452a53-e405-49f9-9031-77d8a9f63bd3",
+    "name": "Cal Roberts",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "46",
+      "division_id": "ocd-division/country:us/state:ut/sldl:46"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ut/government",
+      "name": "Utah",
+      "classification": "state"
+    },
+    "given_name": "Cal",
+    "family_name": "Roberts",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/CalRoberts2024.jpg",
+    "email": "croberts@le.utah.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:59:12.559567+00:00",
+    "updated_at": "2025-03-29T02:34:27.721440+00:00",
+    "openstates_url": "https://openstates.org/person/cal-roberts-4KSWBLm8QcSbTNtIUoYtm7/"
+  }
+]

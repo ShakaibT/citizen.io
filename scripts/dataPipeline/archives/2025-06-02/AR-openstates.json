@@ -1,0 +1,320 @@
+[
+  {
+    "id": "ocd-person/7dff69f1-609b-4230-9937-b8bbc239f5b5",
+    "name": "Aaron Pilkington",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:ar/sldl:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Pilkington",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/House/533_sm.jpg",
+    "email": "aaron.pilkington@arkansashouse.org",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "40",
+      "occupation": "Health Clinic Administrator",
+      "public service": "First Term House 2017",
+      "church affiliation": "Catholic"
+    },
+    "created_at": "2018-10-18T14:34:12.790203+00:00",
+    "updated_at": "2025-05-23T12:05:28.827301+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-pilkington-3pklRuB2Hkxo0q1hd6EnRN/"
+  },
+  {
+    "id": "ocd-person/6448d3df-2802-44a1-a142-7c3cc136d0a5",
+    "name": "Alan Clark",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "7",
+      "division_id": "ocd-division/country:us/state:ar/sldu:7"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Clark",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/Senate/401_sm.jpg",
+    "email": "alan.clark@senate.ar.gov",
+    "gender": "Male",
+    "birth_date": "1960-08-11",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "35",
+      "occupation": "Vice President/Chief Operating Officer, Clark's Building and Decorating Center",
+      "public service": "Garland County Quorum Court; Garland County Planning Commission; Senate 2013,  2015,  2017,  2019,  2021",
+      "church affiliation": "Christian"
+    },
+    "created_at": "2018-10-18T14:34:14.268371+00:00",
+    "updated_at": "2025-02-21T15:43:26.475514+00:00",
+    "openstates_url": "https://openstates.org/person/alan-clark-33EVvigIhXgyCBajrt0Ecf/"
+  },
+  {
+    "id": "ocd-person/4dc31c5c-a5a5-417f-bbaa-d99442259b4f",
+    "name": "Alyssa Brown",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "41",
+      "division_id": "ocd-division/country:us/state:ar/sldl:41"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Alyssa",
+    "family_name": "Brown",
+    "image": "https://arkansasadvocate.com/wp-content/uploads/2024/09/Alyssa-Brown-SOS-2024.jpg",
+    "email": "alyssa.brown@arkansashouse.org",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T17:41:22.267532+00:00",
+    "updated_at": "2025-02-21T15:43:15.367793+00:00",
+    "openstates_url": "https://openstates.org/person/alyssa-brown-2MjZeWKX1ZqJBSL1OLqIIx/"
+  },
+  {
+    "id": "ocd-person/5143965d-c539-411e-8a15-74ebbcbb7cd7",
+    "name": "Andrew Collins",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "73",
+      "division_id": "ocd-division/country:us/state:ar/sldl:73"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Collins",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/House/566_sm.jpg",
+    "email": "andrew.collins@arkansashouse.org",
+    "gender": "Male",
+    "birth_date": "1983-09-07",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "55",
+      "occupation": "Real Estate",
+      "public service": "First Term House 2019",
+      "church affiliation": "Catholic"
+    },
+    "created_at": "2019-01-17T06:04:59.970558+00:00",
+    "updated_at": "2025-02-21T15:43:28.824569+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-collins-2TLGUV93lRCJllnZNnCCEp/"
+  },
+  {
+    "id": "ocd-person/0e0e799b-70de-4472-b289-4a0c2aba3a26",
+    "name": "Ashley Hudson",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "75",
+      "division_id": "ocd-division/country:us/state:ar/sldl:75"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Ashley",
+    "family_name": "Hudson",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/House/566_sm.jpg",
+    "email": "ashley.hudson@arkansashouse.org",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "66",
+      "occupation": "Attorney"
+    },
+    "created_at": "2023-01-17T22:27:16.063798+00:00",
+    "updated_at": "2025-02-21T15:43:13.971309+00:00",
+    "openstates_url": "https://openstates.org/person/ashley-hudson-QWVTXLQFLDF40cX3vFZVW/"
+  },
+  {
+    "id": "ocd-person/30ea7268-a48a-424e-aadf-007b61874985",
+    "name": "Austin McCollum",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:ar/sldl:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Austin",
+    "family_name": "McCollum",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/House/531_sm.jpg",
+    "email": "austin.mccollum@arkansashouse.org",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "31",
+      "occupation": "Business/Analytics/Retail",
+      "public service": "First Term House 2017,  2019,  Majority Leader 2020",
+      "church affiliation": "Christian"
+    },
+    "created_at": "2018-10-18T14:34:20.710168+00:00",
+    "updated_at": "2025-05-15T00:06:09.204119+00:00",
+    "openstates_url": "https://openstates.org/person/austin-mccollum-1UIm09F4Qx1o48QGg0cUpZ/"
+  },
+  {
+    "id": "ocd-person/0dee8795-58dd-48a8-980e-044d8d2ac646",
+    "name": "Bart Hester",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "33",
+      "division_id": "ocd-division/country:us/state:ar/sldu:33"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Bart",
+    "family_name": "Hester",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/Senate/396_sm.jpg",
+    "email": "bart.hester@senate.ar.gov",
+    "gender": "Male",
+    "birth_date": "1977-12-09",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "9",
+      "occupation": "Real Estate and Construction",
+      "public service": "Senate 2013,  2015,  2017 Majority Whip,  Majority Leader 2019,  Senate 2021",
+      "church affiliation": "Baptist"
+    },
+    "created_at": "2018-10-18T14:34:14.988038+00:00",
+    "updated_at": "2025-02-21T15:43:06.829466+00:00",
+    "openstates_url": "https://openstates.org/person/bart-hester-QHuKd9tQhFx76rHFrd2cI/"
+  },
+  {
+    "id": "ocd-person/4f5cafe6-850c-42b3-8a75-cd13c8871baf",
+    "name": "Bart Schulz",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "28",
+      "division_id": "ocd-division/country:us/state:ar/sldl:28"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Bart",
+    "family_name": "Schulz",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/House/614_sm.jpg",
+    "email": "bart.schulz@arkansashouse.org",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "79"
+    },
+    "created_at": "2023-01-17T22:27:17.458359+00:00",
+    "updated_at": "2025-05-23T12:05:32.551496+00:00",
+    "openstates_url": "https://openstates.org/person/bart-schulz-2PkkcX9u0qooATh3726JKx/"
+  },
+  {
+    "id": "ocd-person/821d4077-0022-48a9-86b1-eb4d3bdef2e7",
+    "name": "Ben Gilmore",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:ar/sldu:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Gilmore",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/Senate/583_sm.jpg",
+    "email": "ben.gilmore@senate.ar.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "21",
+      "occupation": "Marketing and Communications Consultant",
+      "public service": "Senate 2021"
+    },
+    "created_at": "2021-01-13T00:03:03.283074+00:00",
+    "updated_at": "2025-02-21T15:43:10.162773+00:00",
+    "openstates_url": "https://openstates.org/person/ben-gilmore-3xWMygQDVludnx7Zr0arIt/"
+  },
+  {
+    "id": "ocd-person/6bbe436a-67bc-4003-80eb-1ce79c52413f",
+    "name": "Blake Johnson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:ar/sldu:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ar/government",
+      "name": "Arkansas",
+      "classification": "state"
+    },
+    "given_name": "Blake",
+    "family_name": "Johnson",
+    "image": "https://www.arkleg.state.ar.us/Content/photos/2023/Senate/509_sm.jpg",
+    "email": "blake.johnson@senate.ar.gov",
+    "gender": "Male",
+    "birth_date": "1971-02-16",
+    "death_date": "",
+    "extras": {
+      "veteran": "No",
+      "seniority": "12",
+      "occupation": "Farmer",
+      "public service": "Corning Alderman,  Senate 2015,  2017,  2019,  2021",
+      "church affiliation": "Baptist"
+    },
+    "created_at": "2018-10-18T14:34:07.827485+00:00",
+    "updated_at": "2025-05-23T12:05:42.965046+00:00",
+    "openstates_url": "https://openstates.org/person/blake-johnson-3HJ8264taQ7pK8Tb2oLKrX/"
+  }
+]

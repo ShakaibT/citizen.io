@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/a76e0c0e-81d3-4f3b-8cc8-b8360d3cecb4",
+    "name": "Aarón Ortíz",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:il/sldl:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Aarón",
+    "family_name": "Ortíz",
+    "image": "https://ilga.gov/images/members/{D96B0DF9-0E06-487B-825C-AB0BE8C3CA1E}.jpg",
+    "email": "district@repaaronortiz.com",
+    "gender": "Male",
+    "birth_date": "1991-06-18",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-19T06:06:39.198974+00:00",
+    "updated_at": "2025-04-24T06:44:55.471206+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-ortiz-55w0dTiU98bQQfi62NSQ68/"
+  },
+  {
+    "id": "ocd-person/4101db1f-a913-4d16-88fb-001f120bb092",
+    "name": "Abdelnasser Rashid",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:il/sldl:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Abdelnasser",
+    "family_name": "Rashid",
+    "image": "https://ilga.gov/images/members/{48E00B1D-C5BE-4210-A9A8-F68739D935D6}.jpg",
+    "email": "office@reprashid.com",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:12:44.065086+00:00",
+    "updated_at": "2025-04-24T06:44:11.853372+00:00",
+    "openstates_url": "https://openstates.org/person/abdelnasser-rashid-1yfLfC7MinO4y4Q57BkWEE/"
+  },
+  {
+    "id": "ocd-person/9729745e-386d-4f4b-8d04-0e762dcd87b2",
+    "name": "Adam Niemerg",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "102",
+      "division_id": "ocd-division/country:us/state:il/sldl:102"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Niemerg",
+    "image": "https://ilga.gov/images/members/{EDDABDD8-51A3-413F-B2A0-FA5953D29598}.jpg",
+    "email": "niemerg@ilhousegop.org",
+    "gender": "Male",
+    "birth_date": "1984-03-17",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-14T00:07:13.674749+00:00",
+    "updated_at": "2025-04-24T06:42:59.310215+00:00",
+    "openstates_url": "https://openstates.org/person/adam-niemerg-4bEmk0fuH8XNAfDTzFcyBu/"
+  },
+  {
+    "id": "ocd-person/e4e9607b-dd1b-4c3d-b3a3-f09927800864",
+    "name": "Adriane Johnson",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "30",
+      "division_id": "ocd-division/country:us/state:il/sldu:30"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Adriane",
+    "family_name": "Johnson",
+    "image": "https://ilga.gov/images/members/{991EBDF6-BC13-4260-A2B8-E10751629780}.jpg",
+    "email": "info@senatoradrianejohnson.com",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-14T00:07:10.768263+00:00",
+    "updated_at": "2025-04-24T06:44:05.771351+00:00",
+    "openstates_url": "https://openstates.org/person/adriane-johnson-6xwu3JuRoxDwW5K1OZlmdw/"
+  },
+  {
+    "id": "ocd-person/b13c7ff5-806e-426d-afd5-181f53e9fed1",
+    "name": "Amy Elik",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "111",
+      "division_id": "ocd-division/country:us/state:il/sldl:111"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Elik",
+    "image": "https://ilga.gov/images/members/{D070CEE6-55DF-4D51-961B-CCA4A0E49A8C}.jpg",
+    "email": "elik@ilhousegop.org",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-14T00:07:07.189115+00:00",
+    "updated_at": "2025-04-24T06:44:13.274287+00:00",
+    "openstates_url": "https://openstates.org/person/amy-elik-5ORI0DqvJ7w8BaxnsAAl3B/"
+  },
+  {
+    "id": "ocd-person/f8dc94db-66cf-4d5e-b1af-0b6307140524",
+    "name": "Amy Grant",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "47",
+      "division_id": "ocd-division/country:us/state:il/sldl:47"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Grant",
+    "image": "https://ilga.gov/images/members/{41DCC207-977E-45DC-BD10-A8AFDCEB673E}.jpg",
+    "email": "grant@ilhousegop.org",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-19T06:06:43.007050+00:00",
+    "updated_at": "2025-04-24T06:44:03.049790+00:00",
+    "openstates_url": "https://openstates.org/person/amy-grant-7ZatzXo2XK4n1hF0ntSvki/"
+  },
+  {
+    "id": "ocd-person/9def23d3-81e9-4baf-b0c8-eeb4e5587778",
+    "name": "Andrew Chesney",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:il/sldu:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Chesney",
+    "image": "https://ilga.gov/images/members/{D79AFB6D-F47C-47F7-988D-A3E99A0100E5}.jpg",
+    "email": "chesney@ilsenategop.org",
+    "gender": "Male",
+    "birth_date": "1982-01-11",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-19T06:06:45.232490+00:00",
+    "updated_at": "2025-04-24T06:42:38.936748+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-chesney-4o157VLk5ICUtbgcj7E8lM/"
+  },
+  {
+    "id": "ocd-person/8b2bc102-d62b-47b2-91d8-5f9b3a172cea",
+    "name": "Angelica Guerrero-Cuellar",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:il/sldl:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Angelica",
+    "family_name": "Guerrero-Cuellar",
+    "image": "https://ilga.gov/images/members/{22FBB36E-8A65-4E83-81F1-A20247A6B8F2}.jpg",
+    "email": "angieguerrerocuellar22@gmail.com",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-12-16T18:47:59.610570+00:00",
+    "updated_at": "2025-04-24T06:45:18.043530+00:00",
+    "openstates_url": "https://openstates.org/person/angelica-guerrero-cuellar-4EbvbJTpyot8JrdY7P7CDS/"
+  },
+  {
+    "id": "ocd-person/02f2799d-4633-48e9-b5ab-379d48e70b40",
+    "name": "Ann Williams",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "11",
+      "division_id": "ocd-division/country:us/state:il/sldl:11"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Williams",
+    "image": "https://ilga.gov/images/members/{C45B418C-4848-4467-ADC2-739B2D1E4418}.jpg",
+    "email": "ann@repannwilliams.com",
+    "gender": "Female",
+    "birth_date": "1968-04-28",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:42:59.603325+00:00",
+    "updated_at": "2025-04-24T06:45:00.143703+00:00",
+    "openstates_url": "https://openstates.org/person/ann-williams-5YnM4Pf8QTW4eskXYSjey/"
+  },
+  {
+    "id": "ocd-person/f38a2b8a-b0e4-4e7d-92cf-7855d42e9c2d",
+    "name": "Anna Moeller",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "43",
+      "division_id": "ocd-division/country:us/state:il/sldl:43"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:il/government",
+      "name": "Illinois",
+      "classification": "state"
+    },
+    "given_name": "Anna",
+    "family_name": "Moeller",
+    "image": "https://ilga.gov/images/members/{DCE9D682-0582-49BD-AD67-98C2502D89C2}.jpg",
+    "email": "staterepmoeller@gmail.com",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:42:55.957474+00:00",
+    "updated_at": "2025-05-15T00:38:30.106253+00:00",
+    "openstates_url": "https://openstates.org/person/anna-moeller-7PYHJs2uw3UNPMDvx7wM3R/"
+  }
+]

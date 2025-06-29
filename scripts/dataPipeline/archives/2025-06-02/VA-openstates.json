@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/893606ce-e251-4dad-8a0f-f101acde8a7f",
+    "name": "A.C. Cordoza",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "86",
+      "division_id": "ocd-division/country:us/state:va/sldl:86"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "A.C.",
+    "family_name": "Cordoza",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Aijalon_Cordoza.jpg",
+    "email": "delaccordoza@house.virginia.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2022-01-03T17:16:51.870397+00:00",
+    "updated_at": "2025-03-05T09:21:26.873071+00:00",
+    "openstates_url": "https://openstates.org/person/a-c-cordoza-4AudcOIvjlQdEXjV2XTTrD/"
+  },
+  {
+    "id": "ocd-person/4a329580-86d3-4db3-915e-9f1af71e0a5a",
+    "name": "Aaron Rouse",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:va/sldu:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Rouse",
+    "image": "https://apps.senate.virginia.gov/Senator/images/member_photos/Rouse22",
+    "email": "district07@senate.virginia.gov",
+    "gender": "Male",
+    "birth_date": "1984-01-08",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-03-07T21:32:57.823846+00:00",
+    "updated_at": "2025-03-05T09:20:58.010340+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-rouse-2G0Y2uu77D0pAnm5Qi4lCM/"
+  },
+  {
+    "id": "ocd-person/2a48661b-97f1-4b4c-a131-26290542f1ec",
+    "name": "Adam Ebbin",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "39",
+      "division_id": "ocd-division/country:us/state:va/sldu:39"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Ebbin",
+    "image": "https://apps.senate.virginia.gov/Senator/images/member_photos/Ebbin39",
+    "email": "senatorebbin@senate.virginia.gov",
+    "gender": "Male",
+    "birth_date": "1963-11-10",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:13:13.700192+00:00",
+    "updated_at": "2025-05-15T02:22:53.075107+00:00",
+    "openstates_url": "https://openstates.org/person/adam-ebbin-1HmlNDRQ0suXrF0aZxVPbw/"
+  },
+  {
+    "id": "ocd-person/d0de7acb-ce8d-4bb2-b6e5-99cefe5e76a6",
+    "name": "Adele McClure",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "2",
+      "division_id": "ocd-division/country:us/state:va/sldl:2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Adele",
+    "family_name": "McClure",
+    "image": "https://memdata.virginiageneralassembly.gov/images/display_image/H0375",
+    "email": "delamcclure@house.virginia.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-09T18:00:15.418808+00:00",
+    "updated_at": "2025-01-28T00:00:45.910070+00:00",
+    "openstates_url": "https://openstates.org/person/adele-mcclure-6M84nwFEnWdGNjyiOeNRd0/"
+  },
+  {
+    "id": "ocd-person/3a48fc34-a650-4fd5-acea-e703e2b8de90",
+    "name": "Alex Askew",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "95",
+      "division_id": "ocd-division/country:us/state:va/sldl:95"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Askew",
+    "image": "https://memdata.virginiageneralassembly.gov/images/display_image/H0311",
+    "email": "delaaskew@house.virginia.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-09T18:00:09.152729+00:00",
+    "updated_at": "2025-05-15T02:23:29.083017+00:00",
+    "openstates_url": "https://openstates.org/person/alex-askew-1lyuNI4AQEiAMdxjhjuqcS/"
+  },
+  {
+    "id": "ocd-person/ed935430-db59-4962-91f7-c0eeca2ef8e2",
+    "name": "Alfonso Lopez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:va/sldl:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Alfonso",
+    "family_name": "Lopez",
+    "image": "https://memdata.virginiageneralassembly.gov/images/display_image/H0239",
+    "email": "delalopez@house.virginia.gov",
+    "gender": "Male",
+    "birth_date": "1970-07-28",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:13:13.773120+00:00",
+    "updated_at": "2025-03-05T09:21:29.575653+00:00",
+    "openstates_url": "https://openstates.org/person/alfonso-lopez-7EIVgCKFCEAa2RvjXRmDWU/"
+  },
+  {
+    "id": "ocd-person/3978e9b7-e219-4863-9788-1bf7991d32fb",
+    "name": "Amanda Batten",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "71",
+      "division_id": "ocd-division/country:us/state:va/sldl:71"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Amanda",
+    "family_name": "Batten",
+    "image": "https://memdata.virginiageneralassembly.gov/images/display_image/H0313",
+    "email": "delabatten@house.virginia.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2020-01-08T23:17:09.998495+00:00",
+    "updated_at": "2025-03-05T09:22:03.840658+00:00",
+    "openstates_url": "https://openstates.org/person/amanda-batten-1kRoq8rAo0D0fzsWmCOxjf/"
+  },
+  {
+    "id": "ocd-person/7e0776e4-a915-4758-a7b3-70ca42ce3fe4",
+    "name": "Amy Laufer",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "55",
+      "division_id": "ocd-division/country:us/state:va/sldl:55"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Laufer",
+    "image": "https://memdata.virginiageneralassembly.gov/images/display_image/H0371",
+    "email": "delalaufer@house.virginia.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-09T18:00:09.908112+00:00",
+    "updated_at": "2025-03-05T09:22:02.902933+00:00",
+    "openstates_url": "https://openstates.org/person/amy-laufer-3poRYTXwpNX7gRM5KnjH52/"
+  },
+  {
+    "id": "ocd-person/f747c790-f609-4da1-b125-73f1807e1430",
+    "name": "Angelia Graves",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:va/sldu:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Angelia",
+    "family_name": "Graves",
+    "image": "https://apps.senate.virginia.gov/Senator/images/member_photos/Williams%20Graves21",
+    "email": "senatorwilliamsgraves@senate.virginia.gov",
+    "gender": "Female",
+    "birth_date": "1972-01-12",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-03-10T00:19:56.078577+00:00",
+    "updated_at": "2025-05-15T02:23:39.317239+00:00",
+    "openstates_url": "https://openstates.org/person/angelia-graves-7WbuIn4ZKSuY7xXn4NkTxo/"
+  },
+  {
+    "id": "ocd-person/9fd6fbd7-5e4e-4426-9d5a-43173ab01489",
+    "name": "Anne Ferrell Tata",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "99",
+      "division_id": "ocd-division/country:us/state:va/sldl:99"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:va/government",
+      "name": "Virginia",
+      "classification": "state"
+    },
+    "given_name": "Anne Ferrell",
+    "family_name": "Tata",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/_Anne_Ferrell_Tata_.jpg",
+    "email": "delaftata@house.virginia.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2022-01-03T17:16:47.781224+00:00",
+    "updated_at": "2025-03-05T09:21:50.558577+00:00",
+    "openstates_url": "https://openstates.org/person/anne-ferrell-tata-4rc1j1PcD5KczIN3qR07CL/"
+  }
+]

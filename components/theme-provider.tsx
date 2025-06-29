@@ -19,10 +19,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true)
-    // Get theme from localStorage or system preference
-    const savedTheme = localStorage.getItem("citizen-theme") as Theme
+    
+    // Start with light mode as default, the sunrise/sunset hook will take over
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-    const initialTheme = savedTheme || systemTheme
+    const initialTheme = systemTheme
     setThemeState(initialTheme)
     applyTheme(initialTheme)
   }, [])

@@ -1,0 +1,294 @@
+[
+  {
+    "id": "ocd-person/4183f327-e2a6-4b1a-9d23-161da1b5e261",
+    "name": "Aaron Michlewitz",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "3rd Suffolk",
+      "division_id": "ocd-division/country:us/state:ma/sldl:3rd_suffolk"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Michlewitz",
+    "image": "https://malegislature.gov/Legislators/Profile/170/AMM1.jpg",
+    "email": "aaron.m.michlewitz@mahouse.gov",
+    "gender": "Male",
+    "birth_date": "1978-06-07",
+    "death_date": "",
+    "extras": {
+      "member code": "AMM1",
+      "leadership position": "House Ways and Means Chair"
+    },
+    "created_at": "2018-10-18T14:46:49.271417+00:00",
+    "updated_at": "2025-04-24T07:01:23.377691+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-michlewitz-1zcnkmjbvPDmiVMWTt6ZkH/"
+  },
+  {
+    "id": "ocd-person/c3d23eba-caa6-4d2a-bbd2-5b8b2ca184ae",
+    "name": "Aaron Saunders",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "7th Hampden",
+      "division_id": "ocd-division/country:us/state:ma/sldl:7th_hampden"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Saunders",
+    "image": "https://malegislature.gov/Legislators/Profile/170/ALS1.jpg",
+    "email": "aaron.saunders@mahouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "member code": "ALS1"
+    },
+    "created_at": "2023-02-13T19:14:39.019091+00:00",
+    "updated_at": "2024-10-09T22:35:50.416709+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-saunders-5xVaKdLeFHX0QZwKgpch5C/"
+  },
+  {
+    "id": "ocd-person/d2a82a0d-fbd1-4448-be2d-b786a7e11168",
+    "name": "Adam Gómez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "Hampden",
+      "division_id": "ocd-division/country:us/state:ma/sldu:hampden"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Gómez",
+    "image": "https://malegislature.gov/Legislators/Profile/170/A_G0.jpg",
+    "email": "adam.gomez@masenate.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "member code": "A_G0"
+    },
+    "created_at": "2021-01-07T11:18:39.804210+00:00",
+    "updated_at": "2025-04-24T00:54:44.980352+00:00",
+    "openstates_url": "https://openstates.org/person/adam-gomez-6PVEsOFVrkTOOOOxZRDIYy/"
+  },
+  {
+    "id": "ocd-person/804c5518-7fdf-43c9-ba24-f2c24eb3b0ab",
+    "name": "Adam Scanlon",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "14th Bristol",
+      "division_id": "ocd-division/country:us/state:ma/sldl:14th_bristol"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Scanlon",
+    "image": "https://malegislature.gov/Legislators/Profile/170/AJS1.jpg",
+    "email": "adam.scanlon@mahouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "member code": "AJS1"
+    },
+    "created_at": "2021-01-07T11:18:53.089261+00:00",
+    "updated_at": "2025-04-24T00:54:33.425401+00:00",
+    "openstates_url": "https://openstates.org/person/adam-scanlon-3u5tukhuRNsHDurEgCHH1n/"
+  },
+  {
+    "id": "ocd-person/f8772f1e-29f7-42e2-8a8c-ab4005153b05",
+    "name": "Adrian Madaro",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "1st Suffolk",
+      "division_id": "ocd-division/country:us/state:ma/sldl:1st_suffolk"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Madaro",
+    "image": "https://malegislature.gov/Legislators/Profile/170/ACM1.jpg",
+    "email": "adrian.madaro@mahouse.gov",
+    "gender": "Male",
+    "birth_date": "1988-11-02",
+    "death_date": "",
+    "extras": {
+      "member code": "ACM1"
+    },
+    "created_at": "2018-10-18T14:46:37.032569+00:00",
+    "updated_at": "2025-04-24T00:55:46.456761+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-madaro-7YqYzODhFcy187pqBwYJnh/"
+  },
+  {
+    "id": "ocd-person/300d40b3-9479-43c0-99d3-18f94e1110cc",
+    "name": "Adrianne Ramos",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "14th Essex",
+      "division_id": "ocd-division/country:us/state:ma/sldl:14th_essex"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Adrianne",
+    "family_name": "Ramos",
+    "image": "https://malegislature.gov/Legislators/Profile/170/APR1.jpg",
+    "email": "adrianne.ramos@mahouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "member code": "APR1"
+    },
+    "created_at": "2023-02-13T19:14:41.824564+00:00",
+    "updated_at": "2024-10-09T22:36:57.118073+00:00",
+    "openstates_url": "https://openstates.org/person/adrianne-ramos-1SfgfUnNoRkFirer7GFi4y/"
+  },
+  {
+    "id": "ocd-person/6e81dcb7-4a04-4a88-b5f2-728a3336cf9d",
+    "name": "Alan Silvia",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "7th Bristol",
+      "division_id": "ocd-division/country:us/state:ma/sldl:7th_bristol"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Silvia",
+    "image": "https://malegislature.gov/Legislators/Profile/170/A_S1.jpg",
+    "email": "alan.silvia@mahouse.gov",
+    "gender": "Male",
+    "birth_date": "1951-10-11",
+    "death_date": "",
+    "extras": {
+      "member code": "A_S1"
+    },
+    "created_at": "2018-10-18T14:46:47.985712+00:00",
+    "updated_at": "2025-04-24T07:01:12.567867+00:00",
+    "openstates_url": "https://openstates.org/person/alan-silvia-3MWVC5ziaEp4paeRvNDImD/"
+  },
+  {
+    "id": "ocd-person/2a9569a0-feaf-431d-8a8d-012d8ebccbf8",
+    "name": "Alice Peisch",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "14th Norfolk",
+      "division_id": "ocd-division/country:us/state:ma/sldl:14th_norfolk"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Alice",
+    "family_name": "Peisch",
+    "image": "https://malegislature.gov/Legislators/Profile/170/AHP1.jpg",
+    "email": "alice.peisch@mahouse.gov",
+    "gender": "Female",
+    "birth_date": "1954-10-04",
+    "death_date": "",
+    "extras": {
+      "member code": "AHP1",
+      "leadership position": "Assistant Majority Leader"
+    },
+    "created_at": "2018-10-18T14:47:04.031717+00:00",
+    "updated_at": "2024-10-09T22:35:40.143276+00:00",
+    "openstates_url": "https://openstates.org/person/alice-peisch-1ILxUGwFL5Y6CeBux2agLQ/"
+  },
+  {
+    "id": "ocd-person/bed31f9a-e759-41a5-80b6-8b6bb9a64762",
+    "name": "Alyson Sullivan-Almeida",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "7th Plymouth",
+      "division_id": "ocd-division/country:us/state:ma/sldl:7th_plymouth"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Alyson",
+    "family_name": "Sullivan-Almeida",
+    "image": "https://malegislature.gov/Legislators/Profile/170/AMS2.jpg",
+    "email": "alyson.sullivan@mahouse.gov",
+    "gender": "Female",
+    "birth_date": "1988-02-07",
+    "death_date": "",
+    "extras": {
+      "member code": "AMS2"
+    },
+    "created_at": "2019-01-05T03:24:00.749697+00:00",
+    "updated_at": "2024-10-09T22:35:45.616697+00:00",
+    "openstates_url": "https://openstates.org/person/alyson-sullivan-almeida-5o51bEx3tnMAs7p8cZknPG/"
+  },
+  {
+    "id": "ocd-person/adb7ebb2-480f-4215-859e-3a1194e9a598",
+    "name": "Amy Sangiolo",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "11th Middlesex",
+      "division_id": "ocd-division/country:us/state:ma/sldl:11th_middlesex"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ma/government",
+      "name": "Massachusetts",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Sangiolo",
+    "image": "https://malegislature.gov/Legislators/Profile/170/AMS3.jpg",
+    "email": "amy.sangiolo@mahouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "member code": "AMS3"
+    },
+    "created_at": "2025-01-05T10:35:29.046519+00:00",
+    "updated_at": "2025-04-24T07:02:01.888101+00:00",
+    "openstates_url": "https://openstates.org/person/amy-sangiolo-5HnivCaOntYeABEZlpuPvM/"
+  }
+]

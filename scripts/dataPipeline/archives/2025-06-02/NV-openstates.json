@@ -1,0 +1,278 @@
+[
+  {
+    "id": "ocd-person/6fee4c5a-f125-46bc-b11a-d254e40428e4",
+    "name": "Alexis Hansen",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "32",
+      "division_id": "ocd-division/country:us/state:nv/sldl:32"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Alexis",
+    "family_name": "Hansen",
+    "image": "http://leg.state.nv.us/Session/83rd2025/legislators/Assembly/Images/Hansen.Alexis.366.jpg",
+    "email": "alexis.hansen@asm.state.nv.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-10T06:15:03.197320+00:00",
+    "updated_at": "2025-03-13T07:41:57.582786+00:00",
+    "openstates_url": "https://openstates.org/person/alexis-hansen-3PD39gJBs6VltZ3VOZuzY4/"
+  },
+  {
+    "id": "ocd-person/d95b3a70-9bb4-43b8-a376-9d3151f9c44d",
+    "name": "Angie Taylor",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "15",
+      "division_id": "ocd-division/country:us/state:nv/sldu:15"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Angie",
+    "family_name": "Taylor",
+    "image": "http://leg.state.nv.us/Session/83rd2025/legislators/Senators/Images/Taylor.Angela.424.jpg",
+    "email": "angela.taylor@sen.state.nv.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-14T02:36:43.616346+00:00",
+    "updated_at": "2025-03-13T07:41:52.353840+00:00",
+    "openstates_url": "https://openstates.org/person/angie-taylor-6c91dT85QIzbrvPYMdnJzJ/"
+  },
+  {
+    "id": "ocd-person/11f44d71-88c1-4022-a2f5-f8ca9b8795f2",
+    "name": "Bert Gurr",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "33",
+      "division_id": "ocd-division/country:us/state:nv/sldl:33"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Bert",
+    "family_name": "Gurr",
+    "image": "http://leg.state.nv.us/Session/82nd2023/legislators/Assembly/Images/Gurr.Bert.402.jpg",
+    "email": "bert.gurr@asm.state.nv.us",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-14T02:36:48.285144+00:00",
+    "updated_at": "2025-03-13T07:41:43.119643+00:00",
+    "openstates_url": "https://openstates.org/person/bert-gurr-XsVzxjx4F8NSVOe2vvCHS/"
+  },
+  {
+    "id": "ocd-person/20c9828b-8026-440a-9328-0c2cbcbad016",
+    "name": "Brian Hibbetts",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:nv/sldl:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Brian",
+    "family_name": "Hibbetts",
+    "image": "http://leg.state.nv.us/Session/82nd2023/legislators/Assembly/Images/Hibbetts.Brian.394.jpg",
+    "email": "brian.hibbetts@asm.state.nv.us",
+    "gender": "Male",
+    "birth_date": "1974-07-01",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-14T02:35:57.749254+00:00",
+    "updated_at": "2025-03-13T07:41:48.884199+00:00",
+    "openstates_url": "https://openstates.org/person/brian-hibbetts-zrqNGvPNI8R14wIEUNjhG/"
+  },
+  {
+    "id": "ocd-person/287d0078-78f3-4717-8493-9f77d0eb57d6",
+    "name": "Brittney Miller",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "5",
+      "division_id": "ocd-division/country:us/state:nv/sldl:5"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Brittney",
+    "family_name": "Miller",
+    "image": "http://leg.state.nv.us/Session/83rd2025/legislators/Assembly/Images/Miller.Brittney.304.jpg",
+    "email": "brittney.miller@asm.state.nv.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:55:53.322547+00:00",
+    "updated_at": "2025-03-13T07:42:02.671894+00:00",
+    "openstates_url": "https://openstates.org/person/brittney-miller-1EOomXVitpbGvF6MYEEoDu/"
+  },
+  {
+    "id": "ocd-person/189d270a-96e5-45af-a2b8-bbcc2ad225c1",
+    "name": "Carrie Buck",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "5",
+      "division_id": "ocd-division/country:us/state:nv/sldu:5"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Carrie",
+    "family_name": "Buck",
+    "image": "http://leg.state.nv.us/Session/83rd2025/legislators/Senators/Images/Buck.Carrie.387.jpg",
+    "email": "carrie.buck@sen.state.nv.us",
+    "gender": "Female",
+    "birth_date": "1971-07-19",
+    "death_date": "",
+    "extras": {
+      "title": "Assistant Minority Leader"
+    },
+    "created_at": "2020-12-07T06:14:45.891691+00:00",
+    "updated_at": "2025-03-13T07:41:59.135435+00:00",
+    "openstates_url": "https://openstates.org/person/carrie-buck-kRdLx6xW0V7Jmx4hiWJyD/"
+  },
+  {
+    "id": "ocd-person/67f22a3d-05c3-4256-8260-dac682607fc7",
+    "name": "Cecelia González",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:nv/sldl:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Cecelia",
+    "family_name": "González",
+    "image": "http://leg.state.nv.us/Session/83rd2025/legislators/Assembly/Images/Gonzlez.Cecelia.378.jpg",
+    "email": "cecelia.gonzalez@asm.state.nv.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2020-12-07T06:14:44.494991+00:00",
+    "updated_at": "2025-03-13T07:41:56.548921+00:00",
+    "openstates_url": "https://openstates.org/person/cecelia-gonzalez-3A8sWNVLlK9eIDvgzmJLuR/"
+  },
+  {
+    "id": "ocd-person/0828d1f5-5772-4e62-88d8-1650abb8b749",
+    "name": "Cinthia Moore",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "11",
+      "division_id": "ocd-division/country:us/state:nv/sldl:11"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Cinthia",
+    "family_name": "Moore",
+    "image": "http://leg.state.nv.us/Session/83rd2025/legislators/Assembly/Images/Moore.Cinthia.412.jpg",
+    "email": "cinthia.moore@asm.state.nv.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T21:35:11.064199+00:00",
+    "updated_at": "2025-03-13T07:41:56.052477+00:00",
+    "openstates_url": "https://openstates.org/person/cinthia-moore-FOanK4U2xT8KfxKbBRvRZ/"
+  },
+  {
+    "id": "ocd-person/b266a1bc-d8f5-472c-ba8d-e98e0d904ee3",
+    "name": "Daniele Monroe-Moreno",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:nv/sldl:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Daniele",
+    "family_name": "Monroe-Moreno",
+    "image": "http://leg.state.nv.us/Session/83rd2025/legislators/Assembly/Images/MonroeMoreno.Daniele.307.jpg",
+    "email": "daniele.monroemoreno@asm.state.nv.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Speaker Pro Tempore"
+    },
+    "created_at": "2018-10-18T14:55:49.240274+00:00",
+    "updated_at": "2025-03-13T07:42:01.703895+00:00",
+    "openstates_url": "https://openstates.org/person/daniele-monroe-moreno-5QdXISqzV5YzAe9zBHHGNf/"
+  },
+  {
+    "id": "ocd-person/bf8b61a8-585a-4357-82f8-bd8de898262b",
+    "name": "Danielle Gallant",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:nv/sldl:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nv/government",
+      "name": "Nevada",
+      "classification": "state"
+    },
+    "given_name": "Danielle",
+    "family_name": "Gallant",
+    "image": "http://leg.state.nv.us/Session/82nd2023/legislators/Assembly/Images/Gallant.Danielle.397.jpg",
+    "email": "danielle.gallant@asm.state.nv.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "\r\nCo-Deputy Minority Floor Leader South                                "
+    },
+    "created_at": "2023-01-14T02:36:52.018457+00:00",
+    "updated_at": "2025-03-13T07:41:41.661494+00:00",
+    "openstates_url": "https://openstates.org/person/danielle-gallant-5pRENg7mML6h7RdMXpGLLn/"
+  }
+]

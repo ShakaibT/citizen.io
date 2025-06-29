@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/03ee8938-314f-4db4-ac76-9507d85fc03c",
+    "name": "Ashlei Spivey",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:ne/sldu:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Ashlei",
+    "family_name": "Spivey",
+    "image": "",
+    "email": "aspivey@leg.ne.gov",
+    "gender": "Female",
+    "birth_date": "1986-08-15",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-02-04T20:19:47.066463+00:00",
+    "updated_at": "2025-02-04T20:19:47.128442+00:00",
+    "openstates_url": "https://openstates.org/person/ashlei-spivey-7PzGoBnrz0MkrrQYTROsG/"
+  },
+  {
+    "id": "ocd-person/01d5ca17-53a1-463a-b2f6-74fe24833c0f",
+    "name": "Barry DeKay",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:ne/sldu:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Barry",
+    "family_name": "DeKay",
+    "image": "https://www.nebraskalegislature.gov/media/images/senators/dist40/highres/dist40.jpg",
+    "email": "bdekay@leg.ne.gov",
+    "gender": "Male",
+    "birth_date": "1959-05-29",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T20:55:33.637238+00:00",
+    "updated_at": "2025-02-21T16:04:19.297877+00:00",
+    "openstates_url": "https://openstates.org/person/barry-dekay-3Sh38RxjLWxm9bxpqsn7f/"
+  },
+  {
+    "id": "ocd-person/3da787e9-f6ed-4069-bd74-58ec7c015efb",
+    "name": "Beau Ballard",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:ne/sldu:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Beau",
+    "family_name": "Ballard",
+    "image": "https://www.nebraskalegislature.gov/media/images/senators/dist21/highres/dist21.jpg",
+    "email": "bballard@leg.ne.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T20:55:34.738317+00:00",
+    "updated_at": "2024-10-08T19:46:36.996856+00:00",
+    "openstates_url": "https://openstates.org/person/beau-ballard-1sL5oWFVZxOw0ITk1aljAp/"
+  },
+  {
+    "id": "ocd-person/bfc9dd37-6a7b-4ea2-acf5-c8e161a27764",
+    "name": "Ben Hansen",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:ne/sldu:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Hansen",
+    "image": "https://www.nebraskalegislature.gov/media/images/senators/dist16/highres/dist16.jpg",
+    "email": "bhansen@leg.ne.gov",
+    "gender": "Male",
+    "birth_date": "1979-06-29",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-10T06:13:20.209776+00:00",
+    "updated_at": "2025-03-13T07:25:57.147276+00:00",
+    "openstates_url": "https://openstates.org/person/ben-hansen-5ptmll9dT66TUJhrhUnO9U/"
+  },
+  {
+    "id": "ocd-person/db002bad-ee6a-4e22-b5c5-840c665ecad4",
+    "name": "Bob Andersen",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "49",
+      "division_id": "ocd-division/country:us/state:ne/sldu:49"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Andersen",
+    "image": "https://storage.googleapis.com/enview-dev-public-general/legislative-people-photos/167021.jpg",
+    "email": "bandersen@leg.ne.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-02-04T20:19:46.519464+00:00",
+    "updated_at": "2025-03-13T07:26:01.639754+00:00",
+    "openstates_url": "https://openstates.org/person/bob-andersen-6fFOeJbsMqRuSrvc1TqCpw/"
+  },
+  {
+    "id": "ocd-person/cc0182c9-3cfe-46b1-8fd2-03e90385c6d5",
+    "name": "Bob Hallstrom",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:ne/sldu:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Hallstrom",
+    "image": "",
+    "email": "bhallstrom@leg.ne.gov",
+    "gender": "Male",
+    "birth_date": "1955-12-02",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-02-04T20:19:44.963578+00:00",
+    "updated_at": "2025-02-04T20:19:45.089609+00:00",
+    "openstates_url": "https://openstates.org/person/bob-hallstrom-6Cx7lC5ixt71d6Mby6urdl/"
+  },
+  {
+    "id": "ocd-person/63d2956a-a0be-40db-a0e3-6c32743951ab",
+    "name": "Brad von Gillern",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "4",
+      "division_id": "ocd-division/country:us/state:ne/sldu:4"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Brad",
+    "family_name": "von Gillern",
+    "image": "https://www.nebraskalegislature.gov/media/images/senators/dist04/highres/dist04.jpg",
+    "email": "bvongillern@leg.ne.gov",
+    "gender": "Male",
+    "birth_date": "1960-07-13",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T20:55:36.147808+00:00",
+    "updated_at": "2025-02-04T20:19:45.448174+00:00",
+    "openstates_url": "https://openstates.org/person/brad-von-gillern-32MTb1ECuhjOUtZyl6MBHH/"
+  },
+  {
+    "id": "ocd-person/a98b3cf6-9bf8-40a3-94f3-1c196e233ebd",
+    "name": "Brian Hardin",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "48",
+      "division_id": "ocd-division/country:us/state:ne/sldu:48"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Brian",
+    "family_name": "Hardin",
+    "image": "https://www.nebraskalegislature.gov/media/images/senators/dist48/highres/dist48.jpg",
+    "email": "bhardin@leg.ne.gov",
+    "gender": "Male",
+    "birth_date": "1965-12-21",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T20:55:35.700762+00:00",
+    "updated_at": "2024-10-08T19:46:38.001592+00:00",
+    "openstates_url": "https://openstates.org/person/brian-hardin-59vKmlfKQGkQM11X4tR23Z/"
+  },
+  {
+    "id": "ocd-person/ecf3913e-8e18-4aec-8991-12549df820cd",
+    "name": "Carolyn Bosn",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:ne/sldu:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Carolyn",
+    "family_name": "Bosn",
+    "image": "https://www.nebraskalegislature.gov/media/images/senators/dist25/highres/dist25.jpg",
+    "email": "cbosn@leg.ne.gov",
+    "gender": "Female",
+    "birth_date": "1982-10-05",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-05-23T01:57:47.707013+00:00",
+    "updated_at": "2025-02-04T20:19:46.471559+00:00",
+    "openstates_url": "https://openstates.org/person/carolyn-bosn-7D7Uz5iGzzhv8QI9MMfIC5/"
+  },
+  {
+    "id": "ocd-person/fdac2d3a-3497-4e34-8247-af670c901dd8",
+    "name": "Christy Armendariz",
+    "party": "Nonpartisan",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "legislature",
+      "district": "18",
+      "division_id": "ocd-division/country:us/state:ne/sldu:18"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ne/government",
+      "name": "Nebraska",
+      "classification": "state"
+    },
+    "given_name": "Christy",
+    "family_name": "Armendariz",
+    "image": "https://www.nebraskalegislature.gov/media/images/senators/dist18/highres/dist18.jpg",
+    "email": "carmendariz@leg.ne.gov",
+    "gender": "Female",
+    "birth_date": "1966-12-10",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T20:55:40.270635+00:00",
+    "updated_at": "2024-10-08T19:46:39.015247+00:00",
+    "openstates_url": "https://openstates.org/person/christy-armendariz-7ifk6j4FCHb6Eat6SauDVY/"
+  }
+]

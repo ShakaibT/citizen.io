@@ -1,0 +1,287 @@
+[
+  {
+    "id": "ocd-person/0ce91900-de38-4ab2-a6fe-089b04b20b74",
+    "name": "Adrian Tam",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "24",
+      "division_id": "ocd-division/country:us/state:hi/sldl:24"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Tam",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/Tam.jpg",
+    "email": "reptam@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "1992-09-11",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-05T16:59:40.332140+00:00",
+    "updated_at": "2025-03-13T06:29:55.509562+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-tam-OMQtk9uNG23Y0clzYiCMG/"
+  },
+  {
+    "id": "ocd-person/cb860f85-2006-4d5b-b1a8-1c56c1def2d7",
+    "name": "Amy Perruso",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "46",
+      "division_id": "ocd-division/country:us/state:hi/sldl:46"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Perruso",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/Perruso.jpg",
+    "email": "repperruso@capitol.hawaii.gov",
+    "gender": "Female",
+    "birth_date": "1968-11-05",
+    "death_date": "",
+    "extras": {
+      "title": "Majority Whip"
+    },
+    "created_at": "2019-01-03T23:33:23.894997+00:00",
+    "updated_at": "2025-03-13T06:29:40.683255+00:00",
+    "openstates_url": "https://openstates.org/person/amy-perruso-6C2huX2eBxRCwnJ8q4qLOJ/"
+  },
+  {
+    "id": "ocd-person/442e3aac-61ca-4efe-bbb8-716654554597",
+    "name": "Andrew Garrett",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:hi/sldl:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Garrett",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/Garrett.jpg",
+    "email": "repgarrett@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-05T16:59:37.579865+00:00",
+    "updated_at": "2025-03-13T06:29:45.057479+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-garrett-24ebVkqRDU924tMqWwqBMN/"
+  },
+  {
+    "id": "ocd-person/d31a4d99-d6f1-42f8-b902-b6bff3c667e8",
+    "name": "Angus McKelvey",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "6",
+      "division_id": "ocd-division/country:us/state:hi/sldu:6"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Angus",
+    "family_name": "McKelvey",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/mckelvey.jpg",
+    "email": "senmckelvey@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "1968-03-09",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:41:23.532494+00:00",
+    "updated_at": "2025-03-13T06:29:51.738525+00:00",
+    "openstates_url": "https://openstates.org/person/angus-mckelvey-6QLOtaPj5aPUCZ3icSeBAG/"
+  },
+  {
+    "id": "ocd-person/22139704-8a26-4f4a-8a03-989990c21f37",
+    "name": "Brandon Elefante",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:hi/sldu:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Brandon",
+    "family_name": "Elefante",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/elefante.jpg",
+    "email": "senelefante@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "extra_social_ids": {
+        "linkedin": "inbrandonelefante"
+      }
+    },
+    "created_at": "2023-01-05T16:59:38.955986+00:00",
+    "updated_at": "2025-03-13T06:29:41.223406+00:00",
+    "openstates_url": "https://openstates.org/person/brandon-elefante-12Igt1IYDitA6J0EwbfKEx/"
+  },
+  {
+    "id": "ocd-person/be1149eb-5b0c-48fb-b9f2-9bee875479cc",
+    "name": "Brenton Awa",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:hi/sldu:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Brenton",
+    "family_name": "Awa",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/awa.jpg",
+    "email": "senawa@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Minority Floor Leader"
+    },
+    "created_at": "2023-01-05T16:59:32.100757+00:00",
+    "updated_at": "2025-03-13T06:30:00.261725+00:00",
+    "openstates_url": "https://openstates.org/person/brenton-awa-5meRTIqByfWwUMStwwHG3w/"
+  },
+  {
+    "id": "ocd-person/ca85a087-4a1f-450b-9386-11c13eb8c280",
+    "name": "Carol Fukunaga",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "11",
+      "division_id": "ocd-division/country:us/state:hi/sldu:11"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Carol",
+    "family_name": "Fukunaga",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/fukunaga.jpg",
+    "email": "senfukunaga@capitol.hawaii.gov",
+    "gender": "Female",
+    "birth_date": "1947-12-12",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-05T16:59:42.512061+00:00",
+    "updated_at": "2025-03-13T06:29:38.289605+00:00",
+    "openstates_url": "https://openstates.org/person/carol-fukunaga-6A9W6NwtqptJZ7yz2J4Vvc/"
+  },
+  {
+    "id": "ocd-person/3484e323-b1a2-4c41-ad9f-8153445f8cd4",
+    "name": "Chris Lee",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:hi/sldu:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Chris",
+    "family_name": "Lee",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/clee.jpg",
+    "email": "senlee@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "1981-01-28",
+    "death_date": "",
+    "extras": {
+      "title": "Assistant Majority Whip"
+    },
+    "created_at": "2021-01-05T06:05:43.080788+00:00",
+    "updated_at": "2025-03-13T06:30:27.499453+00:00",
+    "openstates_url": "https://openstates.org/person/chris-lee-1b6KV1jAm8D2aT1kblhfkK/"
+  },
+  {
+    "id": "ocd-person/1a5995d1-114e-4e7e-a53f-d91017df2bc3",
+    "name": "Chris Muraoka",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:hi/sldl:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Chris",
+    "family_name": "Muraoka",
+    "image": "https://assets.civicengine.com/uploads/candidate/headshot/827989/827989.jpg",
+    "email": "repmuraoka@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T18:41:14.664453+00:00",
+    "updated_at": "2024-12-09T10:57:20.484855+00:00",
+    "openstates_url": "https://openstates.org/person/chris-muraoka-nijwdsjQvvIqKcMUHqi3f/"
+  },
+  {
+    "id": "ocd-person/6f62978c-5c1e-4a93-b182-caa7b97d45e0",
+    "name": "Chris Todd",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:hi/sldl:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:hi/government",
+      "name": "Hawaii",
+      "classification": "state"
+    },
+    "given_name": "Chris",
+    "family_name": "Todd",
+    "image": "http://www.capitol.hawaii.gov/MemberFiles/RepSenPhotos/Todd.jpg",
+    "email": "reptodd@capitol.hawaii.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Majority Whip",
+      "extra_social_ids": {
+        "flickr": "reptodd"
+      }
+    },
+    "created_at": "2018-10-18T14:41:33.794934+00:00",
+    "updated_at": "2025-03-13T06:30:06.062691+00:00",
+    "openstates_url": "https://openstates.org/person/chris-todd-3OBChrQGMmt51xknDHo8Ey/"
+  }
+]

@@ -24,6 +24,7 @@ import { AuthModal } from "@/components/auth-modal"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useAuth } from "@/components/auth-provider"
 import { useLocation } from "@/components/location-provider"
+import { useSunriseSunsetTheme } from "@/hooks/use-sunrise-sunset-theme"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -51,6 +52,9 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const { user, signOut } = useAuth()
   const { location, clearLocation, setShowLocationSetup } = useLocation()
+  
+  // Initialize automatic sunrise/sunset theme switching
+  useSunriseSunsetTheme()
 
   // Force white background on the body
   useEffect(() => {
@@ -279,6 +283,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             )}
             <button
               onClick={() => {
+                console.log('Change Location button clicked')
                 setShowLocationSetup(true)
                 setLocationModalOpen(false)
               }}

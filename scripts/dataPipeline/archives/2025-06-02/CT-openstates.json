@@ -1,0 +1,320 @@
+[
+  {
+    "id": "ocd-person/b43c741a-89b2-4e46-abfc-1d75f26189fe",
+    "name": "Aimee Berger-Girvalo",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "111",
+      "division_id": "ocd-division/country:us/state:ct/sldl:111"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Aimee",
+    "family_name": "Berger-Girvalo",
+    "image": "http://www2.housedems.ct.gov/Berger-Girvalo/images/Berger-Girvalo_HS.jpg",
+    "email": "aimee.berger-girvalo@cga.ct.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Assistant Majority Leader",
+      "gender": "Female",
+      "prison": "0",
+      "committees": "Transportation (Vice Chair); Government Administration and Elections; Public Health",
+      "committee codes": ";GAE;PH;TRA;"
+    },
+    "created_at": "2021-01-08T00:03:57.742893+00:00",
+    "updated_at": "2025-02-04T00:27:02.517236+00:00",
+    "openstates_url": "https://openstates.org/person/aimee-berger-girvalo-5U6FGNsLGIdgpexnTnEgu6/"
+  },
+  {
+    "id": "ocd-person/3e0a00e8-0ec8-418d-a2e3-a7eef0a5d186",
+    "name": "Al Paolillo",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "97",
+      "division_id": "ocd-division/country:us/state:ct/sldl:97"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Paolillo",
+    "image": "http://www2.housedems.ct.gov/Paolillo/images/Paolillo_HS.jpg",
+    "email": "alphonse.paolillo@cga.ct.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Deputy Speaker of the House",
+      "gender": "Male",
+      "prison": "0",
+      "committees": "Banking; Finance, Revenue and Bonding; Public Safety and Security",
+      "committee codes": ";BA;FIN;PS;"
+    },
+    "created_at": "2018-10-18T14:37:11.919413+00:00",
+    "updated_at": "2025-02-26T22:00:11.830283+00:00",
+    "openstates_url": "https://openstates.org/person/al-paolillo-1t45wedxv6Sm239X5VfrnC/"
+  },
+  {
+    "id": "ocd-person/ff1c4d90-5cc3-4ff9-8f31-454d03803816",
+    "name": "Amy Morrin Bello",
+    "party": "Democratic/Working Families",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "28",
+      "division_id": "ocd-division/country:us/state:ct/sldl:28"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Morrin Bello",
+    "image": "http://www2.housedems.ct.gov/MorrinBello/images/MorrinBello_HS.jpg",
+    "email": "amy.morrinbello@cga.ct.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Assistant Majority Leader",
+      "gender": "Female",
+      "prison": "0",
+      "committees": "Government Administration and Elections (Vice Chair); Finance, Revenue and Bonding; Transportation",
+      "committee codes": ";FIN;GAE;TRA;"
+    },
+    "created_at": "2021-01-08T00:03:57.907598+00:00",
+    "updated_at": "2025-02-04T00:26:57.558994+00:00",
+    "openstates_url": "https://openstates.org/person/amy-morrin-bello-7lNycyX1nIFArL15X8KdSo/"
+  },
+  {
+    "id": "ocd-person/9b751b3f-3f56-43dd-8eab-1cfdb81d7b34",
+    "name": "Amy Romano",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "113",
+      "division_id": "ocd-division/country:us/state:ct/sldl:113"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Romano",
+    "image": "https://static.wixstatic.com/media/e5d50b_baf91bfd3abb43beb7eaf7465d575013~mv2.png/v1/fill/w_871,h_802,fp_0.49_0.28,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/1_PNG.png",
+    "email": "amy.romano@housegop.ct.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-04-25T00:19:16.509567+00:00",
+    "updated_at": "2025-05-15T00:18:24.545491+00:00",
+    "openstates_url": "https://openstates.org/person/amy-romano-4jLKMeG3YHLZw324r7mFAy/"
+  },
+  {
+    "id": "ocd-person/e823b0bf-1132-4ed8-b860-e0febf9a275a",
+    "name": "Andre Baker",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "124",
+      "division_id": "ocd-division/country:us/state:ct/sldl:124"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Andre",
+    "family_name": "Baker",
+    "image": "http://www2.housedems.ct.gov/Baker/images/Baker_HS.jpg",
+    "email": "andre.baker@cga.ct.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Deputy Majority Whip-at-Large",
+      "gender": "Male",
+      "prison": "0",
+      "committees": "Appropriations; Banking; Planning and Development",
+      "committee codes": ";APP;BA;PD;"
+    },
+    "created_at": "2018-10-18T14:37:11.457056+00:00",
+    "updated_at": "2025-02-26T22:02:18.317551+00:00",
+    "openstates_url": "https://openstates.org/person/andre-baker-742WsxS4WzZDDW6aiaGQqQ/"
+  },
+  {
+    "id": "ocd-person/087a813d-b14a-4205-a08f-cec795647318",
+    "name": "Anne Dauphinais",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "44",
+      "division_id": "ocd-division/country:us/state:ct/sldl:44"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Dauphinais",
+    "image": "https://www.cga.ct.gov/legpics/044.png?ver=",
+    "email": "anne.dauphinais@housegop.ct.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "gender": "Female",
+      "prison": "0",
+      "committees": "Committee on Children (Ranking Member); Education; Public Health",
+      "committee codes": ";ED;KID;PH;"
+    },
+    "created_at": "2018-10-18T14:36:51.024172+00:00",
+    "updated_at": "2025-02-04T00:28:09.411488+00:00",
+    "openstates_url": "https://openstates.org/person/anne-dauphinais-FzvFsysaHuyIeWz93nE4W/"
+  },
+  {
+    "id": "ocd-person/ce2070f7-9487-4856-976b-9bbd6a2f1617",
+    "name": "Anne Hughes",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "135",
+      "division_id": "ocd-division/country:us/state:ct/sldl:135"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Hughes",
+    "image": "http://www2.housedems.ct.gov/Hughes/images/Hughes_HS.jpg",
+    "email": "anne.hughes@cga.ct.gov",
+    "gender": "Female",
+    "birth_date": "1965-07-03",
+    "death_date": "",
+    "extras": {
+      "title": "Assistant Majority Leader",
+      "gender": "Female",
+      "prison": "0",
+      "committees": "Aging; Human Services; Labor and Public Employees",
+      "business phone": "203-364-8251",
+      "committee codes": ";AGE;HS;LAB;"
+    },
+    "created_at": "2019-01-24T06:04:20.243626+00:00",
+    "updated_at": "2025-02-04T00:28:16.787879+00:00",
+    "openstates_url": "https://openstates.org/person/anne-hughes-6GxFC1lMuUlPkiOsxv7V8p/"
+  },
+  {
+    "id": "ocd-person/c7160abf-d376-484d-b87e-600a398ab503",
+    "name": "Anthony Nolan",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "39",
+      "division_id": "ocd-division/country:us/state:ct/sldl:39"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Nolan",
+    "image": "http://www2.housedems.ct.gov/Nolan/images/Nolan_HS.jpg",
+    "email": "anthony.nolan@cga.ct.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "gender": "Male",
+      "prison": "0",
+      "committees": "Veterans' and Military Affairs (Chair); Appropriations; Internship",
+      "business phone": "860-447-5281",
+      "committee codes": ";APP;ISC;VA;"
+    },
+    "created_at": "2020-04-07T00:49:20.349583+00:00",
+    "updated_at": "2025-02-04T00:27:21.037768+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-nolan-63fXrves7fOnaMJi14u0TT/"
+  },
+  {
+    "id": "ocd-person/caaba025-7a5a-401d-8714-73f627651196",
+    "name": "Antonio Felipe",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "130",
+      "division_id": "ocd-division/country:us/state:ct/sldl:130"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Antonio",
+    "family_name": "Felipe",
+    "image": "http://www2.housedems.ct.gov/Felipe/images/Felipe_HS.jpg",
+    "email": "antonio.felipe@cga.ct.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Deputy Majority Leader",
+      "gender": "Male",
+      "prison": "0",
+      "committees": "Appropriations; Education; Environment",
+      "committee codes": ";APP;ED;ENV;"
+    },
+    "created_at": "2020-04-07T00:49:15.296760+00:00",
+    "updated_at": "2025-02-04T00:26:46.307445+00:00",
+    "openstates_url": "https://openstates.org/person/antonio-felipe-6AQskr0bdxJBM9obHkM4wg/"
+  },
+  {
+    "id": "ocd-person/5e12bcd3-8cc0-4a0f-9c7c-4ecec6442948",
+    "name": "Arnie Jensen",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "131",
+      "division_id": "ocd-division/country:us/state:ct/sldl:131"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ct/government",
+      "name": "Connecticut",
+      "classification": "state"
+    },
+    "given_name": "Arnie",
+    "family_name": "Jensen",
+    "image": "https://cdn.rep-am.com/wp-content/uploads/2024/10/20241024-161212-pic-447309389.jpg",
+    "email": "arnold.jensen@housegop.ct.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-11T18:36:48.067119+00:00",
+    "updated_at": "2025-02-26T22:01:46.419245+00:00",
+    "openstates_url": "https://openstates.org/person/arnie-jensen-2rVqC3IFiIpNrsnJHCgPQ8/"
+  }
+]

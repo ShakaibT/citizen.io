@@ -1,0 +1,294 @@
+[
+  {
+    "id": "ocd-person/be61f240-c0ad-4a98-8ad5-d30f4c5f4a06",
+    "name": "Alan Martinez",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:nm/sldl:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Martinez",
+    "image": "https://www.nmlegis.gov/Images/Legislators/House/HMAAL.jpg",
+    "email": "alan.martinez@nmlegis.gov",
+    "gender": "Male",
+    "birth_date": "1964-06-21",
+    "death_date": "",
+    "extras": {
+      "occupation": "Retired",
+      "counties represented": "Sandoval"
+    },
+    "created_at": "2023-02-13T22:42:17.652479+00:00",
+    "updated_at": "2025-04-24T07:56:59.425604+00:00",
+    "openstates_url": "https://openstates.org/person/alan-martinez-5nFIpT3QP8niHEtTSG8Le2/"
+  },
+  {
+    "id": "ocd-person/c4caca3c-faa3-445f-91e0-cce9edd53a5a",
+    "name": "Andi Reeb",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "64",
+      "division_id": "ocd-division/country:us/state:nm/sldl:64"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Andi",
+    "family_name": "Reeb",
+    "image": "https://www.nmlegis.gov/Images/Legislators/House/HREEB.jpg",
+    "email": "andrea.reeb@nmlegis.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Attorney at Law",
+      "counties represented": "Chaves, Curry & Roosevelt"
+    },
+    "created_at": "2023-02-13T22:42:19.134413+00:00",
+    "updated_at": "2025-04-24T07:56:58.913174+00:00",
+    "openstates_url": "https://openstates.org/person/andi-reeb-5zLAclVSls2H1IZyHmRAuQ/"
+  },
+  {
+    "id": "ocd-person/ed0ba54a-4fc3-4c50-aa0d-f74b1f0e86f6",
+    "name": "Andrea Romero",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "46",
+      "division_id": "ocd-division/country:us/state:nm/sldl:46"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Andrea",
+    "family_name": "Romero",
+    "image": "https://www.nmlegis.gov/Images/Legislators/House/HROAN.jpg",
+    "email": "andrea@andrearomero.com",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "service": "Representative since 2019",
+      "occupation": "Entrepreneur",
+      "counties represented": "Santa Fe"
+    },
+    "created_at": "2019-01-24T06:15:34.963545+00:00",
+    "updated_at": "2025-04-24T07:56:35.811465+00:00",
+    "openstates_url": "https://openstates.org/person/andrea-romero-7DIVDl8iqnc9vo8XCSak3a/"
+  },
+  {
+    "id": "ocd-person/5cf6976d-e616-4579-a194-ec3c37260ebd",
+    "name": "Andrés Romero",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:nm/sldl:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Andrés",
+    "family_name": "Romero",
+    "image": "https://www.nmlegis.gov/Images/Legislators/House/HROMA.jpg",
+    "email": "andres.romero@nmlegis.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "service": "Representative since 2015",
+      "occupation": "Educator",
+      "counties represented": "Bernalillo"
+    },
+    "created_at": "2018-10-18T14:55:23.702992+00:00",
+    "updated_at": "2025-04-24T07:56:44.987556+00:00",
+    "openstates_url": "https://openstates.org/person/andres-romero-2pPzAxe0YkEaTfDvWPGBun/"
+  },
+  {
+    "id": "ocd-person/948ee9a0-a718-46f1-a1fe-35eb97f01fad",
+    "name": "Angel Charley",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "30",
+      "division_id": "ocd-division/country:us/state:nm/sldu:30"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Angel",
+    "family_name": "Charley",
+    "image": "https://images.squarespace-cdn.com/content/v1/65a92fa05202ee2b13428333/630e642f-dfc6-48c0-930b-c25b16d80e76/Headshot.jpg",
+    "email": "angel.charley@nmlegis.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:47:07.499909+00:00",
+    "updated_at": "2025-04-24T07:56:56.154448+00:00",
+    "openstates_url": "https://openstates.org/person/angel-charley-4WKAt9VmEBtnVXvs0sFNQT/"
+  },
+  {
+    "id": "ocd-person/ea2a9403-248c-4474-aea0-47b45265e0be",
+    "name": "Angelica Rubio",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "35",
+      "division_id": "ocd-division/country:us/state:nm/sldl:35"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Angelica",
+    "family_name": "Rubio",
+    "image": "https://www.nmlegis.gov/Images/Legislators/House/HRUBI.jpg",
+    "email": "angelica.rubio@nmlegis.gov",
+    "gender": "Female",
+    "birth_date": "1979-05-30",
+    "death_date": "",
+    "extras": {
+      "service": "Representative since 2017",
+      "occupation": "Nonprofit Consultant",
+      "counties represented": "Doña Ana"
+    },
+    "created_at": "2018-10-18T14:55:32.359354+00:00",
+    "updated_at": "2025-04-24T07:56:25.525032+00:00",
+    "openstates_url": "https://openstates.org/person/angelica-rubio-77rf5mRMWkxkxGdlTygOLu/"
+  },
+  {
+    "id": "ocd-person/75986bbd-3629-4520-a770-f86c46f423ab",
+    "name": "Angelita Mejia",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "58",
+      "division_id": "ocd-division/country:us/state:nm/sldl:58"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Angelita",
+    "family_name": "Mejia",
+    "image": "https://bloximages.newyork1.vip.townnews.com/rdrnews.com/content/tncms/assets/v3/editorial/5/0f/50f20b06-de3c-11ee-8fb3-1b97c5eaf40c/65ec9fd35dc59.image.jpg?resize=457%2C500",
+    "email": "angelita.mejia@nmlegis.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:47:08.699539+00:00",
+    "updated_at": "2025-04-24T07:56:14.486346+00:00",
+    "openstates_url": "https://openstates.org/person/angelita-mejia-3Ztl2lIVyMx0KH1x5IoN8l/"
+  },
+  {
+    "id": "ocd-person/ee127909-55b5-4854-b3c6-2e45e19b7156",
+    "name": "Anita Gonzales",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "70",
+      "division_id": "ocd-division/country:us/state:nm/sldl:70"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Anita",
+    "family_name": "Gonzales",
+    "image": "https://anita4newmexico.com/wp-content/uploads/2024/02/Anita-ABOUT.jpg",
+    "email": "anita.gonzales@nmlegis.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:47:05.316237+00:00",
+    "updated_at": "2025-04-24T07:56:42.193494+00:00",
+    "openstates_url": "https://openstates.org/person/anita-gonzales-7FEcBZtEi1204efDNGNfpm/"
+  },
+  {
+    "id": "ocd-person/02d806fd-fb8f-4d66-b9b8-6dacd2bd9656",
+    "name": "Ant Thornton",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "19",
+      "division_id": "ocd-division/country:us/state:nm/sldu:19"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Ant",
+    "family_name": "Thornton",
+    "image": "https://antthorntonfornm.com/wp-content/uploads/2024/02/Ant-Thornton-768x768.jpg",
+    "email": "anthony.thornton@nmlegis.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:47:03.639667+00:00",
+    "updated_at": "2025-04-24T07:56:12.529510+00:00",
+    "openstates_url": "https://openstates.org/person/ant-thornton-5Mhyyj21bUmhrCZGaAUHG/"
+  },
+  {
+    "id": "ocd-person/3dcac810-1d9b-4a4d-9e82-8b6e49eba735",
+    "name": "Antoinette Sedillo Lopez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:nm/sldu:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nm/government",
+      "name": "New Mexico",
+      "classification": "state"
+    },
+    "given_name": "Antoinette",
+    "family_name": "Sedillo Lopez",
+    "image": "https://www.nmlegis.gov/Images/Legislators/Senate/SSEDI.jpg",
+    "email": "a.sedillolopez@nmlegis.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "service": "Senator since 2019",
+      "occupation": "Retired Law Professor",
+      "counties represented": "Bernalillo"
+    },
+    "created_at": "2019-01-24T06:15:32.274894+00:00",
+    "updated_at": "2025-04-24T07:56:16.661291+00:00",
+    "openstates_url": "https://openstates.org/person/antoinette-sedillo-lopez-1sbCbfiaWFyLeMskKm6BLZ/"
+  }
+]

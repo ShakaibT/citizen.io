@@ -1,0 +1,323 @@
+[
+  {
+    "id": "ocd-person/b5e2b0b8-ae2a-4852-9c40-c9bf4a32fe1a",
+    "name": "Aaron Freeman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "32",
+      "division_id": "ocd-division/country:us/state:in/sldu:32"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Freeman",
+    "image": "https://cdn.zephyrcms.com/a664e2a6-fb83-4186-82cc-d4e33ff0591f/-/progressive/yes/-/format/jpeg/-/scale_crop/200x300/center/-/stretch/off/2021-freeman-2.jpg",
+    "email": "s32@iga.in.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "second phone": "317-232-9400",
+      "media contact name": "Abbey Webb",
+      "media contact email": "Abbey.Webb@iga.in.gov",
+      "media contact phone": "317-234-3560",
+      "legislative assistant name": "Carolyn Travis",
+      "legislative assistant email": "Carolyn.Travis@iga.in.gov",
+      "legislative assistant phone": "317-232-9490"
+    },
+    "created_at": "2018-10-18T14:44:12.952785+00:00",
+    "updated_at": "2025-03-13T06:40:45.193763+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-freeman-5XDCxCVSWglnb4ymMcKrkY/"
+  },
+  {
+    "id": "ocd-person/3564d02c-d1d7-4c46-87b7-dbc1c5f1dc14",
+    "name": "Alaina Shonkwiler",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "29",
+      "division_id": "ocd-division/country:us/state:in/sldl:29"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Alaina",
+    "family_name": "Shonkwiler",
+    "image": "https://storage.googleapis.com/enview-dev-public-general/legislative-people-photos/157746.jpg",
+    "email": "h29@iga.in.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T19:08:54.223642+00:00",
+    "updated_at": "2025-03-13T06:40:40.036349+00:00",
+    "openstates_url": "https://openstates.org/person/alaina-shonkwiler-1ckfEaA8zJfwPqj6ktRvca/"
+  },
+  {
+    "id": "ocd-person/ea9905ae-ca94-4184-853c-d7d622dd46ee",
+    "name": "Alex Burton",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "77",
+      "division_id": "ocd-division/country:us/state:in/sldl:77"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Burton",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/AlexBurton2024.jpeg",
+    "email": "h77@iga.in.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T19:08:22.936921+00:00",
+    "updated_at": "2024-12-09T11:00:16.892830+00:00",
+    "openstates_url": "https://openstates.org/person/alex-burton-78g8QE2rw4jFQmO7Appw3q/"
+  },
+  {
+    "id": "ocd-person/7daef9db-7675-4d8e-8e78-b943a24fd5b7",
+    "name": "Alex Zimmerman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "67",
+      "division_id": "ocd-division/country:us/state:in/sldl:67"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Zimmerman",
+    "image": "https://www.indianahouserepublicans.com/clientuploads/directory/members/Zimmerman_Edited_Headshot.jpg",
+    "email": "h67@iga.in.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "assistant name": "Zack Lamberta",
+      "assistant email": "h67@iga.in.gov",
+      "assistant phone1": "317-232-9643",
+      "assistant phone2": "1-800-382-9841",
+      "press contact name": "Charles Melton",
+      "press contact email": "charles.melton@iga.in.gov",
+      "press contact phone": "317-232-9659"
+    },
+    "created_at": "2024-01-03T20:53:45.921775+00:00",
+    "updated_at": "2024-11-20T19:07:40.896938+00:00",
+    "openstates_url": "https://openstates.org/person/alex-zimmerman-3pA0Jisy4zw1eNI0xrHwgx/"
+  },
+  {
+    "id": "ocd-person/f22b3c5a-950d-4e0c-83c8-bf9a7c005c73",
+    "name": "Andrea Hunley",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "46",
+      "division_id": "ocd-division/country:us/state:in/sldu:46"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Andrea",
+    "family_name": "Hunley",
+    "image": "https://indianasenatedemocrats.org/wp-content/uploads/2022/12/Senator-Hunley_Hoosier-Profile-Pic-600x900-2.jpg",
+    "email": "s46@iga.in.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "Additional Phone 1": "800-382-9467",
+      "Legislative Assistant": "Tracy Woolbright"
+    },
+    "created_at": "2023-01-20T02:01:33.709491+00:00",
+    "updated_at": "2025-03-13T06:41:45.559885+00:00",
+    "openstates_url": "https://openstates.org/person/andrea-hunley-7Mxtv0SoNCfw4oTs06GAtP/"
+  },
+  {
+    "id": "ocd-person/27343a14-0487-4a7a-8ddd-1e0991c4a694",
+    "name": "Andrew Ireland",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "90",
+      "division_id": "ocd-division/country:us/state:in/sldl:90"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Ireland",
+    "image": "https://storage.googleapis.com/enview-dev-public-general/legislative-people-photos/157749.jpg",
+    "email": "h90@iga.in.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T19:09:35.696267+00:00",
+    "updated_at": "2025-03-13T06:41:50.816118+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-ireland-1ByZFIx6OK6piEgvVnUo1E/"
+  },
+  {
+    "id": "ocd-person/85c3a6e4-8292-4e3f-a8f4-475aede6b9d6",
+    "name": "Andy Zay",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "17",
+      "division_id": "ocd-division/country:us/state:in/sldu:17"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Zay",
+    "image": "https://cdn.zephyrcms.com/8b7ce1da-cb9b-4548-a41c-0877c65a7bcf/-/progressive/yes/-/format/jpeg/-/scale_crop/200x300/center/-/stretch/off/2021-zay-2.jpg",
+    "email": "s17@iga.in.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "second phone": "317-232-9400",
+      "media contact name": "Paige Gehlhausen",
+      "media contact email": "Paige.Gehlhausen@iga.in.gov",
+      "media contact phone": "317-232-9425",
+      "legislative assistant name": "Garrett Unger",
+      "legislative assistant email": "Garrett.Unger@iga.in.gov",
+      "legislative assistant phone": "317-234-9441"
+    },
+    "created_at": "2018-10-18T14:44:13.262183+00:00",
+    "updated_at": "2025-03-13T06:41:41.451838+00:00",
+    "openstates_url": "https://openstates.org/person/andy-zay-44POLPu93Ufiz8BtDNlgu6/"
+  },
+  {
+    "id": "ocd-person/a8ed53f7-00fb-428b-a629-7532efaf902d",
+    "name": "Beau Baird",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "44",
+      "division_id": "ocd-division/country:us/state:in/sldl:44"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Beau",
+    "family_name": "Baird",
+    "image": "https://www.indianahouserepublicans.com/clientuploads/directory/members/Main_List/Baird_Main_List.jpg",
+    "email": "h44@iga.in.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "assistant name": "Veda Amor",
+      "assistant email": "h44@iga.in.gov",
+      "assistant phone1": "317-232-9833",
+      "assistant phone2": "1-800-382-9841",
+      "press contact name": "Wade Coggeshall",
+      "press contact email": "wade.coggeshall@iga.in.gov",
+      "press contact phone": "317-232-9693"
+    },
+    "created_at": "2019-01-02T10:40:11.511686+00:00",
+    "updated_at": "2025-03-13T06:41:15.241025+00:00",
+    "openstates_url": "https://openstates.org/person/beau-baird-58lAXy5zzirLh51OAfprjx/"
+  },
+  {
+    "id": "ocd-person/172ba652-d80a-45cd-a387-f072925561f7",
+    "name": "Becky Cash",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:in/sldl:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Becky",
+    "family_name": "Cash",
+    "image": "https://www.indianahouserepublicans.com/clientuploads/directory/members/Main_List/Cash_Main_list.jpg",
+    "email": "h25@iga.in.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "assistant name": "Zack Lamberta",
+      "assistant email": "h25@iga.in.gov",
+      "assistant phone1": "317-232-9643",
+      "assistant phone2": "1-800-382-9841",
+      "press contact name": "Abrahm Hurt",
+      "press contact email": "abrahm.hurt@iga.in.gov",
+      "press contact phone": "317-234-9024"
+    },
+    "created_at": "2023-01-20T02:01:01.904901+00:00",
+    "updated_at": "2025-02-04T01:28:15.627630+00:00",
+    "openstates_url": "https://openstates.org/person/becky-cash-hilpbgb4Lp21O5gE2HvDL/"
+  },
+  {
+    "id": "ocd-person/ea2c35cb-7071-43de-8dc6-e91756d03f11",
+    "name": "Ben Smaltz",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "52",
+      "division_id": "ocd-division/country:us/state:in/sldl:52"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:in/government",
+      "name": "Indiana",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Smaltz",
+    "image": "https://www.indianahouserepublicans.com/clientuploads/directory/members/Main_List/Smaltz_main_list2023.png",
+    "email": "h52@iga.in.gov",
+    "gender": "Male",
+    "birth_date": "1970-01-17",
+    "death_date": "",
+    "extras": {
+      "assistant name": "Kevin Todd",
+      "assistant email": "h52@iga.in.gov",
+      "assistant phone1": "317-234-9450",
+      "assistant phone2": "1-800-382-9841",
+      "press contact name": "Kylie Glatfelter",
+      "press contact email": "kylie.glatfelter@iga.in.gov",
+      "press contact phone": "317-234-9006"
+    },
+    "created_at": "2018-10-18T14:43:56.503000+00:00",
+    "updated_at": "2025-03-13T06:41:34.439449+00:00",
+    "openstates_url": "https://openstates.org/person/ben-smaltz-77sPKfbARg321NHjxJGYlN/"
+  }
+]

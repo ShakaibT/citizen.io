@@ -1,0 +1,282 @@
+[
+  {
+    "id": "ocd-person/295965df-6c71-4e11-806f-2b7d5be5d45c",
+    "name": "Aisha Wahab",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:ca/sldu:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Aisha",
+    "family_name": "Wahab",
+    "image": "https://www.senate.ca.gov/sites/senate.ca.gov/files/senator_photos/wahab_aisha_d-10_-_crop.jpg",
+    "email": "senator.wahab@senate.ca.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-04T02:17:32.491229+00:00",
+    "updated_at": "2025-04-25T00:11:50.345558+00:00",
+    "openstates_url": "https://openstates.org/person/aisha-wahab-1G1XVDXnCp2Y7tFkVGjxiG/"
+  },
+  {
+    "id": "ocd-person/6c2a35d5-c04c-44d0-8bd9-92a625e2b525",
+    "name": "Akilah Weber Pierson",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "39",
+      "division_id": "ocd-division/country:us/state:ca/sldu:39"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Akilah",
+    "family_name": "Weber Pierson",
+    "image": "https://www.assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad-79_weber_a._005_resized.jpg",
+    "email": "senator.weber@senate.ca.gov",
+    "gender": "Female",
+    "birth_date": "1978-07-02",
+    "death_date": "",
+    "extras": {
+      "P.O. Box": "P.O. Box 942849, Sacramento, CA 94249-0079;"
+    },
+    "created_at": "2021-05-10T17:44:38.159424+00:00",
+    "updated_at": "2025-04-25T00:12:11.926407+00:00",
+    "openstates_url": "https://openstates.org/person/akilah-weber-pierson-3I6SbtllPGYw0iniA0ZeUP/"
+  },
+  {
+    "id": "ocd-person/78610d0e-c790-4fc9-ab8e-0887adbbe063",
+    "name": "Al Muratsuchi",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assemblymember",
+      "org_classification": "lower",
+      "district": "66",
+      "division_id": "ocd-division/country:us/state:ca/sldl:66"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Muratsuchi",
+    "image": "https://www.assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad66.jpg",
+    "email": "assemblymember.muratsuchi@assembly.ca.gov",
+    "gender": "Male",
+    "birth_date": "1964-09-04",
+    "death_date": "",
+    "extras": {
+      "P.O. Box": "P.O. Box 942849, Sacramento, CA  94249-0066;"
+    },
+    "created_at": "2018-10-18T14:35:21.209944+00:00",
+    "updated_at": "2025-04-25T00:11:51.846209+00:00",
+    "openstates_url": "https://openstates.org/person/al-muratsuchi-3f9QlLdFSsonjDLkj9caGp/"
+  },
+  {
+    "id": "ocd-person/5d0057a2-e04d-44ca-b1d5-fc55e113351a",
+    "name": "Alex Lee",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assemblymember",
+      "org_classification": "lower",
+      "district": "24",
+      "division_id": "ocd-division/country:us/state:ca/sldl:24"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Lee",
+    "image": "https://www.assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/lee-025.jpg",
+    "email": "alex.lee@asm.ca.gov",
+    "gender": "Male",
+    "birth_date": "1995-07-11",
+    "death_date": "",
+    "extras": {
+      "P.O. Box": "P.O. Box 942849, Sacramento, CA  94249-0024;"
+    },
+    "created_at": "2020-12-16T06:02:55.248049+00:00",
+    "updated_at": "2025-03-05T06:14:38.501546+00:00",
+    "openstates_url": "https://openstates.org/person/alex-lee-2pURSKdvhu27eA1Au6rqdW/"
+  },
+  {
+    "id": "ocd-person/eb9c8103-ac9d-4342-9d95-5086d867a9bd",
+    "name": "Ali Macedo",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assemblymember",
+      "org_classification": "lower",
+      "district": "33",
+      "division_id": "ocd-division/country:us/state:ca/sldl:33"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Ali",
+    "family_name": "Macedo",
+    "image": "https://www.joincalifornia.com/candidate_pic.php?id=15000",
+    "email": "assemblymember.macedo@assembly.ca.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-12-03T00:45:54.910935+00:00",
+    "updated_at": "2025-03-05T06:13:45.248050+00:00",
+    "openstates_url": "https://openstates.org/person/ali-macedo-7AaibBqvmyem75eq1dgRcT/"
+  },
+  {
+    "id": "ocd-person/c3921173-9680-4387-a70e-ebba5c599846",
+    "name": "Anamarie Avila Farias",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assemblymember",
+      "org_classification": "lower",
+      "district": "15",
+      "division_id": "ocd-division/country:us/state:ca/sldl:15"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Anamarie",
+    "family_name": "Avila Farias",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Anamarie_Avila_Farias_20240905_034457.jpg",
+    "email": "assemblymember.avilafarias@assembly.ca.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-12-03T00:45:50.748134+00:00",
+    "updated_at": "2025-03-05T06:14:21.678186+00:00",
+    "openstates_url": "https://openstates.org/person/anamarie-avila-farias-5x2FwIlCMDfORdxZpMQ4Fa/"
+  },
+  {
+    "id": "ocd-person/564f2203-7cae-4a40-bc93-5c05a935b98f",
+    "name": "Angelique Ashby",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:ca/sldu:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Angelique",
+    "family_name": "Ashby",
+    "image": "https://www.senate.ca.gov/sites/senate.ca.gov/files/senator_photos/ashby_angelique_d-08.jpg",
+    "email": "senator.ashby@senate.ca.gov",
+    "gender": "Female",
+    "birth_date": "1975-03-20",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-04T02:16:54.864337+00:00",
+    "updated_at": "2025-04-25T00:11:24.269693+00:00",
+    "openstates_url": "https://openstates.org/person/angelique-ashby-2crVF9NmcEHB0YxRhqpg9n/"
+  },
+  {
+    "id": "ocd-person/fe462917-df55-4a43-9fd8-970541544ca6",
+    "name": "Anna Caballero",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "14",
+      "division_id": "ocd-division/country:us/state:ca/sldu:14"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Anna",
+    "family_name": "Caballero",
+    "image": "https://www.senate.ca.gov/sites/senate.ca.gov/files/senator_photos/2016-ad30_annacaballero.jpg",
+    "email": "senator.caballero@senate.ca.gov",
+    "gender": "Female",
+    "birth_date": "1955-04-18",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:35:20.378014+00:00",
+    "updated_at": "2025-03-05T06:14:02.472728+00:00",
+    "openstates_url": "https://openstates.org/person/anna-caballero-7jo7693ZI31cwOmvvBsK0s/"
+  },
+  {
+    "id": "ocd-person/820619fd-d053-4915-b099-1d134a880228",
+    "name": "Ash Kalra",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assemblymember",
+      "org_classification": "lower",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:ca/sldl:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Ash",
+    "family_name": "Kalra",
+    "image": "https://www.assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad27_karla_roster150_20161205.jpg",
+    "email": "assemblymember.kalra@assembly.ca.gov",
+    "gender": "Male",
+    "birth_date": "1972-01-21",
+    "death_date": "",
+    "extras": {
+      "P.O. Box": "P.O. Box 942849, Sacramento, CA   94249-0025;"
+    },
+    "created_at": "2018-10-18T14:35:31.132450+00:00",
+    "updated_at": "2025-04-25T00:11:20.672181+00:00",
+    "openstates_url": "https://openstates.org/person/ash-kalra-3xLn2H9yyE25Agsny9tcWu/"
+  },
+  {
+    "id": "ocd-person/87062971-b583-4983-8ac5-4af98bef354d",
+    "name": "Avelino Valencia",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assemblymember",
+      "org_classification": "lower",
+      "district": "68",
+      "division_id": "ocd-division/country:us/state:ca/sldl:68"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ca/government",
+      "name": "California",
+      "classification": "state"
+    },
+    "given_name": "Avelino",
+    "family_name": "Valencia",
+    "image": "https://www.assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/valencia_518_11-30-22_resized.jpg",
+    "email": "assemblymember.valencia@assembly.ca.gov",
+    "gender": "Male",
+    "birth_date": "1988-11-12",
+    "death_date": "",
+    "extras": {
+      "P.O. Box": "P.O. Box 942849, Sacramento, CA 94249-0068;"
+    },
+    "created_at": "2023-01-04T02:16:19.361225+00:00",
+    "updated_at": "2025-04-25T00:11:24.929843+00:00",
+    "openstates_url": "https://openstates.org/person/avelino-valencia-46mmMq6nyGgDmnVKC8leVZ/"
+  }
+]

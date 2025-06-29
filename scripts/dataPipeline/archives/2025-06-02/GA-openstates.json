@@ -1,0 +1,352 @@
+[
+  {
+    "id": "ocd-person/a5a0998b-3837-4c4e-a66b-a567dc2f9d77",
+    "name": "Al Williams",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "168",
+      "division_id": "ocd-division/country:us/state:ga/sldl:168"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Williams",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/williams-al-230.jpg",
+    "email": "al.williams@house.ga.gov",
+    "gender": "Male",
+    "birth_date": "1947-08-02",
+    "death_date": "",
+    "extras": {
+      "city": "Midway",
+      "press": "https://house-press.com/representative/Al-Williams",
+      "staff": "a href=\"",
+      "spouse": "Olivia",
+      "birthday": "August 2",
+      "residence": "Midway",
+      "georgia_id": 230,
+      "occupation": "Businessman",
+      "staff email": ""
+    },
+    "created_at": "2018-10-18T14:40:40.370341+00:00",
+    "updated_at": "2025-04-24T00:28:20.185323+00:00",
+    "openstates_url": "https://openstates.org/person/al-williams-52X7x1OCerscb5DHp65obX/"
+  },
+  {
+    "id": "ocd-person/bb48e87c-29db-4a4d-a278-fa299be2020e",
+    "name": "Alan Powell",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "33",
+      "division_id": "ocd-division/country:us/state:ga/sldl:33"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Powell",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/powell-alan-187.jpg",
+    "email": "alan.powell@house.ga.gov",
+    "gender": "Male",
+    "birth_date": "1951-11-10",
+    "death_date": "",
+    "extras": {
+      "city": "Hartwell",
+      "press": "https://house-press.com/representative/Alan-Powell",
+      "staff": "a href=\"",
+      "title": "Chairman, Regulated Industries",
+      "birthday": "November 10",
+      "residence": "Hartwell",
+      "georgia_id": 187,
+      "occupation": "Self Employed",
+      "staff email": ""
+    },
+    "created_at": "2018-10-18T14:40:33.033662+00:00",
+    "updated_at": "2025-05-23T12:27:07.499409+00:00",
+    "openstates_url": "https://openstates.org/person/alan-powell-5hOsp6K6KiT8jtyX5KChKA/"
+  },
+  {
+    "id": "ocd-person/b001a55f-61fa-4e62-85fd-ac6c282f2711",
+    "name": "Angela Moore",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "91",
+      "division_id": "ocd-division/country:us/state:ga/sldl:91"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Moore",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/moore-angela-5008.jpg",
+    "email": "angela.moore@house.ga.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "city": "Stonecrest",
+      "staff": "Angela Nichols - Administrative Assistant",
+      "birthday": "October 4",
+      "residence": "Stonecrest",
+      "georgia_id": 5008,
+      "occupation": "Sr. Entertainment Publicist/Communications Specialist",
+      "staff email": "angela.nichols@house.ga.gov"
+    },
+    "created_at": "2021-03-23T00:06:07.410274+00:00",
+    "updated_at": "2025-05-23T12:26:26.493548+00:00",
+    "openstates_url": "https://openstates.org/person/angela-moore-5M7OuOU2OIWd1tvj100oJF/"
+  },
+  {
+    "id": "ocd-person/1d0deded-daaa-425b-b6aa-3612492dca5b",
+    "name": "Angie O'Steen",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "169",
+      "division_id": "ocd-division/country:us/state:ga/sldl:169"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Angie",
+    "family_name": "O'Steen",
+    "image": "https://angieosteen.com/wp-content/uploads/sites/109/2024/04/photo-mobile-1.jpg",
+    "email": "angie.o'steen@house.ga.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T17:55:26.719284+00:00",
+    "updated_at": "2025-03-29T00:29:16.928736+00:00",
+    "openstates_url": "https://openstates.org/person/angie-o-steen-sp8scLzHXd2l0z0r5A8kt/"
+  },
+  {
+    "id": "ocd-person/e16d6516-badc-4682-9e3a-84f30a44b060",
+    "name": "Anne Westbrook",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "163",
+      "division_id": "ocd-division/country:us/state:ga/sldl:163"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Westbrook",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/westbrook-anne-allen-5054.jpg",
+    "email": "anneallen.westbrook@house.ga.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "city": "Savannah",
+      "press": "https://house-press.com/representative/Anne-Allen-Westbrook",
+      "staff": "Jackie Hicks Rowe - Administrative Assistant",
+      "spouse": "Todd",
+      "birthday": "January 24",
+      "residence": "Savannah",
+      "georgia_id": 5054,
+      "occupation": "Attorney",
+      "staff email": "jacquelyn.rowe@house.ga.gov"
+    },
+    "created_at": "2023-01-18T03:40:17.829451+00:00",
+    "updated_at": "2025-04-24T00:28:41.438560+00:00",
+    "openstates_url": "https://openstates.org/person/anne-westbrook-6rNGZ0KeoQWh2t2ZjPlx0y/"
+  },
+  {
+    "id": "ocd-person/3b3da57c-2f96-4a94-a7bc-eb6a814cc627",
+    "name": "Arlene Beckles",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "96",
+      "division_id": "ocd-division/country:us/state:ga/sldl:96"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Arlene",
+    "family_name": "Beckles",
+    "image": "https://bloximages.newyork1.vip.townnews.com/gwinnettdailypost.com/content/tncms/assets/v3/editorial/f/66/f663df0a-941b-11ec-92cf-a71cdde39cc5/621544040ce4c.image.jpg?crop=656%2C819%2C276%2C240",
+    "email": "arlene.beckles@house.ga.gov",
+    "gender": "Female",
+    "birth_date": "1963-08-03",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T17:55:44.244661+00:00",
+    "updated_at": "2025-03-29T00:29:24.010208+00:00",
+    "openstates_url": "https://openstates.org/person/arlene-beckles-1nmicrZ9DDd5OrAaPYJdo7/"
+  },
+  {
+    "id": "ocd-person/fd2717f1-6294-4601-a027-8fc41195372c",
+    "name": "Ben Watson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:ga/sldu:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Watson",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/watson-ben-784.jpg",
+    "email": "ben.watson@house.ga.gov",
+    "gender": "Male",
+    "birth_date": "1959-07-27",
+    "death_date": "",
+    "extras": {
+      "city": "Savannah",
+      "press": "https://senatepress.net/category/senate-press/ben-watson ",
+      "staff": "Kaylon Day",
+      "spouse": "Bernice",
+      "birthday": "July 27",
+      "religion": "Anglican",
+      "residence": "Savannah",
+      "georgia_id": 784,
+      "occupation": "Medical Doctor",
+      "staff email": "kaylon.day@senate.ga.gov"
+    },
+    "created_at": "2018-10-18T14:39:58.868140+00:00",
+    "updated_at": "2025-03-29T00:28:52.117574+00:00",
+    "openstates_url": "https://openstates.org/person/ben-watson-7hgvJqrG0XNBlugC6jN5eG/"
+  },
+  {
+    "id": "ocd-person/e4e40f68-0970-4392-b739-3c68f749bcdc",
+    "name": "Beth Camp",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "135",
+      "division_id": "ocd-division/country:us/state:ga/sldl:135"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Beth",
+    "family_name": "Camp",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/camp-beth-5004.jpg",
+    "email": "beth.camp@house.ga.gov",
+    "gender": "Female",
+    "birth_date": "1974-01-10",
+    "death_date": "",
+    "extras": {
+      "city": "Concord",
+      "press": "https://house-press.com/representative/Beth-Camp",
+      "staff": "Dendrick Atkins - Administrative Assistant",
+      "title": "Chairman, Intragovernmental Coordination",
+      "spouse": "Mark",
+      "birthday": "January 10",
+      "residence": "Concord",
+      "georgia_id": 5004,
+      "occupation": "Real Estate",
+      "staff email": "dendrick.atkins@house.ga.gov"
+    },
+    "created_at": "2021-01-12T00:06:58.714676+00:00",
+    "updated_at": "2025-05-23T12:26:55.695668+00:00",
+    "openstates_url": "https://openstates.org/person/beth-camp-6xuTPOBqSVJBY7LS67zfrQ/"
+  },
+  {
+    "id": "ocd-person/8b4b00cb-6f78-4b69-b788-796b19d94752",
+    "name": "Bethany Ballard",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "147",
+      "division_id": "ocd-division/country:us/state:ga/sldl:147"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Bethany",
+    "family_name": "Ballard",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/ballard-bethany-5051.jpg",
+    "email": "bethany.ballard@house.ga.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "city": "Warner Robins",
+      "press": "https://house-press.com/representative/Bethany-Ballard",
+      "staff": "Chelsea Bell - Administrative Assistant",
+      "spouse": "Mike",
+      "birthday": "August 22",
+      "residence": "Warner Robins",
+      "georgia_id": 5051,
+      "occupation": "Small Business Owner",
+      "staff email": "chelsea.bell@house.ga.gov"
+    },
+    "created_at": "2023-01-18T03:43:21.877318+00:00",
+    "updated_at": "2025-03-29T00:27:48.247973+00:00",
+    "openstates_url": "https://openstates.org/person/bethany-ballard-4EqD16fcoGsNBzDTwuXWr4/"
+  },
+  {
+    "id": "ocd-person/c2c81ffc-f4b1-40f4-96b0-6309f89902ee",
+    "name": "Betsy Holland",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "54",
+      "division_id": "ocd-division/country:us/state:ga/sldl:54"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ga/government",
+      "name": "Georgia",
+      "classification": "state"
+    },
+    "given_name": "Betsy",
+    "family_name": "Holland",
+    "image": "https://www.legis.ga.gov/api/images/default-source/portraits/holland-betsy-4943.jpg",
+    "email": "betsy.holland@house.ga.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "city": "Atlanta",
+      "press": "https://house-press.com/representative/Betsy-Holland",
+      "staff": "Jackie Hicks Rowe - Administrative Assistant",
+      "spouse": "Jason",
+      "birthday": "January 10",
+      "residence": "Atlanta",
+      "georgia_id": 4943,
+      "occupation": "Director, Culture & Engagement at Turner",
+      "staff email": "jacquelyn.rowe@house.ga.gov"
+    },
+    "created_at": "2019-01-13T06:05:28.052201+00:00",
+    "updated_at": "2025-05-23T12:27:25.225164+00:00",
+    "openstates_url": "https://openstates.org/person/betsy-holland-5vXy42vXYzX8kMu5DYegeM/"
+  }
+]

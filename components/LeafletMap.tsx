@@ -10,6 +10,7 @@ import { ZoomIn, ZoomOut, RotateCcw, ArrowLeft, Plus, Minus } from 'lucide-react
 import { Button } from '@/components/ui/button'
 import { usePopulationData, useCountyPopulationData } from '@/hooks/usePopulationData'
 import { useOfficialsData } from '@/hooks/useOfficialsData'
+import { getCountyData, formatCountyStatus, getStatusColor, type CountyData } from '@/lib/county-data-manager'
 import { getCurrentCensusYear } from '@/lib/census-api'
 import useSWR from 'swr'
 
@@ -466,17 +467,7 @@ function OfficialsLegend({
             </div>
           </div>
           
-          {/* Data source indicator */}
-          <div className="text-xs text-gray-500 dark:text-gray-400">
-            {officialsData.source === 'google_civic_api' && '🔴 Live Data'}
-            {officialsData.source === 'supabase_cache' && '🟡 Cached Data'}
-            {officialsData.source === 'fallback_data' && '🟠 Fallback Data'}
-            {officialsData.lastUpdated && (
-              <span className="ml-2">
-                Updated: {new Date(officialsData.lastUpdated).toLocaleDateString()}
-              </span>
-            )}
-          </div>
+
           
           {/* Governor */}
           {governor && (
@@ -590,12 +581,23 @@ function HoverInfo({
   const isStateFeature = currentView === 'states' && !feature.properties?.COUNTYFP
 
   let displayData = null
+  let curatedCountyData: CountyData | null = null
 
   if (isCountyFeature) {
-    // For counties, look in county data
-    displayData = countyPopData?.find(
-      (item: any) => item.name === featureName
-    )
+    // For counties, check our curated data first
+    const stateFips = feature.properties?.STATEFP
+    const countyFips = feature.properties?.COUNTYFP
+    
+    if (stateFips && countyFips) {
+      curatedCountyData = getCountyData(stateFips, countyFips)
+    }
+    
+    // Fall back to API data if no curated data available
+    if (!curatedCountyData) {
+      displayData = countyPopData?.find(
+        (item: any) => item.name === featureName
+      )
+    }
   } else {
     // For states, use enhanced data if available, otherwise fall back to basic state data
     const enhancedData = enhancedStateData?.find(
@@ -688,7 +690,98 @@ function HoverInfo({
           )}
         </div>
 
-        {displayData ? (
+        {/* County Data Display */}
+        {isCountyFeature && curatedCountyData ? (
+          <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+            {/* Data Status */}
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Data Status:</span>
+              <span className={`font-medium ml-2 ${getStatusColor(curatedCountyData.status)}`}>
+                {formatCountyStatus(curatedCountyData.status)}
+              </span>
+            </div>
+            
+            {curatedCountyData.status === 'verified' ? (
+              <>
+                {/* Verified County Data */}
+                {curatedCountyData.population && (
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 dark:text-gray-400">Population:</span>
+                    <span className="font-medium text-gray-900 dark:text-white ml-2">
+                      {formatPopulation(curatedCountyData.population)}
+                    </span>
+                  </div>
+                )}
+                
+                {curatedCountyData.representatives?.house && curatedCountyData.representatives.house.length > 0 && (
+                  <div className="space-y-1">
+                    <div className="text-gray-600 dark:text-gray-400">
+                      House Rep{curatedCountyData.representatives.house.length > 1 ? 's' : ''}:
+                    </div>
+                    {curatedCountyData.representatives.house.map((rep, idx) => (
+                      <div key={idx} className="text-xs">
+                        <span className="font-medium text-gray-900 dark:text-white">
+                          {rep.name}
+                        </span>
+                        <span className="text-gray-600 dark:text-gray-400 ml-1">
+                          ({rep.party.charAt(0)}-{rep.district})
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                
+                {curatedCountyData.lastUpdated && (
+                  <div className="text-xs text-gray-500 dark:text-gray-400 pt-1 border-t border-gray-200 dark:border-gray-600">
+                    Verified: {new Date(curatedCountyData.lastUpdated).toLocaleDateString()}
+                  </div>
+                )}
+              </>
+            ) : (
+              /* Coming Soon / In Progress Counties */
+              <div className="space-y-1.5">
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  {curatedCountyData.status === 'coming_soon' && 
+                    "Detailed civic data is being prepared for this county. Check back soon for verified information about your representatives, local government, and civic opportunities."
+                  }
+                  {curatedCountyData.status === 'in_progress' && 
+                    "We're currently verifying and updating the civic data for this county. Accurate information will be available soon."
+                  }
+                  {curatedCountyData.status === 'needs_update' && 
+                    "This county's data is being refreshed with the latest information."
+                  }
+                </div>
+                <div className="flex items-center justify-center py-2">
+                  <div className="w-4 h-4 border-2 border-orange-500 border-t-transparent rounded-full animate-spin mr-2"></div>
+                  <span className="text-xs text-orange-600 dark:text-orange-400 font-medium">
+                    Data curation in progress
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        ) : isCountyFeature ? (
+          /* Fallback for counties not in our curation system yet */
+          <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Data Status:</span>
+              <span className="font-medium text-orange-600 dark:text-orange-400 ml-2">
+                Coming Soon
+              </span>
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-400">
+              We're working to provide accurate, verified civic data for this county. 
+              Check back soon for detailed information about your representatives and local government.
+            </div>
+            <div className="flex items-center justify-center py-2">
+              <div className="w-4 h-4 border-2 border-orange-500 border-t-transparent rounded-full animate-spin mr-2"></div>
+              <span className="text-xs text-orange-600 dark:text-orange-400 font-medium">
+                Data curation in progress
+              </span>
+            </div>
+          </div>
+        ) : displayData ? (
+          /* State Data Display (unchanged) */
           <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
             <div className="flex justify-between items-center">
               <span className="text-gray-600 dark:text-gray-400">Population:</span>
@@ -696,49 +789,19 @@ function HoverInfo({
                 {formatPopulation(displayData.population)}
               </span>
             </div>
-            {!isCountyFeature && (
-              <>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Counties:</span>
-                  <span className="font-medium text-gray-900 dark:text-white ml-2">
-                    {getActualCountyCount(featureName, displayData.county_count || displayData.counties || displayData.countyCount)}
-                  </span>
-                </div>
-                {repsData && (
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">Representatives:</span>
-                    <span className="font-medium text-gray-900 dark:text-white ml-2">
-                      {repsData.house}
-                    </span>
-                  </div>
-                )}
-              </>
-            )}
-            {isCountyFeature && selectedState && (
-              <>
-                {/* Show House Representatives for counties */}
-                {(() => {
-                  const countyReps = getCountyReps(selectedState, featureName)
-                  if (countyReps.length > 0) {
-                    return (
-                      <div className="space-y-1">
-                        <div className="text-gray-600 dark:text-gray-400">House Rep{countyReps.length > 1 ? 's' : ''}:</div>
-                        {countyReps.map((rep, idx) => (
-                          <div key={idx} className="text-xs">
-                            <span className="font-medium text-gray-900 dark:text-white">
-                              {rep.name}
-                            </span>
-                            <span className="text-gray-600 dark:text-gray-400 ml-1">
-                              ({rep.party.charAt(0)}-{rep.district})
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    )
-                  }
-                  return null
-                })()}
-              </>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Counties:</span>
+              <span className="font-medium text-gray-900 dark:text-white ml-2">
+                {getActualCountyCount(featureName, displayData.county_count || displayData.counties || displayData.countyCount)}
+              </span>
+            </div>
+            {repsData && (
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600 dark:text-gray-400">Representatives:</span>
+                <span className="font-medium text-gray-900 dark:text-white ml-2">
+                  {repsData.house}
+                </span>
+              </div>
             )}
           </div>
         ) : (
@@ -748,7 +811,7 @@ function HoverInfo({
         )}
 
         <div className="text-xs text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-600 pt-2">
-          {getCurrentCensusYear()} Census Data
+          {isCountyFeature ? 'Manually Curated Data' : `${getCurrentCensusYear()} Census Data`}
         </div>
       </div>
     </div>
@@ -812,51 +875,26 @@ function ResponsiveTileLayer({
 }) {
   const map = useMap()
   
-  // Define different tile sources for different zoom levels and contexts
-  const getTileConfig = useCallback(() => {
-    // Base map style - clean, minimal for civic data
-    const baseStyle = {
-      url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }
-    
-    // For high zoom levels (street level), use detailed OSM
-    if (currentZoom >= 10) {
-      return {
-        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        subdomains: 'abc',
-        maxZoom: 19
-      }
-    }
-    
-    // For medium zoom (city/county level), use clean CartoDB
-    if (currentZoom >= 6) {
-      return {
-        url: "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
-      }
-    }
-    
-    // For low zoom (state/national level), use minimal base
-    return baseStyle
-  }, [currentZoom])
-  
-  const tileConfig = getTileConfig()
+  // Use a single consistent tile layer to prevent flicker during zoom
+  const tileConfig = useMemo(() => ({
+    url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }), [])
   
   return (
     <TileLayer
-      key={`${currentZoom}-${currentView}`}
       url={tileConfig.url}
       attribution={tileConfig.attribution}
       subdomains={tileConfig.subdomains}
       maxZoom={tileConfig.maxZoom}
-      opacity={currentZoom >= 10 ? 1 : 0.8}
+      opacity={0.8}
       className="responsive-tile-layer"
+      updateWhenIdle={false} // Update immediately for responsiveness
+      updateWhenZooming={true} // Keep updating during zoom for smooth experience
+      keepBuffer={2} // Balanced buffer size
+      updateInterval={100} // Faster updates
     />
   )
 }
@@ -885,6 +923,7 @@ function EnhancedGeoJSONLayer({
   onFeatureHover: (feature: any, event: L.LeafletMouseEvent) => void
   onFeatureMouseOut: (feature: any, event: L.LeafletMouseEvent) => void
 }) {
+  const geoJsonRef = useRef<L.GeoJSON | null>(null)
   
   // NYT-style color scales with better contrast
   const getPopulationColor = useCallback((population: number, isState: boolean) => {
@@ -897,99 +936,101 @@ function EnhancedGeoJSONLayer({
       if (population < 20000000) return '#38bdf8'       // Medium dark blue
       return '#0ea5e9'                                  // Dark blue
     } else {
-      // County-level colors - warmer civic palette
-      if (population < 5000) return '#fef3c7'          // Very light amber
-      if (population < 15000) return '#fde68a'         // Light amber
-      if (population < 50000) return '#fcd34d'         // Medium amber
-      if (population < 100000) return '#f59e0b'        // Medium orange
-      if (population < 250000) return '#d97706'        // Dark orange
-      if (population < 500000) return '#b45309'        // Darker orange
-      return '#92400e'                                 // Darkest orange
+      // County-level colors - blue civic palette to match legend
+      if (population < 5000) return '#f0f9ff'          // Very light blue
+      if (population < 15000) return '#e0f2fe'         // Light blue
+      if (population < 50000) return '#bae6fd'         // Medium light blue
+      if (population < 100000) return '#7dd3fc'        // Medium blue
+      if (population < 250000) return '#38bdf8'        // Medium dark blue
+      if (population < 500000) return '#0ea5e9'        // Dark blue
+      return '#0284c7'                                 // Darkest blue
     }
   }, [])
   
-  // Enhanced styling function
-  const getFeatureStyle = useCallback((feature: any) => {
-    const isState = currentView === 'states'
-    const featureName = feature.properties?.NAME || feature.properties?.name || ''
-    
-    let population = 0
-    let isSelected = false
-    
-    if (isState) {
-      const stateData = statePopData.find(s => s.name === featureName)
-      population = stateData?.population || 0
-      isSelected = selectedState === featureName
-    } else {
-      const countyData = countyPopData.find(c => c.name === featureName)
-      population = countyData?.population || 0
-      isSelected = selectedCounty === featureName
+  // Stable styling function - completely independent of zoom
+  const getFeatureStyle = useMemo(() => {
+    return (feature: any) => {
+      const isState = currentView === 'states'
+      const featureName = feature.properties?.NAME || feature.properties?.name || ''
+      
+      let population = 0
+      let isSelected = false
+      
+      if (isState) {
+        const stateData = statePopData.find(s => s.name === featureName)
+        population = stateData?.population || 0
+        isSelected = selectedState === featureName
+      } else {
+        const countyData = countyPopData.find(c => c.name === featureName)
+        population = countyData?.population || 0
+        isSelected = selectedCounty === featureName
+      }
+      
+      const baseColor = getPopulationColor(population, isState)
+      
+      return {
+        fillColor: baseColor,
+        weight: isSelected ? 3 : 2,
+        opacity: 1,
+        color: isSelected ? '#1e40af' : '#6b7280',
+        fillOpacity: 0.7,
+        cursor: 'pointer'
+      }
     }
-    
-    const baseColor = getPopulationColor(population, isState)
-    
-    return {
-      fillColor: baseColor,
-      weight: isSelected ? 3 : 2,
-      opacity: 1,
-      color: isSelected ? '#1e40af' : '#6b7280',
-      fillOpacity: 0.7,
-      cursor: 'pointer'
-    }
-  }, [currentView, currentZoom, statePopData, countyPopData, selectedState, selectedCounty, getPopulationColor])
+  }, [currentView, statePopData, countyPopData, selectedState, selectedCounty, getPopulationColor])
   
-  // Enhanced event handlers
+  // Enhanced event handlers with immediate response
   const onEachFeature = useCallback((feature: any, layer: L.Layer) => {
     layer.on({
       mouseover: (e: L.LeafletMouseEvent) => {
         const layer = e.target
         const currentStyle = getFeatureStyle(feature)
         
-        // Apply prominent hover style with scaling effect
+        // Apply hover style immediately without transitions
         layer.setStyle({
           ...currentStyle,
           weight: currentStyle.weight + 2,
           fillOpacity: Math.min(currentStyle.fillOpacity + 0.2, 0.9),
           color: '#1e40af',
-          dashArray: '' // Ensure no dashed lines
+          dashArray: ''
         })
         
-        // Add scaling effect via CSS transform
+        // Add scaling effect via CSS transform with hardware acceleration
         if (layer.getElement) {
           const element = layer.getElement()
           if (element) {
-            element.style.transform = 'scale(1.05)'
+            element.style.transform = 'scale(1.05) translateZ(0)'
             element.style.transformOrigin = 'center'
-            element.style.transition = 'transform 0.2s ease-out'
+            element.style.transition = 'none' // Remove transition for immediate response
             element.style.filter = 'brightness(1.1)'
             element.style.zIndex = '1000'
+            element.style.willChange = 'transform'
           }
         }
         
-        // Bring to front
         layer.bringToFront()
-        
         onFeatureHover(feature, e)
       },
       mouseout: (e: L.LeafletMouseEvent) => {
         const layer = e.target
         
-        // Reset scaling effect
+        // Reset scaling effect immediately
         if (layer.getElement) {
           const element = layer.getElement()
           if (element) {
-            element.style.transform = 'scale(1)'
-            element.style.transition = 'transform 0.2s ease-out'
+            element.style.transform = 'scale(1) translateZ(0)'
+            element.style.transition = 'none' // Remove transition for immediate response
             element.style.filter = 'none'
             element.style.zIndex = 'auto'
+            element.style.willChange = 'auto'
           }
         }
         
-        // Completely reset to fresh style
+        // Reset style immediately
         const resetStyle = getFeatureStyle(feature)
         layer.setStyle({
           ...resetStyle,
-          dashArray: '' // Explicitly remove any dashed lines
+          dashArray: ''
         })
         
         onFeatureMouseOut(feature, e)
@@ -1002,12 +1043,20 @@ function EnhancedGeoJSONLayer({
   
   if (!data) return null
   
+  // Use a stable key that doesn't change during zoom
+  const stableKey = `${currentView}-${selectedState || 'all'}-${selectedCounty || 'none'}`
+  
   return (
     <GeoJSON
-      key={`${currentView}-layer`}
+      ref={geoJsonRef}
+      key={stableKey}
       data={data}
       style={getFeatureStyle}
       onEachFeature={onEachFeature}
+      // Performance optimizations
+      pointToLayer={undefined}
+      coordsToLatLng={undefined}
+      markersInheritOptions={false}
     />
   )
 }
@@ -1035,6 +1084,8 @@ export default function LeafletMap({
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [currentZoom, setCurrentZoom] = useState(4) // Track current zoom level
   const [isMapReady, setIsMapReady] = useState(false)
+  const [isZooming, setIsZooming] = useState(false) // Track zoom state to prevent flashing
+  const zoomTimeoutRef = useRef<NodeJS.Timeout | null>(null) // Add ref for zoom timeout
 
   // Data hooks
   const { statePopData = [], isLoading: statePopLoading } = usePopulationData()
@@ -1067,69 +1118,71 @@ export default function LeafletMap({
     loadStatesData()
   }, [onError])
 
-  // Load counties data when a state is selected AND we're in counties view
+  // Load counties data when state is selected
   useEffect(() => {
     if (selectedState && currentView === 'counties') {
       const loadCountiesData = async () => {
         try {
-          console.log(`Loading counties for ${selectedState}...`)
           const response = await fetch(`/api/counties-geojson?state=${encodeURIComponent(selectedState)}`)
           if (!response.ok) {
             throw new Error(`Failed to load counties data: ${response.status}`)
           }
           const data = await response.json()
-          console.log(`Loaded ${data.features?.length || 0} counties for ${selectedState}`)
           setCountiesData(data)
         } catch (error) {
           console.error('Error loading counties data:', error)
           if (onError) {
-            onError('Failed to load counties data')
+            onError('Failed to load county data')
           }
         }
       }
 
       loadCountiesData()
     } else if (currentView === 'states') {
-      // Clear counties data when switching back to states view
       setCountiesData(null)
-      setSelectedCounty(null)
     }
   }, [selectedState, currentView, onError])
 
-  // Handle zoom to location
+  // Enhanced zoom to location with smooth transitions
   useEffect(() => {
     if (zoomToLocation && mapRef.current && isMapReady) {
-      const { lat, lng, zoom = 12 } = zoomToLocation
-      mapRef.current.flyTo([lat, lng], zoom, {
-        duration: 1.2,
-        easeLinearity: 0.1
-      })
+      mapRef.current.flyTo(
+        [zoomToLocation.lat, zoomToLocation.lng],
+        zoomToLocation.zoom || 10,
+        {
+          duration: 1.2,
+          easeLinearity: 0.1
+        }
+      )
     }
   }, [zoomToLocation, isMapReady])
 
-  // Enhanced feature click handler
+  // Enhanced feature click handler for better state transitions
   const handleFeatureClick = useCallback((feature: any, event: L.LeafletMouseEvent) => {
-    const featureName = feature.properties?.NAME || feature.properties?.name || ''
+    const featureName = feature.properties?.NAME || feature.properties?.name
     
     if (currentView === 'states') {
       if (featureName && onStateClick) {
         onStateClick(featureName)
         
-        // Always switch to counties view when clicking a state
+        // Switch to county view first
         setCurrentView('counties')
         
-        // Zoom to state bounds with proper padding
-        const layer = event.target
-        if (mapRef.current && layer.getBounds) {
-          // Use a timeout to ensure the counties data loads first
-          setTimeout(() => {
-            mapRef.current?.flyToBounds(layer.getBounds(), { 
-              padding: [20, 20],
-              duration: 1.0,
-              easeLinearity: 0.1,
-              maxZoom: 8 // Prevent over-zooming
-            })
-          }, 100)
+        // Smoothly zoom to the clicked state with enhanced animation
+        if (mapRef.current && stateCentroids[featureName]) {
+          const [lat, lng] = stateCentroids[featureName]
+          
+          // Calculate optimal zoom based on state size
+          let optimalZoom = 6
+          const smallStates = ['Rhode Island', 'Delaware', 'Connecticut', 'New Jersey', 'Massachusetts', 'New Hampshire', 'Vermont', 'Maryland', 'Hawaii']
+          if (smallStates.includes(featureName)) {
+            optimalZoom = 7.5
+          }
+          
+                     mapRef.current.flyTo([lat, lng], optimalZoom, {
+             duration: 1.2,
+             easeLinearity: 0.1
+           })
         }
       }
     } else if (currentView === 'counties') {
@@ -1143,27 +1196,41 @@ export default function LeafletMap({
     }
   }, [currentView, onStateClick, onCountyClick, selectedState])
 
-  // Enhanced feature hover handler
+  // Enhanced feature hover handler with stable positioning and debouncing
   const handleFeatureHover = useCallback((feature: any, event: L.LeafletMouseEvent) => {
+    // No zoom blocking for immediate responsiveness
     setHoveredFeature(feature)
-    setMousePosition({ x: event.originalEvent.clientX, y: event.originalEvent.clientY })
+    
+    // Get the map container's bounding rect for relative positioning
+    const mapContainer = mapRef.current?.getContainer()
+    if (mapContainer) {
+      const rect = mapContainer.getBoundingClientRect()
+      setMousePosition({ 
+        x: event.originalEvent.clientX - rect.left, 
+        y: event.originalEvent.clientY - rect.top 
+      })
+    } else {
+      setMousePosition({ x: event.originalEvent.clientX, y: event.originalEvent.clientY })
+    }
+    
     onHover?.(feature)
   }, [onHover])
 
   // Feature mouse out handler
   const handleFeatureMouseOut = useCallback((feature: any, event: L.LeafletMouseEvent) => {
+    // No zoom blocking for immediate responsiveness
     setHoveredFeature(null)
     setMousePosition(null)
   }, [])
 
-  // Map controls handlers with zoom tracking
+  // Map controls handlers with smooth zoom tracking
   const handleZoomIn = useCallback(() => {
     if (mapRef.current) {
       const currentZoom = mapRef.current.getZoom()
       const currentCenter = mapRef.current.getCenter()
-      mapRef.current.flyTo(currentCenter, currentZoom + 0.5, {
-        duration: 0.5,
-        easeLinearity: 0.1
+      mapRef.current.flyTo(currentCenter, Math.min(currentZoom + 1, 18), {
+        duration: 0.3,
+        easeLinearity: 0.2
       })
     }
   }, [])
@@ -1172,16 +1239,24 @@ export default function LeafletMap({
     if (mapRef.current) {
       const currentZoom = mapRef.current.getZoom()
       const currentCenter = mapRef.current.getCenter()
-      mapRef.current.flyTo(currentCenter, currentZoom - 0.5, {
-        duration: 0.5,
-        easeLinearity: 0.1
+      mapRef.current.flyTo(currentCenter, Math.max(currentZoom - 1, 2), {
+        duration: 0.3,
+        easeLinearity: 0.2
       })
     }
   }, [])
 
   const handleResetView = useCallback(() => {
+    // Clear all state and hover information FIRST
+    setCurrentView('states')
+    setCountiesData(null)
+    setSelectedCounty(null)
+    setHoveredFeature(null)
+    setMousePosition(null)
+    setDrawerOpen(false)
+    
+    // Then reset map view
     if (mapRef.current) {
-      // Simple reset to initial view without restrictive bounds
       const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
       const resetCenter: [number, number] = isMobile 
         ? [45.0, -95.0] // Mobile center
@@ -1189,21 +1264,22 @@ export default function LeafletMap({
       const resetZoom = isMobile ? 3.8 : 4
       
       mapRef.current.flyTo(resetCenter, resetZoom, { 
-        duration: 0.8,
+        duration: 0.6,
         easeLinearity: 0.1
       })
     }
-    setCurrentView('states')
-    setCountiesData(null)
-    setSelectedCounty(null)
-    setDrawerOpen(false)
+    
+    // Call parent reset to clear selectedState
     onReset?.()
   }, [onReset])
 
   const handleBackToStates = useCallback(() => {
+    // Clear all state and hover information
     setCurrentView('states')
     setCountiesData(null)
     setSelectedCounty(null)
+    setHoveredFeature(null)
+    setMousePosition(null)
     setDrawerOpen(false)
     handleResetView()
   }, [handleResetView])
@@ -1221,8 +1297,6 @@ export default function LeafletMap({
     ? [45.0, -95.0] // Much higher latitude for mobile to push US states up significantly
     : [39.8283, -98.5795] // Keep original desktop center unchanged
   const initialZoom = isMobile ? 3.8 : 4 // Slightly lower zoom for mobile to fit more content
-  
-  // Removed problematic window resize handler that was interfering with zoom
 
   return (
     <div className={`relative ${mapHeight} ${className}`}>
@@ -1231,22 +1305,68 @@ export default function LeafletMap({
           if (map) {
             mapRef.current = map
             
-            // Set initial view after map is ready
-            setTimeout(() => {
-              const isMobile = window.innerWidth < 768
-              const center: [number, number] = isMobile 
-                ? [45.0, -95.0] // Much higher latitude for mobile to push US states up significantly
-                : [39.8283, -98.5795] // Keep original desktop center unchanged
-              const zoom = isMobile ? 3.8 : 4 // Slightly lower zoom for mobile to fit more content
-              
-              map.setView(center, zoom, { animate: false })
-              setCurrentZoom(zoom)
-              setIsMapReady(true)
-            }, 100)
+            // Set initial view immediately without setTimeout to prevent interference
+            const isMobile = window.innerWidth < 768
+            const center: [number, number] = isMobile 
+              ? [45.0, -95.0] // Much higher latitude for mobile to push US states up significantly
+              : [39.8283, -98.5795] // Keep original desktop center unchanged
+            const zoom = isMobile ? 3.8 : 4 // Slightly lower zoom for mobile to fit more content
             
-            // Add zoom change listener
+            setCurrentZoom(zoom)
+            setIsMapReady(true)
+            
+            // Enhanced zoom event listeners for real-time updates and positioning
+            map.on('zoomstart', () => {
+              setIsZooming(true)
+            })
+            
+            // Real-time zoom tracking with immediate updates
+            map.on('zoom', () => {
+              // Clear any existing timeout
+              if (zoomTimeoutRef.current) {
+                clearTimeout(zoomTimeoutRef.current)
+              }
+              
+              // Update zoom immediately for responsive GeoJSON layers
+              const newZoom = map.getZoom()
+              setCurrentZoom(newZoom)
+              
+              // Force immediate layer positioning update
+              if (map.getPane('overlayPane')) {
+                const overlayPane = map.getPane('overlayPane')
+                if (overlayPane) {
+                  overlayPane.style.transform = overlayPane.style.transform || 'translateZ(0)'
+                }
+              }
+            })
+            
+            // Handle zoom animation frame updates for smooth positioning
+            map.on('zoomanim', (e: any) => {
+              // Update zoom during animation for smoother experience
+              setCurrentZoom(e.zoom)
+            })
+            
             map.on('zoomend', () => {
-              setCurrentZoom(map.getZoom())
+              // Clear timeout on zoom end
+              if (zoomTimeoutRef.current) {
+                clearTimeout(zoomTimeoutRef.current)
+                zoomTimeoutRef.current = null
+              }
+              
+              // Final zoom update and positioning fix
+              const finalZoom = map.getZoom()
+              setCurrentZoom(finalZoom)
+              setIsZooming(false)
+              
+              // Ensure proper layer positioning after zoom
+              requestAnimationFrame(() => {
+                if (map.getPane('overlayPane')) {
+                  const overlayPane = map.getPane('overlayPane')
+                  if (overlayPane) {
+                    overlayPane.style.transform = overlayPane.style.transform || 'translateZ(0)'
+                  }
+                }
+              })
             })
           }
         }}
@@ -1258,14 +1378,19 @@ export default function LeafletMap({
         zoomControl={false}
         attributionControl={false}
         scrollWheelZoom={true} // Enable scroll wheel zoom
-        zoomSnap={0.25} // Smoother zoom increments
-        zoomDelta={0.5} // Reasonable zoom delta
+        zoomSnap={0.1} // Finer zoom increments for smoother experience
+        zoomDelta={0.5} // Smaller zoom delta for smoother experience
         zoomAnimation={true}
-        fadeAnimation={true}
-        markerZoomAnimation={true}
+        fadeAnimation={false} // Disable fade to reduce conflicts
+        markerZoomAnimation={false} // Disable marker animation to reduce conflicts
+        preferCanvas={true} // Use canvas rendering for better performance
         inertia={true}
-        inertiaDeceleration={2000}
-        inertiaMaxSpeed={1000}
+        inertiaDeceleration={3000} // Smoother deceleration
+        inertiaMaxSpeed={1500} // Controlled max speed
+        wheelPxPerZoomLevel={60} // Smooth scroll wheel response
+        doubleClickZoom={true} // Enable double-click zoom
+        touchZoom={true} // Enable touch zoom
+        boxZoom={false} // Disable box zoom to prevent conflicts
       >
         {/* Responsive Tile Layer */}
         <ResponsiveTileLayer
@@ -1345,25 +1470,77 @@ export default function LeafletMap({
       {/* Enhanced Hover Info */}
       {hoveredFeature && mousePosition && (
         <div
-          className="fixed z-[2000] pointer-events-none bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3 max-w-xs"
+          className="absolute z-[2000] pointer-events-none bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3 max-w-xs transition-all duration-75 ease-out"
           style={{
-            left: mousePosition.x + 10,
-            top: mousePosition.y - 10,
-            transform: mousePosition.x > window.innerWidth - 200 ? 'translateX(-100%)' : 'none'
+            left: Math.min(mousePosition.x + 10, (mapRef.current?.getContainer()?.clientWidth || window.innerWidth) - 280),
+            top: Math.min(Math.max(mousePosition.y - 10, 10), (mapRef.current?.getContainer()?.clientHeight || window.innerHeight) - 250),
+            transform: mousePosition.x > ((mapRef.current?.getContainer()?.clientWidth || window.innerWidth) - 280) ? 'translateX(-110%)' : 'none'
           }}
         >
           <div className="text-sm font-semibold text-gray-900 dark:text-white">
             {hoveredFeature.properties?.NAME || hoveredFeature.properties?.name}
           </div>
           {currentView === 'states' && (
-            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+            <div className="space-y-1 text-xs text-gray-600 dark:text-gray-400 mt-2">
               {(() => {
                 const stateName = hoveredFeature.properties?.NAME || hoveredFeature.properties?.name
                 const stateData = statePopData.find((s: any) => s.name === stateName)
-                return stateData ? `Population: ${stateData.population.toLocaleString()}` : 'Loading...'
-              })()}
-            </div>
-          )}
+                
+                if (!stateData) return <div>Loading...</div>
+                
+                // Get actual county count
+                const knownCountyCounts: { [key: string]: number } = {
+                  'Alabama': 67, 'Alaska': 29, 'Arizona': 15, 'Arkansas': 75, 'California': 58,
+                  'Colorado': 64, 'Connecticut': 8, 'Delaware': 3, 'Florida': 67, 'Georgia': 159,
+                  'Hawaii': 5, 'Idaho': 44, 'Illinois': 102, 'Indiana': 92, 'Iowa': 99,
+                  'Kansas': 105, 'Kentucky': 120, 'Louisiana': 64, 'Maine': 16, 'Maryland': 23,
+                  'Massachusetts': 14, 'Michigan': 83, 'Minnesota': 87, 'Mississippi': 82, 'Missouri': 115,
+                  'Montana': 56, 'Nebraska': 93, 'Nevada': 17, 'New Hampshire': 10, 'New Jersey': 21,
+                  'New Mexico': 33, 'New York': 62, 'North Carolina': 100, 'North Dakota': 53, 'Ohio': 88,
+                  'Oklahoma': 77, 'Oregon': 36, 'Pennsylvania': 67, 'Rhode Island': 5, 'South Carolina': 46,
+                  'South Dakota': 66, 'Tennessee': 95, 'Texas': 254, 'Utah': 29, 'Vermont': 14,
+                  'Virginia': 95, 'Washington': 39, 'West Virginia': 55, 'Wisconsin': 72, 'Wyoming': 23
+                }
+                
+                // Get state representatives data
+                const stateRepresentatives: { [key: string]: { house: number } } = {
+                  'Alabama': { house: 7 }, 'Alaska': { house: 1 }, 'Arizona': { house: 9 }, 'Arkansas': { house: 4 }, 'California': { house: 52 },
+                  'Colorado': { house: 8 }, 'Connecticut': { house: 5 }, 'Delaware': { house: 1 }, 'Florida': { house: 28 }, 'Georgia': { house: 14 },
+                  'Hawaii': { house: 2 }, 'Idaho': { house: 2 }, 'Illinois': { house: 17 }, 'Indiana': { house: 9 }, 'Iowa': { house: 4 },
+                  'Kansas': { house: 4 }, 'Kentucky': { house: 6 }, 'Louisiana': { house: 6 }, 'Maine': { house: 2 }, 'Maryland': { house: 8 },
+                  'Massachusetts': { house: 9 }, 'Michigan': { house: 13 }, 'Minnesota': { house: 8 }, 'Mississippi': { house: 4 }, 'Missouri': { house: 8 },
+                  'Montana': { house: 2 }, 'Nebraska': { house: 3 }, 'Nevada': { house: 4 }, 'New Hampshire': { house: 2 }, 'New Jersey': { house: 12 },
+                  'New Mexico': { house: 3 }, 'New York': { house: 26 }, 'North Carolina': { house: 14 }, 'North Dakota': { house: 1 }, 'Ohio': { house: 15 },
+                  'Oklahoma': { house: 5 }, 'Oregon': { house: 6 }, 'Pennsylvania': { house: 17 }, 'Rhode Island': { house: 2 }, 'South Carolina': { house: 7 },
+                  'South Dakota': { house: 1 }, 'Tennessee': { house: 9 }, 'Texas': { house: 38 }, 'Utah': { house: 4 }, 'Vermont': { house: 1 },
+                  'Virginia': { house: 11 }, 'Washington': { house: 10 }, 'West Virginia': { house: 2 }, 'Wisconsin': { house: 8 }, 'Wyoming': { house: 1 }
+                }
+                
+                                 const countyCount = knownCountyCounts[stateName] || 0
+                const houseReps = stateRepresentatives[stateName]?.house || 0
+                
+                return (
+                  <>
+                    <div className="flex justify-between">
+                      <span>Population:</span>
+                      <span className="font-medium">{stateData.population.toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Counties:</span>
+                      <span className="font-medium">{countyCount}</span>
+                    </div>
+                                         <div className="flex justify-between">
+                       <span>House Reps:</span>
+                       <span className="font-medium">{houseReps}</span>
+                     </div>
+                   </>
+                 )
+               })()}
+               <div className="text-xs text-gray-500 dark:text-gray-400 mt-2 pt-2 border-t border-gray-200 dark:border-gray-600">
+                 2024 Census Data
+               </div>
+             </div>
+           )}
           {currentView === 'counties' && (
             <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
               {(() => {
@@ -1374,7 +1551,7 @@ export default function LeafletMap({
             </div>
           )}
           <div className="text-xs text-blue-600 dark:text-blue-400 mt-1">
-            Zoom: {currentZoom.toFixed(1)}x • Click to {currentView === 'states' ? 'explore counties' : 'select'}
+            {currentView === 'counties' ? 'Click to select county' : 'Click to explore counties'}
           </div>
         </div>
       )}

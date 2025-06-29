@@ -1,0 +1,313 @@
+[
+  {
+    "id": "ocd-person/45c957a4-0017-4c0c-8650-393d656fc5a0",
+    "name": "Alex Valdez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "5",
+      "division_id": "ocd-division/country:us/state:co/sldl:5"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Valdez",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_valdez%2Calex.jpg?itok=NsEe2BaG",
+    "email": "alex.valdez.house@coleg.gov",
+    "gender": "Male",
+    "birth_date": "1981-06-03",
+    "death_date": "",
+    "extras": {
+      "counties represented": [
+        "Denver"
+      ]
+    },
+    "created_at": "2019-01-04T02:12:13.330549+00:00",
+    "updated_at": "2025-03-05T06:20:14.593076+00:00",
+    "openstates_url": "https://openstates.org/person/alex-valdez-27gU1XRsmZtONzLseXJeMq/"
+  },
+  {
+    "id": "ocd-person/34dbb5f1-239b-4924-911e-27ff91bde5cd",
+    "name": "Amy Paschal",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "18",
+      "division_id": "ocd-division/country:us/state:co/sldl:18"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Paschal",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/AmyPaschall24.jpg",
+    "email": "amy.paschal.house@coleg.gov",
+    "gender": "Female",
+    "birth_date": "1964-08-07",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-11T18:29:02.658309+00:00",
+    "updated_at": "2025-03-29T00:16:03.780135+00:00",
+    "openstates_url": "https://openstates.org/person/amy-paschal-1bk0Yties9pWeZ7e5tzkuT/"
+  },
+  {
+    "id": "ocd-person/278f042b-4fe3-4325-ad59-bc240e4fda0c",
+    "name": "Andy Boesenecker",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "53",
+      "division_id": "ocd-division/country:us/state:co/sldl:53"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Boesenecker",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_boesenecker%2Candrew.jpg?itok=3jMO1y9L",
+    "email": "andrew.boesenecker.house@coleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Majority Co-Whip",
+      "counties represented": [
+        "Larimer"
+      ]
+    },
+    "created_at": "2021-12-16T18:42:07.858207+00:00",
+    "updated_at": "2025-03-29T00:16:52.605149+00:00",
+    "openstates_url": "https://openstates.org/person/andy-boesenecker-1Ce3gFOOq7MShcly1aafeu/"
+  },
+  {
+    "id": "ocd-person/6d1fcaf0-ed3d-4772-876f-09dc5e931556",
+    "name": "Barbara Kirkmeyer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:co/sldu:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Barbara",
+    "family_name": "Kirkmeyer",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_kirkmeyer%2Cbarb-.jpg?itok=0RWY0AqY",
+    "email": "barbara.kirkmeyer.senate@coleg.gov",
+    "gender": "Female",
+    "birth_date": "1958-09-15",
+    "death_date": "",
+    "extras": {
+      "counties represented": [
+        "Larimer",
+        "Weld"
+      ]
+    },
+    "created_at": "2021-01-13T00:04:09.143445+00:00",
+    "updated_at": "2025-03-29T00:16:39.650190+00:00",
+    "openstates_url": "https://openstates.org/person/barbara-kirkmeyer-3JugxkfPwIzAg4Lc7g5hGo/"
+  },
+  {
+    "id": "ocd-person/ade56d2d-41d7-436d-b76b-85051f036c7a",
+    "name": "Bob Marshall",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "43",
+      "division_id": "ocd-division/country:us/state:co/sldl:43"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Marshall",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_marshall%2C%20bob.jpg?itok=5ohSNQXK",
+    "email": "bob.marshall.house@coleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties represented": [
+        "Douglas"
+      ]
+    },
+    "created_at": "2023-01-13T22:24:25.669186+00:00",
+    "updated_at": "2025-03-29T00:16:09.261697+00:00",
+    "openstates_url": "https://openstates.org/person/bob-marshall-5I8WHnXHRQvlwkX1KKq0N8/"
+  },
+  {
+    "id": "ocd-person/5a396024-8dcf-438c-beca-a730e972d9d8",
+    "name": "Brandi Bradley",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "39",
+      "division_id": "ocd-division/country:us/state:co/sldl:39"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Brandi",
+    "family_name": "Bradley",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_bradley%2Cbrandi.jpg?itok=gkSqfLu8",
+    "email": "brandi.bradley.house@coleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties represented": [
+        "Douglas"
+      ]
+    },
+    "created_at": "2023-01-13T22:24:28.109869+00:00",
+    "updated_at": "2025-03-29T00:16:05.351893+00:00",
+    "openstates_url": "https://openstates.org/person/brandi-bradley-2kFWrpILhvESiCMzyqW1WK/"
+  },
+  {
+    "id": "ocd-person/fa9b604d-5981-4de1-97bc-9400e03909c9",
+    "name": "Brianna Titone",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:co/sldl:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Brianna",
+    "family_name": "Titone",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_titone%2Cbrianna.jpg?itok=uJAlJK9O",
+    "email": "brianna.titone.house@coleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Majority Caucus Co-Chair",
+      "counties represented": [
+        "Jefferson"
+      ]
+    },
+    "created_at": "2019-01-04T02:11:23.673918+00:00",
+    "updated_at": "2025-03-29T00:16:33.064560+00:00",
+    "openstates_url": "https://openstates.org/person/brianna-titone-7ct5VZhwaM81shpxxyg8Hx/"
+  },
+  {
+    "id": "ocd-person/2d0d060c-6d5f-45da-a069-fe2be14547eb",
+    "name": "Byron Pelton",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:co/sldu:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Byron",
+    "family_name": "Pelton",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_pelton%2Cbyron-.jpg?itok=dSwGCsUR",
+    "email": "byron.pelton.senate@coleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties represented": [
+        "Logan",
+        "Morgan",
+        "Phillips",
+        "Sedgwick",
+        "Washington",
+        "Weld",
+        "Yuma"
+      ]
+    },
+    "created_at": "2023-01-13T22:24:20.053914+00:00",
+    "updated_at": "2025-03-05T06:20:39.849654+00:00",
+    "openstates_url": "https://openstates.org/person/byron-pelton-1N0bbUkqSQzLxxgZGsjc6d/"
+  },
+  {
+    "id": "ocd-person/5f8d1bd0-329b-4a87-8d2f-cb62b8f2e921",
+    "name": "Carlos Barron",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "48",
+      "division_id": "ocd-division/country:us/state:co/sldl:48"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Carlos",
+    "family_name": "Barron",
+    "image": "https://i0.wp.com/coloradocommunitymedia.com/wp-content/uploads/2024/10/7A10C326-743A-4DF1-9625-6E709398C30F-JF-Services-Inc-Office-e1728345969755.jpg?resize=150%2C150&ssl=1",
+    "email": "carlos.barron.house@coleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-11T18:30:23.388762+00:00",
+    "updated_at": "2025-03-29T00:16:33.582308+00:00",
+    "openstates_url": "https://openstates.org/person/carlos-barron-2uIkzLbHMp2rlTZuxShQsT/"
+  },
+  {
+    "id": "ocd-person/0ddf3b75-c450-419e-8235-553157770e49",
+    "name": "Cathy Kipp",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "14",
+      "division_id": "ocd-division/country:us/state:co/sldu:14"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:co/government",
+      "name": "Colorado",
+      "classification": "state"
+    },
+    "given_name": "Cathy",
+    "family_name": "Kipp",
+    "image": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_kipp%2Ccathy-.jpg?itok=5TZvGZWf",
+    "email": "cathy.kipp.senate@coleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties represented": [
+        "Larimer"
+      ]
+    },
+    "created_at": "2019-03-20T05:03:58.764150+00:00",
+    "updated_at": "2025-03-29T00:16:25.668243+00:00",
+    "openstates_url": "https://openstates.org/person/cathy-kipp-QAutZAfrA73ISjQqmGHSz/"
+  }
+]

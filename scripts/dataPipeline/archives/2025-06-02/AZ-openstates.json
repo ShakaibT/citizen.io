@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/c6a181c7-b58e-4c2a-aa2d-9ca31fc6548f",
+    "name": "Aaron Marquez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "5",
+      "division_id": "ocd-division/country:us/state:az/sldl:5"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Marquez",
+    "image": "https://cmsv2-assets.apptegy.net/uploads/23522/file/3233138/f4ffcd47-cd48-4c93-a121-db3084965d55.jpeg",
+    "email": "amarquez@azleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T17:43:05.233241+00:00",
+    "updated_at": "2025-02-10T21:14:20.918224+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-marquez-62oHxKKHIuiMpTtbhX5MvX/"
+  },
+  {
+    "id": "ocd-person/45ff1caf-0d6b-4915-9e34-5f4694907a07",
+    "name": "Adrian Fontes",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Secretary Of State",
+      "org_classification": "executive",
+      "district": "",
+      "division_id": ""
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Fontes",
+    "image": "https://azsos.gov/sites/default/files/Katie-4.jpg",
+    "email": "sosadmin@azsos.gov",
+    "gender": "",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-08-29T14:50:41.296887+00:00",
+    "updated_at": "2023-08-29T14:50:41.450167+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-fontes-2853XSrH7zLfYDem2FaG51/"
+  },
+  {
+    "id": "ocd-person/102ffcb1-3028-401f-b74f-6f45db25e05e",
+    "name": "Alexander Kolodin",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:az/sldl:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Alexander",
+    "family_name": "Kolodin",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Alexander_Kolodin.jpeg",
+    "email": "akolodin@azleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-11T22:32:22.191894+00:00",
+    "updated_at": "2025-01-14T17:42:53.734263+00:00",
+    "openstates_url": "https://openstates.org/person/alexander-kolodin-UXo3bAtBuUe3y6YhpUCNy/"
+  },
+  {
+    "id": "ocd-person/6dba6afa-b274-4273-b8c6-270d27214eee",
+    "name": "Alma Hernández",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "20",
+      "division_id": "ocd-division/country:us/state:az/sldl:20"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Alma",
+    "family_name": "Hernández",
+    "image": "https://www.azleg.gov/alisImages/MemberPhotos/55leg/House/HERNANDEZ_A.jpg",
+    "email": "ahernandez@azleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-05T07:25:02.576862+00:00",
+    "updated_at": "2025-02-13T14:03:14.887533+00:00",
+    "openstates_url": "https://openstates.org/person/alma-hernandez-3L3M7kOTW4kkD5VRliuXOw/"
+  },
+  {
+    "id": "ocd-person/87e6206a-c16e-4038-a86f-0d5c88b993e3",
+    "name": "Analise Ortiz",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "24",
+      "division_id": "ocd-division/country:us/state:az/sldu:24"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Analise",
+    "family_name": "Ortiz",
+    "image": "https://cdn.runforsomething.net/candidates/2022/04/campaign/2552.jpg",
+    "email": "analise.ortiz@azleg.gov",
+    "gender": "Female",
+    "birth_date": "1993-04-17",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-11T22:32:29.100902+00:00",
+    "updated_at": "2025-02-14T21:54:55.147595+00:00",
+    "openstates_url": "https://openstates.org/person/analise-ortiz-48R8CaMOmlm2Y8wtqRHuZX/"
+  },
+  {
+    "id": "ocd-person/2e9c0206-d392-48a3-a599-7f6d226527b7",
+    "name": "Anna Abeytia",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "24",
+      "division_id": "ocd-division/country:us/state:az/sldl:24"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Anna",
+    "family_name": "Abeytia",
+    "image": "https://ugc.production.linktr.ee/hBHigizRf6QilAdEMhX9_dvlE42we69344ZoA?io=true&size=avatar-v3_0",
+    "email": "aabeytia@azleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T17:43:00.165469+00:00",
+    "updated_at": "2025-02-04T00:01:34.532120+00:00",
+    "openstates_url": "https://openstates.org/person/anna-abeytia-1PwwSLb1YBiv9gnxefkJfT/"
+  },
+  {
+    "id": "ocd-person/81d12f3a-b635-4111-be8d-a71d2f7565f2",
+    "name": "Betty Villegas",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "20",
+      "division_id": "ocd-division/country:us/state:az/sldl:20"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Betty",
+    "family_name": "Villegas",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Betty_Villegas_by_Gage_Skidmore.jpg",
+    "email": "bvillegas@azleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-12-28T22:43:16.546964+00:00",
+    "updated_at": "2025-05-15T00:08:04.114494+00:00",
+    "openstates_url": "https://openstates.org/person/betty-villegas-3wxbgEHJUQfSzzxcL153di/"
+  },
+  {
+    "id": "ocd-person/77be0e97-4c93-4332-a9f9-9348560fdf98",
+    "name": "Beverly Pingerelli",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "28",
+      "division_id": "ocd-division/country:us/state:az/sldl:28"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Beverly",
+    "family_name": "Pingerelli",
+    "image": "https://www.azleg.gov/alisImages/MemberPhotos/55leg/House/PINGERELLI.jpg",
+    "email": "bpingerelli@azleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-12T00:04:33.120574+00:00",
+    "updated_at": "2025-02-13T14:03:13.670323+00:00",
+    "openstates_url": "https://openstates.org/person/beverly-pingerelli-3dwwTfIvbZM8Gre1coraw4/"
+  },
+  {
+    "id": "ocd-person/5425612b-fb2c-4857-8f75-31523345eb2b",
+    "name": "Brian Fernandez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:az/sldu:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Brian",
+    "family_name": "Fernandez",
+    "image": "https://www.azleg.gov/alisImages/MemberPhotos/55leg/House/FERNANDEZ_B.jpg",
+    "email": "bfernandez@azleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2022-01-05T22:10:23.243550+00:00",
+    "updated_at": "2025-02-13T14:03:12.968776+00:00",
+    "openstates_url": "https://openstates.org/person/brian-fernandez-2YmR9bFPbqgI6DgEbzZRk3/"
+  },
+  {
+    "id": "ocd-person/c13f449f-0423-4ad5-836b-69913aad6600",
+    "name": "Brian Garcia",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:az/sldl:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:az/government",
+      "name": "Arizona",
+      "classification": "state"
+    },
+    "given_name": "Brian",
+    "family_name": "Garcia",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Brian_Garcia_Headshot.jpg",
+    "email": "bgarcia@azleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T17:43:07.516404+00:00",
+    "updated_at": "2025-02-04T00:01:17.720610+00:00",
+    "openstates_url": "https://openstates.org/person/brian-garcia-5seQpFq0812lmpp4shrLiy/"
+  }
+]

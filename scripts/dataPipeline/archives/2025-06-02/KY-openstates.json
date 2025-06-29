@@ -1,0 +1,307 @@
+[
+  {
+    "id": "ocd-person/e46eb488-2e34-4f33-840f-917496473c64",
+    "name": "Aaron Reed",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "7",
+      "division_id": "ocd-division/country:us/state:ky/sldu:7"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Reed",
+    "image": "https://gunleash.com/wp-content/uploads/2023/11/Aaron_Reed.jpg",
+    "email": "aaron.reed@kylegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:33:58.351727+00:00",
+    "updated_at": "2025-02-21T15:54:19.580298+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-reed-6x2qGNr9nWRhTcblRvsZ4W/"
+  },
+  {
+    "id": "ocd-person/1439bad2-f18b-49e2-94ca-21f2b563dfdd",
+    "name": "Aaron Thompson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "98",
+      "division_id": "ocd-division/country:us/state:ky/sldl:98"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Thompson",
+    "image": "https://content.campaignpartner.net/images/126420/Headshot.jpg",
+    "email": "aaron.thompson@kylegislature.gov",
+    "gender": "Male",
+    "birth_date": "1991-05-31",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:33:58.193239+00:00",
+    "updated_at": "2025-03-13T06:46:53.975569+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-thompson-cAECkXoA3dB4dSUhXoAXN/"
+  },
+  {
+    "id": "ocd-person/e7f7a316-4eb0-4be9-adf9-e7067b20dcfc",
+    "name": "Adam Bowling",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "87",
+      "division_id": "ocd-division/country:us/state:ky/sldl:87"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Bowling",
+    "image": "https://legislature.ky.gov/Legislators%20Thumbnail%20Images/house87.jpg",
+    "email": "adam.bowling@kylegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "home city": "Middlesboro",
+      "mailing address": "PO Box 2928 Middlesboro, KY 40965",
+      "counties represented": [
+        "Bell",
+        "Harlan"
+      ]
+    },
+    "created_at": "2019-01-10T02:15:14.733298+00:00",
+    "updated_at": "2025-01-05T10:34:04.936080+00:00",
+    "openstates_url": "https://openstates.org/person/adam-bowling-73iOfrGXyKJW9N6hx5lcLM/"
+  },
+  {
+    "id": "ocd-person/1ce736fd-c1ca-4366-a235-9509fdb2dcaf",
+    "name": "Adam Moore",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:ky/sldl:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Moore",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/AdamMoore2024.jpg",
+    "email": "adam.moore@kylegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:33:55.323728+00:00",
+    "updated_at": "2025-02-21T15:54:18.115026+00:00",
+    "openstates_url": "https://openstates.org/person/adam-moore-sXRwB6OVKEuYnmESe2J83/"
+  },
+  {
+    "id": "ocd-person/943724d5-5e02-4d0f-bd79-a74e30f18d1a",
+    "name": "Adrielle Camuel",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "93",
+      "division_id": "ocd-division/country:us/state:ky/sldl:93"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Adrielle",
+    "family_name": "Camuel",
+    "image": "https://legislature.ky.gov/Legislators%20Thumbnail%20Images/house93.jpg",
+    "email": "adrielle.camuel@kylegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "home city": "Lexington",
+      "mailing address": "702 Capital Ave Annex Room 429F Frankfort, KY 40601",
+      "counties represented": [
+        "Fayette"
+      ]
+    },
+    "created_at": "2024-01-03T21:15:56.588781+00:00",
+    "updated_at": "2024-10-15T22:17:59.294132+00:00",
+    "openstates_url": "https://openstates.org/person/adrielle-camuel-4Vg42hGOTvxtq8whnJ9Lwo/"
+  },
+  {
+    "id": "ocd-person/dfaa3769-decc-4c1c-9c0b-7195153ab6c8",
+    "name": "Al Gentry",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "46",
+      "division_id": "ocd-division/country:us/state:ky/sldl:46"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Gentry",
+    "image": "https://legislature.ky.gov/Legislators%20Thumbnail%20Images/house46.jpg",
+    "email": "al.gentry@kylegislature.gov",
+    "gender": "Male",
+    "birth_date": "1964-10-12",
+    "death_date": "",
+    "extras": {
+      "home city": "Louisville",
+      "mailing address": "8406 Cloverport Dr Louisville, KY 40228",
+      "counties represented": [
+        "Jefferson"
+      ]
+    },
+    "created_at": "2018-10-18T14:45:01.831072+00:00",
+    "updated_at": "2024-10-15T22:18:05.225842+00:00",
+    "openstates_url": "https://openstates.org/person/al-gentry-6o34q3EsWsZwrvtdSNgA36/"
+  },
+  {
+    "id": "ocd-person/7c03bd44-8541-49b0-9794-a9e606c292ce",
+    "name": "Amanda Bledsoe",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:ky/sldu:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Amanda",
+    "family_name": "Bledsoe",
+    "image": "https://legislature.ky.gov/Legislators%20Thumbnail%20Images/senate112.jpg",
+    "email": "amanda.maysbledsoe@kylegislature.gov",
+    "gender": "Female",
+    "birth_date": "1978-02-15",
+    "death_date": "",
+    "extras": {
+      "home city": "Lexington",
+      "mailing address": "PO Box 23112 Lexington, KY 40523",
+      "counties represented": [
+        "Boyle",
+        "Fayette"
+      ]
+    },
+    "created_at": "2023-01-06T20:18:25.760154+00:00",
+    "updated_at": "2025-05-15T00:47:18.774357+00:00",
+    "openstates_url": "https://openstates.org/person/amanda-bledsoe-3m0kxXDdN2RQpZ4kBXHT70/"
+  },
+  {
+    "id": "ocd-person/f7bb262c-026f-4af2-9e17-939692c96e89",
+    "name": "Amy Neighbors",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:ky/sldl:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Neighbors",
+    "image": "https://legislature.ky.gov/Legislators%20Thumbnail%20Images/house21.jpg",
+    "email": "amy.neighbors@kylegislature.gov",
+    "gender": "Female",
+    "birth_date": "1975-11-12",
+    "death_date": "",
+    "extras": {
+      "home city": "Edmonton",
+      "mailing address": "702 Capital Ave Annex Room 395 Frankfort, KY 40601",
+      "counties represented": [
+        "Adair",
+        "Cumberland",
+        "Metcalfe",
+        "Monroe"
+      ]
+    },
+    "created_at": "2023-01-06T20:18:20.684727+00:00",
+    "updated_at": "2024-10-15T22:17:56.322415+00:00",
+    "openstates_url": "https://openstates.org/person/amy-neighbors-7XSdByT1tPN5XYfReouxOj/"
+  },
+  {
+    "id": "ocd-person/c7dbc1b4-67fb-4bb2-b1c5-cc5ef9356a5a",
+    "name": "Andy Beshear",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Governor",
+      "org_classification": "executive",
+      "district": "",
+      "division_id": ""
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Beshear",
+    "image": "https://governor.ky.gov/PublishingImages/Governor-Beshear_Official-Picture.jpg",
+    "email": "",
+    "gender": "",
+    "birth_date": "1977-11-29",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2020-08-04T05:08:30.863605+00:00",
+    "updated_at": "2024-10-18T15:19:53.649681+00:00",
+    "openstates_url": "https://openstates.org/person/andy-beshear-657tvqE4jAZJDHnjYEwnne/"
+  },
+  {
+    "id": "ocd-person/2b9ac6b5-8979-40b1-b2d1-8241b93061a7",
+    "name": "Anne Donworth",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "76",
+      "division_id": "ocd-division/country:us/state:ky/sldl:76"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ky/government",
+      "name": "Kentucky",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Donworth",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/AnneDonworth.jpeg",
+    "email": "anne.donworth@kylegislature.gov",
+    "gender": "Female",
+    "birth_date": "1983-05-16",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:34:05.179851+00:00",
+    "updated_at": "2025-03-13T06:46:41.007582+00:00",
+    "openstates_url": "https://openstates.org/person/anne-donworth-1KHOz4bEthb9fptM9HfVEV/"
+  }
+]

@@ -1,0 +1,327 @@
+[
+  {
+    "id": "ocd-person/559521af-e5f9-43c3-a75e-de9b242d364f",
+    "name": "Abe Jones",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "38",
+      "division_id": "ocd-division/country:us/state:nc/sldl:38"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Abe",
+    "family_name": "Jones",
+    "image": "https://www.ncleg.gov/Members/MemberImage/H/780/Low",
+    "email": "abe.jones@ncleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Attorney",
+      "mailing address": "16 West Jones Street, Rm. 1219; Raleigh, NC 27601-1096",
+      "terms in senate": "2 (0 in Senate)",
+      "represented counties": "Wake",
+      "legislative assistant": "Catherine Leake",
+      "legislative assistant email": "Catherine.Leake@ncleg.gov"
+    },
+    "created_at": "2021-01-09T00:12:00.397864+00:00",
+    "updated_at": "2025-04-24T07:34:30.046402+00:00",
+    "openstates_url": "https://openstates.org/person/abe-jones-2bUV4JBemvSdQh86IEIasR/"
+  },
+  {
+    "id": "ocd-person/9f9d7fb9-9981-412d-b3e2-45c7f67d189a",
+    "name": "Aisha Dew",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "107",
+      "division_id": "ocd-division/country:us/state:nc/sldl:107"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Aisha",
+    "family_name": "Dew",
+    "image": "https://static.wixstatic.com/media/382708_03a01c002bae45c2a4dd4b665892e242~mv2.png/v1/fill/w_369,h_369,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aisha%20dew%20updated%20headshot.png",
+    "email": "aisha.dew@ncleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-05T10:42:11.106954+00:00",
+    "updated_at": "2025-04-24T07:34:58.433391+00:00",
+    "openstates_url": "https://openstates.org/person/aisha-dew-4rBkwgELWqDsdXMdaiZymY/"
+  },
+  {
+    "id": "ocd-person/6ca8b8ee-96ed-4b21-94cf-d67e49f9c1c8",
+    "name": "Alan Branson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "59",
+      "division_id": "ocd-division/country:us/state:nc/sldl:59"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Branson",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/alan_branson.jpg",
+    "email": "alan.branson@ncleg.gov",
+    "gender": "Male",
+    "birth_date": "1951-12-06",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-07-05T19:57:09.429960+00:00",
+    "updated_at": "2025-05-15T01:21:34.299285+00:00",
+    "openstates_url": "https://openstates.org/person/alan-branson-3J2HDKlNZ9DjiBcSdOvOIq/"
+  },
+  {
+    "id": "ocd-person/95a533af-7933-4992-aea6-dfdc626b7ca6",
+    "name": "Allen Buansi",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "56",
+      "division_id": "ocd-division/country:us/state:nc/sldl:56"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Allen",
+    "family_name": "Buansi",
+    "image": "https://www.ncleg.gov/Members/MemberImage/H/790/Low",
+    "email": "allen.buansi@ncleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Attorney",
+      "mailing address": "300 N. Salisbury Street, Rm. 514; Raleigh, NC 27603-5925",
+      "terms in senate": "1.5 (0 in Senate)",
+      "represented counties": "Orange",
+      "legislative assistant": "Austin Hahn",
+      "legislative assistant email": "Austin.Hahn@ncleg.gov"
+    },
+    "created_at": "2022-07-20T21:27:49.581326+00:00",
+    "updated_at": "2025-04-24T07:33:57.141865+00:00",
+    "openstates_url": "https://openstates.org/person/allen-buansi-4YNLxXRlo8c0efhX7pKygQ/"
+  },
+  {
+    "id": "ocd-person/fc3772c1-d98a-4325-a6c8-96b9da492ed6",
+    "name": "Allen Chesser",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:nc/sldl:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Allen",
+    "family_name": "Chesser",
+    "image": "https://www.ncleg.gov/Members/MemberImage/H/799/Low",
+    "email": "allen.chesser@ncleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Civil Engineering - Technician",
+      "mailing address": "300 N. Salisbury Street, Rm. 610; Raleigh, NC 27603-5925",
+      "terms in senate": "1 (0 in Senate)",
+      "military experience": "Army/Army National Guard, 2003-2009",
+      "represented counties": "Nash",
+      "legislative assistant": "Sean Harrington",
+      "legislative assistant email": "Sean.Harrington@ncleg.gov"
+    },
+    "created_at": "2023-01-20T00:29:44.832845+00:00",
+    "updated_at": "2025-04-24T07:34:27.325529+00:00",
+    "openstates_url": "https://openstates.org/person/allen-chesser-7fvPBw41GcGKPTLbtnUXos/"
+  },
+  {
+    "id": "ocd-person/785927b3-34ca-4a2d-bc1c-df4cc8e16c47",
+    "name": "Allison Dahle",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "11",
+      "division_id": "ocd-division/country:us/state:nc/sldl:11"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Allison",
+    "family_name": "Dahle",
+    "image": "https://www.ncleg.gov/Members/MemberImage/H/740/Low",
+    "email": "allison.dahle@ncleg.gov",
+    "gender": "Female",
+    "birth_date": "1964-03-25",
+    "death_date": "",
+    "extras": {
+      "occupation": "Office Manager",
+      "mailing address": "16 West Jones Street, Rm. 1217; Raleigh, NC 27601-1096",
+      "terms in senate": "3 (0 in Senate)",
+      "represented counties": "Wake",
+      "legislative assistant": "Austen High",
+      "legislative assistant email": "Austen.High@ncleg.gov"
+    },
+    "created_at": "2019-01-24T06:13:27.684325+00:00",
+    "updated_at": "2025-04-24T07:34:45.161395+00:00",
+    "openstates_url": "https://openstates.org/person/allison-dahle-3f5p2T60GXSTUrr6UwHGuV/"
+  },
+  {
+    "id": "ocd-person/628fc48c-a48b-4128-87f1-2391ab795e0a",
+    "name": "Amber Baker",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "72",
+      "division_id": "ocd-division/country:us/state:nc/sldl:72"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Amber",
+    "family_name": "Baker",
+    "image": "https://www.ncleg.gov/Members/MemberImage/H/782/Low",
+    "email": "amber.baker@ncleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Educator",
+      "mailing address": "16 West Jones Street, Rm. 1006; Raleigh, NC 27601-1096",
+      "terms in senate": "2 (0 in Senate)",
+      "represented counties": "Forsyth",
+      "legislative assistant": "Elijah Bowers",
+      "legislative assistant email": "Elijah.Bowers@ncleg.gov"
+    },
+    "created_at": "2021-01-09T00:11:57.196044+00:00",
+    "updated_at": "2025-04-24T07:33:39.931416+00:00",
+    "openstates_url": "https://openstates.org/person/amber-baker-2zywuBMH10FntpR0TeAd1W/"
+  },
+  {
+    "id": "ocd-person/46275779-8191-48be-8b0b-8373376fa23d",
+    "name": "Amos Quick",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "58",
+      "division_id": "ocd-division/country:us/state:nc/sldl:58"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Amos",
+    "family_name": "Quick",
+    "image": "https://www.ncleg.gov/Members/MemberImage/H/725/Low",
+    "email": "amos.quick@ncleg.gov",
+    "gender": "Male",
+    "birth_date": "1968-08-14",
+    "death_date": "",
+    "extras": {
+      "occupation": "Pastor - Friendship Baptist Church, Lexington, NC",
+      "mailing address": "300 N. Salisbury Street, Rm. 510; Raleigh, NC 27603-5925",
+      "terms in senate": "4 (0 in Senate)",
+      "represented counties": "Guilford",
+      "legislative assistant": "Jasmine Miller",
+      "legislative assistant email": "Jasmine.Miller@ncleg.gov"
+    },
+    "created_at": "2018-10-18T14:52:29.699402+00:00",
+    "updated_at": "2025-04-24T07:33:40.946708+00:00",
+    "openstates_url": "https://openstates.org/person/amos-quick-28NRPPfJA6FGVl9RrjpKjl/"
+  },
+  {
+    "id": "ocd-person/8be9deca-bbd6-404f-8726-0aecaeb19ca7",
+    "name": "Amy Galey",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:nc/sldu:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Galey",
+    "image": "https://www.ncleg.gov/Members/MemberImage/S/429/Low",
+    "email": "amy.galey@ncleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "terms in senate": "2 (0 in House)",
+      "represented counties": "Alamance, Randolph",
+      "legislative assistant": "Samuel Ward",
+      "legislative assistant email": "Samuel.Ward@ncleg.gov"
+    },
+    "created_at": "2021-01-09T00:11:59.588854+00:00",
+    "updated_at": "2025-04-24T07:34:28.516422+00:00",
+    "openstates_url": "https://openstates.org/person/amy-galey-4G0oN7wAbZ7jEsr93dEzkl/"
+  },
+  {
+    "id": "ocd-person/367ad234-14bc-4d86-95ee-ab1176890d6e",
+    "name": "Becky Carney",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "102",
+      "division_id": "ocd-division/country:us/state:nc/sldl:102"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nc/government",
+      "name": "North Carolina",
+      "classification": "state"
+    },
+    "given_name": "Becky",
+    "family_name": "Carney",
+    "image": "https://www.ncleg.gov/Members/MemberImage/H/322/Low",
+    "email": "becky.carney@ncleg.gov",
+    "gender": "Female",
+    "birth_date": "1944-12-25",
+    "death_date": "",
+    "extras": {
+      "occupation": "Legislator, Former County Commissioner",
+      "mailing address": "16 West Jones Street, Rm. 1221; Raleigh, NC 27601-1096",
+      "terms in senate": "11 (0 in Senate)",
+      "represented counties": "Mecklenburg",
+      "legislative assistant": "Beth LeGrande",
+      "legislative assistant email": "Beth.LeGrande@ncleg.gov"
+    },
+    "created_at": "2018-10-18T14:52:11.192840+00:00",
+    "updated_at": "2025-04-24T07:34:49.081413+00:00",
+    "openstates_url": "https://openstates.org/person/becky-carney-1eniKgqyNsl11XZnt6ccRy/"
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "id": "ocd-person/9eddb3cd-868e-42ba-831a-b415fd7ed445",
+    "name": "Adam Bernbaum",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "24",
+      "division_id": "ocd-division/country:us/state:wa/sldl:24"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Bernbaum",
+    "image": "https://storage.googleapis.com/enview-dev-public-general/legislative-people-photos/163652.jpg",
+    "email": "adam.bernbaum@leg.wa.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-12T08:06:12.435839+00:00",
+    "updated_at": "2025-05-23T14:31:12.985366+00:00",
+    "openstates_url": "https://openstates.org/person/adam-bernbaum-4pm6ZATB5dDx2Ke1uyIPh7/"
+  },
+  {
+    "id": "ocd-person/bae1dc2d-8fd6-48cb-b1d8-afa86f205a3c",
+    "name": "Adison Richards",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "26",
+      "division_id": "ocd-division/country:us/state:wa/sldl:26"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Adison",
+    "family_name": "Richards",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/AdisonRichards.jpg",
+    "email": "adison.richards@leg.wa.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:15:59.675128+00:00",
+    "updated_at": "2025-05-23T14:30:59.704780+00:00",
+    "openstates_url": "https://openstates.org/person/adison-richards-5gdn3DbSs0OssGuLKPDuxg/"
+  },
+  {
+    "id": "ocd-person/3f71f11c-c231-4661-af2a-629d2eb32580",
+    "name": "Adrian Cortes",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "18",
+      "division_id": "ocd-division/country:us/state:wa/sldu:18"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Cortes",
+    "image": "https://storage.googleapis.com/enview-dev-public-general/legislative-people-photos/168725.jpg",
+    "email": "adrian.cortes@leg.wa.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-23T16:56:19.995445+00:00",
+    "updated_at": "2025-05-23T14:30:35.840116+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-cortes-1viaSv7D5ctBZ7TMdI1Z32/"
+  },
+  {
+    "id": "ocd-person/193dce49-ab25-4608-b4d2-65d80fd3d46c",
+    "name": "Alex Ramel",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:wa/sldl:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Ramel",
+    "image": "https://app.leg.wa.gov/ContentParts/MemberDirectory/LargePhoto?m=30127",
+    "email": "alex.ramel@leg.wa.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Majority Whip"
+    },
+    "created_at": "2020-01-30T11:16:57.839608+00:00",
+    "updated_at": "2025-05-23T14:30:32.182436+00:00",
+    "openstates_url": "https://openstates.org/person/alex-ramel-ld3JgoThlxqYUAvBvhpMq/"
+  },
+  {
+    "id": "ocd-person/ad28df67-a1bf-4580-b55f-f0917c6e69b2",
+    "name": "Alex Ybarra",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:wa/sldl:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Ybarra",
+    "image": "https://app.leg.wa.gov/ContentParts/MemberDirectory/LargePhoto?m=29318",
+    "email": "alex.ybarra@leg.wa.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-21T06:20:12.671992+00:00",
+    "updated_at": "2025-05-23T14:31:32.070295+00:00",
+    "openstates_url": "https://openstates.org/person/alex-ybarra-5GkLmuPwgU05eNZCquCGos/"
+  },
+  {
+    "id": "ocd-person/b735531c-ec99-4e19-9f43-967d951f8010",
+    "name": "Alicia Rule",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "42",
+      "division_id": "ocd-division/country:us/state:wa/sldl:42"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Alicia",
+    "family_name": "Rule",
+    "image": "https://app.leg.wa.gov/ContentParts/MemberDirectory/LargePhoto?m=31533",
+    "email": "alicia.rule@leg.wa.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-13T00:19:53.113084+00:00",
+    "updated_at": "2025-05-23T14:30:29.529645+00:00",
+    "openstates_url": "https://openstates.org/person/alicia-rule-5ZhxqWNU6iOf4jbC8bJgwa/"
+  },
+  {
+    "id": "ocd-person/80548fd7-06a0-44f1-b121-7caae4819ed6",
+    "name": "Amy Walen",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "48",
+      "division_id": "ocd-division/country:us/state:wa/sldl:48"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Walen",
+    "image": "https://app.leg.wa.gov/ContentParts/MemberDirectory/LargePhoto?m=29109",
+    "email": "amy.walen@leg.wa.gov",
+    "gender": "Female",
+    "birth_date": "1967-12-26",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-21T06:20:15.873874+00:00",
+    "updated_at": "2025-05-23T14:31:19.061007+00:00",
+    "openstates_url": "https://openstates.org/person/amy-walen-3u9f5ZHKj4d6lVstbOZfi2/"
+  },
+  {
+    "id": "ocd-person/9c1fefff-fa5a-49aa-90ca-a9ca80b6f669",
+    "name": "Andrew Barkis",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "2",
+      "division_id": "ocd-division/country:us/state:wa/sldl:2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Barkis",
+    "image": "https://app.leg.wa.gov/ContentParts/MemberDirectory/LargePhoto?m=24075",
+    "email": "andrew.barkis@leg.wa.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:13:50.194033+00:00",
+    "updated_at": "2025-05-23T14:31:08.828003+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-barkis-4kbOhmrT8wmMzEsU4TXqO1/"
+  },
+  {
+    "id": "ocd-person/9a2a700c-9c13-4cc5-ab56-7e62327f0c19",
+    "name": "Andrew Engell",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "7",
+      "division_id": "ocd-division/country:us/state:wa/sldl:7"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Engell",
+    "image": "https://electandrew.com/wp-content/uploads/2024/03/Andrew-Professional-Headshot-1536x1536.jpg",
+    "email": "andrew.engell@leg.wa.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:16:27.153753+00:00",
+    "updated_at": "2025-05-23T14:30:16.721694+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-engell-4guDAbLYNnH4jne7PIaV45/"
+  },
+  {
+    "id": "ocd-person/50c73eec-2f66-450b-b8b4-b8bce995e221",
+    "name": "Annette Cleveland",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "49",
+      "division_id": "ocd-division/country:us/state:wa/sldu:49"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wa/government",
+      "name": "Washington",
+      "classification": "state"
+    },
+    "given_name": "Annette",
+    "family_name": "Cleveland",
+    "image": "https://app.leg.wa.gov/ContentParts/MemberDirectory/LargePhoto?m=17294",
+    "email": "annette.cleveland@leg.wa.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:13:50.426602+00:00",
+    "updated_at": "2025-05-23T14:31:23.548363+00:00",
+    "openstates_url": "https://openstates.org/person/annette-cleveland-2SQRO3278XYF83zGHDLhzd/"
+  }
+]

@@ -1,0 +1,304 @@
+[
+  {
+    "id": "ocd-person/844f3ed7-03df-420f-81bd-3f547c12e61e",
+    "name": "Aaron Bernstine",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:pa/sldl:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Bernstine",
+    "image": "https://www.legis.state.pa.us/images/members/200/1742.jpg?1703415645672",
+    "email": "abernstine@pahousegop.com",
+    "gender": "Male",
+    "birth_date": "1984-07-02",
+    "death_date": "",
+    "extras": {
+      "website": "http://www.repbernstine.com"
+    },
+    "created_at": "2018-10-18T16:11:03.344387+00:00",
+    "updated_at": "2025-03-05T08:41:09.256072+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-bernstine-41fCYBiTjz78enWh54VU10/"
+  },
+  {
+    "id": "ocd-person/db196239-5fca-4218-82ee-ce1f6cf03ec4",
+    "name": "Abby Major",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "60",
+      "division_id": "ocd-division/country:us/state:pa/sldl:60"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Abby",
+    "family_name": "Major",
+    "image": "https://www.legis.state.pa.us/images/members/200/1926.jpg?1703415645672",
+    "email": "amajor@pahousegop.com",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "Education": [
+        "Ford City High School, 2003; Pittsburgh Institute of Mortuary Science, 2016; Southern Illinois University at Carbondale, BS in Mortuary Science and Funeral Service, 2018"
+      ]
+    },
+    "created_at": "2021-12-16T19:09:47.496998+00:00",
+    "updated_at": "2025-03-05T08:42:40.508736+00:00",
+    "openstates_url": "https://openstates.org/person/abby-major-6fQv2QsLFzohUAPIZvu0Dk/"
+  },
+  {
+    "id": "ocd-person/4bc74848-3896-4a0a-9310-970458f48d1a",
+    "name": "Abigail Salisbury",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "34",
+      "division_id": "ocd-division/country:us/state:pa/sldl:34"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Abigail",
+    "family_name": "Salisbury",
+    "image": "https://www.legis.state.pa.us/images/members/200/2012.jpg?1703415645672",
+    "email": "repsalisbury@pahouse.net",
+    "gender": "Female",
+    "birth_date": "1982-04-07",
+    "death_date": "",
+    "extras": {
+      "Education": [
+        "Fairview High School, 2000",
+        "Case Western Reserve University, B.A. 2004",
+        "Pitt Law, J.D. 2007",
+        "Pitt Graduate School of Public & International Affairs, MPPM 2013"
+      ]
+    },
+    "created_at": "2023-04-05T19:29:21.240287+00:00",
+    "updated_at": "2025-03-05T08:40:13.287062+00:00",
+    "openstates_url": "https://openstates.org/person/abigail-salisbury-2IzUnkXqwxXDEWHYrTyXHe/"
+  },
+  {
+    "id": "ocd-person/1b5abb1e-0028-49a3-ae86-cfb90296c796",
+    "name": "Aerion Abney",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "19",
+      "division_id": "ocd-division/country:us/state:pa/sldl:19"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Aerion",
+    "family_name": "Abney",
+    "image": "https://www.legis.state.pa.us/images/members/200/1933.jpg?1703415645672",
+    "email": "aabney@pahouse.net",
+    "gender": "Male",
+    "birth_date": "1988-05-23",
+    "death_date": "",
+    "extras": {
+      "Education": [
+        "Cardinal O'Hara High School, 2006",
+        "University of Pittsburgh, 2010 BA Communications, 2012 MSW"
+      ]
+    },
+    "created_at": "2023-01-12T19:28:11.885046+00:00",
+    "updated_at": "2025-03-05T08:41:30.452197+00:00",
+    "openstates_url": "https://openstates.org/person/aerion-abney-pcFvp2Y08OhowN2nHMIfW/"
+  },
+  {
+    "id": "ocd-person/6726e869-3e54-4b33-8765-d4704529465d",
+    "name": "Al Schmidt",
+    "party": "Republican",
+    "current_role": {
+      "title": "Secretary Of State",
+      "org_classification": "executive",
+      "district": "",
+      "division_id": ""
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Schmidt",
+    "image": "https://www.dos.pa.gov/about-us/PublishingImages/Al-Schmidt-Headshot.jpg",
+    "email": "st-press@pa.gov",
+    "gender": "",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-08-29T15:16:36.365785+00:00",
+    "updated_at": "2023-08-29T15:16:36.567106+00:00",
+    "openstates_url": "https://openstates.org/person/al-schmidt-38dzPwM3SrGuVVdYNFdwEv/"
+  },
+  {
+    "id": "ocd-person/be809fa5-6ef4-4071-bb94-ed10fb051f69",
+    "name": "Alec Ryncavage",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "119",
+      "division_id": "ocd-division/country:us/state:pa/sldl:119"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Alec",
+    "family_name": "Ryncavage",
+    "image": "https://www.legis.state.pa.us/images/members/200/1967.jpg?1703415645672",
+    "email": "aryncavage@pahousegop.com",
+    "gender": "Male",
+    "birth_date": "2001-03-27",
+    "death_date": "",
+    "extras": {
+      "website": "http://www.RepRyncavage.com"
+    },
+    "created_at": "2023-01-12T19:28:12.204559+00:00",
+    "updated_at": "2025-03-05T08:40:52.451012+00:00",
+    "openstates_url": "https://openstates.org/person/alec-ryncavage-5nTK2huv4eZf166iRogeQD/"
+  },
+  {
+    "id": "ocd-person/77755456-0f2a-4bbd-ac96-03d83398d6fc",
+    "name": "Amanda Cappelletti",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "17",
+      "division_id": "ocd-division/country:us/state:pa/sldu:17"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Amanda",
+    "family_name": "Cappelletti",
+    "image": "https://www.legis.state.pa.us/images/members/200/1923.jpg?1703415645672",
+    "email": "cappelletti@pasenate.com",
+    "gender": "Female",
+    "birth_date": "1986-12-09",
+    "death_date": "",
+    "extras": {
+      "Education": [
+        "Chestnut Hill College, B.S.",
+        "Temple University James E. Beasley School of Law, J.D.",
+        "Temple University, College of Health Professions and Social Work, M.P.H."
+      ]
+    },
+    "created_at": "2020-12-30T06:15:44.173494+00:00",
+    "updated_at": "2025-03-05T08:41:44.892262+00:00",
+    "openstates_url": "https://openstates.org/person/amanda-cappelletti-3dPhoE1WJU4wXiTysODkYm/"
+  },
+  {
+    "id": "ocd-person/a41016aa-660f-4af7-afcd-ef182e544533",
+    "name": "Amen Brown",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:pa/sldl:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Amen",
+    "family_name": "Brown",
+    "image": "https://www.legis.state.pa.us/images/members/200/1919.jpg?1703415645672",
+    "email": "repbrown@pahouse.net",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "Education": [
+        "Community College"
+      ]
+    },
+    "created_at": "2020-12-30T06:15:48.018350+00:00",
+    "updated_at": "2025-03-05T08:41:56.967525+00:00",
+    "openstates_url": "https://openstates.org/person/amen-brown-4za5pkZy1xtz6r0q3Lex6Z/"
+  },
+  {
+    "id": "ocd-person/628312bf-7920-44b7-b226-90c92f92a123",
+    "name": "Andre Carroll",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "201",
+      "division_id": "ocd-division/country:us/state:pa/sldl:201"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Andre",
+    "family_name": "Carroll",
+    "image": "https://storage.googleapis.com/enview-public-general/legislative-people-photos/150754.jpg",
+    "email": "repcarroll@pahouse.net",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-10-09T23:24:47.736346+00:00",
+    "updated_at": "2025-03-05T08:42:58.102705+00:00",
+    "openstates_url": "https://openstates.org/person/andre-carroll-2zt9DWdNnN8xhKaik0FMKh/"
+  },
+  {
+    "id": "ocd-person/0d86d77b-ff68-4182-be53-09ff196b8174",
+    "name": "Andrew Kuzma",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "39",
+      "division_id": "ocd-division/country:us/state:pa/sldl:39"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:pa/government",
+      "name": "Pennsylvania",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Kuzma",
+    "image": "https://www.legis.state.pa.us/images/members/200/1946.jpg?1703415645672",
+    "email": "akuzma@pahousegop.com",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "website": "http://www.RepKuzma.com"
+    },
+    "created_at": "2023-01-12T19:28:01.932661+00:00",
+    "updated_at": "2025-03-05T08:42:51.438202+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-kuzma-PWWQmV0WCnh9g09ObzNtU/"
+  }
+]

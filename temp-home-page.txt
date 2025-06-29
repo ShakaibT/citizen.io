@@ -1,0 +1,457 @@
+"use client"
+
+import React, { useState, useEffect } from "react"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import {
+  ChevronRight,
+  Shield,
+  Vote,
+  Scale,
+  Newspaper,
+  Megaphone,
+  ArrowRight,
+  MapPin,
+  Edit,
+  ArrowLeft,
+  Users,
+} from "lucide-react"
+import { useAuth } from "@/components/auth-provider"
+import { useLocation } from "@/components/location-provider"
+import { AuthModal } from "@/components/auth-modal"
+import { AddressResults } from "@/components/address-results"
+import dynamic from "next/dynamic"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+
+// Dynamic import to prevent SSR issues
+const MapComponent = dynamic(() => import('@/components/Map'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-gray-50 rounded-lg">
+      <div className="text-gray-600">Loading map...</div>
+    </div>
+  )
+})
+
+export function HomePage() {
+  const { user } = useAuth()
+  const { location, setLocation, clearLocation, setShowLocationSetup } = useLocation()
+  const router = useRouter()
+  const [authModalOpen, setAuthModalOpen] = useState(false)
+  const [authModalTab, setAuthModalTab] = useState<"signin" | "signup">("signin")
+  
+  const [selectedState, setSelectedState] = useState<string | null>(null)
+
+    // If user already has a location, navigate to dashboard
+    if (location) {
+      // Navigate to dashboard using Next.js router
+      router.push('/dashboard')
+    } else {
+      // Only show location setup when no location exists
+      setShowLocationSetup(true)
+    }
+  }
+
+  const handleSignIn = () => {
+    setAuthModalTab("signin")
+    setAuthModalOpen(true)
+  }
+
+  const handleChangeLocation = () => {
+    clearLocation()
+    // This will trigger the LocationProvider to show the location setup
+  }
+
+  const handleMapStateClick = (stateName: string) => {
+    // Set the selected state for the Officials legend
+    setSelectedState(stateName)
+    
+    // Don't update location if user already has a specific address set
+    // Only update for very generic state-level locations or when no location exists
+    if (!location || 
+        (location.address === `${location.state}, USA` && location.zipCode === "")) {
+      // Create a basic location object for state-level selection
+      const stateLocation = {
+        address: `${stateName}, USA`,
+        city: stateName,
+        state: stateName,
+        zipCode: "",
+        latitude: 39.8283, // Default center
+        longitude: -98.5795,
+      }
+      setLocation(stateLocation)
+    }
+  }
+
+  const handleMapCountyClick = (countyName: string, stateName: string) => {
+    // Set the selected state for consistency
+    setSelectedState(stateName)
+    
+    // Create a county-level location object
+    const countyLocation = {
+      address: `${countyName}, ${stateName}, USA`,
+      city: countyName,
+      state: stateName,
+      zipCode: "",
+      latitude: 39.8283, // Default center - in real app would geocode
+      longitude: -98.5795,
+      county: countyName,
+    }
+    setLocation(countyLocation)
+  }
+
+  const handleMapReset = () => {
+    setSelectedState(null)
+    // Don't clear location on map reset unless it's a generic state selection
+    if (location && location.address === `${location.state}, USA` && location.zipCode === "") {
+      clearLocation()
+    }
+  }
+
+  // If user has entered a specific address, show the address results page
+  if (hasSpecificAddress) {
+    return (
+      <AddressResults 
+        onChangeLocation={handleChangeLocation}
+        onContinue={handleGetStarted}
+      />
+    )
+  }
+
+  // Otherwise, show the map-based selection interface
+  return (
+    <>
+      {/* Location Display Section - Show when location is set but it's state/county level */}
+      {location && !hasSpecificAddress && (
+        <section className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border-b border-green-200 dark:border-green-800">
+          <div className="container-responsive padding-responsive-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Selected Location</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      {location.county ? (
+                        <span className="font-medium">{location.county}, {location.state}</span>
+                      ) : (
+                        <span className="font-medium">{location.state}</span>
+                      )}
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      {location.county ? 'County selected from map' : 'State selected from map'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <Button
+                  onClick={handleChangeLocation}
+                  variant="outline"
+                  size="sm"
+                  className="bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800 border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white btn-mobile"
+                >
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Go Back & Change Location
+                </Button>
+                <Button onClick={handleGetStarted} size="sm" className="bg-green-600 hover:bg-green-700 text-white btn-mobile">
+                  <ArrowRight className="h-4 w-4 mr-2" />
+                  Continue to Dashboard
+                </Button>
+              </div>
+            </div>
+
+            {/* Location Details Card */}
+            <div className="mt-6">
+              <Card className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-white/40 dark:border-gray-700/40 shadow-lg">
+                <CardContent className="p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Your Civic Information</h4>
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-sm text-gray-600 dark:text-gray-400">Location Type:</span>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">
+                            {location.county ? 'County Level' : 'State Level'}
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-gray-600 dark:text-gray-400">State:</span>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">{location.state}</span>
+                        </div>
+                        {location.county && (
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600 dark:text-gray-400">County:</span>
+                            <span className="text-sm font-medium text-gray-900 dark:text-white">{location.county}</span>
+                          </div>
+                        )}
+                        <div className="flex justify-between">
+                          <span className="text-sm text-gray-600 dark:text-gray-400">Full Address:</span>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">{location.address}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">What's Available</h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                          <span className="text-sm text-gray-700 dark:text-gray-300">Federal Representatives</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                          <span className="text-sm text-gray-700 dark:text-gray-300">State Officials</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                          <span className="text-sm text-gray-700 dark:text-gray-300">General Voting Info</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                          <span className="text-sm text-gray-700 dark:text-gray-300">State Legislation</span>
+                        </div>
+                        {!location.county && (
+                          <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                            <p className="text-xs text-blue-700 dark:text-blue-300">
+                              💡 <strong>Tip:</strong> Enter your full address for more precise local information including city council, school board, and exact polling locations.
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-patriot-blue-600 via-patriot-blue-700 to-patriot-blue-800 dark:from-patriot-blue-800 dark:via-patriot-blue-900 dark:to-black text-white overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+          <div className="absolute bottom-32 right-32 w-24 h-24 bg-white rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full animate-pulse delay-2000"></div>
+        </div>
+
+        <div className="relative container-responsive padding-responsive">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
+            {/* Left Content */}
+            <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
+              <div className="space-y-4">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                  Your Voice in
+                  <span className="block text-patriot-red-400 dark:text-patriot-red-300">Democracy</span>
+                </h1>
+                <p className="text-lg sm:text-xl lg:text-2xl text-patriot-blue-100 dark:text-patriot-blue-200 max-w-2xl mx-auto lg:mx-0">
+                  Stay informed about your representatives, local legislation, and civic opportunities in your community.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  onClick={handleGetStarted}
+                  size="lg"
+                  className="bg-patriot-red-600 hover:bg-patriot-red-700 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 btn-mobile-lg"
+                >
+                  {location ? (
+                    <>
+                      <ArrowRight className="h-5 w-5 mr-2" />
+                      Go to Dashboard
+                    </>
+                  ) : (
+                    <>
+                      <MapPin className="h-5 w-5 mr-2" />
+                      Get Started
+                    </>
+                  )}
+                </Button>
+                
+                {!user && (
+                  <Button
+                    onClick={handleSignIn}
+                    variant="outline"
+                    size="lg"
+                    className="border-white text-white hover:bg-white hover:text-patriot-blue-700 font-semibold px-8 py-4 text-lg rounded-xl btn-mobile-lg"
+                  >
+                    Sign In
+                  </Button>
+                )}
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-3 gap-4 pt-6 lg:pt-8">
+                <div className="text-center">
+                  <div className="text-2xl lg:text-3xl font-bold text-patriot-red-400 dark:text-patriot-red-300">50</div>
+                  <div className="text-sm text-patriot-blue-200 dark:text-patriot-blue-300">States Covered</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl lg:text-3xl font-bold text-patriot-red-400 dark:text-patriot-red-300">3K+</div>
+                  <div className="text-sm text-patriot-blue-200 dark:text-patriot-blue-300">Counties</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl lg:text-3xl font-bold text-patriot-red-400 dark:text-patriot-red-300">Live</div>
+                  <div className="text-sm text-patriot-blue-200 dark:text-patriot-blue-300">Data Updates</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content - Interactive Map */}
+            <div className="relative flex items-center justify-center mb-6 lg:mb-0">
+              {/* Map container with proper dark mode styling */}
+              <div className="relative bg-white dark:bg-white/10 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-white/20 backdrop-blur-md w-full max-w-lg lg:max-w-none">
+                <div className="p-3 sm:p-4 lg:p-6">
+                  <div className="mb-3 lg:mb-4 flex items-center justify-between">
+                    <h3 className="text-base lg:text-lg font-semibold text-gray-900 dark:text-white">Interactive US Map</h3>
+                    {location && (
+                      <Button onClick={handleChangeLocation} variant="outline" size="sm" className="text-xs btn-mobile">
+                        <ArrowLeft className="h-3 w-3 mr-1" />
+                        Change
+                      </Button>
+                    )}
+                  </div>
+
+                  <div className="w-full h-[30vh] sm:h-[35vh] lg:h-[40vh] max-h-[400px]">
+                    <MapComponent
+                      onStateClick={handleMapStateClick}
+                      onCountyClick={handleMapCountyClick}
+                      selectedState={selectedState}
+                      zoomToLocation={null}
+                      selectedLocationPin={null}
+                      onReset={handleMapReset}
+                      fullHeight={true}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
+        <div className="container-responsive padding-responsive">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Everything You Need to Stay Engaged
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              From tracking your representatives to understanding local legislation, we provide the tools you need to be an informed citizen.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-patriot-blue-100 dark:bg-patriot-blue-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                <Users className="h-8 w-8 text-patriot-blue-600 dark:text-patriot-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Your Representatives</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Find and contact your federal, state, and local representatives with up-to-date information and contact details.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-patriot-red-100 dark:bg-patriot-red-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                <Vote className="h-8 w-8 text-patriot-red-600 dark:text-patriot-red-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Voting Information</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Get details about upcoming elections, polling locations, ballot measures, and voter registration deadlines.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                <Scale className="h-8 w-8 text-green-600 dark:text-green-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Legislation Tracking</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Stay informed about bills and legislation that affect your community, from local ordinances to federal laws.
+              </p>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                <Newspaper className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Local News</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Access curated local news and updates about civic events, town halls, and community meetings.
+              </p>
+            </div>
+
+            {/* Feature 5 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                <Megaphone className="h-8 w-8 text-orange-600 dark:text-orange-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Civic Engagement</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Discover opportunities to get involved in your community through volunteer work and civic organizations.
+              </p>
+            </div>
+
+            {/* Feature 6 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                <Shield className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Privacy First</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Your data is protected with industry-standard security. We never sell your information to third parties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-patriot-blue-600 to-patriot-blue-800 dark:from-patriot-blue-800 dark:to-black text-white">
+        <div className="container-responsive padding-responsive text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            Ready to Make Your Voice Heard?
+          </h2>
+          <p className="text-xl text-patriot-blue-100 dark:text-patriot-blue-200 mb-8 max-w-2xl mx-auto">
+            Join thousands of engaged citizens who stay informed and involved in their democracy.
+          </p>
+          <Button
+            onClick={handleGetStarted}
+            size="lg"
+            className="bg-patriot-red-600 hover:bg-patriot-red-700 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 btn-mobile-lg"
+          >
+            {location ? (
+              <>
+                <ArrowRight className="h-5 w-5 mr-2" />
+                Go to Your Dashboard
+              </>
+            ) : (
+              <>
+                <MapPin className="h-5 w-5 mr-2" />
+                Get Started Now
+              </>
+            )}
+          </Button>
+        </div>
+      </section>
+
+      <AuthModal
+        open={authModalOpen}
+        onOpenChange={setAuthModalOpen}
+        defaultTab={authModalTab}
+      />
+    </>
+  )
+}

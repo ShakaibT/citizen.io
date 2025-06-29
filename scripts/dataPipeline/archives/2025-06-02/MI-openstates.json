@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/788d408d-cb80-43fd-802a-4778a930894d",
+    "name": "Alabas Farhat",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:mi/sldl:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Alabas",
+    "family_name": "Farhat",
+    "image": "",
+    "email": "alabasfarhat@house.mi.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:40:26.551939+00:00",
+    "updated_at": "2025-02-04T02:23:44.123414+00:00",
+    "openstates_url": "https://openstates.org/person/alabas-farhat-3fTdA5gqsGcBgLcMwB4emz/"
+  },
+  {
+    "id": "ocd-person/81da0894-0569-4c8d-9c4e-befd39650fee",
+    "name": "Alicia St. Germaine",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "62",
+      "division_id": "ocd-division/country:us/state:mi/sldl:62"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Alicia",
+    "family_name": "St. Germaine",
+    "image": "https://www.house.mi.gov/media/Representatives/St. Germaine-062.jpg",
+    "email": "aliciastgermaine@house.mi.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:40:25.927926+00:00",
+    "updated_at": "2025-02-04T02:24:00.525553+00:00",
+    "openstates_url": "https://openstates.org/person/alicia-st-germaine-3x1ePPo069Y0BwgeQ65Qpq/"
+  },
+  {
+    "id": "ocd-person/5f160dff-1ce1-4606-a469-fdd08125beb4",
+    "name": "Amos O'Neal",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "94",
+      "division_id": "ocd-division/country:us/state:mi/sldl:94"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Amos",
+    "family_name": "O'Neal",
+    "image": "",
+    "email": "amosoneal@house.mi.gov",
+    "gender": "Male",
+    "birth_date": "1961-07-17",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-14T00:10:24.026795+00:00",
+    "updated_at": "2025-03-29T01:06:01.408356+00:00",
+    "openstates_url": "https://openstates.org/person/amos-o-neal-2tQLhhMkNH5Gq7lcKgOOOa/"
+  },
+  {
+    "id": "ocd-person/527d59db-a346-4a91-8f98-e1b57947b58c",
+    "name": "Angela Rigas",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "79",
+      "division_id": "ocd-division/country:us/state:mi/sldl:79"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Rigas",
+    "image": "https://www.house.mi.gov/media/Representatives/Rigas-079.jpg",
+    "email": "angelarigas@house.mi.gov",
+    "gender": "Female",
+    "birth_date": "1974-10-10",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:40:22.028719+00:00",
+    "updated_at": "2025-02-04T02:24:18.098929+00:00",
+    "openstates_url": "https://openstates.org/person/angela-rigas-2Veeh8ZNHqzz9vNLKei7rw/"
+  },
+  {
+    "id": "ocd-person/0db39d07-a543-4e52-82b0-457f406855e8",
+    "name": "Angela Witwer",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "76",
+      "division_id": "ocd-division/country:us/state:mi/sldl:76"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Witwer",
+    "image": "https://housedems.com/sites/default/files/Images/Representative_Images/D071_Angela_Witwer/071_Witwer.jpg",
+    "email": "angelawitwer@house.mi.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-12T12:23:56.139131+00:00",
+    "updated_at": "2025-02-08T09:32:55.451410+00:00",
+    "openstates_url": "https://openstates.org/person/angela-witwer-Pqyzjp23DQzBGmruGkn1M/"
+  },
+  {
+    "id": "ocd-person/3a9d71dc-da5b-4bd3-8062-c8387292dc52",
+    "name": "Ann Bollin",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "49",
+      "division_id": "ocd-division/country:us/state:mi/sldl:49"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Bollin",
+    "image": "https://dtj5wlj7ond0z.cloudfront.net/uploads/2020/07/HS_AnnBollin_0119-scaled.jpg",
+    "email": "annbollin@house.mi.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-12T12:23:59.238727+00:00",
+    "updated_at": "2025-02-08T09:32:56.610804+00:00",
+    "openstates_url": "https://openstates.org/person/ann-bollin-1mbVSYYAy33dRT25DkT8uA/"
+  },
+  {
+    "id": "ocd-person/6d11944d-f19f-4697-811c-0c9dca750c57",
+    "name": "Aric Nesbitt",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "20",
+      "division_id": "ocd-division/country:us/state:mi/sldu:20"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Aric",
+    "family_name": "Nesbitt",
+    "image": "https://www.misenategop.com/wp-content/uploads/2019/01/Nesbitt-580x770.jpg",
+    "email": "senanesbitt@senate.michigan.gov",
+    "gender": "Male",
+    "birth_date": "1980-01-25",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-12T12:23:02.010373+00:00",
+    "updated_at": "2025-03-29T01:06:07.842454+00:00",
+    "openstates_url": "https://openstates.org/person/aric-nesbitt-3JoCEqU538JLkawagWtE8d/"
+  },
+  {
+    "id": "ocd-person/80ccf9a5-7303-4218-be3e-0ab6f8e90eee",
+    "name": "Betsy Coffia",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "103",
+      "division_id": "ocd-division/country:us/state:mi/sldl:103"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Betsy",
+    "family_name": "Coffia",
+    "image": "",
+    "email": "betsycoffia@house.mi.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:40:19.276633+00:00",
+    "updated_at": "2025-02-04T02:21:50.390799+00:00",
+    "openstates_url": "https://openstates.org/person/betsy-coffia-3v2gtB38whmUSLKfX2A67q/"
+  },
+  {
+    "id": "ocd-person/5355f558-55bb-4f29-81eb-89179f55d69a",
+    "name": "Bill Schuette",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "95",
+      "division_id": "ocd-division/country:us/state:mi/sldl:95"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Schuette",
+    "image": "https://www.house.mi.gov/media/Representatives/Schuette-095.jpg",
+    "email": "billschuette@house.mi.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:40:21.528770+00:00",
+    "updated_at": "2025-02-04T02:21:55.742831+00:00",
+    "openstates_url": "https://openstates.org/person/bill-schuette-2XFe46S7Ug2BYCouTXaVS6/"
+  },
+  {
+    "id": "ocd-person/04a88313-6387-44ab-972c-b000b3c316f4",
+    "name": "Brad Paquette",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "37",
+      "division_id": "ocd-division/country:us/state:mi/sldl:37"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mi/government",
+      "name": "Michigan",
+      "classification": "state"
+    },
+    "given_name": "Brad",
+    "family_name": "Paquette",
+    "image": "https://dtj5wlj7ond0z.cloudfront.net/uploads/2020/07/HS_PAQUETTE_0119.jpg",
+    "email": "bradpaquette@house.mi.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-12T12:23:20.795545+00:00",
+    "updated_at": "2025-03-05T07:29:29.185149+00:00",
+    "openstates_url": "https://openstates.org/person/brad-paquette-8myjFZsK9zeEfo1ie3ZTw/"
+  }
+]

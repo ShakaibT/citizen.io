@@ -1,0 +1,500 @@
+[
+  {
+    "id": "ocd-person/9995703e-90eb-4d20-a2f6-bfd9542102bd",
+    "name": "Abby Angelos",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:wy/sldl:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Abby",
+    "family_name": "Angelos",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/67th-AngelosAbby.jpg",
+    "email": "abby.angelos@wyoleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "county": "Campbell County",
+      "religion": "Christian",
+      "education": [
+        {
+          "degree": "",
+          "gradYear": "1998",
+          "schoolName": "Wright Jr Sr High School "
+        }
+      ],
+      "occupation": "Women’s Ministry Director ",
+      "birth place": "Buffalo, WY",
+      "house years": "House:  2023-Present",
+      "prior service": [
+        {
+          "chamber": "House",
+          "endYear": "Present",
+          "district": " District 03, ",
+          "startYear": 2023
+        }
+      ],
+      "number of children": "3"
+    },
+    "created_at": "2023-02-15T00:34:12.040916+00:00",
+    "updated_at": "2025-03-29T02:56:06.453579+00:00",
+    "openstates_url": "https://openstates.org/person/abby-angelos-4fo7PiVcGLMWcnsSizX2lB/"
+  },
+  {
+    "id": "ocd-person/3198aa67-829e-4827-8b26-8955cbf36f4a",
+    "name": "Andrew Byron",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:wy/sldl:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Byron",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/67th-ByronAndrew.jpg",
+    "email": "andrew.byron@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "county": "Lincoln, Teton Counties",
+      "religion": "Christian",
+      "education": [
+        {
+          "degree": "BS Political Science ",
+          "gradYear": "2008",
+          "schoolName": "University of Wyoming"
+        }
+      ],
+      "birth place": "Jackson",
+      "house years": "House:  2023-Present",
+      "organizations": [
+        {
+          "orgname": "Snake River Fund "
+        },
+        {
+          "orgname": "Jackson Hole Fire/EMS"
+        }
+      ],
+      "prior service": [
+        {
+          "chamber": "House",
+          "endYear": "Present",
+          "district": " District 22, ",
+          "startYear": 2023
+        }
+      ],
+      "number of children": "1"
+    },
+    "created_at": "2023-02-15T00:33:28.129863+00:00",
+    "updated_at": "2025-03-29T02:56:08.425182+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-byron-1VaOKRePqBoEb7ZLe32cBe/"
+  },
+  {
+    "id": "ocd-person/4665c34f-70f5-4bc0-af49-0239e0e907a1",
+    "name": "Ann Lucas",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "43",
+      "division_id": "ocd-division/country:us/state:wy/sldl:43"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Lucas",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/68th-LucasAnn.jpg",
+    "email": "ann.lucas@wyoleg.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-12T08:24:47.690131+00:00",
+    "updated_at": "2025-03-29T02:55:15.238721+00:00",
+    "openstates_url": "https://openstates.org/person/ann-lucas-28py3bCicxdx493QQaHKWP/"
+  },
+  {
+    "id": "ocd-person/394ba273-63d7-409d-90cd-5d183e750ea4",
+    "name": "Art Washut",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "36",
+      "division_id": "ocd-division/country:us/state:wy/sldl:36"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Art",
+    "family_name": "Washut",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/66th-WashutArt.jpg",
+    "email": "art.washut@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "county": "Natrona County",
+      "religion": "Roman Catholic",
+      "education": [
+        {
+          "degree": "Masters Public Administration",
+          "gradYear": "1994",
+          "schoolName": "University of Wyoming"
+        },
+        {
+          "degree": "BA in Criminal Justice",
+          "gradYear": "1979",
+          "schoolName": "Chadron State College"
+        }
+      ],
+      "birth place": "Wyoming",
+      "house years": "House:  2019-Present",
+      "prior service": [
+        {
+          "chamber": "House",
+          "endYear": "Present",
+          "district": " District 36, ",
+          "startYear": 2019
+        }
+      ]
+    },
+    "created_at": "2019-01-07T05:14:22.367762+00:00",
+    "updated_at": "2025-03-29T02:55:13.590070+00:00",
+    "openstates_url": "https://openstates.org/person/art-washut-1k77v0mOzTV5AWvw4twsB2/"
+  },
+  {
+    "id": "ocd-person/c6578593-1ca0-4b7d-8635-67249df87c36",
+    "name": "Barry Crago",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:wy/sldu:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Barry",
+    "family_name": "Crago",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/68th-CragoBarry.jpg",
+    "email": "barry.crago@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "county": "Johnson, Sheridan Counties",
+      "occupation": "Rancher/Attorney",
+      "house years": "House:  2021-Present",
+      "prior service": [
+        {
+          "chamber": "House",
+          "endYear": "Present",
+          "district": " District 40, ",
+          "startYear": 2021
+        }
+      ]
+    },
+    "created_at": "2021-01-12T00:23:03.173654+00:00",
+    "updated_at": "2025-03-29T02:55:31.313173+00:00",
+    "openstates_url": "https://openstates.org/person/barry-crago-62GTebtjReZKK3jZegPkpC/"
+  },
+  {
+    "id": "ocd-person/2f0d84dc-df29-4c3d-83ea-aa56beca9839",
+    "name": "Bill Allemand",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "58",
+      "division_id": "ocd-division/country:us/state:wy/sldl:58"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Allemand",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/67th-AllemandBill.jpg",
+    "email": "bill.allemand@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "county": "Natrona County",
+      "religion": "Christian",
+      "birth place": "Casper, Wy",
+      "house years": "House:  2023-Present",
+      "prior service": [
+        {
+          "chamber": "House",
+          "endYear": "Present",
+          "district": " District 58, ",
+          "startYear": 2023
+        }
+      ],
+      "number of children": "4",
+      "number of grandchildren": "6"
+    },
+    "created_at": "2023-02-15T00:33:31.947336+00:00",
+    "updated_at": "2025-04-24T09:07:31.482708+00:00",
+    "openstates_url": "https://openstates.org/person/bill-allemand-1Qmogiylf90EBHKdAZYsJd/"
+  },
+  {
+    "id": "ocd-person/e0c25487-a7fb-406b-b637-c3a4de3c6770",
+    "name": "Bill Landen",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:wy/sldu:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Landen",
+    "image": "http://legisweb.state.wy.us/LegislatorSummary/photos/LandenBS27.jpg",
+    "email": "bill.landen@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "1956-02-21",
+    "death_date": "",
+    "extras": {
+      "county": "Natrona County",
+      "education": [
+        {
+          "degree": "A.A.",
+          "gradYear": "",
+          "schoolName": "Casper College"
+        },
+        {
+          "degree": "B.S. & M.P.A.",
+          "gradYear": "",
+          "schoolName": "University of Wyoming"
+        },
+        {
+          "degree": "Graduate Study",
+          "gradYear": "",
+          "schoolName": "Colorado State"
+        }
+      ],
+      "birth place": "Riverton, WY",
+      "spouse name": "Robyn",
+      "senate years": "Senate: 2007-Present",
+      "prior service": [
+        {
+          "chamber": "Senate",
+          "endYear": "Present",
+          "district": " District 27, ",
+          "startYear": 2007
+        }
+      ],
+      "number of children": "3",
+      "number of grandchildren": "1"
+    },
+    "created_at": "2018-10-18T16:14:44.591321+00:00",
+    "updated_at": "2025-03-29T02:55:42.370826+00:00",
+    "openstates_url": "https://openstates.org/person/bill-landen-6q75bT1K6g0J8wsA7wRGiW/"
+  },
+  {
+    "id": "ocd-person/016465da-4d49-4ffc-8bb0-cf9528bc6d0e",
+    "name": "Bo Biteman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:wy/sldu:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Bo",
+    "family_name": "Biteman",
+    "image": "http://legisweb.state.wy.us/LegislatorSummary/photos/BitemanDH51.jpg",
+    "email": "bo.biteman@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "1978-10-23",
+    "death_date": "",
+    "extras": {
+      "county": "Sheridan County",
+      "religion": "Christian",
+      "education": [
+        {
+          "degree": "Bachelor of Business Administration",
+          "gradYear": "2002",
+          "schoolName": "Grand Valley State University"
+        }
+      ],
+      "occupation": "Certified Professional Landman",
+      "birth place": "Midland, Michigan",
+      "house years": "House:  2017-Present",
+      "spouse name": "Mercedes",
+      "organizations": [
+        {
+          "orgname": "Tongue River Fire Department-Volunteer Firefighter"
+        },
+        {
+          "orgname": "American Association of Professional Landmen"
+        },
+        {
+          "orgname": "Wyoming Association of Professional Landmen"
+        }
+      ],
+      "prior service": [
+        {
+          "chamber": "House",
+          "endYear": "2018",
+          "district": " District 51, ",
+          "startYear": 2017
+        },
+        {
+          "chamber": "Senate",
+          "endYear": "Present",
+          "district": " District 21, ",
+          "startYear": 2019
+        }
+      ],
+      "number of children": "2"
+    },
+    "created_at": "2018-10-18T16:14:44.752585+00:00",
+    "updated_at": "2025-03-29T02:55:39.009757+00:00",
+    "openstates_url": "https://openstates.org/person/bo-biteman-2csCizf0utkxnZC1NoY18/"
+  },
+  {
+    "id": "ocd-person/8ddb8078-482c-4df5-983d-ece9e5825cc2",
+    "name": "Bob Davis",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "47",
+      "division_id": "ocd-division/country:us/state:wy/sldl:47"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Davis",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/67th-DavisBob.jpg",
+    "email": "bob.davis@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "county": "Carbon, Sweetwater Counties",
+      "religion": "Christian",
+      "birth place": "Omaha, Nebraska",
+      "house years": "House:  2023-Present",
+      "prior service": [
+        {
+          "chamber": "House",
+          "endYear": "Present",
+          "district": " District 47, ",
+          "startYear": 2023
+        }
+      ],
+      "number of children": "3",
+      "number of grandchildren": "8"
+    },
+    "created_at": "2023-02-15T00:33:36.753625+00:00",
+    "updated_at": "2025-03-29T02:56:03.347252+00:00",
+    "openstates_url": "https://openstates.org/person/bob-davis-4JgEIu2zBhSMwSqh2aQXLu/"
+  },
+  {
+    "id": "ocd-person/6d1c2665-46ea-444d-b88b-b22e2623e660",
+    "name": "Bob Ide",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "29",
+      "division_id": "ocd-division/country:us/state:wy/sldu:29"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wy/government",
+      "name": "Wyoming",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Ide",
+    "image": "https://wyoleg.gov/LegislatorSummary/Photos/67th-IdeBob.jpg",
+    "email": "bob.ide@wyoleg.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "county": "Natrona County",
+      "religion": "Catholic",
+      "education": [
+        {
+          "degree": "Ag-Business",
+          "gradYear": "1981",
+          "schoolName": "University of Wyoming"
+        }
+      ],
+      "occupation": "Commercial Real Estate Developer/Landman",
+      "birth place": "Boulder, CO",
+      "spouse name": "Cathy",
+      "senate years": "Senate: 2022-Present",
+      "organizations": [
+        {
+          "orgname": "Wyoming Campaign For Liberty"
+        },
+        {
+          "orgname": "National Association for Gun Rights"
+        },
+        {
+          "orgname": "Independent Cattlemen of WY"
+        },
+        {
+          "orgname": "United Precious Metals Association"
+        }
+      ],
+      "prior service": [
+        {
+          "chamber": "Senate",
+          "endYear": "Present",
+          "district": " District 29, ",
+          "startYear": 2022
+        }
+      ],
+      "number of children": "6",
+      "number of grandchildren": "6"
+    },
+    "created_at": "2023-02-15T00:33:22.320850+00:00",
+    "updated_at": "2025-03-29T02:55:20.501138+00:00",
+    "openstates_url": "https://openstates.org/person/bob-ide-3Jt1kTXLwNjl5AVxUSToY4/"
+  }
+]

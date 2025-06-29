@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/dd3e49ca-2b2b-4a83-ae63-0ade6ccef73f",
+    "name": "A.J. Louderback",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "30",
+      "division_id": "ocd-division/country:us/state:tx/sldl:30"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "A.J.",
+    "family_name": "Louderback",
+    "image": "https://pulitzercenter.org/sites/default/files/pictures/picture-242043-1566939284.jpg",
+    "email": "aj.louderback@house.texas.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:04:07.293160+00:00",
+    "updated_at": "2025-04-25T02:30:30.444489+00:00",
+    "openstates_url": "https://openstates.org/person/a-j-louderback-6jTlk9C3OrFoAnMZmfaq11/"
+  },
+  {
+    "id": "ocd-person/7f748f58-e6f2-4c86-ad01-52c7ca3435ca",
+    "name": "Adam Hinojosa",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:tx/sldu:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Hinojosa",
+    "image": "https://mr.cdn.ignitecdn.com/client_assets/texasinsider/media/picture/671f/bb04/9228/b138/0738/814c/original_State.Senator.Adam.Hinojosa.jpg?1730132741",
+    "email": "adam.hinojosa@senate.texas.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:03:43.845810+00:00",
+    "updated_at": "2025-04-25T02:29:11.934472+00:00",
+    "openstates_url": "https://openstates.org/person/adam-hinojosa-3sVICUmEfaHxfLchb3sY2c/"
+  },
+  {
+    "id": "ocd-person/c55d85ff-7172-42d4-9c8f-da2f258dc19b",
+    "name": "Aicha Davis",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "109",
+      "division_id": "ocd-division/country:us/state:tx/sldl:109"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Aicha",
+    "family_name": "Davis",
+    "image": "https://sboe.texas.gov/sites/default/files/Aicha%20Davis%202019%20web.jpg",
+    "email": "aicha.davis@house.texas.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:03:36.403811+00:00",
+    "updated_at": "2025-04-25T02:29:07.867823+00:00",
+    "openstates_url": "https://openstates.org/person/aicha-davis-60QEBHpjCKDV23R3E9r7P9/"
+  },
+  {
+    "id": "ocd-person/1493b76f-b77d-48db-9ecd-26d0e2dfc843",
+    "name": "Alan Schoolcraft",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "44",
+      "division_id": "ocd-division/country:us/state:tx/sldl:44"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Schoolcraft",
+    "image": "https://bloximages.chicago2.vip.townnews.com/seguingazette.com/content/tncms/assets/v3/editorial/f/60/f6094ac6-9947-11ee-b917-73c94b3061ae/6578efa4705cc.image.jpg?resize=400%2C286",
+    "email": "alan.schoolcraft@house.texas.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:04:03.175825+00:00",
+    "updated_at": "2025-04-25T02:29:40.433112+00:00",
+    "openstates_url": "https://openstates.org/person/alan-schoolcraft-cpLtfJP7nUa4WkrHiV4st/"
+  },
+  {
+    "id": "ocd-person/2fd6fcd3-9676-42a4-b879-e317576ff18f",
+    "name": "Alma Allen",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "131",
+      "division_id": "ocd-division/country:us/state:tx/sldl:131"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Alma",
+    "family_name": "Allen",
+    "image": "https://house.texas.gov/members/photos/2100.jpg?v=88.25",
+    "email": "alma.allen@house.texas.gov",
+    "gender": "Female",
+    "birth_date": "1939-04-07",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:12:33.253989+00:00",
+    "updated_at": "2025-04-25T02:30:20.874608+00:00",
+    "openstates_url": "https://openstates.org/person/alma-allen-1SGt7EImvuo2VarMAH4s8N/"
+  },
+  {
+    "id": "ocd-person/4f98520b-d88b-4053-acc5-3cb2fff14660",
+    "name": "Ana Hernandez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "143",
+      "division_id": "ocd-division/country:us/state:tx/sldl:143"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Ana",
+    "family_name": "Hernandez",
+    "image": "https://house.texas.gov/members/photos/3155.jpg?v=88.25",
+    "email": "ana.hernandez@house.texas.gov",
+    "gender": "Female",
+    "birth_date": "1978-08-25",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:12:33.335210+00:00",
+    "updated_at": "2025-04-25T02:29:45.554374+00:00",
+    "openstates_url": "https://openstates.org/person/ana-hernandez-2QC0HGY8qnb32BwNf5nzOq/"
+  },
+  {
+    "id": "ocd-person/7f893a20-0547-4ad9-9a94-1084a9ef6469",
+    "name": "Ana-Maria Rodriguez Ramos",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "102",
+      "division_id": "ocd-division/country:us/state:tx/sldl:102"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Ana-Maria",
+    "family_name": "Rodriguez Ramos",
+    "image": "https://house.texas.gov/members/photos/3735.jpg?v=88.25",
+    "email": "ana-maria.ramos@house.texas.gov",
+    "gender": "Female",
+    "birth_date": "1976-06-16",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-18T04:27:12.375718+00:00",
+    "updated_at": "2025-04-25T02:29:26.520609+00:00",
+    "openstates_url": "https://openstates.org/person/ana-maria-rodriguez-ramos-3sejmes1z3P1VAB8z1d7yD/"
+  },
+  {
+    "id": "ocd-person/ee8cc382-84b7-47e3-824f-e05cf6455161",
+    "name": "Andy Hopper",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "64",
+      "division_id": "ocd-division/country:us/state:tx/sldl:64"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Hopper",
+    "image": "https://bloximages.newyork1.vip.townnews.com/dentonrc.com/content/tncms/assets/v3/editorial/a/2d/a2dba312-f83f-5aa9-be3a-2a9cf64abbcd/665699bcc3013.image.jpg?resize=1200%2C1200",
+    "email": "andy.hopper@house.texas.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:04:09.934748+00:00",
+    "updated_at": "2025-04-25T02:30:05.851525+00:00",
+    "openstates_url": "https://openstates.org/person/andy-hopper-7G8VBbKPkEXw7pz8Udi7xh/"
+  },
+  {
+    "id": "ocd-person/895887ba-73cd-4321-827d-bb06d4eedfdf",
+    "name": "Angela Paxton",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:tx/sldu:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Paxton",
+    "image": "https://senate.texas.gov/members/d08/img/Paxton_2019.jpg",
+    "email": "angela.paxton@senate.texas.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-18T04:24:44.255478+00:00",
+    "updated_at": "2025-04-25T02:30:53.557967+00:00",
+    "openstates_url": "https://openstates.org/person/angela-paxton-4BAPFIiU4f6dKRVIwyyoQh/"
+  },
+  {
+    "id": "ocd-person/aa0d12c3-c318-4c97-a0d4-c63795ec50d9",
+    "name": "Angelia Orr",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:tx/sldl:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tx/government",
+      "name": "Texas",
+      "classification": "state"
+    },
+    "given_name": "Angelia",
+    "family_name": "Orr",
+    "image": "https://house.texas.gov/members/photos/4340.jpg?v=88.25",
+    "email": "angelia.orr@house.texas.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-14T05:34:03.170262+00:00",
+    "updated_at": "2025-04-25T02:30:34.476157+00:00",
+    "openstates_url": "https://openstates.org/person/angelia-orr-5AsfXs9Q4E331wgtGlwLm5/"
+  }
+]

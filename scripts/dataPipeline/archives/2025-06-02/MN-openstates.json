@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/09493dc0-a224-4cf6-a859-1384ffeda8a0",
+    "name": "Aisha Gomez",
+    "party": "Democratic-Farmer-Labor",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "62A",
+      "division_id": "ocd-division/country:us/state:mn/sldl:62a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Aisha",
+    "family_name": "Gomez",
+    "image": "https://www.house.mn.gov/hinfo/memberimgls93/62A.gif?v=032323",
+    "email": "rep.aisha.gomez@house.mn.gov",
+    "gender": "Female",
+    "birth_date": "1981-07-22",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-10T01:47:42.513395+00:00",
+    "updated_at": "2025-03-05T07:34:36.117399+00:00",
+    "openstates_url": "https://openstates.org/person/aisha-gomez-HWOwLDPm2QTeyZT2LRbP6/"
+  },
+  {
+    "id": "ocd-person/1a50d8e6-64c4-4c8f-87ee-dedde17c1c2c",
+    "name": "Alex Falconer",
+    "party": "Democratic-Farmer-Labor",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "49A",
+      "division_id": "ocd-division/country:us/state:mn/sldl:49a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Falconer",
+    "image": "https://americanpromise.net/wp-content/uploads/2024/07/IMG_3275-2-667x1024.jpg",
+    "email": "rep.alex.falconer@house.mn.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-11T20:34:32.500627+00:00",
+    "updated_at": "2025-03-05T07:34:03.870656+00:00",
+    "openstates_url": "https://openstates.org/person/alex-falconer-nekMYvrItsHdIAzjidaYu/"
+  },
+  {
+    "id": "ocd-person/c5f2a744-0a3e-481f-9224-e4d5a58b9c9d",
+    "name": "Alice Mann",
+    "party": "Democratic-Farmer-Labor",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "50",
+      "division_id": "ocd-division/country:us/state:mn/sldu:50"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Alice",
+    "family_name": "Mann",
+    "image": "https://www.senate.mn/img/member_thumbnails/50Mann.jpg",
+    "email": "sen.alice.mann@senate.mn",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T17:57:41.952555+00:00",
+    "updated_at": "2025-03-13T07:07:04.523136+00:00",
+    "openstates_url": "https://openstates.org/person/alice-mann-61WNdng2uw8OUZsM7azcw1/"
+  },
+  {
+    "id": "ocd-person/8300aa36-f818-4ae8-ad31-f9373e396e08",
+    "name": "Amanda Hemmingsen-Jaeger",
+    "party": "Democratic-Farmer-Labor",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "47A",
+      "division_id": "ocd-division/country:us/state:mn/sldl:47a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Amanda",
+    "family_name": "Hemmingsen-Jaeger",
+    "image": "https://www.house.mn.gov/hinfo/memberimgls93/47A.gif?v=032323",
+    "email": "rep.amanda.hemmingsen-jaeger@house.mn.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T17:57:29.193629+00:00",
+    "updated_at": "2024-10-09T22:47:45.673673+00:00",
+    "openstates_url": "https://openstates.org/person/amanda-hemmingsen-jaeger-3zCIWBc9z5ipkev0DlXnEO/"
+  },
+  {
+    "id": "ocd-person/3e1cd4f3-2c37-4531-b2cb-ca875c82d773",
+    "name": "Andrew Lang",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:mn/sldu:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Lang",
+    "image": "https://www.senate.mn/img/member_thumbnails/17Lang.jpg",
+    "email": "sen.andrew.lang@senate.mn",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:49:19.825956+00:00",
+    "updated_at": "2025-03-13T07:06:57.787135+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-lang-1tChQYx4kxqTaOsqb1paOx/"
+  },
+  {
+    "id": "ocd-person/aabdca28-85ec-41e4-be90-726acaaa0cff",
+    "name": "Andrew Mathews",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:mn/sldu:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Mathews",
+    "image": "https://www.senate.mn/img/member_thumbnails/15Mathews.jpg",
+    "email": "sen.andrew.mathews@senate.mn",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:49:27.227635+00:00",
+    "updated_at": "2025-03-13T07:07:14.875700+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-mathews-5CBQdowl9YfU4wkyyAURl1/"
+  },
+  {
+    "id": "ocd-person/bba68b5b-90ac-4465-bdd2-fdf23c33b87a",
+    "name": "Andrew Myers",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "45A",
+      "division_id": "ocd-division/country:us/state:mn/sldl:45a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Myers",
+    "image": "https://www.house.mn.gov/hinfo/memberimgls93/45A.gif?v=032323",
+    "email": "rep.andrew.myers@house.mn.gov",
+    "gender": "Male",
+    "birth_date": "1979-05-18",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T17:57:18.453755+00:00",
+    "updated_at": "2024-10-09T22:47:07.087976+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-myers-5i5fv3lxXcvln989TYAGz4/"
+  },
+  {
+    "id": "ocd-person/41cf59c9-a2c3-442d-85f1-7d6ec8de1a97",
+    "name": "Andy Smith",
+    "party": "Democratic-Farmer-Labor",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "25B",
+      "division_id": "ocd-division/country:us/state:mn/sldl:25b"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Smith",
+    "image": "https://www.house.mn.gov/hinfo/memberimgls93/25B.gif?v=032323",
+    "email": "rep.andy.smith@house.mn.gov",
+    "gender": "Male",
+    "birth_date": "1991-05-24",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-09T17:57:18.311856+00:00",
+    "updated_at": "2025-05-15T01:06:33.605417+00:00",
+    "openstates_url": "https://openstates.org/person/andy-smith-20BGAWskqxYqyKojsnnuNT/"
+  },
+  {
+    "id": "ocd-person/4749e0fb-4f41-46e3-a8b4-19fdbbbde113",
+    "name": "Ann Johnson Stewart",
+    "party": "Democratic-Farmer-Labor",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:mn/sldu:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Johnson Stewart",
+    "image": "https://www.senate.mn/img/member_thumbnails/44JohnsonStewartAnn.jpg",
+    "email": "sen.ann.johnson.stewart@senate.mn",
+    "gender": "Female",
+    "birth_date": "1964-07-27",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-06T06:09:24.849024+00:00",
+    "updated_at": "2025-03-13T07:06:21.767841+00:00",
+    "openstates_url": "https://openstates.org/person/ann-johnson-stewart-2AWDVkh9SWTjA9pa7ozHvf/"
+  },
+  {
+    "id": "ocd-person/ec588921-873b-4335-8fa1-2e3485008d3e",
+    "name": "Ann Rest",
+    "party": "Democratic-Farmer-Labor",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "43",
+      "division_id": "ocd-division/country:us/state:mn/sldu:43"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mn/government",
+      "name": "Minnesota",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Rest",
+    "image": "https://www.senate.mn/img/member_thumbnails/43Rest.jpg",
+    "email": "sen.ann.rest@senate.mn",
+    "gender": "Female",
+    "birth_date": "1942-04-24",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:49:22.680262+00:00",
+    "updated_at": "2025-03-29T01:10:30.701698+00:00",
+    "openstates_url": "https://openstates.org/person/ann-rest-7ByeIumF1Y3Iqkm9bgBppm/"
+  }
+]

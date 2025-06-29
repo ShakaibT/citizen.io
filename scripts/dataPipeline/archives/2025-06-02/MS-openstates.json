@@ -1,0 +1,375 @@
+[
+  {
+    "id": "ocd-person/c012fed5-c753-4a01-9c3c-9924d178c24d",
+    "name": "Albert Butler",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "37",
+      "division_id": "ocd-division/country:us/state:ms/sldu:37"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Albert",
+    "family_name": "Butler",
+    "image": "https://billstatus.ls.state.ms.us/members/senate/butler.jpg",
+    "email": "abutler@senate.ms.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "fax": "(601)683-6695",
+      "education": [
+        "Alcorn State University",
+        "Jackson State University",
+        "University of Arkansas at Conway"
+      ],
+      "occupation": "Academic Manager Mississippi Job Corp",
+      "other phone": "(601)415-1182",
+      "counties represented": [
+        "Claiborne",
+        "Copiah",
+        "Hinds",
+        "Jefferson"
+      ]
+    },
+    "created_at": "2018-10-18T14:50:56.664059+00:00",
+    "updated_at": "2025-04-24T01:18:37.548094+00:00",
+    "openstates_url": "https://openstates.org/person/albert-butler-5qRCsUx2H0hCdJxoyJW3ZN/"
+  },
+  {
+    "id": "ocd-person/80fca1ba-017c-4941-990c-a5e2ff34aea0",
+    "name": "Andy Berry",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "35",
+      "division_id": "ocd-division/country:us/state:ms/sldu:35"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Berry",
+    "image": "https://billstatus.ls.state.ms.us/members/senate/Berry.jpg",
+    "email": "aberry@senate.ms.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-24T20:29:47.888907+00:00",
+    "updated_at": "2025-01-27T21:13:54.235439+00:00",
+    "openstates_url": "https://openstates.org/person/andy-berry-3vOTC4tC08mSGS6OP4uJjE/"
+  },
+  {
+    "id": "ocd-person/95d25b69-8eb7-44cd-a789-54351e17970c",
+    "name": "Andy Boyd",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "37",
+      "division_id": "ocd-division/country:us/state:ms/sldl:37"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Boyd",
+    "image": "http://billstatus.ls.state.ms.us/members/house/boyd_(37).jpg",
+    "email": "aboyd@house.ms.gov",
+    "gender": "Male",
+    "birth_date": "1957-06-26",
+    "death_date": "",
+    "extras": {
+      "education": [
+        "Bachelor of Science - Business Administration, Mississippi State University"
+      ],
+      "counties represented": [
+        "Clay",
+        "Lowndes",
+        "Oktibbeha"
+      ]
+    },
+    "created_at": "2023-01-05T20:45:50.361306+00:00",
+    "updated_at": "2025-01-27T21:17:03.549159+00:00",
+    "openstates_url": "https://openstates.org/person/andy-boyd-4YhzOEQVKoYvSow0he8oQO/"
+  },
+  {
+    "id": "ocd-person/83f9f72e-ec2d-4351-a227-d8a6aec18eed",
+    "name": "Angela Cockerham",
+    "party": "Independent",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "96",
+      "division_id": "ocd-division/country:us/state:ms/sldl:96"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Cockerham",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Angela_Cockerham.jpg",
+    "email": "acockerham@house.ms.gov",
+    "gender": "Female",
+    "birth_date": "1976-08-20",
+    "death_date": "",
+    "extras": {
+      "education": [
+        "Jackson State University; B. A.",
+        "Loyola University-New Orleans; J. D.",
+        "Tufts University, The Fletcher School of Law and Diplomacy, M.A."
+      ],
+      "counties represented": [
+        "Adams",
+        "Amite",
+        "Pike",
+        "Wilkinson"
+      ]
+    },
+    "created_at": "2018-10-18T14:50:54.404547+00:00",
+    "updated_at": "2025-01-27T21:16:06.074352+00:00",
+    "openstates_url": "https://openstates.org/person/angela-cockerham-412EDs601H2pREXQULlSUX/"
+  },
+  {
+    "id": "ocd-person/4004cf9a-6d23-4323-b158-00f22078d2b4",
+    "name": "Angela Hill",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:ms/sldu:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Hill",
+    "image": "http://billstatus.ls.state.ms.us/members/senate/hill.jpg",
+    "email": "ahill@senate.ms.gov",
+    "gender": "Female",
+    "birth_date": "1965-08-14",
+    "death_date": "",
+    "extras": {
+      "education": [
+        "University of Southern Mississippi",
+        "Pearl River Community College",
+        "Picayune Memorial High School"
+      ],
+      "occupation": "former Science Teacher",
+      "counties represented": [
+        "Marion",
+        "Pearl River"
+      ]
+    },
+    "created_at": "2018-10-18T14:51:03.129937+00:00",
+    "updated_at": "2025-04-24T01:17:37.293980+00:00",
+    "openstates_url": "https://openstates.org/person/angela-hill-1wnhrlzhrOrQJTZTD7OmCy/"
+  },
+  {
+    "id": "ocd-person/74d0c9b2-58a2-41a7-b2a0-582924a45adf",
+    "name": "Angela Turner-Ford",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:ms/sldu:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Turner-Ford",
+    "image": "http://billstatus.ls.state.ms.us/members/senate/turner-ford.jpg",
+    "email": "aturner@senate.ms.gov",
+    "gender": "Female",
+    "birth_date": "1971-07-02",
+    "death_date": "",
+    "extras": {
+      "fax": "(662)494-4814",
+      "education": [
+        "Hampton University",
+        "Howard University",
+        "Mississippi State University",
+        "The University of Alabama at Birmingham",
+        "The University of Mississippi"
+      ],
+      "occupation": "Attorney",
+      "other phone": "(662)494-6611",
+      "counties represented": [
+        "Clay",
+        "Lowndes",
+        "Noxubee",
+        "Oktibbeha"
+      ]
+    },
+    "created_at": "2018-10-18T14:51:12.441651+00:00",
+    "updated_at": "2025-04-24T01:17:34.170388+00:00",
+    "openstates_url": "https://openstates.org/person/angela-turner-ford-3YQWcvpBtkwWBWCLcJtwjP/"
+  },
+  {
+    "id": "ocd-person/5f65f3a3-db2a-4573-a5c8-59b6cc0dbf40",
+    "name": "Bart Williams",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "15",
+      "division_id": "ocd-division/country:us/state:ms/sldu:15"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Bart",
+    "family_name": "Williams",
+    "image": "http://billstatus.ls.state.ms.us/members/senate/williams.jpg",
+    "email": "bwilliams@senate.ms.gov",
+    "gender": "Male",
+    "birth_date": "1966-10-26",
+    "death_date": "",
+    "extras": {
+      "education": [
+        "Harding Academy; Memphis, TN",
+        "Mississippi State University"
+      ],
+      "occupation": "Owner, Security Solutions and Communications, Inc",
+      "counties represented": [
+        "Choctaw",
+        "Montgomery",
+        "Oktibbeha",
+        "Webster"
+      ]
+    },
+    "created_at": "2020-12-19T06:11:17.577936+00:00",
+    "updated_at": "2025-04-01T01:13:45.218693+00:00",
+    "openstates_url": "https://openstates.org/person/bart-williams-2u0rVrw301Uq1BAJVkEZI8/"
+  },
+  {
+    "id": "ocd-person/4b865b47-4811-4437-be08-0f3bf10d461c",
+    "name": "Becky Currie",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "92",
+      "division_id": "ocd-division/country:us/state:ms/sldl:92"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Becky",
+    "family_name": "Currie",
+    "image": "http://billstatus.ls.state.ms.us/members/house/currie.jpg",
+    "email": "bcurrie@house.ms.gov",
+    "gender": "Female",
+    "birth_date": "1957-05-02",
+    "death_date": "",
+    "extras": {
+      "education": [
+        "S/W Community College, A.S.",
+        "University of Southern Mississippi"
+      ],
+      "occupation": "Registered Nurse",
+      "counties represented": [
+        "Copiah",
+        "Lawrence",
+        "Lincoln"
+      ]
+    },
+    "created_at": "2018-10-18T14:51:17.079023+00:00",
+    "updated_at": "2025-01-27T21:15:28.170181+00:00",
+    "openstates_url": "https://openstates.org/person/becky-currie-2IVpBla4swnx81gDv6tG8a/"
+  },
+  {
+    "id": "ocd-person/ba13036f-790b-4745-b008-eeb74f1c86a1",
+    "name": "Ben Suber",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:ms/sldu:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Suber",
+    "image": "http://billstatus.ls.state.ms.us/members/senate/suber.jpg",
+    "email": "bsuber@senate.ms.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "fax": "(662)983-3030",
+      "education": [
+        "Manila High School - Manila, AR",
+        "Arkansas State University",
+        "Mississippi State University",
+        "Mississippi College School of Law"
+      ],
+      "other phone": "(662)983-3000",
+      "counties represented": [
+        "Calhoun",
+        "Chickasaw",
+        "Lee",
+        "Pontotoc",
+        "Yalobusha"
+      ]
+    },
+    "created_at": "2020-03-06T06:12:53.363810+00:00",
+    "updated_at": "2025-04-24T01:17:48.819507+00:00",
+    "openstates_url": "https://openstates.org/person/ben-suber-5f7GF2MKvN3I733ENeqoin/"
+  },
+  {
+    "id": "ocd-person/27f187c6-8755-4a18-a32a-dd5b5d7831c8",
+    "name": "Beth Waldo",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "15",
+      "division_id": "ocd-division/country:us/state:ms/sldl:15"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ms/government",
+      "name": "Mississippi",
+      "classification": "state"
+    },
+    "given_name": "Beth",
+    "family_name": "Waldo",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Beth_Luther_Waldo.jpeg",
+    "email": "bwaldo@house.ms.gov",
+    "gender": "Female",
+    "birth_date": "1970-05-07",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-24T20:29:50.691146+00:00",
+    "updated_at": "2025-01-27T21:14:52.075843+00:00",
+    "openstates_url": "https://openstates.org/person/beth-waldo-1DN4zDSDMr6REAi6S0uEUC/"
+  }
+]

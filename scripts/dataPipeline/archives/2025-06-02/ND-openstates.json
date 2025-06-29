@@ -1,0 +1,294 @@
+[
+  {
+    "id": "ocd-person/9c0f35c1-03de-443e-97bd-5cdf77581897",
+    "name": "Alisa Mitskog",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:nd/sldl:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Alisa",
+    "family_name": "Mitskog",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/amitskog2023_3.jpg?itok=vwMWQ-Ou",
+    "email": "amitskog@ndlegis.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "bio info": [],
+      "Home phone": "701-642-9023"
+    },
+    "created_at": "2018-10-18T14:53:02.294869+00:00",
+    "updated_at": "2025-03-05T07:57:55.754133+00:00",
+    "openstates_url": "https://openstates.org/person/alisa-mitskog-4kTkkKaWhkLlchhJfyGwsx/"
+  },
+  {
+    "id": "ocd-person/6fbb2691-956f-4427-8927-66309b08ed68",
+    "name": "Andrew Marschall",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:nd/sldl:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Marschall",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/amarschall2023.jpg?itok=hxGY-yV_",
+    "email": "amarschall@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "1962-12-17",
+    "death_date": "",
+    "extras": {
+      "bio info": []
+    },
+    "created_at": "2018-10-18T14:52:56.970470+00:00",
+    "updated_at": "2025-03-05T07:57:35.956923+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-marschall-3Opfw1eL495VfDCIz9vsSW/"
+  },
+  {
+    "id": "ocd-person/c40382fd-ce08-46af-8649-afd1f5e04091",
+    "name": "Anna Novak",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "33",
+      "division_id": "ocd-division/country:us/state:nd/sldl:33"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Anna",
+    "family_name": "Novak",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/anovak2023.jpg?itok=EptvTScj",
+    "email": "anovak@ndlegis.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "cell": "701-870-0288",
+      "home": "701-748-2399"
+    },
+    "created_at": "2023-02-13T19:43:25.269113+00:00",
+    "updated_at": "2025-02-04T20:19:35.079384+00:00",
+    "openstates_url": "https://openstates.org/person/anna-novak-5xs6FzPCN18xCsYZRktlx3/"
+  },
+  {
+    "id": "ocd-person/860892bd-92d1-4a30-a5e6-3b5f2359e9df",
+    "name": "Austen Schauer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:nd/sldl:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Austen",
+    "family_name": "Schauer",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/aschauer2023.jpg?itok=nn6aFXan",
+    "email": "aschauer@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "cell": "701-730-4474"
+    },
+    "created_at": "2019-01-04T06:33:20.274516+00:00",
+    "updated_at": "2025-03-05T07:57:56.315965+00:00",
+    "openstates_url": "https://openstates.org/person/austen-schauer-44utAJwfLVL58nADPnbvrT/"
+  },
+  {
+    "id": "ocd-person/7b99ceee-cc27-4b30-96f9-b29845bacdf8",
+    "name": "Austin Foss",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "44",
+      "division_id": "ocd-division/country:us/state:nd/sldl:44"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Austin",
+    "family_name": "Foss",
+    "image": "https://demnpl.com/wp-content/uploads/2024/05/Austin-Foss-1225x1500.png",
+    "email": "afoss@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-12-03T01:17:58.009697+00:00",
+    "updated_at": "2025-02-04T20:19:32.143929+00:00",
+    "openstates_url": "https://openstates.org/person/austin-foss-3lELVBgCXfELEkrJxaucOm/"
+  },
+  {
+    "id": "ocd-person/9335be7e-11ff-4577-af89-e61195143354",
+    "name": "Ben Koppelman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:nd/sldl:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Koppelman",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/bkoppelman2023.jpg?itok=esaQXglY",
+    "email": "bkoppelman@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "1980-01-02",
+    "death_date": "",
+    "extras": {
+      "cell": "701-491-0665"
+    },
+    "created_at": "2018-10-18T14:53:09.008812+00:00",
+    "updated_at": "2025-03-05T07:57:59.251802+00:00",
+    "openstates_url": "https://openstates.org/person/ben-koppelman-4TmQrCNR7fxwb4LHWqvqgW/"
+  },
+  {
+    "id": "ocd-person/3f885f7e-14b0-4ee7-b1fd-71ddbd72c539",
+    "name": "Bernie Satrom",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:nd/sldl:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Bernie",
+    "family_name": "Satrom",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/blsatrom2023.jpg?itok=QdHtHBmZ",
+    "email": "blsatrom@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "cell": "701-320-7239"
+    },
+    "created_at": "2018-10-18T14:52:58.074686+00:00",
+    "updated_at": "2025-03-05T07:56:44.807313+00:00",
+    "openstates_url": "https://openstates.org/person/bernie-satrom-1vsq23CH5NEvAiuMvp8o4f/"
+  },
+  {
+    "id": "ocd-person/7ba931d2-cba2-4913-92fa-f5b0c3a8baf0",
+    "name": "Bert Anderson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "2",
+      "division_id": "ocd-division/country:us/state:nd/sldl:2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Bert",
+    "family_name": "Anderson",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/bertanderson2.jpg?itok=VRfZY6e1",
+    "email": "bertanderson@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "cell": "701-641-1549",
+      "home": "701-965-6973"
+    },
+    "created_at": "2018-10-18T14:52:56.493081+00:00",
+    "updated_at": "2025-03-05T07:56:46.866771+00:00",
+    "openstates_url": "https://openstates.org/person/bert-anderson-3lLNSU5M3RD6etZhoVcp1c/"
+  },
+  {
+    "id": "ocd-person/50e4864c-095a-43a6-9486-3b071e02ca09",
+    "name": "Bill Tveit",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "33",
+      "division_id": "ocd-division/country:us/state:nd/sldl:33"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Tveit",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/btveit2023.jpg?itok=cI3qL4LC",
+    "email": "btveit@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "cell": "701-870-4014",
+      "home": "701-748-2812"
+    },
+    "created_at": "2019-01-04T06:33:01.447195+00:00",
+    "updated_at": "2025-03-05T07:57:49.905023+00:00",
+    "openstates_url": "https://openstates.org/person/bill-tveit-2SdoyVN3EQw8B04bvak4Kn/"
+  },
+  {
+    "id": "ocd-person/f8720088-51ae-4178-87f8-abbb73faf444",
+    "name": "Bob Martinson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "35",
+      "division_id": "ocd-division/country:us/state:nd/sldl:35"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nd/government",
+      "name": "North Dakota",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Martinson",
+    "image": "https://www.ndlegis.gov/sites/default/files/styles/member_list_photo/public/person/photo/bmartinson2023.jpg?itok=G3GoKXQJ",
+    "email": "bmartinson@ndlegis.gov",
+    "gender": "Male",
+    "birth_date": "1952-08-19",
+    "death_date": "",
+    "extras": {
+      "home": "701-223-0835"
+    },
+    "created_at": "2018-10-18T14:53:12.936806+00:00",
+    "updated_at": "2025-03-05T07:57:41.684362+00:00",
+    "openstates_url": "https://openstates.org/person/bob-martinson-7YoCA9J46xg6nGY1Rd919A/"
+  }
+]

@@ -1,0 +1,293 @@
+[
+  {
+    "id": "ocd-person/0970c995-247f-4cc0-b0a3-8ee4a0e4ebcb",
+    "name": "Adam Duncan",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "2",
+      "division_id": "ocd-division/country:us/state:sc/sldl:2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Duncan",
+    "image": "https://bloximages.chicago2.vip.townnews.com/upstatetoday.com/content/tncms/assets/v3/editorial/2/db/2dbe7f98-2879-11ef-8c0d-7356b5095dbe/66692c7a1bcf4.image.jpg?crop=1045%2C588%2C12%2C42&resize=1045%2C588&order=crop%2Cresize",
+    "email": "adamduncan@schouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T22:25:57.326001+00:00",
+    "updated_at": "2025-03-29T02:11:51.502524+00:00",
+    "openstates_url": "https://openstates.org/person/adam-duncan-HoTRgIf5DedfUOqAsR0Z9/"
+  },
+  {
+    "id": "ocd-person/10d51991-3dec-499f-8ed2-9c5685de9b00",
+    "name": "Alan Morgan",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "18",
+      "division_id": "ocd-division/country:us/state:sc/sldl:18"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Morgan",
+    "image": "https://scstatehouse.gov/images/members/1374999835.jpg",
+    "email": "alanmorgan@schouse.gov",
+    "gender": "Male",
+    "birth_date": "1988-02-08",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Greenville County"
+    },
+    "created_at": "2022-06-02T23:22:01.567341+00:00",
+    "updated_at": "2025-03-29T02:10:27.910821+00:00",
+    "openstates_url": "https://openstates.org/person/alan-morgan-VlGNNJWlTyXWdkJ0hUmum/"
+  },
+  {
+    "id": "ocd-person/52d28efd-d83d-4825-8572-c9e30b8d7c77",
+    "name": "Allen Blackmon",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:sc/sldu:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Allen",
+    "family_name": "Blackmon",
+    "image": "https://scdailygazette.com/wp-content/uploads/2024/06/image000001-682x1024.jpg",
+    "email": "allenblackmon@scsenate.gov",
+    "gender": "Male",
+    "birth_date": "1955-08-06",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T22:26:42.100588+00:00",
+    "updated_at": "2025-03-05T20:48:59.458369+00:00",
+    "openstates_url": "https://openstates.org/person/allen-blackmon-2WHayLVlU47mRzmWOq1RJv/"
+  },
+  {
+    "id": "ocd-person/86e53967-3383-4df1-b3b6-49aa2b327110",
+    "name": "Annie McDaniel",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "41",
+      "division_id": "ocd-division/country:us/state:sc/sldl:41"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Annie",
+    "family_name": "McDaniel",
+    "image": "https://scstatehouse.gov/images/members/1221590763.jpg",
+    "email": "anniemcdaniel@schouse.gov",
+    "gender": "Female",
+    "birth_date": "1960-05-28",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Chester, Fairfield & Richland Counties",
+      "Home Address Home Phone": "(803) 635-6894"
+    },
+    "created_at": "2019-01-04T05:19:57.629581+00:00",
+    "updated_at": "2025-03-29T02:11:22.972476+00:00",
+    "openstates_url": "https://openstates.org/person/annie-mcdaniel-46Xj6pIJSOxPz9v5KX1DEm/"
+  },
+  {
+    "id": "ocd-person/dbb8fc98-5116-44c4-8009-8c91e514dec1",
+    "name": "April Cromer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "6",
+      "division_id": "ocd-division/country:us/state:sc/sldl:6"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "April",
+    "family_name": "Cromer",
+    "image": "https://scstatehouse.gov/images/members/0434090857.jpg",
+    "email": "aprilcromer@schouse.gov",
+    "gender": "Female",
+    "birth_date": "1978-08-28",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Anderson County",
+      "Home Address Home Phone": "(864) 844-1097"
+    },
+    "created_at": "2023-02-14T05:08:28.668367+00:00",
+    "updated_at": "2025-03-05T08:54:39.232209+00:00",
+    "openstates_url": "https://openstates.org/person/april-cromer-6gbrF6QminRTceo56ydqC1/"
+  },
+  {
+    "id": "ocd-person/a45d8c37-372d-4d32-b9a5-cce96299ea3d",
+    "name": "Beth Bernstein",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "78",
+      "division_id": "ocd-division/country:us/state:sc/sldl:78"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Beth",
+    "family_name": "Bernstein",
+    "image": "https://scstatehouse.gov/images/members/0141477256.jpg",
+    "email": "bethbernstein@schouse.gov",
+    "gender": "Female",
+    "birth_date": "1969-11-13",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Richland County"
+    },
+    "created_at": "2018-10-18T16:11:52.902095+00:00",
+    "updated_at": "2025-03-29T02:10:40.304478+00:00",
+    "openstates_url": "https://openstates.org/person/beth-bernstein-509UZI96p8KrTFXOaUeLoj/"
+  },
+  {
+    "id": "ocd-person/20240c0c-69e5-445f-b8ca-d33dd377e086",
+    "name": "Bill Chumley",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "35",
+      "division_id": "ocd-division/country:us/state:sc/sldl:35"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Chumley",
+    "image": "https://scstatehouse.gov/images/members/0351704504.jpg",
+    "email": "billchumley@schouse.gov",
+    "gender": "Male",
+    "birth_date": "1947-09-24",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Greenville & Spartanburg Counties",
+      "Home Address Home Phone": "(864) 303-2726"
+    },
+    "created_at": "2018-10-18T16:12:05.018390+00:00",
+    "updated_at": "2025-03-29T02:11:17.197733+00:00",
+    "openstates_url": "https://openstates.org/person/bill-chumley-yeE8V5OHLAvlPyIJHWyIA/"
+  },
+  {
+    "id": "ocd-person/58d2072a-c96a-49b2-8591-a4e186dc28eb",
+    "name": "Bill Clyburn",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "82",
+      "division_id": "ocd-division/country:us/state:sc/sldl:82"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Clyburn",
+    "image": "https://scstatehouse.gov/images/members/0363636320.jpg",
+    "email": "billclyburn@schouse.gov",
+    "gender": "Male",
+    "birth_date": "1941-05-19",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Aiken, Edgefield & Saluda Counties",
+      "Home Address Home Phone": "(803) 649-6167"
+    },
+    "created_at": "2018-10-18T16:12:04.631275+00:00",
+    "updated_at": "2025-03-29T02:10:42.830340+00:00",
+    "openstates_url": "https://openstates.org/person/bill-clyburn-2hbJ5KJ5ile6EMdVJyUCXD/"
+  },
+  {
+    "id": "ocd-person/066a2879-ab95-4082-803d-9c4dd582f04e",
+    "name": "Bill Hager",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "122",
+      "division_id": "ocd-division/country:us/state:sc/sldl:122"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Hager",
+    "image": "https://scstatehouse.gov/images/members/0733948776.jpg",
+    "email": "billhager@schouse.gov",
+    "gender": "Male",
+    "birth_date": "1960-02-07",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Beaufort, Colleton, Hampton & Jasper Counties",
+      "Home Address Home Phone": "(803) 346-9576"
+    },
+    "created_at": "2023-02-14T05:12:12.349102+00:00",
+    "updated_at": "2025-03-29T02:11:05.413263+00:00",
+    "openstates_url": "https://openstates.org/person/bill-hager-C6T2LRWykxLdBftzCmhqg/"
+  },
+  {
+    "id": "ocd-person/e27051a1-60e8-4ad9-b1d2-55360e09ea8c",
+    "name": "Bill Herbkersman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "118",
+      "division_id": "ocd-division/country:us/state:sc/sldl:118"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sc/government",
+      "name": "South Carolina",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Herbkersman",
+    "image": "https://scstatehouse.gov/images/members/0832954446.jpg",
+    "email": "billherbkerman@schouse.gov",
+    "gender": "Male",
+    "birth_date": "1958-06-30",
+    "death_date": "",
+    "extras": {
+      "counties represented": "Beaufort County"
+    },
+    "created_at": "2018-10-18T16:12:04.861029+00:00",
+    "updated_at": "2025-03-29T02:10:44.263442+00:00",
+    "openstates_url": "https://openstates.org/person/bill-herbkersman-6tHaw7aMma27QMWoZir0YO/"
+  }
+]

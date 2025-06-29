@@ -1,0 +1,292 @@
+[
+  {
+    "id": "ocd-person/474c3552-b3cd-4015-ac15-3c6301a0ce0e",
+    "name": "A.J. McCampbell",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "71",
+      "division_id": "ocd-division/country:us/state:al/sldl:71"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "A.J.",
+    "family_name": "McCampbell",
+    "image": "https://www.legislature.state.al.us/pdf/house/members/McCampbell_71.png",
+    "email": "artis.mccampbell@alhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties": "Marengo County, Pickens County, Sumter County, Tuscaloosa County"
+    },
+    "created_at": "2018-10-18T14:33:34.412484+00:00",
+    "updated_at": "2025-02-21T15:42:19.036236+00:00",
+    "openstates_url": "https://openstates.org/person/a-j-mccampbell-2AXHVwSs7HVhhslb98y9mA/"
+  },
+  {
+    "id": "ocd-person/4cb1aeb5-d822-4f2c-a7e6-ae2a132acf17",
+    "name": "Adline Clarke",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "97",
+      "division_id": "ocd-division/country:us/state:al/sldl:97"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Adline",
+    "family_name": "Clarke",
+    "image": "https://www.legislature.state.al.us/pdf/house/members/Clarke_97.png",
+    "email": "adline.clarke@alhouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties": "Mobile County"
+    },
+    "created_at": "2018-10-18T14:33:18.583310+00:00",
+    "updated_at": "2025-02-03T23:48:36.256681+00:00",
+    "openstates_url": "https://openstates.org/person/adline-clarke-2KicJRvVvM1UeFM73QfdaB/"
+  },
+  {
+    "id": "ocd-person/cb2488d5-f0b6-4e9f-948b-ff7e9f4e1907",
+    "name": "Alan Baker",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "66",
+      "division_id": "ocd-division/country:us/state:al/sldl:66"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Baker",
+    "image": "https://www.legislature.state.al.us/pdf/house/members/Baker_66.png",
+    "email": "staterep@co.escambia.al.us",
+    "gender": "Male",
+    "birth_date": "1956-07-15",
+    "death_date": "",
+    "extras": {
+      "counties": "Baldwin County, Escambia County"
+    },
+    "created_at": "2018-10-18T14:33:33.385700+00:00",
+    "updated_at": "2025-02-21T15:42:24.477794+00:00",
+    "openstates_url": "https://openstates.org/person/alan-baker-6BK8b9dJQAn8RJoZ5MPeqN/"
+  },
+  {
+    "id": "ocd-person/3f96a690-e9a3-4774-8484-49a5a079b18c",
+    "name": "Allen Treadaway",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "51",
+      "division_id": "ocd-division/country:us/state:al/sldl:51"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Allen",
+    "family_name": "Treadaway",
+    "image": "https://www.legislature.state.al.us/pdf/house/members/Treadaway_51.png",
+    "email": "allen.treadaway@alhouse.gov",
+    "gender": "Male",
+    "birth_date": "1961-09-25",
+    "death_date": "",
+    "extras": {
+      "counties": "Jefferson County"
+    },
+    "created_at": "2018-10-18T14:33:12.863842+00:00",
+    "updated_at": "2025-02-03T23:47:43.173305+00:00",
+    "openstates_url": "https://openstates.org/person/allen-treadaway-1vzMZkWlHAVZBYkW7GQNvI/"
+  },
+  {
+    "id": "ocd-person/84d43460-8578-4b85-b2ee-7f6849e270d8",
+    "name": "Andrew Jones",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:al/sldu:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Jones",
+    "image": "https://www.legislature.state.al.us/pdf/senate/members/Jones_10.png",
+    "email": "andrew.jones@alsenate.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties": "Cherokee County, DeKalb County, Etowah County"
+    },
+    "created_at": "2019-01-02T10:09:54.318236+00:00",
+    "updated_at": "2025-02-03T23:47:04.082732+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-jones-42dxpCu7ZGZ8nizXhcy3rM/"
+  },
+  {
+    "id": "ocd-person/c128ed12-dd1b-4b5f-8c64-9d86bf9d6580",
+    "name": "Andy Whitt",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "6",
+      "division_id": "ocd-division/country:us/state:al/sldl:6"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Whitt",
+    "image": "https://www.legislature.state.al.us/pdf/house/members/Whitt_6.png",
+    "email": "andy.whitt@alhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "counties": "Madison County, Limestone County"
+    },
+    "created_at": "2019-01-02T10:08:44.148775+00:00",
+    "updated_at": "2025-02-21T15:42:22.062190+00:00",
+    "openstates_url": "https://openstates.org/person/andy-whitt-5sUDmo104q0f1lKdVJ6gjI/"
+  },
+  {
+    "id": "ocd-person/95f7541d-5429-41aa-85e5-7fc9cf33d688",
+    "name": "Anthony Daniels",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "53",
+      "division_id": "ocd-division/country:us/state:al/sldl:53"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Daniels",
+    "image": "https://www.legislature.state.al.us/pdf/house/members/Daniels_53.png",
+    "email": "anthony.daniels@alhouse.gov",
+    "gender": "Male",
+    "birth_date": "1982-10-05",
+    "death_date": "",
+    "extras": {
+      "counties": "Madison County"
+    },
+    "created_at": "2018-10-18T14:33:19.241939+00:00",
+    "updated_at": "2025-02-21T15:42:27.996372+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-daniels-4YyswWygCvjxXIdZtx055k/"
+  },
+  {
+    "id": "ocd-person/15ebe01e-1447-4bdb-8dfb-e9d5948b872d",
+    "name": "April Weaver",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "14",
+      "division_id": "ocd-division/country:us/state:al/sldu:14"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "April",
+    "family_name": "Weaver",
+    "image": "https://www.legislature.state.al.us/pdf/senate/members/Weaver_14.png",
+    "email": "april.weaver@alsenate.gov",
+    "gender": "Female",
+    "birth_date": "1971-04-13",
+    "death_date": "",
+    "extras": {
+      "counties": "Bibb County, Chilton County, Shelby County"
+    },
+    "created_at": "2021-07-19T15:57:59.229265+00:00",
+    "updated_at": "2025-02-21T15:42:33.873924+00:00",
+    "openstates_url": "https://openstates.org/person/april-weaver-fMdK4Bm5Dr84tOXsTCOr7/"
+  },
+  {
+    "id": "ocd-person/02655110-0839-4b2e-9f4b-b3a43788e275",
+    "name": "Arnold Mooney",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "43",
+      "division_id": "ocd-division/country:us/state:al/sldl:43"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Arnold",
+    "family_name": "Mooney",
+    "image": "https://www.legislature.state.al.us/pdf/house/members/Mooney_43.png",
+    "email": "arnold.mooney@alhouse.gov",
+    "gender": "Male",
+    "birth_date": "1950-12-08",
+    "death_date": "",
+    "extras": {
+      "counties": "Shelby County"
+    },
+    "created_at": "2018-10-18T14:33:38.339645+00:00",
+    "updated_at": "2025-02-21T15:42:35.969564+00:00",
+    "openstates_url": "https://openstates.org/person/arnold-mooney-4WHlHGPuMcQyn8fQWVTKX/"
+  },
+  {
+    "id": "ocd-person/b38546ec-f8fb-4e99-8e0c-46715b2e8578",
+    "name": "Arthur Orr",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:al/sldu:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:al/government",
+      "name": "Alabama",
+      "classification": "state"
+    },
+    "given_name": "Arthur",
+    "family_name": "Orr",
+    "image": "https://www.legislature.state.al.us/pdf/senate/members/Orr_3.png",
+    "email": "arthur.orr@alsenate.gov",
+    "gender": "Male",
+    "birth_date": "1964-05-25",
+    "death_date": "",
+    "extras": {
+      "counties": "Limestone County, Madison County, Morgan County"
+    },
+    "created_at": "2018-10-18T14:33:26.200287+00:00",
+    "updated_at": "2025-02-21T15:42:35.542553+00:00",
+    "openstates_url": "https://openstates.org/person/arthur-orr-5SkX7u30VXM818Yq9cIYgK/"
+  }
+]

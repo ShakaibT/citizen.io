@@ -1,0 +1,290 @@
+[
+  {
+    "id": "ocd-person/9dbec823-aab4-40bb-a26a-e51a896dcc1f",
+    "name": "Alana DiMario",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "36",
+      "division_id": "ocd-division/country:us/state:ri/sldu:36"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Alana",
+    "family_name": "DiMario",
+    "image": "https://www.rilegislature.gov/senators/pictures/dimario.jpg",
+    "email": "sen-dimario@rilegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Charlestown, New Shoreham, South Kingstown, Westerly"
+    },
+    "created_at": "2021-01-07T06:16:23.560338+00:00",
+    "updated_at": "2025-03-13T07:59:46.788447+00:00",
+    "openstates_url": "https://openstates.org/person/alana-dimario-4neyw7Bo6ah9kqpoD56Zjj/"
+  },
+  {
+    "id": "ocd-person/202a1def-abb3-4f77-8ef1-5c453d2d5423",
+    "name": "Alex Finkelman",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "74",
+      "division_id": "ocd-division/country:us/state:ri/sldl:74"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Finkelman",
+    "image": "https://www.rilegislature.gov/representatives/Pictures/Alex%20Finkelman.jpg",
+    "email": "rep-finkelman@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "1986-02-13",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Jamestown, Middletown"
+    },
+    "created_at": "2023-01-11T22:44:11.528846+00:00",
+    "updated_at": "2025-03-13T08:00:25.892299+00:00",
+    "openstates_url": "https://openstates.org/person/alex-finkelman-yh07WgqLiymFWTbWfsCot/"
+  },
+  {
+    "id": "ocd-person/7769ff96-3f6e-4747-b14b-de0a8648af61",
+    "name": "Alex Marszalkowski",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "52",
+      "division_id": "ocd-division/country:us/state:ri/sldl:52"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Marszalkowski",
+    "image": "http://www.rilegislature.gov/representatives/Pictures/marszalkowski.jpg",
+    "email": "rep-marszalkowski@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "1987-02-22",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Cumberland"
+    },
+    "created_at": "2018-10-18T16:11:40.659046+00:00",
+    "updated_at": "2025-03-13T08:00:17.114562+00:00",
+    "openstates_url": "https://openstates.org/person/alex-marszalkowski-3dKWkouhnqPdHVmXHB9DNJ/"
+  },
+  {
+    "id": "ocd-person/a857e27b-7ced-43ad-bd08-a954e5f781ac",
+    "name": "Ana Quezada",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "2",
+      "division_id": "ocd-division/country:us/state:ri/sldu:2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Ana",
+    "family_name": "Quezada",
+    "image": "http://www.rilegislature.gov/senators/pictures/quezada.jpg",
+    "email": "sen-quezada@rilegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Providence"
+    },
+    "created_at": "2018-10-18T16:11:40.766804+00:00",
+    "updated_at": "2025-03-13T07:59:45.317517+00:00",
+    "openstates_url": "https://openstates.org/person/ana-quezada-57esD0fT3COEWp1BAp0F5A/"
+  },
+  {
+    "id": "ocd-person/89fadd1c-b02c-45aa-b008-bf31d3fea4a1",
+    "name": "Andrew Dimitri",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:ri/sldu:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Dimitri",
+    "image": "https://assets.civicengine.com/uploads/candidate/headshot/830447/830447.jpg",
+    "email": "sen-dimitri@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-12T07:07:21.224173+00:00",
+    "updated_at": "2025-03-13T08:00:11.182180+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-dimitri-4CMaoi1iqhGDTrOIx4wQNN/"
+  },
+  {
+    "id": "ocd-person/b9359c6a-fbb2-4165-af9b-a6c63290d851",
+    "name": "Anthony DeSimone",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "5",
+      "division_id": "ocd-division/country:us/state:ri/sldl:5"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "DeSimone",
+    "image": "https://www.rilegislature.gov/representatives/Pictures/DeSimone.jpg",
+    "email": "rep-desimone@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "1990-03-26",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Providence"
+    },
+    "created_at": "2023-01-11T22:44:11.592911+00:00",
+    "updated_at": "2025-03-13T07:59:50.730183+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-desimone-5dU50YqzaYb8puWoms75Iv/"
+  },
+  {
+    "id": "ocd-person/6d4c7be7-4e68-4aa1-9262-81995fcc231e",
+    "name": "Arthur Handy",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "18",
+      "division_id": "ocd-division/country:us/state:ri/sldl:18"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Arthur",
+    "family_name": "Handy",
+    "image": "http://www.rilegislature.gov/representatives/pictures/handy.jpg",
+    "email": "rep-handy@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "1967-02-15",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Cranston"
+    },
+    "created_at": "2018-10-18T16:11:40.988158+00:00",
+    "updated_at": "2025-03-13T08:00:25.403484+00:00",
+    "openstates_url": "https://openstates.org/person/arthur-handy-3KF7FSq2wmLJWia35UIu3K/"
+  },
+  {
+    "id": "ocd-person/4352dbd3-90e5-4cf3-9bf6-accff7592c33",
+    "name": "Bill O'Brien",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "54",
+      "division_id": "ocd-division/country:us/state:ri/sldl:54"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "O'Brien",
+    "image": "http://www.rilegislature.gov/representatives/pictures/o'brien.jpg",
+    "email": "rep-obrien@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "1969-07-27",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "North Providence"
+    },
+    "created_at": "2018-10-18T16:11:48.994692+00:00",
+    "updated_at": "2025-03-13T08:00:00.124816+00:00",
+    "openstates_url": "https://openstates.org/person/bill-o-brien-232LqlxCPubS0o3LfPAamZ/"
+  },
+  {
+    "id": "ocd-person/01ddc920-772c-4098-b9f8-8704783940e5",
+    "name": "Bob Britto",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "18",
+      "division_id": "ocd-division/country:us/state:ri/sldu:18"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Britto",
+    "image": "https://www.rilegislature.gov/senators/Pictures/Britto%202023.jpg",
+    "email": "sen-britto@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "1963-07-01",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Cranston"
+    },
+    "created_at": "2023-01-11T22:44:11.465201+00:00",
+    "updated_at": "2025-03-13T07:59:43.354767+00:00",
+    "openstates_url": "https://openstates.org/person/bob-britto-3WLcDmt7ygwxpqWPZ4oXl/"
+  },
+  {
+    "id": "ocd-person/53f07987-a534-4194-ba51-2fcd62f0f63e",
+    "name": "Bob Phillips",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "51",
+      "division_id": "ocd-division/country:us/state:ri/sldl:51"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ri/government",
+      "name": "Rhode Island",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Phillips",
+    "image": "https://www.rilegislature.gov/representatives/pictures/phillips.jpg",
+    "email": "rep-phillips@rilegislature.gov",
+    "gender": "Male",
+    "birth_date": "1956-05-29",
+    "death_date": "",
+    "extras": {
+      "City/Town Represented": "Woonsocket, Cumberland"
+    },
+    "created_at": "2018-10-18T16:11:47.490453+00:00",
+    "updated_at": "2025-03-13T07:59:49.743221+00:00",
+    "openstates_url": "https://openstates.org/person/bob-phillips-2YOG8xrJ9QfhnnUyFCTzx8/"
+  }
+]

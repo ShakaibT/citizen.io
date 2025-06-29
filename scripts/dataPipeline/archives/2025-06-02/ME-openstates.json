@@ -1,0 +1,336 @@
+[
+  {
+    "id": "ocd-person/906cd606-c6ff-41e5-87a6-e038b711fa61",
+    "name": "Aaron Dana",
+    "party": "Independent",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Passamaquoddy Tribe",
+      "division_id": "ocd-division/country:us/state:me/sldl:passamaquoddy-tribe"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Dana",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/27852f04-e612-46a5-9727-1bbd1d5e48e0_DANA.jpg",
+    "email": "aaron.dana@legislature.maine.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-26T01:47:59.874146+00:00",
+    "updated_at": "2025-03-13T06:57:40.701124+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-dana-4OWdGO7QpEtYSb6TWQKrHl/"
+  },
+  {
+    "id": "ocd-person/b6cdaab7-6aec-4c65-a239-e18c6e839fbc",
+    "name": "Abden Simmons",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:me/sldl:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Abden",
+    "family_name": "Simmons",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/75e9b804-f745-4f44-9817-146eb1a8c378_simmas[1].jpg",
+    "email": "abden.simmons@legislature.maine.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "Seat Number": "152",
+      "towns represented": [
+        "Friendship",
+        "Washington",
+        "Bremen",
+        "Louds Island Township",
+        "Waldoboro"
+      ]
+    },
+    "created_at": "2018-10-18T14:48:20.532782+00:00",
+    "updated_at": "2025-03-13T06:58:16.545983+00:00",
+    "openstates_url": "https://openstates.org/person/abden-simmons-5YwanWmXR7AvYm2ui7Xb9I/"
+  },
+  {
+    "id": "ocd-person/513edd6e-0d85-4ad6-8852-577cd5c0ee02",
+    "name": "Abigail Griffin",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "34",
+      "division_id": "ocd-division/country:us/state:me/sldl:34"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Abigail",
+    "family_name": "Griffin",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/fa129957-8083-482b-93f5-318d0cfc0718_griffin.jpg",
+    "email": "abigail.griffin@legislature.maine.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Retired Teacher",
+      "Seat Number": "59",
+      "towns represented": [
+        "Glenburn",
+        "Kenduskeag",
+        "Levant"
+      ]
+    },
+    "created_at": "2019-01-05T07:43:14.833149+00:00",
+    "updated_at": "2025-03-13T06:59:20.695711+00:00",
+    "openstates_url": "https://openstates.org/person/abigail-griffin-2TJ6gaQlcNGM72KRqkZeYU/"
+  },
+  {
+    "id": "ocd-person/dff0e200-fd8c-4ada-ac3d-e014a529dd59",
+    "name": "Adam Lee",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "89",
+      "division_id": "ocd-division/country:us/state:me/sldl:89"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Lee",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/cc770c67-4f1f-4e24-a168-4a359d33b108_ALEE.jpg",
+    "email": "adam.lee@legislature.maine.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "UT Austin, Vermont Law School",
+      "occupation": "Attorney",
+      "Seat Number": "139",
+      "towns represented": [
+        "Auburn (Part)"
+      ]
+    },
+    "created_at": "2023-01-03T00:48:32.081098+00:00",
+    "updated_at": "2025-03-29T01:02:44.755415+00:00",
+    "openstates_url": "https://openstates.org/person/adam-lee-6oZN6ZaE0o5CosjRfFb9Q1/"
+  },
+  {
+    "id": "ocd-person/4bc2b129-52c1-4dfd-99af-dd38f620183a",
+    "name": "Alicia Collins",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "61",
+      "division_id": "ocd-division/country:us/state:me/sldl:61"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Alicia",
+    "family_name": "Collins",
+    "image": "https://aliciaformaine.com/images/d8140e2917dbb338d1ef9980ee0d0557.png",
+    "email": "alicia.collins@legislature.maine.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-12-06T21:08:13.202146+00:00",
+    "updated_at": "2025-03-13T06:58:37.523586+00:00",
+    "openstates_url": "https://openstates.org/person/alicia-collins-2IxOjsqy9bxl5Sgg43QXYQ/"
+  },
+  {
+    "id": "ocd-person/82b51bea-5f96-46d6-bbcf-4d973f701b27",
+    "name": "Allison Hepler",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "49",
+      "division_id": "ocd-division/country:us/state:me/sldl:49"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Allison",
+    "family_name": "Hepler",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/a75da791-060e-45cd-b1bd-95bc7c00c6e8_hepler.jpg",
+    "email": "allison.hepler@legislature.maine.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "History",
+      "occupation": "History",
+      "Seat Number": "33",
+      "towns represented": [
+        "Arrowsic",
+        "Georgetown",
+        "Phippsburg",
+        "West Bath",
+        "Woolwich"
+      ]
+    },
+    "created_at": "2019-01-05T07:44:24.480045+00:00",
+    "updated_at": "2025-03-13T06:58:53.479813+00:00",
+    "openstates_url": "https://openstates.org/person/allison-hepler-3ydliEpdJjc42bSP1XeNFv/"
+  },
+  {
+    "id": "ocd-person/1e7a6a8f-7160-4bee-80d1-b1dc47b3db4f",
+    "name": "Amanda Collamore",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "68",
+      "division_id": "ocd-division/country:us/state:me/sldl:68"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Amanda",
+    "family_name": "Collamore",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/24f65326-81e9-48f3-a7cc-a5dc8e7d74e6_Collamore.jpg",
+    "email": "amanda.collamore@legislature.maine.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "TIDC Education & Outreach Manager, University of Maine",
+      "Seat Number": "81",
+      "towns represented": [
+        "Clinton",
+        "Pittsfield",
+        "Burnham",
+        "Troy"
+      ]
+    },
+    "created_at": "2020-12-09T06:08:48.831257+00:00",
+    "updated_at": "2025-03-13T06:57:37.373470+00:00",
+    "openstates_url": "https://openstates.org/person/amanda-collamore-vViHM8cdawKlhA5KF14pz/"
+  },
+  {
+    "id": "ocd-person/8f61f208-cf99-489a-aa36-847438b0ed60",
+    "name": "Ambureen Rana",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "21",
+      "division_id": "ocd-division/country:us/state:me/sldl:21"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Ambureen",
+    "family_name": "Rana",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/1f89f046-4256-4341-9236-68c67e6efd77_ARANA.jpg",
+    "email": "ambureen.rana@legislature.maine.gov",
+    "gender": "X",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Program Coordinator",
+      "Seat Number": "99",
+      "towns represented": [
+        "Bangor (Part)"
+      ]
+    },
+    "created_at": "2023-01-03T00:46:13.632568+00:00",
+    "updated_at": "2025-03-13T06:57:37.431023+00:00",
+    "openstates_url": "https://openstates.org/person/ambureen-rana-4MYfAEhIVvl9C5UiuUhXxA/"
+  },
+  {
+    "id": "ocd-person/20082672-8aa7-4d49-bad7-fe5a92d1720d",
+    "name": "Amy Arata",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "104",
+      "division_id": "ocd-division/country:us/state:me/sldl:104"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Arata",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/73657768-20f5-4692-8934-16f6b9a3cacd_arata.jpg",
+    "email": "amy.arata@legislature.maine.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Gordon College, University of California Davis",
+      "occupation": "Business Owner",
+      "Seat Number": "22",
+      "towns represented": [
+        "New Gloucester",
+        "Gray (Part)"
+      ]
+    },
+    "created_at": "2019-01-05T07:43:08.856905+00:00",
+    "updated_at": "2025-03-13T06:58:27.845474+00:00",
+    "openstates_url": "https://openstates.org/person/amy-arata-yRThh0OfHXH71foEjRjPJ/"
+  },
+  {
+    "id": "ocd-person/d9825f86-280b-4b70-9a6e-2bb7f02e239a",
+    "name": "Amy Kuhn",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "111",
+      "division_id": "ocd-division/country:us/state:me/sldl:111"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:me/government",
+      "name": "Maine",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Kuhn",
+    "image": "https://legislature.maine.gov/house/house/Repository/MemberProfiles/a99f9866-50ae-4e3a-8eee-10a3e0d00dce_AKUHN.jpg",
+    "email": "amy.kuhn@legislature.maine.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Attorney",
+      "Seat Number": "95",
+      "towns represented": [
+        "Falmouth (Part)"
+      ]
+    },
+    "created_at": "2023-01-03T00:47:05.568088+00:00",
+    "updated_at": "2025-03-13T06:58:49.316271+00:00",
+    "openstates_url": "https://openstates.org/person/amy-kuhn-6cQulkYGuG1Q4n8RWJuZzO/"
+  }
+]

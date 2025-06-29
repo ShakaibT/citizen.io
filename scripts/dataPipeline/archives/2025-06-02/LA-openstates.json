@@ -1,0 +1,324 @@
+[
+  {
+    "id": "ocd-person/0d1a7b74-9ed8-4d8c-a1fc-f2caafc3d364",
+    "name": "Adam Bass",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "36",
+      "division_id": "ocd-division/country:us/state:la/sldu:36"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Bass",
+    "image": "https://senate.la.gov/SenPics/Sen36.jpg",
+    "email": "sen36@legis.la.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-02-12T19:25:57.412598+00:00",
+    "updated_at": "2025-03-29T00:52:46.456559+00:00",
+    "openstates_url": "https://openstates.org/person/adam-bass-Oj0AGpnaDuemuktwvSsgm/"
+  },
+  {
+    "id": "ocd-person/5d1fade2-4678-406c-b4ed-657baed1db2b",
+    "name": "Adrian Fisher",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:la/sldl:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Fisher",
+    "image": "https://house.louisiana.gov/H_Reps/RepPics20/rep16.jpg",
+    "email": "hse016@legis.la.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Masters Degree, Community Counseling-University of LA-Monroe; Bachelors Degree, Accounting-Southern University-Baton Rouge",
+      "legislative assistant": "Scerida Hollins",
+      "representing parishes": [
+        "Morehouse and Ouachita"
+      ]
+    },
+    "created_at": "2022-01-31T04:06:49.130275+00:00",
+    "updated_at": "2025-03-29T00:52:52.186651+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-fisher-2pilMHFyu6CrT4QNlVEe8x/"
+  },
+  {
+    "id": "ocd-person/3937cef1-8c62-428c-8837-aa6a6a8b60e7",
+    "name": "Aimee Freeman",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "98",
+      "division_id": "ocd-division/country:us/state:la/sldl:98"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Aimee",
+    "family_name": "Freeman",
+    "image": "https://house.louisiana.gov/H_Reps/RepPics20/rep98.jpg",
+    "email": "hse098@legis.la.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Tulane University, M. B. A.; University of Virginia, B. A.",
+      "legislative assistant": "Razan Amira Badr",
+      "representing parishes": [
+        "Orleans"
+      ]
+    },
+    "created_at": "2020-03-06T01:31:32.189640+00:00",
+    "updated_at": "2025-03-29T00:52:54.119003+00:00",
+    "openstates_url": "https://openstates.org/person/aimee-freeman-1jy4A4PSXXOVUsVR0xCoMx/"
+  },
+  {
+    "id": "ocd-person/5032448a-7275-4a02-8dc1-d251cdde8ad9",
+    "name": "Alan Seabaugh",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "31",
+      "division_id": "ocd-division/country:us/state:la/sldu:31"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Alan",
+    "family_name": "Seabaugh",
+    "image": "https://senate.la.gov/SenPics/Sen31.jpg",
+    "email": "sen31@legis.la.gov",
+    "gender": "Male",
+    "birth_date": "1967-05-20",
+    "death_date": "",
+    "extras": {
+      "education": "Louisiana State University, B.A., 1990; Louisiana State University Law School, J.D., 1993",
+      "legislative assistant": "Emily Mott and Megan McCreary",
+      "representing parishes": [
+        "Caddo"
+      ]
+    },
+    "created_at": "2018-10-18T14:45:46.883803+00:00",
+    "updated_at": "2025-03-29T00:52:45.410056+00:00",
+    "openstates_url": "https://openstates.org/person/alan-seabaugh-2RKMENSeFvu1IuYoaHHo6L/"
+  },
+  {
+    "id": "ocd-person/967fa557-fcdc-4a75-a13e-dabf05b85905",
+    "name": "Alonzo Knox",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "93",
+      "division_id": "ocd-division/country:us/state:la/sldl:93"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Alonzo",
+    "family_name": "Knox",
+    "image": "https://house.louisiana.gov/H_Reps/RepPics20/rep93.jpg",
+    "email": "hse093@legis.la.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "MBA, Trinity University, \r\nBA, Political Science, Southern University at B.R. and \r\nAA, Law Enforcement, Southern University at B.R.",
+      "legislative assistant": "Jonathan Green",
+      "representing parishes": [
+        "Orleans"
+      ]
+    },
+    "created_at": "2023-04-18T23:38:22.798940+00:00",
+    "updated_at": "2025-03-29T00:52:31.463741+00:00",
+    "openstates_url": "https://openstates.org/person/alonzo-knox-4ZzBMtUIY3RsvBJO1n6Ncr/"
+  },
+  {
+    "id": "ocd-person/a6a9544c-d12b-44cc-a52d-f2ec0e01f556",
+    "name": "Annie Spell",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "45",
+      "division_id": "ocd-division/country:us/state:la/sldl:45"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Annie",
+    "family_name": "Spell",
+    "image": "",
+    "email": "hse045@legis.la.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-03-29T00:52:29.892711+00:00",
+    "updated_at": "2025-04-24T06:59:00.111069+00:00",
+    "openstates_url": "https://openstates.org/person/annie-spell-54U6omTGEYGc2kKTAk6EYo/"
+  },
+  {
+    "id": "ocd-person/ad514eed-2832-4ae3-a0c5-62d8f2721297",
+    "name": "Barbara Carpenter",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "63",
+      "division_id": "ocd-division/country:us/state:la/sldl:63"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Barbara",
+    "family_name": "Carpenter",
+    "image": "https://house.louisiana.gov/H_Reps/RepPics20/rep63.jpg",
+    "email": "carpenterb@legis.la.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Southern University, B.S., Vocational Education and General Science; Southern University, M.Ed, Secondary Education and Administration; Kansas State University, PhD, Adult and Occupational Education and International Education",
+      "legislative assistant": "Kermit Johnson, IV",
+      "representing parishes": [
+        "East Baton Rouge"
+      ]
+    },
+    "created_at": "2018-10-18T14:45:54.845428+00:00",
+    "updated_at": "2025-03-29T00:53:07.775637+00:00",
+    "openstates_url": "https://openstates.org/person/barbara-carpenter-5H2pUhj9UAAUSLiZg7FBvb/"
+  },
+  {
+    "id": "ocd-person/bd179bf7-f90d-4e3a-baea-a590c3002586",
+    "name": "Barbara Freiberg",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "70",
+      "division_id": "ocd-division/country:us/state:la/sldl:70"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Barbara",
+    "family_name": "Freiberg",
+    "image": "https://house.louisiana.gov/H_Reps/RepPics20/rep70.jpg",
+    "email": "hse070@legis.la.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Lee High School; Louisiana Tech University, B.A.; University of North Carolina at Chapel Hill, M.A.",
+      "legislative assistant": "Brandi Chambless",
+      "representing parishes": [
+        "East Baton Rouge"
+      ]
+    },
+    "created_at": "2020-03-06T01:31:34.233974+00:00",
+    "updated_at": "2025-03-29T00:53:05.413484+00:00",
+    "openstates_url": "https://openstates.org/person/barbara-freiberg-5koL26vVbnf4ZIgeC3e8Sk/"
+  },
+  {
+    "id": "ocd-person/c5ea395a-7594-4585-b193-000e05f08005",
+    "name": "Beau Beaullieu",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "48",
+      "division_id": "ocd-division/country:us/state:la/sldl:48"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Beau",
+    "family_name": "Beaullieu",
+    "image": "https://house.louisiana.gov/H_Reps/RepPics20/rep48.jpg",
+    "email": "hse048@legis.la.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "education": "Louisiana State University, Finance Degree; University of Lafayette, MBA; Certified 401(K) Professional; Accredited Investment Fiduciary",
+      "legislative assistant": "Julie F. Romero",
+      "representing parishes": [
+        "Iberia",
+        "Lafayette",
+        "and St. Martin"
+      ]
+    },
+    "created_at": "2020-03-06T01:31:40.561118+00:00",
+    "updated_at": "2025-03-29T00:52:24.262477+00:00",
+    "openstates_url": "https://openstates.org/person/beau-beaullieu-61SWnrP3y5bd4CUn9QWlMr/"
+  },
+  {
+    "id": "ocd-person/cbe53992-3b3c-4ec0-a94a-58ddf96e6edd",
+    "name": "Beryl Amedée",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "51",
+      "division_id": "ocd-division/country:us/state:la/sldl:51"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:la/government",
+      "name": "Louisiana",
+      "classification": "state"
+    },
+    "given_name": "Beryl",
+    "family_name": "Amedée",
+    "image": "https://house.louisiana.gov/H_Reps/RepPics20/rep51.jpg",
+    "email": "amedeeb@legis.la.gov",
+    "gender": "Female",
+    "birth_date": "1964-10-14",
+    "death_date": "",
+    "extras": {
+      "legislative assistant": "Kristi Gregoire",
+      "representing parishes": [
+        "Assumption",
+        "Lafourche",
+        "St. Mary",
+        "and Terrebonne"
+      ]
+    },
+    "created_at": "2018-10-18T14:45:38.261098+00:00",
+    "updated_at": "2025-03-29T00:52:24.767396+00:00",
+    "openstates_url": "https://openstates.org/person/beryl-amedee-6CkCIovX0ca87YHi5udDhN/"
+  }
+]

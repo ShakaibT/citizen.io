@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/8a65569e-4ed6-4952-86b8-d499bcbf1cae",
+    "name": "Alek Skarlatos",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "4",
+      "division_id": "ocd-division/country:us/state:or/sldl:4"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Alek",
+    "family_name": "Skarlatos",
+    "image": "https://storage.googleapis.com/enview-dev-public-general/legislative-people-photos/121328.jpg",
+    "email": "rep.alekskarlatos@oregonlegislature.gov",
+    "gender": "Male",
+    "birth_date": "1992-10-10",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-16T01:32:05.474213+00:00",
+    "updated_at": "2025-03-13T07:52:27.547642+00:00",
+    "openstates_url": "https://openstates.org/person/alek-skarlatos-4D9Fg4c2FXaFLpPdrY3fgs/"
+  },
+  {
+    "id": "ocd-person/3efec526-6660-45fa-9a10-b02716b2a779",
+    "name": "Andrea Valderrama",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "47",
+      "division_id": "ocd-division/country:us/state:or/sldl:47"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Andrea",
+    "family_name": "Valderrama",
+    "image": "https://www.oregonlegislature.gov/valderrama/PublishingImages/member_photo.jpg",
+    "email": "rep.andreavalderrama@oregonlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-06-01T20:26:36.843077+00:00",
+    "updated_at": "2024-10-09T23:22:25.880177+00:00",
+    "openstates_url": "https://openstates.org/person/andrea-valderrama-1urxBG7R2pJJFBJl9OCGnR/"
+  },
+  {
+    "id": "ocd-person/a22ec130-3ba7-4304-9e6f-3a950b8454cb",
+    "name": "Anna Scharf",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:or/sldl:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Anna",
+    "family_name": "Scharf",
+    "image": "https://www.oregonlegislature.gov/scharf/PublishingImages/member_photo.jpg",
+    "email": "rep.annascharf@oregonlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2022-01-30T08:01:48.309284+00:00",
+    "updated_at": "2024-10-09T23:22:45.404025+00:00",
+    "openstates_url": "https://openstates.org/person/anna-scharf-4w27gHZDINDrIrpbmLrDHH/"
+  },
+  {
+    "id": "ocd-person/7a36fd6a-105a-44b3-b7e3-b3447979db49",
+    "name": "Annessa Hartman",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:or/sldl:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Annessa",
+    "family_name": "Hartman",
+    "image": "https://www.clackamas.us/sites/default/files/2021-12/annessa_hartman.jpg",
+    "email": "rep.annessahartman@oregonlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-18T23:00:38.409951+00:00",
+    "updated_at": "2024-10-09T23:22:38.396218+00:00",
+    "openstates_url": "https://openstates.org/person/annessa-hartman-3icC34Gwv2WK6M98WUoBon/"
+  },
+  {
+    "id": "ocd-person/305e1426-2193-4e49-accf-6b26d224e92b",
+    "name": "Anthony Broadman",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:or/sldu:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Broadman",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Anthony_Broadman.jpg",
+    "email": "sen.anthonybroadman@oregonlegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-16T01:32:26.002093+00:00",
+    "updated_at": "2025-02-04T04:31:46.015906+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-broadman-1TGcnVylqvW5DdeyI0UXzH/"
+  },
+  {
+    "id": "ocd-person/571be1bf-e0ba-45a3-97be-d5df3bc98738",
+    "name": "April Dobson",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "39",
+      "division_id": "ocd-division/country:us/state:or/sldl:39"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "April",
+    "family_name": "Dobson",
+    "image": "https://www.oregonlegislature.gov/dobson/PublishingImages/member_photo.jpg",
+    "email": "rep.aprildobson@oregonlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-16T01:32:59.148852+00:00",
+    "updated_at": "2025-02-21T16:11:59.520826+00:00",
+    "openstates_url": "https://openstates.org/person/april-dobson-2eN4cJ3WB8CW79MXyhdXZ2/"
+  },
+  {
+    "id": "ocd-person/a19e8e1f-4859-4d05-8dc7-6f0a352c0757",
+    "name": "Ben Bowman",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "25",
+      "division_id": "ocd-division/country:us/state:or/sldl:25"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Bowman",
+    "image": "https://www.oregonlegislature.gov/bowman/PublishingImages/member_photo.jpg",
+    "email": "rep.benbowman@oregonlegislature.gov",
+    "gender": "Male",
+    "birth_date": "1992-01-23",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-18T22:59:45.332257+00:00",
+    "updated_at": "2024-10-09T23:22:28.343418+00:00",
+    "openstates_url": "https://openstates.org/person/ben-bowman-4uyDvCO5rsJKbsKiOQ9ERz/"
+  },
+  {
+    "id": "ocd-person/4c9f2660-6dd3-49f5-a503-6fe5bc5c7787",
+    "name": "Bobby Levy",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "58",
+      "division_id": "ocd-division/country:us/state:or/sldl:58"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Bobby",
+    "family_name": "Levy",
+    "image": "https://www.oregonlegislature.gov/levy/PublishingImages/member_photo.jpg",
+    "email": "rep.bobbylevy@oregonlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-13T00:16:09.687058+00:00",
+    "updated_at": "2024-10-09T23:22:45.750093+00:00",
+    "openstates_url": "https://openstates.org/person/bobby-levy-2Ka9D4dLN0Lm7acRB38DX5/"
+  },
+  {
+    "id": "ocd-person/a95c31b3-9bfa-4ab1-93d1-278082ead92a",
+    "name": "Boomer Wright",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "9",
+      "division_id": "ocd-division/country:us/state:or/sldl:9"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Boomer",
+    "family_name": "Wright",
+    "image": "https://www.oregonlegislature.gov/wright/PublishingImages/member_photo.jpg",
+    "email": "rep.boomerwright@oregonlegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-13T00:16:06.383159+00:00",
+    "updated_at": "2024-10-09T23:22:49.273841+00:00",
+    "openstates_url": "https://openstates.org/person/boomer-wright-59Zppyu6XjATkUjr3VXD6w/"
+  },
+  {
+    "id": "ocd-person/e420fffb-7b56-42db-8cc4-531526ad6802",
+    "name": "Bruce Starr",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:or/sldu:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:or/government",
+      "name": "Oregon",
+      "classification": "state"
+    },
+    "given_name": "Bruce",
+    "family_name": "Starr",
+    "image": "https://www.oregonlegislature.gov/starr/PublishingImages/member_photo.jpg",
+    "email": "sen.brucestarr@oregonlegislature.gov",
+    "gender": "Male",
+    "birth_date": "1969-01-12",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-11-17T12:13:04.985227+00:00",
+    "updated_at": "2025-01-27T22:51:11.218807+00:00",
+    "openstates_url": "https://openstates.org/person/bruce-starr-6wTKYWtE6uTJTaHqwu5wlW/"
+  }
+]

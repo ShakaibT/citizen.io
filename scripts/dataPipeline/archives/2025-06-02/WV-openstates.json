@@ -1,0 +1,276 @@
+[
+  {
+    "id": "ocd-person/76544899-58ec-4065-a3e8-4a4d8a12b4eb",
+    "name": "Adam Burkhammer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "64",
+      "division_id": "ocd-division/country:us/state:wv/sldl:64"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Burkhammer",
+    "image": "https://www.wvlegislature.gov/images/members/2025/house/burkhammer_adam.jpg",
+    "email": "adam.burkhammer@wvhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-14T00:20:45.462316+00:00",
+    "updated_at": "2025-03-29T02:51:22.916113+00:00",
+    "openstates_url": "https://openstates.org/person/adam-burkhammer-3bHbxeU86muRNrfYdD69Kl/"
+  },
+  {
+    "id": "ocd-person/c15b4eb1-1dc4-498f-9929-43ff34445317",
+    "name": "Adam Vance",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "35",
+      "division_id": "ocd-division/country:us/state:wv/sldl:35"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Vance",
+    "image": "http://www.wvlegislature.gov/images/members/2023/house/vance_adam.jpg",
+    "email": "adam.vance@wvhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "title": "Assistant Majority Whip"
+    },
+    "created_at": "2023-02-15T00:28:31.462389+00:00",
+    "updated_at": "2025-03-29T02:50:48.836524+00:00",
+    "openstates_url": "https://openstates.org/person/adam-vance-5srFIK4N7vuCuZRhmffGHn/"
+  },
+  {
+    "id": "ocd-person/57c08164-a673-4269-84d9-6017e740eaac",
+    "name": "Amy Grady",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "4",
+      "division_id": "ocd-division/country:us/state:wv/sldu:4"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Grady",
+    "image": "https://www.wvlegislature.gov/images/members/2024/senate/grady_amy.jpg",
+    "email": "amy.grady@wvsenate.gov",
+    "gender": "Female",
+    "birth_date": "1979-10-15",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-14T00:20:47.063841+00:00",
+    "updated_at": "2025-03-29T02:51:08.176879+00:00",
+    "openstates_url": "https://openstates.org/person/amy-grady-2faJ4iw2GcoVJd2hb4sNhs/"
+  },
+  {
+    "id": "ocd-person/e6deff1e-fb70-4bf0-a2b6-9c30567fcd9d",
+    "name": "Andy Shamblin",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "59",
+      "division_id": "ocd-division/country:us/state:wv/sldl:59"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Andy",
+    "family_name": "Shamblin",
+    "image": "http://www.wvlegislature.gov/images/members/2023/house/shamblin_andy.jpg",
+    "email": "andy.shamblin@wvhouse.gov",
+    "gender": "Male",
+    "birth_date": "1990-05-25",
+    "death_date": "",
+    "extras": {
+      "title": "Assistant Majority Whip"
+    },
+    "created_at": "2023-02-15T00:29:46.204916+00:00",
+    "updated_at": "2025-03-29T02:52:19.277070+00:00",
+    "openstates_url": "https://openstates.org/person/andy-shamblin-71e8z57rnsciTtVptYlG1N/"
+  },
+  {
+    "id": "ocd-person/86a1fdf7-e6af-41b4-8d69-0d0815fc9512",
+    "name": "Anitra Hamilton",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "81",
+      "division_id": "ocd-division/country:us/state:wv/sldl:81"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Anitra",
+    "family_name": "Hamilton",
+    "image": "http://www.wvlegislature.gov/images/members/2023/house/hamilton_anitra.jpg",
+    "email": "anitra.hamilton@wvhouse.gov",
+    "gender": "Female",
+    "birth_date": "1977-06-20",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-05-24T00:56:06.568411+00:00",
+    "updated_at": "2025-03-29T02:51:04.452502+00:00",
+    "openstates_url": "https://openstates.org/person/anitra-hamilton-46309D74kcFSCmv3ez9jlq/"
+  },
+  {
+    "id": "ocd-person/37bf9de9-84b5-4983-8742-a5c3eeeca64a",
+    "name": "Anne Charnock",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "17",
+      "division_id": "ocd-division/country:us/state:wv/sldu:17"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Charnock",
+    "image": "https://www.wvlegislature.gov/images/members/2025/senate/charnock_anne.jpg",
+    "email": "anne.charnock@wvsenate.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-03-29T02:51:09.463766+00:00",
+    "updated_at": "2025-03-29T02:51:10.459317+00:00",
+    "openstates_url": "https://openstates.org/person/anne-charnock-1hC97YT1MaX83RfAa0IKvy/"
+  },
+  {
+    "id": "ocd-person/de50d28d-6a58-4244-8c74-36ca3f41767a",
+    "name": "Ben Queen",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:wv/sldu:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Queen",
+    "image": "https://www.wvlegislature.gov/images/members/2023/senate/queen_ben.jpg",
+    "email": "ben.queen@wvsenate.gov",
+    "gender": "Male",
+    "birth_date": "1995-02-07",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:14:23.923959+00:00",
+    "updated_at": "2025-03-29T02:52:28.310764+00:00",
+    "openstates_url": "https://openstates.org/person/ben-queen-6lVEPyKCL3faXaMdDlTjRK/"
+  },
+  {
+    "id": "ocd-person/b5b3734c-fa9f-422b-b0d4-ce8b2b2624c5",
+    "name": "Bill Anderson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:wv/sldl:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Anderson",
+    "image": "http://www.wvlegislature.gov/images/members/2022/house/anderson_bill.jpg",
+    "email": "bill.anderson@wvhouse.gov",
+    "gender": "Male",
+    "birth_date": "1948-08-09",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:14:34.877660+00:00",
+    "updated_at": "2025-03-29T02:52:21.977402+00:00",
+    "openstates_url": "https://openstates.org/person/bill-anderson-5WrcSDPGcalDrfWYpHvADF/"
+  },
+  {
+    "id": "ocd-person/84ae4ee5-01d1-402d-8267-787a78dd58e5",
+    "name": "Bill Flanigan",
+    "party": "Republican",
+    "current_role": {
+      "title": "Delegate",
+      "org_classification": "lower",
+      "district": "4",
+      "division_id": "ocd-division/country:us/state:wv/sldl:4"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Flanigan",
+    "image": "https://www.wvlegislature.gov/images/members/2025/house/flanigan_bill.jpg",
+    "email": "bill.flanigan@wvhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-11-16T02:10:13.744869+00:00",
+    "updated_at": "2025-03-29T02:52:24.069700+00:00",
+    "openstates_url": "https://openstates.org/person/bill-flanigan-42Me45GvK98Z49jq36Tuh3/"
+  },
+  {
+    "id": "ocd-person/8bd21671-34c1-4ba3-aced-0dcaa110029c",
+    "name": "Bill Hamilton",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "11",
+      "division_id": "ocd-division/country:us/state:wv/sldu:11"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:wv/government",
+      "name": "West Virginia",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Hamilton",
+    "image": "https://www.wvlegislature.gov/images/members/2024/senate/hamilton_bill.jpg",
+    "email": "bill.hamilton@wvsenate.gov",
+    "gender": "Male",
+    "birth_date": "1950-07-14",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T16:14:24.012255+00:00",
+    "updated_at": "2025-03-29T02:52:01.577987+00:00",
+    "openstates_url": "https://openstates.org/person/bill-hamilton-4FpwVtl1dBA7QFWRyCDEBY/"
+  }
+]

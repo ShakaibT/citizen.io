@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Leaflet Zoom Test</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .instructions h2 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        
+        .instructions ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin: 5px 0;
+            color: #1565c0;
+        }
+        
+        #map {
+            height: 500px;
+            width: 100%;
+            border: 2px solid #007cba;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .status {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .status h3 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+        
+        #console-output {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Pure Leaflet Zoom Test</h1>
+        
+        <div class="instructions">
+            <h2>Test Instructions</h2>
+            <ul>
+                <li><strong>Mouse Wheel:</strong> Scroll up/down to zoom in/out</li>
+                <li><strong>Double Click:</strong> Double-click anywhere on the map to zoom in</li>
+                <li><strong>Zoom Controls:</strong> Use the + and - buttons in the top-left corner</li>
+                <li><strong>Keyboard:</strong> Use + and - keys to zoom (click map first to focus)</li>
+                <li><strong>Touch:</strong> Pinch to zoom on mobile devices</li>
+            </ul>
+            <p><strong>Watch the console output below for zoom events!</strong></p>
+        </div>
+        
+        <div id="map"></div>
+        
+        <div class="status">
+            <h3>Console Output</h3>
+            <div id="console-output">Initializing map...\n</div>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    <script>
+        // Console output function
+        function logToConsole(message) {
+            const output = document.getElementById('console-output');
+            const timestamp = new Date().toLocaleTimeString();
+            output.textContent += `[${timestamp}] ${message}\n`;
+            output.scrollTop = output.scrollHeight;
+            console.log(message);
+        }
+        
+        // Initialize the map
+        logToConsole('🗺️ Initializing Leaflet map...');
+        
+        const map = L.map('map', {
+            center: [39.8283, -98.5795], // Center of USA
+            zoom: 4,
+            minZoom: 1,
+            maxZoom: 18,
+            zoomControl: true,
+            scrollWheelZoom: true,
+            doubleClickZoom: true,
+            touchZoom: true,
+            boxZoom: true,
+            keyboard: true,
+            zoomSnap: 0.1,
+            zoomDelta: 0.25,
+            wheelPxPerZoomLevel: 60
+        });
+        
+        // Add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+        
+        // Log initial state
+        logToConsole(`📊 Initial zoom level: ${map.getZoom()}`);
+        logToConsole(`📊 Min zoom: ${map.getMinZoom()}, Max zoom: ${map.getMaxZoom()}`);
+        
+        // Check zoom capabilities
+        const capabilities = {
+            scrollWheelZoom: map.scrollWheelZoom.enabled(),
+            doubleClickZoom: map.doubleClickZoom.enabled(),
+            touchZoom: map.touchZoom.enabled(),
+            boxZoom: map.boxZoom.enabled(),
+            keyboard: map.keyboard.enabled()
+        };
+        
+        logToConsole(`📊 Zoom capabilities: ${JSON.stringify(capabilities)}`);
+        
+        // Add event listeners
+        map.on('zoomstart', function() {
+            logToConsole('🚀 ZOOM START');
+        });
+        
+        map.on('zoom', function() {
+            logToConsole(`🔍 ZOOM EVENT - Level: ${map.getZoom()}`);
+        });
+        
+        map.on('zoomend', function() {
+            logToConsole(`🏁 ZOOM END - Final Level: ${map.getZoom()}`);
+        });
+        
+        // Listen for wheel events
+        map.getContainer().addEventListener('wheel', function(e) {
+            logToConsole(`🖱️ WHEEL EVENT - deltaY: ${e.deltaY}, deltaX: ${e.deltaX}`);
+        });
+        
+        // Listen for double-click events
+        map.on('dblclick', function(e) {
+            logToConsole(`👆 DOUBLE CLICK EVENT at ${e.latlng.lat.toFixed(4)}, ${e.latlng.lng.toFixed(4)}`);
+        });
+        
+        // Listen for touch events
+        map.getContainer().addEventListener('touchstart', function(e) {
+            logToConsole(`👆 TOUCH START - ${e.touches.length} touches`);
+        });
+        
+        map.getContainer().addEventListener('touchmove', function(e) {
+            if (e.touches.length > 1) {
+                logToConsole(`👆 TOUCH MOVE - ${e.touches.length} touches (pinch gesture)`);
+            }
+        });
+        
+        // Test programmatic zoom after 3 seconds
+        setTimeout(function() {
+            logToConsole('🧪 Testing programmatic zoom...');
+            const currentZoom = map.getZoom();
+            map.setZoom(currentZoom + 1);
+            logToConsole(`🧪 Programmatic zoom from ${currentZoom} to ${currentZoom + 1}`);
+        }, 3000);
+        
+        // Add a marker for reference
+        L.marker([39.8283, -98.5795]).addTo(map)
+            .bindPopup('Center of USA<br>Try zooming in and out!')
+            .openPopup();
+        
+        logToConsole('✅ Map initialization complete!');
+        logToConsole('📝 Try interacting with the map using mouse wheel, double-click, or zoom controls');
+    </script>
+</body>
+</html> 

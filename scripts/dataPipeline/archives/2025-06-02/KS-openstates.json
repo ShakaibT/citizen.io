@@ -1,0 +1,284 @@
+[
+  {
+    "id": "ocd-person/c1802270-0126-4be5-b7e7-1a9a472f5fd7",
+    "name": "Adam Smith",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "120",
+      "division_id": "ocd-division/country:us/state:ks/sldl:120"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Smith",
+    "image": "https://www.kslegislature.org/li/s/images/pics/rep_smith_adam_1.jpg",
+    "email": "adam.smith@house.ks.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Farmer/Rancher"
+    },
+    "created_at": "2018-10-18T14:44:30.656833+00:00",
+    "updated_at": "2025-03-05T07:02:27.907594+00:00",
+    "openstates_url": "https://openstates.org/person/adam-smith-5t84l1IlhVdjxR4pj67bKZ/"
+  },
+  {
+    "id": "ocd-person/2c46aedb-f7a4-4f9a-bade-5ae192acc2a3",
+    "name": "Adam Thomas",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:ks/sldu:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Thomas",
+    "image": "https://www.kslegislature.org/li/s/images/pics/rep_thomas_adam_1.jpg",
+    "email": "adam.thomas@senate.ks.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Restaurant Owner"
+    },
+    "created_at": "2019-01-07T05:01:31.726090+00:00",
+    "updated_at": "2025-03-05T07:02:38.655053+00:00",
+    "openstates_url": "https://openstates.org/person/adam-thomas-1LXxo22tJv8mJxz9UJ2qe3/"
+  },
+  {
+    "id": "ocd-person/d7dd1de1-73e2-438a-bf25-c70e12ede30d",
+    "name": "Adam Turk",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "117",
+      "division_id": "ocd-division/country:us/state:ks/sldl:117"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Turk",
+    "image": "http://www.kslegislature.org/li/s/images/pics/rep_turk_adam_1.jpg",
+    "email": "adam.turk@house.ks.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "self employed"
+    },
+    "created_at": "2023-01-12T22:28:53.927470+00:00",
+    "updated_at": "2025-03-05T07:03:11.462768+00:00",
+    "openstates_url": "https://openstates.org/person/adam-turk-6ZKOr9wnNPYGgow2r32TAj/"
+  },
+  {
+    "id": "ocd-person/f3a06f5c-fe9a-42c9-ad04-82e1532b6979",
+    "name": "Alexis Simmons",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "58",
+      "division_id": "ocd-division/country:us/state:ks/sldl:58"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Alexis",
+    "family_name": "Simmons",
+    "image": "https://static.wixstatic.com/media/26ce0e_9c56817c3ca545d6a0d57f7c9a163a92~mv2.png/v1/crop/x_0,y_0,w_689,h_687/fill/w_458,h_482,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/26ce0e_9c56817c3ca545d6a0d57f7c9a163a92~mv2.png",
+    "email": "alexis.simmons@house.ks.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T18:07:00.806585+00:00",
+    "updated_at": "2025-02-04T20:14:37.019999+00:00",
+    "openstates_url": "https://openstates.org/person/alexis-simmons-7PiSAxNPjkhsRt6Fc6Rvnl/"
+  },
+  {
+    "id": "ocd-person/47445ee6-4c28-496c-b5a2-2f666fc62d46",
+    "name": "Allen Reavis",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "63",
+      "division_id": "ocd-division/country:us/state:ks/sldl:63"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Allen",
+    "family_name": "Reavis",
+    "image": "https://www.atchisoncountyks.org/ImageRepository/Document?documentID=2708",
+    "email": "allen.reavis@house.ks.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T18:06:51.592351+00:00",
+    "updated_at": "2025-03-05T07:01:55.531149+00:00",
+    "openstates_url": "https://openstates.org/person/allen-reavis-2AThRXlRlrG2imEvlPG1WI/"
+  },
+  {
+    "id": "ocd-person/372f4e97-d36e-41c3-aae3-fd69da828ee5",
+    "name": "Angel Roeser",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "67",
+      "division_id": "ocd-division/country:us/state:ks/sldl:67"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Angel",
+    "family_name": "Roeser",
+    "image": "https://www.kslegislature.gov/li/s/images/pics/rep_roeser_angelina_1.jpg",
+    "email": "angel.roeser@house.ks.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T18:07:01.613419+00:00",
+    "updated_at": "2025-02-04T20:14:36.793192+00:00",
+    "openstates_url": "https://openstates.org/person/angel-roeser-1g8CEayuxhVaaYvHVReAQX/"
+  },
+  {
+    "id": "ocd-person/a587476a-1201-4d9f-b8b7-ac6f74b3f6ce",
+    "name": "Angela Martinez",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "103",
+      "division_id": "ocd-division/country:us/state:ks/sldl:103"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Martinez",
+    "image": "http://www.kslegislature.org/li/s/images/pics/rep_martinez_angela_1.jpg",
+    "email": "angela.martinez@house.ks.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Direct Care Counselor Wichita Children's Home"
+    },
+    "created_at": "2023-01-12T22:28:00.684756+00:00",
+    "updated_at": "2025-03-05T07:02:01.412039+00:00",
+    "openstates_url": "https://openstates.org/person/angela-martinez-52LYVc4CpvoeE6NNcW1oli/"
+  },
+  {
+    "id": "ocd-person/e0cddd71-639c-4b74-8dea-bc189418034d",
+    "name": "Angela Stiens",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "39",
+      "division_id": "ocd-division/country:us/state:ks/sldl:39"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Stiens",
+    "image": "https://www.kslegislature.org/li/s/images/pics/rep_stiens_angela_1.jpg",
+    "email": "angela.stiens@house.ks.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-04-01T20:43:49.875008+00:00",
+    "updated_at": "2025-05-15T00:44:28.039124+00:00",
+    "openstates_url": "https://openstates.org/person/angela-stiens-6qCMQpP6n8WbLD9CZhEwjV/"
+  },
+  {
+    "id": "ocd-person/4544fc4e-fff8-4bbe-bc29-4e28c6be3179",
+    "name": "Avery Anderson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "72",
+      "division_id": "ocd-division/country:us/state:ks/sldl:72"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Avery",
+    "family_name": "Anderson",
+    "image": "https://www.gannett-cdn.com/-mm-/b7f21864ea2f692daa800e1f0bbe0a1fdbbdf4cf/c=0-274-5260-3233/local/-/media/2020/11/20/Topeka/ghows-KS-200929929-8133c8fa.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp",
+    "email": "avery.anderson@house.ks.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Insurance"
+    },
+    "created_at": "2021-01-12T00:09:19.079813+00:00",
+    "updated_at": "2025-03-05T07:02:31.023678+00:00",
+    "openstates_url": "https://openstates.org/person/avery-anderson-26hzohQKKQKEkEDLrCLOG1/"
+  },
+  {
+    "id": "ocd-person/7aac5ab6-1590-4cfe-8c02-d61f292497c8",
+    "name": "Barb Wasinger",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "111",
+      "division_id": "ocd-division/country:us/state:ks/sldl:111"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:ks/government",
+      "name": "Kansas",
+      "classification": "state"
+    },
+    "given_name": "Barb",
+    "family_name": "Wasinger",
+    "image": "https://www.kslegislature.org/li/s/images/pics/rep_wasinger_barbara_1.jpg",
+    "email": "barb.wasinger@house.ks.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Business Owner"
+    },
+    "created_at": "2019-01-07T05:01:30.416044+00:00",
+    "updated_at": "2025-03-05T07:03:03.558384+00:00",
+    "openstates_url": "https://openstates.org/person/barb-wasinger-3jTpShH62L44rALrqBav0K/"
+  }
+]

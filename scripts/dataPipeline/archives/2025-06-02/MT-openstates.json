@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/1f3a2599-a310-46f5-9b72-ea57f7b59c9b",
+    "name": "Alanah Griffith",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "60",
+      "division_id": "ocd-division/country:us/state:mt/sldl:60"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Alanah",
+    "family_name": "Griffith",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/AlanahGriffith2024.jpg",
+    "email": "alanah.griffith@legmt.gov",
+    "gender": "Female",
+    "birth_date": "1974-12-26",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-11T21:03:32.888190+00:00",
+    "updated_at": "2025-05-15T01:18:33.886962+00:00",
+    "openstates_url": "https://openstates.org/person/alanah-griffith-wvKn1EvrgG2FsHxb8OSiZ/"
+  },
+  {
+    "id": "ocd-person/817877aa-a3ac-40a7-9f32-f40204840abf",
+    "name": "Amy Regier",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "6",
+      "division_id": "ocd-division/country:us/state:mt/sldl:6"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Regier",
+    "image": "",
+    "email": "amy.regier@legmt.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-04-01T00:13:21.022242+00:00",
+    "updated_at": "2025-05-15T01:18:03.770273+00:00",
+    "openstates_url": "https://openstates.org/person/amy-regier-3wJ3xr8eGXwoqOll99lDHr/"
+  },
+  {
+    "id": "ocd-person/2dcaf4be-0227-4ced-b01c-aacd8376c45a",
+    "name": "Andrea Olsen",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "48",
+      "division_id": "ocd-division/country:us/state:mt/sldu:48"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Andrea",
+    "family_name": "Olsen",
+    "image": "",
+    "email": "andrea.olsen@legmt.gov",
+    "gender": "Female",
+    "birth_date": "1961-12-24",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:51:54.005017+00:00",
+    "updated_at": "2025-05-15T01:16:48.852294+00:00",
+    "openstates_url": "https://openstates.org/person/andrea-olsen-1OPPABn3twPsyE9o6WjNwQ/"
+  },
+  {
+    "id": "ocd-person/06fef2c8-9695-47b2-9015-999a5dd3bded",
+    "name": "Anthony Nicastro",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "50",
+      "division_id": "ocd-division/country:us/state:mt/sldl:50"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Nicastro",
+    "image": "",
+    "email": "anthony.nicastro@legmt.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-11T21:01:20.694723+00:00",
+    "updated_at": "2025-05-15T01:18:32.358946+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-nicastro-DCSs7wx8K7PxloMeYGbHR/"
+  },
+  {
+    "id": "ocd-person/69cfa3aa-7091-4752-a99c-b6a42c70b17b",
+    "name": "Barry Usher",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "19",
+      "division_id": "ocd-division/country:us/state:mt/sldu:19"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Barry",
+    "family_name": "Usher",
+    "image": "",
+    "email": "barry.usher@legmt.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:51:57.903657+00:00",
+    "updated_at": "2025-05-15T01:18:34.792957+00:00",
+    "openstates_url": "https://openstates.org/person/barry-usher-3Df5JgrvdVvM17m34RFK71/"
+  },
+  {
+    "id": "ocd-person/f87d7b76-3065-48f4-bc3b-50bf00926180",
+    "name": "Becky Beard",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "38",
+      "division_id": "ocd-division/country:us/state:mt/sldu:38"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Becky",
+    "family_name": "Beard",
+    "image": "",
+    "email": "becky.beard@legmt.gov",
+    "gender": "Female",
+    "birth_date": "1960-06-22",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-03T06:37:19.859351+00:00",
+    "updated_at": "2025-05-15T01:18:29.182400+00:00",
+    "openstates_url": "https://openstates.org/person/becky-beard-7YtRRYD8gG3Wu4qgJvWCq8/"
+  },
+  {
+    "id": "ocd-person/94db4829-5bc5-433b-9617-f1e9740ad694",
+    "name": "Becky Edwards",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "61",
+      "division_id": "ocd-division/country:us/state:mt/sldl:61"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Becky",
+    "family_name": "Edwards",
+    "image": "",
+    "email": "becky.edwards@legmt.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-11T21:00:32.016015+00:00",
+    "updated_at": "2025-05-15T01:18:19.260360+00:00",
+    "openstates_url": "https://openstates.org/person/becky-edwards-4Wt4k2bc94XwYqe3F1Ks5s/"
+  },
+  {
+    "id": "ocd-person/e0b3aa43-c4ac-42b9-934a-281d064e590f",
+    "name": "Bill Mercer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "52",
+      "division_id": "ocd-division/country:us/state:mt/sldl:52"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Mercer",
+    "image": "",
+    "email": "bill.mercer@legmt.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-07T01:53:29.564659+00:00",
+    "updated_at": "2025-05-15T01:17:28.279058+00:00",
+    "openstates_url": "https://openstates.org/person/bill-mercer-6q0O56E1r1vaZ0ZdcTW8hr/"
+  },
+  {
+    "id": "ocd-person/ad9a1852-425f-4f4b-9b6e-270f2c282024",
+    "name": "Bob Carter",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "96",
+      "division_id": "ocd-division/country:us/state:mt/sldl:96"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Carter",
+    "image": "",
+    "email": "bob.carter@legmt.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-03T06:36:42.682876+00:00",
+    "updated_at": "2025-05-15T01:17:59.549374+00:00",
+    "openstates_url": "https://openstates.org/person/bob-carter-5Ha5q2PwGdXECWTmaRX5Yi/"
+  },
+  {
+    "id": "ocd-person/cf7f704c-87ac-4bcd-821a-9377bbbee43f",
+    "name": "Bob Phalen",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "17",
+      "division_id": "ocd-division/country:us/state:mt/sldu:17"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mt/government",
+      "name": "Montana",
+      "classification": "state"
+    },
+    "given_name": "Bob",
+    "family_name": "Phalen",
+    "image": "",
+    "email": "bobby.phalen@legmt.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-04-01T00:13:20.267179+00:00",
+    "updated_at": "2025-05-15T01:18:17.748667+00:00",
+    "openstates_url": "https://openstates.org/person/bob-phalen-6JXeNfppxYwygmyrNS6OGF/"
+  }
+]

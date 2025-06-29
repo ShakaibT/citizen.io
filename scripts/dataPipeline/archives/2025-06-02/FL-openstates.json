@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/6a3fae94-a613-49f5-acec-355e4a2722d8",
+    "name": "Adam Anderson",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "57",
+      "division_id": "ocd-division/country:us/state:fl/sldl:57"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Anderson",
+    "image": "https://myfloridahouse.gov//FileStores/Web/Imaging/Member/4885.jpg",
+    "email": "adam.anderson@flhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-14T01:12:29.680831+00:00",
+    "updated_at": "2025-05-23T12:22:23.048399+00:00",
+    "openstates_url": "https://openstates.org/person/adam-anderson-3EUHwR5pv456z8MMnIz7sG/"
+  },
+  {
+    "id": "ocd-person/c94b1151-5034-482b-8d7b-f91f9bb5f951",
+    "name": "Adam Botana",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "80",
+      "division_id": "ocd-division/country:us/state:fl/sldl:80"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Botana",
+    "image": "https://myfloridahouse.gov//FileStores/Web/Imaging/Member/4782.jpg",
+    "email": "adam.botana@flhouse.gov",
+    "gender": "Male",
+    "birth_date": "1984-04-27",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-13T00:05:04.574250+00:00",
+    "updated_at": "2025-04-25T00:24:03.173094+00:00",
+    "openstates_url": "https://openstates.org/person/adam-botana-67plLnPC6qQqKUD4ehxLZh/"
+  },
+  {
+    "id": "ocd-person/de5ddba1-d7fe-41da-9f36-16a03b0b22fc",
+    "name": "Alex Andrade",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "2",
+      "division_id": "ocd-division/country:us/state:fl/sldl:2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Andrade",
+    "image": "https://myfloridahouse.gov//FileStores/Web/Imaging/Member/4710.jpg",
+    "email": "alex.andrade@flhouse.gov",
+    "gender": "Male",
+    "birth_date": "1989-07-22",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-24T06:05:17.643592+00:00",
+    "updated_at": "2025-04-25T00:23:30.828614+00:00",
+    "openstates_url": "https://openstates.org/person/alex-andrade-6lbBlXxwEesk0cmBnjlPyO/"
+  },
+  {
+    "id": "ocd-person/b2fce1a8-4ba6-483b-a534-fa48cc43ee7f",
+    "name": "Alex Rizo",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "112",
+      "division_id": "ocd-division/country:us/state:fl/sldl:112"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Rizo",
+    "image": "https://myfloridahouse.gov//FileStores/Web/Imaging/Member/4796.jpg",
+    "email": "alex.rizo@flhouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-13T00:05:10.809709+00:00",
+    "updated_at": "2025-05-15T00:23:01.744930+00:00",
+    "openstates_url": "https://openstates.org/person/alex-rizo-5RkCU1oHYXogGSQ7OFgrU7/"
+  },
+  {
+    "id": "ocd-person/7f1e874f-ae8b-42a0-90d9-fe867cf9fb45",
+    "name": "Alexis Calatayud",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "38",
+      "division_id": "ocd-division/country:us/state:fl/sldu:38"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Alexis",
+    "family_name": "Calatayud",
+    "image": "https://flsenate.gov/PublishedContent/Senators/2022-2024/Photos/s38_5525.jpg",
+    "email": "calatayud.alexis.web@flsenate.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-14T01:11:50.240700+00:00",
+    "updated_at": "2025-04-25T00:23:37.198808+00:00",
+    "openstates_url": "https://openstates.org/person/alexis-calatayud-3rrya2aQgU3IWcwrwT9QcX/"
+  },
+  {
+    "id": "ocd-person/c26599eb-5ef8-44c3-93a6-77cf23a9567e",
+    "name": "Allison Tant",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "9",
+      "division_id": "ocd-division/country:us/state:fl/sldl:9"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Allison",
+    "family_name": "Tant",
+    "image": "https://myfloridahouse.gov//FileStores/Web/Imaging/Member/4765.jpg",
+    "email": "allison.tant@flhouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-13T00:05:12.912686+00:00",
+    "updated_at": "2025-05-15T00:23:12.805197+00:00",
+    "openstates_url": "https://openstates.org/person/allison-tant-5uowUBEorjyn4gtgCiQvk6/"
+  },
+  {
+    "id": "ocd-person/afd55a58-b8f6-4dd7-9d93-a2207b65e425",
+    "name": "Ana Maria Rodriguez",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:fl/sldu:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Ana Maria",
+    "family_name": "Rodriguez",
+    "image": "https://flsenate.gov/PublishedContent/Senators/2022-2024/Photos/s40_5379.jpg",
+    "email": "rodriguez.anamaria.web@flsenate.gov",
+    "gender": "Female",
+    "birth_date": "1977-05-23",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-04-25T22:28:31.194742+00:00",
+    "updated_at": "2025-03-05T06:31:00.135772+00:00",
+    "openstates_url": "https://openstates.org/person/ana-maria-rodriguez-5Ln9uBYMxYvKnM41eVuMI1/"
+  },
+  {
+    "id": "ocd-person/66c3a112-3008-4332-a6b0-8990a7d992d5",
+    "name": "Angie Nixon",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:fl/sldl:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Angie",
+    "family_name": "Nixon",
+    "image": "https://myfloridahouse.gov//FileStores/Web/Imaging/Member/4766.jpg",
+    "email": "angela.nixon@flhouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-13T00:05:02.588470+00:00",
+    "updated_at": "2025-04-25T00:24:00.689771+00:00",
+    "openstates_url": "https://openstates.org/person/angie-nixon-37ucRobbjxT3HSd7yyFNIL/"
+  },
+  {
+    "id": "ocd-person/1f8e10ad-0047-4854-b696-38e15fda7afa",
+    "name": "Anna Eskamani",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "42",
+      "division_id": "ocd-division/country:us/state:fl/sldl:42"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Anna",
+    "family_name": "Eskamani",
+    "image": "https://myfloridahouse.gov//FileStores/Web/Imaging/Member/4746.jpg",
+    "email": "anna.eskamani@flhouse.gov",
+    "gender": "Female",
+    "birth_date": "1990-05-20",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-24T06:05:18.650753+00:00",
+    "updated_at": "2025-04-25T00:24:01.214875+00:00",
+    "openstates_url": "https://openstates.org/person/anna-eskamani-xXgXJiyRZTNpr1YG9X1Yo/"
+  },
+  {
+    "id": "ocd-person/ad877adf-e8f2-4f31-bdd2-38a6aaf74884",
+    "name": "Anne Gerwig",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "93",
+      "division_id": "ocd-division/country:us/state:fl/sldl:93"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:fl/government",
+      "name": "Florida",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Gerwig",
+    "image": "https://www.hlcpbc.org/wp-content/uploads/2021/01/Anne_Gerwig.jpg",
+    "email": "anne.gerwig@flhouse.gov",
+    "gender": "Female",
+    "birth_date": "1963-12-04",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T18:20:54.154687+00:00",
+    "updated_at": "2025-04-25T00:22:53.246531+00:00",
+    "openstates_url": "https://openstates.org/person/anne-gerwig-5HRaOmVQX21MG3JmEbfbsK/"
+  }
+]

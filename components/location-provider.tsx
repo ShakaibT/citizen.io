@@ -27,6 +27,8 @@ interface LocationContextType {
   error: Error | null
   showLocationSetup: boolean
   setShowLocationSetup: (show: boolean) => void
+  showTutorial: boolean
+  setShowTutorial: (show: boolean) => void
 }
 
 const LocationContext = createContext<LocationContextType | undefined>(undefined)
@@ -37,6 +39,7 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
   const [showLocationSetup, setShowLocationSetup] = useState(false)
+  const [showTutorial, setShowTutorial] = useState(false)
   const [hasCheckedForLocation, setHasCheckedForLocation] = useState(false)
   const [isInitialized, setIsInitialized] = useState(false)
   const { user, loading: authLoading, isConfigured } = useAuth()
@@ -147,6 +150,12 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
             setShowLocationSetup(true)
           }
         }
+        
+        // If location was found, make sure we mark as initialized and checked
+        if (locationFound && mounted) {
+          setHasCheckedForLocation(true)
+          setIsInitialized(true)
+        }
       } catch (err) {
         console.error("Error loading location:", err)
         if (mounted) {
@@ -172,11 +181,33 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
   }, [user, authLoading, isConfigured, hasCheckedForLocation, isInitialized, location])
 
   const setLocation = useCallback((newLocation: LocationData) => {
+    console.log('LocationProvider: Setting new location and triggering tutorial')
     // Use functional updates to prevent race conditions
     setLocationState(newLocation)
     setIsLocationSet(true)
     setError(null)
     setShowLocationSetup(false)
+    
+    // Check if this is a new location (not just reloading an existing one)
+    const isNewLocation = (() => {
+      try {
+        const existingLocation = localStorage.getItem("citizen-location")
+        if (!existingLocation) return true
+        const parsed = JSON.parse(existingLocation)
+        return parsed.address !== newLocation.address
+      } catch {
+        return true
+      }
+    })()
+    
+    // Only show tutorial for new locations, not when reloading existing ones
+    if (isNewLocation) {
+      console.log('LocationProvider: New location detected, will show tutorial')
+      // Show tutorial after a short delay to let the UI settle
+      setTimeout(() => {
+        setShowTutorial(true)
+      }, 1000)
+    }
     
     // Mark that user has completed location setup in this session
     try {
@@ -194,6 +225,7 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   const clearLocation = useCallback(() => {
+    console.log('LocationProvider: Clearing location...')
     setLocationState(null)
     setIsLocationSet(false)
     setError(null)
@@ -245,36 +277,14 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
     )
   }
 
-  // Only show location setup when:
+  // Show location setup when:
   // 1. Explicitly requested by user (showLocationSetup is true)
-  // 2. AND we truly have no location data available
-  // 3. AND we've finished all initialization checks
-  // 4. AND user hasn't already completed setup in this session
-  // 5. AND there's no location in localStorage
-  const hasCompletedSetupInSession = (() => {
-    try {
-      return sessionStorage.getItem("citizen-location-setup-completed") === "true"
-    } catch {
-      return false
-    }
-  })()
-
-  const hasLocationInStorage = (() => {
-    try {
-      const savedLocation = localStorage.getItem("citizen-location")
-      return savedLocation && JSON.parse(savedLocation)
-    } catch {
-      return false
-    }
-  })()
-
+  // 2. AND we've finished all initialization checks
+  // Note: We removed the other conditions because when a user explicitly clicks "Change Location",
+  // we should always show the setup regardless of existing location or session state
   const shouldShowLocationSetup = showLocationSetup && 
-    !location && 
-    !isLocationSet && 
     hasCheckedForLocation && 
-    isInitialized &&
-    !hasCompletedSetupInSession &&
-    !hasLocationInStorage
+    isInitialized
 
   console.log('LocationProvider: Should show location setup?', {
     showLocationSetup,
@@ -282,8 +292,6 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
     isLocationSet,
     hasCheckedForLocation,
     isInitialized,
-    hasCompletedSetupInSession,
-    hasLocationInStorage,
     shouldShowLocationSetup
   })
 
@@ -303,7 +311,9 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
       isLoading: authLoading || isLoading,
       error,
       showLocationSetup,
-      setShowLocationSetup
+      setShowLocationSetup,
+      showTutorial,
+      setShowTutorial
     }}>
       {children}
     </LocationContext.Provider>

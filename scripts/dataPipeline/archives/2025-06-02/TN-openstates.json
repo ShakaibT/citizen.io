@@ -1,0 +1,347 @@
+[
+  {
+    "id": "ocd-person/b3bd4f95-946f-4b4b-b58f-ab78345847b7",
+    "name": "Adam Lowe",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:tn/sldu:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Lowe",
+    "image": "https://static.wixstatic.com/media/599b12_afa74a3390064dd386df25e882ac9659~mv2.jpeg/v1/fill/w_675,h_716,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/599b12_afa74a3390064dd386df25e882ac9659~mv2.jpeg",
+    "email": "sen.adam.lowe@capitol.tn.gov",
+    "gender": "Male",
+    "birth_date": "1981-01-08",
+    "death_date": "",
+    "extras": {
+      "office": "740 CHB",
+      "personal info": [
+        "Born on January 8, 1981",
+        "Married, wife Rachel, four children",
+        "Christian",
+        "College Professor & Corporate Professional Development",
+        "B.A. from Lee University",
+        "M.P.A. from University of Tennessee - Chattanooga",
+        "PhD from University of Tennessee - Knoxville"
+      ]
+    },
+    "created_at": "2023-02-14T05:25:24.363788+00:00",
+    "updated_at": "2025-04-24T08:32:02.199505+00:00",
+    "openstates_url": "https://openstates.org/person/adam-lowe-5TA8nF7D3yoTztj8VGhnB1/"
+  },
+  {
+    "id": "ocd-person/6dc4d8e8-aa2c-423b-8f5c-8ed4666a27db",
+    "name": "Aftyn Behn",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "51",
+      "division_id": "ocd-division/country:us/state:tn/sldl:51"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Aftyn",
+    "family_name": "Behn",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Aftyn_Behn.png",
+    "email": "rep.aftyn.behn@capitol.tn.gov",
+    "gender": "Female",
+    "birth_date": "1988-11-30",
+    "death_date": "",
+    "extras": {
+      "office": "574 CHB",
+      "personal info": [
+        "Born November, 24, 1989",
+        "Community Organizer",
+        "Licensed Social Worker",
+        "B.A., Psychology Honors, University of Texas at Austin",
+        "MSSW, Administration and Policy Practice, University of Texas at Austin",
+        "Portfolio Certificate, Texas Center for Disability Studies"
+      ]
+    },
+    "created_at": "2023-12-28T23:11:46.801456+00:00",
+    "updated_at": "2025-04-24T08:32:18.909580+00:00",
+    "openstates_url": "https://openstates.org/person/aftyn-behn-3L87dEMKyZkNj9T4mJBZb1/"
+  },
+  {
+    "id": "ocd-person/ad23d4a9-9a62-40a5-94a5-246f7741c3e2",
+    "name": "Andrew Farmer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "17",
+      "division_id": "ocd-division/country:us/state:tn/sldl:17"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Farmer",
+    "image": "http://www.capitol.tn.gov/house/members/images/h17.jpg",
+    "email": "rep.andrew.farmer@capitol.tn.gov",
+    "gender": "Male",
+    "birth_date": "1979-12-14",
+    "death_date": "",
+    "extras": {
+      "office": "630 CHB",
+      "personal info": [
+        "Born December 14, 1979",
+        "Married, wife Mariah, two children",
+        "Attorney/Businessman",
+        "Baptist",
+        "B.B.A., East Tennessee State University, Business Administration",
+        "J.D., Thomas M. Cooley Law School, Lansing, Michigan"
+      ]
+    },
+    "created_at": "2018-10-18T16:12:17.602771+00:00",
+    "updated_at": "2025-04-24T02:19:11.444382+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-farmer-5Gi2vd3u2uWZ6OovbLvD6I/"
+  },
+  {
+    "id": "ocd-person/785aed65-3e87-42fe-8e71-307ce08f44ae",
+    "name": "Antonio Parkinson",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "98",
+      "division_id": "ocd-division/country:us/state:tn/sldl:98"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Antonio",
+    "family_name": "Parkinson",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Antonio_Parkinson.jpg",
+    "email": "rep.antonio.parkinson@capitol.tn.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "office": "419 CHB",
+      "personal info": [
+        "Born July 14",
+        "Retired Firefighter, Lieutenant, Shelby County Fire Dept.",
+        "Retired U.S. Marine"
+      ]
+    },
+    "created_at": "2018-10-18T16:12:25.293555+00:00",
+    "updated_at": "2025-04-24T08:32:09.439541+00:00",
+    "openstates_url": "https://openstates.org/person/antonio-parkinson-3f6dFnbQnzam2R7AHayDLa/"
+  },
+  {
+    "id": "ocd-person/0b5b90de-2d94-424f-ab28-b434696cb5a9",
+    "name": "Aron Maberry",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "68",
+      "division_id": "ocd-division/country:us/state:tn/sldl:68"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Aron",
+    "family_name": "Maberry",
+    "image": "https://www.cmcss.net/wp-content/uploads/elementor/thumbs/L10A9877-2-scaled-qx0h1ahjmd2n4yug9v0d3onejmbo99kwtpl6ybvbxo.jpg",
+    "email": "rep.aron.maberry@capitol.tn.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-11-20T22:41:24.565767+00:00",
+    "updated_at": "2025-04-24T08:31:47.264219+00:00",
+    "openstates_url": "https://openstates.org/person/aron-maberry-LQlCXD74g92IOJGSr1b3J/"
+  },
+  {
+    "id": "ocd-person/5110ee0d-fc68-4126-8ff2-7db3814afe66",
+    "name": "Becky Jo Alexander",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "7",
+      "division_id": "ocd-division/country:us/state:tn/sldl:7"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Becky Jo",
+    "family_name": "Alexander",
+    "image": "https://www.capitol.tn.gov/house/members/images/h7.jpg",
+    "email": "rep.rebecca.alexander@capitol.tn.gov",
+    "gender": "Female",
+    "birth_date": "1958-11-04",
+    "death_date": "",
+    "extras": {
+      "office": "516 CHB",
+      "personal info": [
+        "Born November 4, 1958",
+        "Married, 2 daughters",
+        "Motivational Speaker and Storyteller",
+        "Christian",
+        "Daniel Boone High School, 1976",
+        "Milligan College, B.A. in English, Sociology/Psychology - Teaching Certificate in English",
+        "ETSU, M.Ed. Education with emphasis in Storytelling"
+      ]
+    },
+    "created_at": "2021-01-07T06:17:26.779723+00:00",
+    "updated_at": "2025-04-24T08:31:39.371732+00:00",
+    "openstates_url": "https://openstates.org/person/becky-jo-alexander-2Sy79sGue84AIYTf3sqMas/"
+  },
+  {
+    "id": "ocd-person/592971a7-2e11-4bed-a57d-71187e174329",
+    "name": "Becky Massey",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "6",
+      "division_id": "ocd-division/country:us/state:tn/sldu:6"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Becky",
+    "family_name": "Massey",
+    "image": "http://www.capitol.tn.gov/senate/members/images/s6.jpg",
+    "email": "sen.becky.massey@capitol.tn.gov",
+    "gender": "Female",
+    "birth_date": "1955-01-02",
+    "death_date": "",
+    "extras": {
+      "office": "776 CHB",
+      "personal info": [
+        "Born January 2, 1955",
+        "Married, husband Morton, two daughters, Courtney and Kristen, granddaughter Bailey",
+        "B. S., Business Administration, University of Tennessee, Knoxville, 1977"
+      ]
+    },
+    "created_at": "2018-10-18T16:12:17.992056+00:00",
+    "updated_at": "2025-04-24T08:32:04.921451+00:00",
+    "openstates_url": "https://openstates.org/person/becky-massey-2iFFw4adN2uaJqyMVsXVyj/"
+  },
+  {
+    "id": "ocd-person/d94cf7a2-1ba6-46f2-bdbf-54ace20b8dfc",
+    "name": "Bill Lee",
+    "party": "Republican",
+    "current_role": {
+      "title": "Governor",
+      "org_classification": "executive",
+      "district": "",
+      "division_id": ""
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Lee",
+    "image": "https://www.tn.gov/content/dam/tn/governorsoffice-documents/governorlee-images/lee_portraits_2.jpg",
+    "email": "",
+    "gender": "",
+    "birth_date": "1959-10-09",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2020-08-04T05:20:09.986855+00:00",
+    "updated_at": "2024-10-18T18:23:09.876231+00:00",
+    "openstates_url": "https://openstates.org/person/bill-lee-6c2VZ3B25Jtvxdsp4ZUhS8/"
+  },
+  {
+    "id": "ocd-person/46b6a1b2-f0c0-4e9a-a506-a81e12e329f5",
+    "name": "Bill Powers",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "22",
+      "division_id": "ocd-division/country:us/state:tn/sldu:22"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Bill",
+    "family_name": "Powers",
+    "image": "http://www.capitol.tn.gov/senate/members/images/s22.jpg",
+    "email": "sen.bill.powers@capitol.tn.gov",
+    "gender": "Male",
+    "birth_date": "1957-03-10",
+    "death_date": "",
+    "extras": {
+      "office": "772 CHB",
+      "personal info": [
+        "Born on March 10, 1957",
+        "Married, wife Fran, three adult children",
+        "Methodist",
+        "B.A., University of Tennessee, Knoxville, with honors",
+        "Managing Partner, Wyatt-Johnson Automotive Group"
+      ]
+    },
+    "created_at": "2020-01-31T18:21:28.186185+00:00",
+    "updated_at": "2025-04-24T08:32:13.068470+00:00",
+    "openstates_url": "https://openstates.org/person/bill-powers-29QvOhMikFqJLZcqjxiHzx/"
+  },
+  {
+    "id": "ocd-person/e0272220-99f1-4cfb-9d29-946b86279e0b",
+    "name": "Bo Mitchell",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "50",
+      "division_id": "ocd-division/country:us/state:tn/sldl:50"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:tn/government",
+      "name": "Tennessee",
+      "classification": "state"
+    },
+    "given_name": "Bo",
+    "family_name": "Mitchell",
+    "image": "http://www.capitol.tn.gov/house/members/images/h50.jpg",
+    "email": "rep.bo.mitchell@capitol.tn.gov",
+    "gender": "Male",
+    "birth_date": "1970-09-05",
+    "death_date": "",
+    "extras": {
+      "office": "400 CHB",
+      "personal info": [
+        "Born September 5, 1970",
+        "Married, wife Chastity, two sons Parker and Brady",
+        "Christian",
+        "Self-Employed, Employee Benefits",
+        "B.A. in Political Science, David Lipscomb University",
+        "J.D. from Nashville School of Law"
+      ]
+    },
+    "created_at": "2018-10-18T16:12:18.297572+00:00",
+    "updated_at": "2025-04-24T08:32:39.815434+00:00",
+    "openstates_url": "https://openstates.org/person/bo-mitchell-6oyAF5zUmYNYTiy3IZ9NLn/"
+  }
+]

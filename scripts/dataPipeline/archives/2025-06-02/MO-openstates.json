@@ -1,0 +1,291 @@
+[
+  {
+    "id": "ocd-person/ba6eb394-0402-49ba-9917-c5618d8a1589",
+    "name": "Aaron Crossley",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "29",
+      "division_id": "ocd-division/country:us/state:mo/sldl:29"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Crossley",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2366",
+    "email": "aaron.crossley@house.mo.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "Independence"
+    },
+    "created_at": "2023-01-05T23:27:36.506140+00:00",
+    "updated_at": "2024-10-08T19:42:50.359096+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-crossley-5fnA8dDTbOVSGUlPE0b9Mv/"
+  },
+  {
+    "id": "ocd-person/f436aa10-c006-4128-9748-050bf50c4e21",
+    "name": "Adam Schnelting",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "23",
+      "division_id": "ocd-division/country:us/state:mo/sldu:23"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Schnelting",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2087",
+    "email": "adam.schnelting@senate.mo.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "St. Charles"
+    },
+    "created_at": "2019-01-17T06:13:29.288115+00:00",
+    "updated_at": "2025-03-05T07:39:15.230095+00:00",
+    "openstates_url": "https://openstates.org/person/adam-schnelting-7Qp6miVSq5pUN4DYEUpR4r/"
+  },
+  {
+    "id": "ocd-person/f2e657d5-999a-4d77-98e3-b06a7c3771f4",
+    "name": "Adrian Plank",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "47",
+      "division_id": "ocd-division/country:us/state:mo/sldl:47"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Adrian",
+    "family_name": "Plank",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2395",
+    "email": "adrian.plank@house.mo.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "Columbia"
+    },
+    "created_at": "2023-01-05T23:27:28.597709+00:00",
+    "updated_at": "2024-10-08T19:42:48.561729+00:00",
+    "openstates_url": "https://openstates.org/person/adrian-plank-7OLPQtdxibdfeD8JGvTEQ8/"
+  },
+  {
+    "id": "ocd-person/b11b5a8d-08e8-4cf3-802c-42a842102cfa",
+    "name": "Alex Riley",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "134",
+      "division_id": "ocd-division/country:us/state:mo/sldl:134"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Riley",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2232",
+    "email": "alex.riley@house.mo.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "Springfield"
+    },
+    "created_at": "2021-01-08T00:10:32.500380+00:00",
+    "updated_at": "2025-04-24T07:23:39.573978+00:00",
+    "openstates_url": "https://openstates.org/person/alex-riley-5OC8pzpNmftq9WZbg3DScE/"
+  },
+  {
+    "id": "ocd-person/048bc29f-0bab-4fa1-8a1e-647b0eba4dcd",
+    "name": "Angela Mosley",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:mo/sldu:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Mosley",
+    "image": "https://www.senate.mo.gov/21web/wp-content/uploads/2020/12/Mosley2021-200x300.jpg",
+    "email": "angela.mosley@senate.mo.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-08T00:10:32.538625+00:00",
+    "updated_at": "2025-03-29T01:14:01.564418+00:00",
+    "openstates_url": "https://openstates.org/person/angela-mosley-8Zq4dSg4oEaowGvf9DT0H/"
+  },
+  {
+    "id": "ocd-person/fff43ce1-d209-4556-ba74-32f9ba46d3c0",
+    "name": "Ann Kelley",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "127",
+      "division_id": "ocd-division/country:us/state:mo/sldl:127"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Kelley",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2051",
+    "email": "ann.kelley@house.mo.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "Lamar"
+    },
+    "created_at": "2019-01-17T06:13:34.174113+00:00",
+    "updated_at": "2025-04-24T07:23:11.080465+00:00",
+    "openstates_url": "https://openstates.org/person/ann-kelley-7myewUTyBTM6IoCCmsySqu/"
+  },
+  {
+    "id": "ocd-person/a5cc5083-e44a-4379-b4db-74c4a930821b",
+    "name": "Anthony Ealy",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "36",
+      "division_id": "ocd-division/country:us/state:mo/sldl:36"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Ealy",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2384",
+    "email": "anthony.ealy@house.mo.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "Grandview"
+    },
+    "created_at": "2023-01-05T23:27:20.435189+00:00",
+    "updated_at": "2024-10-08T19:42:53.608776+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-ealy-52r6ZFtUOHfJJV2RJHlxkJ/"
+  },
+  {
+    "id": "ocd-person/1ff1dec0-c449-4ff8-aa22-0830817c2070",
+    "name": "Ashley Aune",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "14",
+      "division_id": "ocd-division/country:us/state:mo/sldl:14"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Ashley",
+    "family_name": "Aune",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2210",
+    "email": "ashley.aune@house.mo.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "Kansas City"
+    },
+    "created_at": "2021-01-08T00:10:35.749989+00:00",
+    "updated_at": "2024-10-08T19:42:49.142728+00:00",
+    "openstates_url": "https://openstates.org/person/ashley-aune-yHIQ1v4fLoUjQP73tCcvQ/"
+  },
+  {
+    "id": "ocd-person/de8806cc-fa03-4745-ae1e-198c56492f9a",
+    "name": "Barbara Washington",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "9",
+      "division_id": "ocd-division/country:us/state:mo/sldu:9"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Barbara",
+    "family_name": "Washington",
+    "image": "",
+    "email": "barbara.washington@senate.mo.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "last_name": "Washington",
+      "first_name": "Barbara"
+    },
+    "created_at": "2018-10-18T14:50:25.778537+00:00",
+    "updated_at": "2025-03-29T01:14:04.454012+00:00",
+    "openstates_url": "https://openstates.org/person/barbara-washington-6luSZiaKeYJXMaDUH6aQTC/"
+  },
+  {
+    "id": "ocd-person/54f9145f-2529-448e-8238-b00d049a782c",
+    "name": "Barry Hovis",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "146",
+      "division_id": "ocd-division/country:us/state:mo/sldl:146"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:mo/government",
+      "name": "Missouri",
+      "classification": "state"
+    },
+    "given_name": "Barry",
+    "family_name": "Hovis",
+    "image": "https://house.mo.gov/MemberPhoto.aspx?id=2129",
+    "email": "barry.hovis@house.mo.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "hometown": "Whitewater"
+    },
+    "created_at": "2019-01-17T06:13:29.143635+00:00",
+    "updated_at": "2025-04-24T07:22:34.866834+00:00",
+    "openstates_url": "https://openstates.org/person/barry-hovis-2aLBTiochC6cRK6EMxuyMu/"
+  }
+]

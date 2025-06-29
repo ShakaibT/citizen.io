@@ -15,6 +15,16 @@ import {
   Shield,
   Flag,
   UserPlus,
+  Vote,
+  Scale,
+  User,
+  Phone,
+  Mail,
+  Newspaper,
+  Megaphone,
+  FileText,
+  ArrowRight,
+  Sparkles,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -932,111 +942,299 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
 
   if (step === "welcome") {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex items-center justify-center padding-responsive-sm pt-12">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-100/20 to-purple-100/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+
         {/* Theme Toggle */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4 z-20">
           <ThemeToggle />
         </div>
-        <div className="container-responsive max-w-4xl">
-          {/* Hero Section */}
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="flex items-center justify-center mb-6">
-              <div className="relative">
-                <img src="/logo.png" alt="Citizen Logo" className="h-16 sm:h-20 w-auto max-w-16 sm:max-w-20 shadow-xl rounded-2xl object-contain" />
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-patriot-gray-900"></div>
-              </div>
-            </div>
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white mb-4 tracking-tight">
-              Welcome to{" "}
-              <span className="text-patriot-blue-600 dark:text-patriot-blue-400">
-                Citizen
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl text-black dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
-              Stay Informed. Stay Empowered. Stay Engaged.
-            </p>
 
-            {/* Feature highlights */}
-            <div className="grid-responsive-cards mb-8 sm:mb-12">
-              <div 
-                className="flex flex-col items-center p-4 sm:p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
-                style={{
-                  backdropFilter: 'blur(16px)',
-                  WebkitBackdropFilter: 'blur(16px)',
-                  boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
-                }}
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-patriot-blue-100/70 dark:bg-patriot-blue-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                  <Globe2 className="h-6 w-6 sm:h-8 sm:w-8 text-patriot-blue-600 dark:text-patriot-blue-400" />
+        <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto">
+            {/* Hero Section */}
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center mb-8">
+                <div className="relative">
+                  <img src="/logo.png" alt="Citizen Logo" className="h-20 w-20 rounded-2xl shadow-xl object-contain" />
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 shadow-sm animate-pulse"></div>
                 </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2 text-lg sm:text-xl">Location-Based</h3>
-                <p className="text-black/80 dark:text-white/80 text-base sm:text-lg text-center">
-                  Track legislation and news that directly affects your community.
-                </p>
               </div>
-              <div 
-                className="flex flex-col items-center p-4 sm:p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
-                style={{
-                  backdropFilter: 'blur(16px)',
-                  WebkitBackdropFilter: 'blur(16px)',
-                  boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
-                }}
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100/70 dark:bg-green-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                  <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-green-600 dark:text-green-400" />
-                </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2 text-lg sm:text-xl">Real-Time Updates</h3>
-                <p className="text-black/80 dark:text-white/80 text-base sm:text-lg text-center">
-                  Follow bills and headlines as they unfold — no noise, just facts.
-                </p>
-              </div>
-              <div 
-                className="flex flex-col items-center p-4 sm:p-6 backdrop-blur-xl rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 bg-white/80 border border-black/10 dark:bg-white/15 dark:border-white/30 transition-all duration-300"
-                style={{
-                  backdropFilter: 'blur(16px)',
-                  WebkitBackdropFilter: 'blur(16px)',
-                  boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
-                }}
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-patriot-red-100/70 dark:bg-patriot-red-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 sm:h-8 sm:w-8 text-patriot-red-600 dark:text-patriot-red-400" />
-                </div>
-                <h3 className="font-semibold text-black dark:text-white mb-2 text-lg sm:text-xl">Take Action</h3>
-                <p className="text-black/80 dark:text-white/80 text-base sm:text-lg text-center">
-                  Contact representatives and join campaigns that matter to you
-                </p>
-              </div>
+
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+                Your Voice in
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  American Democracy
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12">
+                Stay informed, engaged, and empowered with personalized civic information tailored to your location. See exactly what's happening in your community.
+              </p>
             </div>
 
-            <div className="space-y-4">
-              <button
-                onClick={() => setStep("address")}
-                className="group relative inline-flex items-center justify-center gap-3 font-bold px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 ease-out bg-patriot-blue-600 hover:bg-patriot-blue-700 dark:bg-patriot-blue-700 dark:hover:bg-patriot-blue-800 text-white btn-mobile-lg w-full sm:w-auto"
-              >
-                <span className="relative z-10">Get Started with Your Address</span>
-                <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 relative z-10 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            {/* Main Action Section */}
+            <div className="text-center mb-16">
+
+              {/* Primary CTA */}
+              <div className="mb-8">
+                <button
+                  onClick={() => setStep("address")}
+                  className="group relative inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-12 py-5 text-xl rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                >
+                  <MapPin className="h-6 w-6" />
+                  Get Started with Your Address
+                  <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
+                </button>
+              </div>
+
+              {/* Secondary Actions */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
                   onClick={() => {
                     setAuthModalTab("signup")
                     setAuthModalOpen(true)
                   }}
-                  className="inline-flex items-center justify-center gap-2 bg-patriot-red-600 hover:bg-patriot-red-700 active:bg-patriot-red-800 dark:bg-patriot-red-700 dark:hover:bg-patriot-red-800 dark:active:bg-patriot-red-900 text-white font-semibold px-6 sm:px-8 py-3 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl border border-white/10 btn-mobile w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 text-base rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
                 >
                   <UserPlus className="h-5 w-5" />
-                  Sign Up
+                  Create Account
                 </button>
                 <button
                   onClick={() => {
                     setAuthModalTab("signin")
                     setAuthModalOpen(true)
                   }}
-                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 active:bg-gray-100 dark:bg-slate-600 dark:hover:bg-slate-500 dark:active:bg-slate-400 text-black dark:text-white font-semibold px-6 sm:px-8 py-3 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl border border-gray-200 dark:border-slate-500 btn-mobile w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold px-8 py-3 text-base rounded-xl shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-600 transition-all duration-200"
                 >
                   <Shield className="h-5 w-5" />
-                  Login
+                  Sign In
                 </button>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm mt-8">
+                <Shield className="w-4 h-4 mr-2" />
+                Free forever. No credit card required. Privacy protected.
+              </div>
+            </div>
+
+            {/* Dashboard Preview Section */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full text-sm font-medium text-blue-700 dark:text-blue-300 mb-6">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Preview Your Dashboard
+              </div>
+              
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Here's What You'll See
+              </h2>
+              
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
+                Get a sneak peek at your personalized civic dashboard for Manhattan, NYC. These are the tools that will keep you informed and engaged.
+              </p>
+
+              {/* Interactive Dashboard Previews */}
+              <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                {/* Elections Dashboard Preview */}
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-white font-bold text-lg flex items-center">
+                        <Vote className="w-5 h-5 mr-2" />
+                        Elections Dashboard
+                      </h3>
+                      <div className="flex space-x-1">
+                        <div className="w-3 h-3 bg-red-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Next Election</span>
+                      <span className="text-sm bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-1 rounded-full">325 days</span>
+                    </div>
+                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-700">
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">NYC Mayoral Election</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">November 4, 2025 • Primary TBD</p>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-sm">
+                          <span className="text-gray-700 dark:text-gray-300">Eric Adams</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-medium">Incumbent</span>
+                        </div>
+                        <div className="flex items-center justify-between text-sm">
+                          <span className="text-gray-700 dark:text-gray-300">Manhattan Borough President</span>
+                          <span className="text-green-600 dark:text-green-400 font-medium">Also on Ballot</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-700">
+                      <div className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
+                        <span className="text-sm font-medium text-green-700 dark:text-green-300">Registered to Vote</span>
+                      </div>
+                      <button className="text-xs bg-green-600 text-white px-3 py-1 rounded-full hover:bg-green-700">
+                        View Ballot
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Legislation Tracker Preview */}
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                  <div className="bg-gradient-to-r from-green-600 to-teal-600 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-white font-bold text-lg flex items-center">
+                        <Scale className="w-5 h-5 mr-2" />
+                        Active Legislation
+                      </h3>
+                      <div className="flex space-x-1">
+                        <div className="w-3 h-3 bg-red-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-400">NYC Council Bills</span>
+                      <span className="text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full">4 active</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="border border-gray-200 dark:border-gray-600 rounded-lg p-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <div className="flex items-start justify-between mb-2">
+                          <span className="text-xs bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-1 rounded">Intro 0734-2024</span>
+                          <span className="text-xs text-orange-600 dark:text-orange-400 font-medium">High Priority</span>
+                        </div>
+                        <h5 className="font-medium text-gray-900 dark:text-white text-sm mb-1">Housing Preservation & Development</h5>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Affordable housing initiatives for NYC</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-gray-500 dark:text-gray-400">Updated 3 days ago</span>
+                          <button className="text-xs text-blue-600 dark:text-blue-400 hover:underline">Track</button>
+                        </div>
+                      </div>
+                      <div className="border border-gray-200 dark:border-gray-600 rounded-lg p-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <div className="flex items-start justify-between mb-2">
+                          <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded">Intro 0889-2024</span>
+                          <span className="text-xs text-yellow-600 dark:text-yellow-400 font-medium">Medium</span>
+                        </div>
+                        <h5 className="font-medium text-gray-900 dark:text-white text-sm mb-1">Climate Resiliency & Environmental Justice</h5>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Environmental protection measures</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-gray-500 dark:text-gray-400">Updated 1 week ago</span>
+                          <button className="text-xs text-blue-600 dark:text-blue-400 hover:underline">Track</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Representatives Preview */}
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                  <div className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-white font-bold text-lg flex items-center">
+                        <Users className="w-5 h-5 mr-2" />
+                        Your Representatives
+                      </h3>
+                      <div className="flex space-x-1">
+                        <div className="w-3 h-3 bg-red-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Manhattan, NY</span>
+                      <span className="text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 px-2 py-1 rounded-full">6 officials</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3 p-3 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                          <span className="text-blue-600 dark:text-blue-400 font-bold text-xs">CS</span>
+                        </div>
+                        <div className="flex-1">
+                          <h5 className="font-medium text-gray-900 dark:text-white text-sm">Sen. Chuck Schumer</h5>
+                          <p className="text-xs text-gray-600 dark:text-gray-400">U.S. Senate Majority Leader • Democrat</p>
+                        </div>
+                        <div className="flex space-x-1">
+                          <button className="p-1 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded">
+                            <Phone className="w-3 h-3" />
+                          </button>
+                          <button className="p-1 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded">
+                            <Mail className="w-3 h-3" />
+                          </button>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3 p-3 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                          <span className="text-blue-600 dark:text-blue-400 font-bold text-xs">JN</span>
+                        </div>
+                        <div className="flex-1">
+                          <h5 className="font-medium text-gray-900 dark:text-white text-sm">Rep. Jerry Nadler</h5>
+                          <p className="text-xs text-gray-600 dark:text-gray-400">NY-12 House District • Democrat</p>
+                        </div>
+                        <div className="flex space-x-1">
+                          <button className="p-1 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded">
+                            <Phone className="w-3 h-3" />
+                          </button>
+                          <button className="p-1 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded">
+                            <Mail className="w-3 h-3" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* News & Action Center Preview */}
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                  <div className="bg-gradient-to-r from-orange-600 to-red-600 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-white font-bold text-lg flex items-center">
+                        <Newspaper className="w-5 h-5 mr-2" />
+                        News & Actions
+                      </h3>
+                      <div className="flex space-x-1">
+                        <div className="w-3 h-3 bg-red-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full hover:w-4 hover:h-4 transition-all duration-200 cursor-pointer"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div className="space-y-3">
+                      <div className="border-l-4 border-blue-500 pl-3 py-2">
+                        <h5 className="font-medium text-gray-900 dark:text-white text-sm mb-1">NYC Council Housing Committee Meeting</h5>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Affordable housing initiatives discussed</p>
+                        <span className="text-xs text-blue-600 dark:text-blue-400">NYC.gov • 1 day ago</span>
+                      </div>
+                      <div className="border-l-4 border-green-500 pl-3 py-2">
+                        <h5 className="font-medium text-gray-900 dark:text-white text-sm mb-1">Manhattan Borough President Budget Hearing</h5>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Community input session scheduled</p>
+                        <span className="text-xs text-green-600 dark:text-green-400">Manhattan BP • 2 days ago</span>
+                      </div>
+                    </div>
+                    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-medium text-yellow-800 dark:text-yellow-200">Public Comment Period</span>
+                        <Megaphone className="w-4 h-4 text-yellow-600 dark:text-yellow-400" />
+                      </div>
+                      <p className="text-xs text-yellow-700 dark:text-yellow-300 mb-2">Congestion pricing implementation feedback needed</p>
+                      <button className="text-xs bg-yellow-600 text-white px-3 py-1 rounded-full hover:bg-yellow-700">
+                        Submit Comment
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1077,24 +1275,14 @@ export function LocationSetup({ onLocationSet }: LocationSetupProps) {
             <PreferenceCarousel />
           </div>
 
-          {/* Right Panel - Map */}
-          <div className="w-full lg:w-2/3 h-[40vh] lg:h-full relative bg-patriot-gray-100 dark:bg-patriot-gray-800 flex-1">
-            {/* Full Map - No padding, fills entire container */}
-            <div className="absolute inset-0 w-full h-full">
-              <LeafletMap
-                selectedState={selectedState}
-                onStateClick={handleStateSelect}
-                onCountyClick={handleCountySelect}
-                selectedLocationPin={selectedLocationPin}
-                zoomToLocation={mapZoomLocation}
-                onReset={() => {
-                  setSelectedLocationPin(null)
-                  setMapZoomLocation(null)
-                }}
-                onError={(error) => console.error("Map Error:", error)}
-                onHover={(feature) => console.log("Hovering on:", feature)}
-                className="w-full h-full"
-                fullHeight={true}
+          {/* Right Panel - Signup Form */}
+          <div className="w-full lg:w-2/5 h-[60vh] lg:h-full relative bg-white dark:bg-slate-900 flex-1 flex items-center justify-center p-6 lg:p-8">
+            <div className="w-full max-w-md">
+              <SignupForm
+                validatedAddress={validatedAddress}
+                onSignup={handleAuthSuccess}
+                onContinueAsGuest={handleContinueWithoutAccount}
+                onChangeLocation={handleChangeLocation}
               />
             </div>
           </div>

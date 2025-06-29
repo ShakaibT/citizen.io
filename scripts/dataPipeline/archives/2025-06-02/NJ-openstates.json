@@ -1,0 +1,278 @@
+[
+  {
+    "id": "ocd-person/d358cf84-b9ae-4bce-bb28-aa083fe082b4",
+    "name": "Al Abdelaziz",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "35",
+      "division_id": "ocd-division/country:us/state:nj/sldl:35"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Abdelaziz",
+    "image": "",
+    "email": "asmabdelaziz@njleg.org",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-03-05T08:15:12.131856+00:00",
+    "updated_at": "2025-03-29T01:42:39.746289+00:00",
+    "openstates_url": "https://openstates.org/person/al-abdelaziz-6QnxzIl0TyNSzC8xo2mPPY/"
+  },
+  {
+    "id": "ocd-person/525b3307-b007-4cfa-8166-efb0810fcda7",
+    "name": "Al Barlas",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "40",
+      "division_id": "ocd-division/country:us/state:nj/sldl:40"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Barlas",
+    "image": "",
+    "email": "asmbarlas@njleg.org",
+    "gender": "Male",
+    "birth_date": "1981-06-21",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-10T05:53:37.977373+00:00",
+    "updated_at": "2025-03-29T01:43:12.242120+00:00",
+    "openstates_url": "https://openstates.org/person/al-barlas-2VP32SGEELg7V34z0PfL3H/"
+  },
+  {
+    "id": "ocd-person/fc986c0e-c1cd-422f-80c1-4d3691f34f28",
+    "name": "Alex Sauickie",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:nj/sldl:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Alex",
+    "family_name": "Sauickie",
+    "image": "",
+    "email": "asmsauickie@njleg.org",
+    "gender": "Male",
+    "birth_date": "1971-01-25",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-18T22:40:40.689213+00:00",
+    "updated_at": "2025-03-29T01:43:18.742109+00:00",
+    "openstates_url": "https://openstates.org/person/alex-sauickie-7gdir78oN3V0ljMcg8WYae/"
+  },
+  {
+    "id": "ocd-person/b5f9d8c9-0f98-4d89-8a5f-82152f41687d",
+    "name": "Alixon Collazos-Gill",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "27",
+      "division_id": "ocd-division/country:us/state:nj/sldl:27"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Alixon",
+    "family_name": "Collazos-Gill",
+    "image": "",
+    "email": "aswcollazosgill@njleg.org",
+    "gender": "Female",
+    "birth_date": "1977-01-27",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-10T05:53:46.200904+00:00",
+    "updated_at": "2025-03-29T01:43:01.858515+00:00",
+    "openstates_url": "https://openstates.org/person/alixon-collazos-gill-5XNn4WUn5VDApjjIj3LI1F/"
+  },
+  {
+    "id": "ocd-person/acf3b54e-9725-4867-aaa5-9275ada21b37",
+    "name": "Andrea Katz",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:nj/sldl:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Andrea",
+    "family_name": "Katz",
+    "image": "",
+    "email": "aswkatz@njleg.org",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-01-10T05:53:42.535309+00:00",
+    "updated_at": "2025-03-29T01:43:00.786278+00:00",
+    "openstates_url": "https://openstates.org/person/andrea-katz-5GM3QF79NTGaSwYgtcAWfP/"
+  },
+  {
+    "id": "ocd-person/7782ffcd-73df-41b5-9857-fd7b10953bf3",
+    "name": "Andrew Zwicker",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:nj/sldu:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Zwicker",
+    "image": "https://www.njleg.state.nj.us/members/memberphotos/zwicker_andrew_2019.jpg",
+    "email": "senzwicker@njleg.org",
+    "gender": "Male",
+    "birth_date": "1964-05-17",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:55:01.299953+00:00",
+    "updated_at": "2025-03-29T01:43:24.274208+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-zwicker-3dVx87fdOIFuYLsrh0kW4B/"
+  },
+  {
+    "id": "ocd-person/d8c826c4-95c7-465b-8448-1f05495bfc45",
+    "name": "Angela McKnight",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "31",
+      "division_id": "ocd-division/country:us/state:nj/sldu:31"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "McKnight",
+    "image": "https://www.njleg.state.nj.us/members/memberphotos/mcknight_color.jpg",
+    "email": "senmcknight@njleg.org",
+    "gender": "Female",
+    "birth_date": "1977-03-10",
+    "death_date": "",
+    "extras": {
+      "position": "Deputy Majority Leader"
+    },
+    "created_at": "2018-10-18T14:55:05.230021+00:00",
+    "updated_at": "2025-03-29T01:42:32.220008+00:00",
+    "openstates_url": "https://openstates.org/person/angela-mcknight-6b3oLg9bh5dOgof91Hsayj/"
+  },
+  {
+    "id": "ocd-person/ec370db8-c51e-4022-9868-5cad9c38e97d",
+    "name": "Annette Quijano",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "20",
+      "division_id": "ocd-division/country:us/state:nj/sldl:20"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Annette",
+    "family_name": "Quijano",
+    "image": "https://www.njleg.state.nj.us/members/memberphotos/quijano_annette_2020.jpg",
+    "email": "aswquijano@njleg.org",
+    "gender": "Female",
+    "birth_date": "1962-07-04",
+    "death_date": "",
+    "extras": {
+      "position": "Majority Conference Leader"
+    },
+    "created_at": "2018-10-18T14:54:58.366685+00:00",
+    "updated_at": "2025-03-29T01:43:07.353345+00:00",
+    "openstates_url": "https://openstates.org/person/annette-quijano-7BjLcXERQxhRS7ebgmMQFZ/"
+  },
+  {
+    "id": "ocd-person/c6d61a12-eeb5-4400-943d-68a81b0728f0",
+    "name": "Anthony Verrelli",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "15",
+      "division_id": "ocd-division/country:us/state:nj/sldl:15"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Anthony",
+    "family_name": "Verrelli",
+    "image": "https://www.njleg.state.nj.us/members/memberphotos/verrelli_anthony_2020.jpg",
+    "email": "asmverrelli@njleg.org",
+    "gender": "Male",
+    "birth_date": "1964-01-06",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:54:49.322745+00:00",
+    "updated_at": "2025-03-29T01:42:54.737760+00:00",
+    "openstates_url": "https://openstates.org/person/anthony-verrelli-63CKBSl16eIBFgkQxTx5aC/"
+  },
+  {
+    "id": "ocd-person/4ebe8d6e-9814-4f68-aa9f-148c0942eaab",
+    "name": "Antwan McClellan",
+    "party": "Republican",
+    "current_role": {
+      "title": "Assembly Member",
+      "org_classification": "lower",
+      "district": "1",
+      "division_id": "ocd-division/country:us/state:nj/sldl:1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:nj/government",
+      "name": "New Jersey",
+      "classification": "state"
+    },
+    "given_name": "Antwan",
+    "family_name": "McClellan",
+    "image": "http://www.njleg.state.nj.us/members/memberphotos/mcclellan_antwan_2020.jpg",
+    "email": "asmmcclellan@njleg.org",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "position": "Minority Whip"
+    },
+    "created_at": "2020-01-28T06:11:53.360853+00:00",
+    "updated_at": "2025-03-29T01:43:10.670801+00:00",
+    "openstates_url": "https://openstates.org/person/antwan-mcclellan-2OaU1MkiAUAzaG9sRTCBh5/"
+  }
+]

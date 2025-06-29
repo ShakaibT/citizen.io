@@ -1,0 +1,302 @@
+[
+  {
+    "id": "ocd-person/90da5348-421e-435b-8458-67123462addf",
+    "name": "Abbey Duke",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Chittenden-17",
+      "division_id": "ocd-division/country:us/state:vt/sldl:chittenden-17"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Abbey",
+    "family_name": "Duke",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Duke,%20Abbey.jpg",
+    "email": "aduke@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-12T08:00:03.492774+00:00",
+    "updated_at": "2025-05-23T14:27:08.854589+00:00",
+    "openstates_url": "https://openstates.org/person/abbey-duke-4PKfXcWkVwlzfQ7sohJlcN/"
+  },
+  {
+    "id": "ocd-person/24194dba-4d25-4b8c-be33-8ff50fcd8a8f",
+    "name": "Alice Emmons",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Windsor-3",
+      "division_id": "ocd-division/country:us/state:vt/sldl:windsor-3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Alice",
+    "family_name": "Emmons",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/AEmmons.jpg",
+    "email": "aemmons@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "1955-02-14",
+    "death_date": "",
+    "extras": {
+      "home phone": "(802) 885-5893",
+      "state email": "aemmons@leg.state.vt.us",
+      "home address": "Springfield, VT 05156"
+    },
+    "created_at": "2018-10-18T16:13:29.111159+00:00",
+    "updated_at": "2025-05-23T14:25:53.226931+00:00",
+    "openstates_url": "https://openstates.org/person/alice-emmons-167HpNbBbOA7Ha8WWRTL5z/"
+  },
+  {
+    "id": "ocd-person/6c87b7e7-0047-47a6-94b4-9232ac42175f",
+    "name": "Alicia Malay",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Rutland-8",
+      "division_id": "ocd-division/country:us/state:vt/sldl:rutland-8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Alicia",
+    "family_name": "Malay",
+    "image": "https://bloximages.chicago2.vip.townnews.com/rutlandherald.com/content/tncms/assets/v3/editorial/7/95/7959f150-8bcd-11ef-875d-572c07042bb6/670fd1d93861f.image.jpg?resize=487%2C500",
+    "email": "amalay@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-12T07:59:26.135710+00:00",
+    "updated_at": "2025-05-23T14:27:26.955752+00:00",
+    "openstates_url": "https://openstates.org/person/alicia-malay-3InC4k5HAOZptaHaOPZ6Hn/"
+  },
+  {
+    "id": "ocd-person/a366bc32-20d8-41a8-a2cf-939650b7a2c2",
+    "name": "Alison Clarkson",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "Windsor",
+      "division_id": "ocd-division/country:us/state:vt/sldu:windsor"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Alison",
+    "family_name": "Clarkson",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Clarkson,Alison.jpg",
+    "email": "aclarkson@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "1955-04-26",
+    "death_date": "",
+    "extras": {
+      "home phone": "(802) 457-4627",
+      "state email": "AClarkson@leg.state.vt.us",
+      "home address": "18 Golf Avenue Woodstock, VT 05091"
+    },
+    "created_at": "2018-10-18T16:13:29.353215+00:00",
+    "updated_at": "2025-05-23T14:27:12.662579+00:00",
+    "openstates_url": "https://openstates.org/person/alison-clarkson-4yKhMRybeySPAuQsGNa4n4/"
+  },
+  {
+    "id": "ocd-person/cd4ceb1c-8960-4b10-b6f8-bd0b8ae0c68c",
+    "name": "Alyssa Black",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Chittenden-24",
+      "division_id": "ocd-division/country:us/state:vt/sldl:chittenden-24"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Alyssa",
+    "family_name": "Black",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Black,Alyssa.jpg",
+    "email": "ablack@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "home phone": "(802) 598-1026",
+      "state email": "ablack@leg.state.vt.us",
+      "home address": "19 Steeplebush Rd Essex Junction, VT 05452"
+    },
+    "created_at": "2021-01-08T00:19:30.524396+00:00",
+    "updated_at": "2025-05-23T14:27:26.639350+00:00",
+    "openstates_url": "https://openstates.org/person/alyssa-black-6FOZt44STKzs9q9cdkxEHE/"
+  },
+  {
+    "id": "ocd-person/f490d01d-80b7-40ae-9577-572bd1c8567a",
+    "name": "Amy Sheldon",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Addison-1",
+      "division_id": "ocd-division/country:us/state:vt/sldl:addison-1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Amy",
+    "family_name": "Sheldon",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Sheldon,%20Amy.jpg",
+    "email": "asheldon@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "1966-07-20",
+    "death_date": "",
+    "extras": {
+      "home phone": "(802) 377-1110",
+      "state email": "asheldon@leg.state.vt.us",
+      "home address": "East Middlebury, VT 05740"
+    },
+    "created_at": "2018-10-18T16:13:29.431194+00:00",
+    "updated_at": "2025-05-23T14:25:56.039522+00:00",
+    "openstates_url": "https://openstates.org/person/amy-sheldon-7RUJ3yzDUuJkMU9JrGEeF8/"
+  },
+  {
+    "id": "ocd-person/1463485e-f279-44f6-a368-f75f213dc7cd",
+    "name": "Andrew Perchlik",
+    "party": "Democratic/Progressive",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "Washington",
+      "division_id": "ocd-division/country:us/state:vt/sldu:washington"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Perchlik",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Perchlik.Andrew.jpg",
+    "email": "aperchlik@leg.state.vt.us",
+    "gender": "Male",
+    "birth_date": "1968-06-03",
+    "death_date": "",
+    "extras": {
+      "home phone": "(802) 279-0471",
+      "home address": "530 Laird Pond Rd. Plainfield, VT 05677"
+    },
+    "created_at": "2019-01-10T06:19:40.601936+00:00",
+    "updated_at": "2025-05-23T14:26:27.358875+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-perchlik-cTDZIRFEXymQRBKGZ6w1d/"
+  },
+  {
+    "id": "ocd-person/91f08063-02d6-4167-aa23-bbfb2289bbf1",
+    "name": "Angela Arsenault",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Chittenden-2",
+      "division_id": "ocd-division/country:us/state:vt/sldl:chittenden-2"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Angela",
+    "family_name": "Arsenault",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Arsenault,Angela.jpg",
+    "email": "aarsenault@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "state email": "aarsenault@leg.state.vt.us",
+      "home address": "P.O. Box 1102 Williston, VT 05495"
+    },
+    "created_at": "2023-02-14T20:03:28.045542+00:00",
+    "updated_at": "2025-05-23T14:25:25.767676+00:00",
+    "openstates_url": "https://openstates.org/person/angela-arsenault-4RNnPK85qoSJQO9y3BfV7x/"
+  },
+  {
+    "id": "ocd-person/c34f492a-7cdf-4830-a28a-0ff2fe7c8f71",
+    "name": "Ann Cummings",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "Washington",
+      "division_id": "ocd-division/country:us/state:vt/sldu:washington"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Ann",
+    "family_name": "Cummings",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Cummings,Ann%20064.jpg",
+    "email": "acummings@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "1946-07-20",
+    "death_date": "",
+    "extras": {
+      "home phone": "(802) 223-6043",
+      "home address": "24 Colonial Dr. Montpelier, VT 05602"
+    },
+    "created_at": "2018-10-18T16:13:29.505145+00:00",
+    "updated_at": "2025-05-23T14:26:18.704407+00:00",
+    "openstates_url": "https://openstates.org/person/ann-cummings-5wXjirGRBNVHn8m96VdxYH/"
+  },
+  {
+    "id": "ocd-person/5321cd58-caae-4d94-8ba0-f1df47d4e75b",
+    "name": "Anne Donahue",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "Washington-1",
+      "division_id": "ocd-division/country:us/state:vt/sldl:washington-1"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:vt/government",
+      "name": "Vermont",
+      "classification": "state"
+    },
+    "given_name": "Anne",
+    "family_name": "Donahue",
+    "image": "https://legislature.vermont.gov/Documents/Legislators/Donahue.Anne.jpg",
+    "email": "adonahue@leg.state.vt.us",
+    "gender": "Female",
+    "birth_date": "1956-03-20",
+    "death_date": "",
+    "extras": {
+      "home phone": "(802) 636-7857",
+      "state email": "adonahue@leg.state.vt.us",
+      "home address": "Northfield, VT 05663",
+      "work address": "Rutland, VT 05701"
+    },
+    "created_at": "2018-10-18T16:13:29.665499+00:00",
+    "updated_at": "2025-05-23T14:26:20.966453+00:00",
+    "openstates_url": "https://openstates.org/person/anne-donahue-2WroGYdMeG2TDSGWYeT6j5/"
+  }
+]

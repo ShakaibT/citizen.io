@@ -1,0 +1,286 @@
+[
+  {
+    "id": "ocd-person/d3d7563b-420c-4498-8bc5-4f9d6ed90806",
+    "name": "Aaron Aylward",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "6",
+      "division_id": "ocd-division/country:us/state:sd/sldl:6"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Aaron",
+    "family_name": "Aylward",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Aaron-Aylward.PNG",
+    "email": "aaron.aylward@sdlegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Recruiter"
+    },
+    "created_at": "2021-01-12T00:19:53.111770+00:00",
+    "updated_at": "2025-04-01T02:08:15.205995+00:00",
+    "openstates_url": "https://openstates.org/person/aaron-aylward-6RjmzYBoBnIzkEmJZR9u1W/"
+  },
+  {
+    "id": "ocd-person/02f0edff-2879-4fbb-9b23-796358690d07",
+    "name": "Al Novstrup",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:sd/sldl:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Novstrup",
+    "image": "https://sdlegislature.gov/inc/img/Legislators/NOVSTRUP_2017.jpg",
+    "email": "al.novstrup@sdlegislature.gov",
+    "gender": "Male",
+    "birth_date": "1954-08-04",
+    "death_date": "",
+    "extras": {
+      "occupation": "Family Entertainment Center Manager"
+    },
+    "created_at": "2018-10-18T16:12:09.964458+00:00",
+    "updated_at": "2025-02-04T20:24:44.195337+00:00",
+    "openstates_url": "https://openstates.org/person/al-novstrup-5Y5ZHLEaE9xpc8pzti0O7/"
+  },
+  {
+    "id": "ocd-person/f9dd87da-ac23-450d-9574-1efa95ef0d81",
+    "name": "Amber Arlint",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:sd/sldl:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Amber",
+    "family_name": "Arlint",
+    "image": "https://siouxfallschamber.com/wp-content/uploads/sites/3/2022/11/District-12-Amber-Arlint.webp",
+    "email": "amber.arlint@sdlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Insurance Agency Owner"
+    },
+    "created_at": "2023-01-19T06:01:08.242477+00:00",
+    "updated_at": "2025-04-01T02:08:38.135194+00:00",
+    "openstates_url": "https://openstates.org/person/amber-arlint-7bUKPXCSQmks9cndoczGS1/"
+  },
+  {
+    "id": "ocd-person/ae4b500c-4a37-43ed-a3a2-dbb08071e265",
+    "name": "Amber Hulse",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "30",
+      "division_id": "ocd-division/country:us/state:sd/sldu:30"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Amber",
+    "family_name": "Hulse",
+    "image": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/ahulse.jpg",
+    "email": "amber.hulse@sdlegislature.gov",
+    "gender": "Female",
+    "birth_date": "1998-09-09",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:00:18.494407+00:00",
+    "updated_at": "2025-04-01T02:09:00.505491+00:00",
+    "openstates_url": "https://openstates.org/person/amber-hulse-5It58d1dcHwuNWzjdP2NF7/"
+  },
+  {
+    "id": "ocd-person/169a8374-daaa-4884-9add-d1719eabd966",
+    "name": "Arch Beal",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:sd/sldu:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Arch",
+    "family_name": "Beal",
+    "image": "https://sdlegislature.gov/inc/img/Legislators/BEAL_2017.jpg",
+    "email": "arch.beal@sdlegislature.gov",
+    "gender": "Male",
+    "birth_date": "1955-02-23",
+    "death_date": "",
+    "extras": {
+      "occupation": "Business Owner"
+    },
+    "created_at": "2018-10-18T16:12:10.095094+00:00",
+    "updated_at": "2025-04-01T02:08:20.118248+00:00",
+    "openstates_url": "https://openstates.org/person/arch-beal-geRWyGIMhLGYWrvV17BV0/"
+  },
+  {
+    "id": "ocd-person/3b05e975-1b79-42ec-94e8-7a258142dd46",
+    "name": "Bethany Soye",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "9",
+      "division_id": "ocd-division/country:us/state:sd/sldl:9"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Bethany",
+    "family_name": "Soye",
+    "image": "https://static.wixstatic.com/media/8bfd3e_dbac551f01a34584a6bd53e0bccca5ef~mv2.jpg/v1/fill/w_640,h_1144,fp_0.44_0.17,q_85,usm_0.66_1.00_0.01/8bfd3e_dbac551f01a34584a6bd53e0bccca5ef~mv2.webp",
+    "email": "bethany.soye@sdlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Mother/Attorney/Banking"
+    },
+    "created_at": "2021-01-12T00:19:51.165401+00:00",
+    "updated_at": "2025-04-01T02:09:12.760367+00:00",
+    "openstates_url": "https://openstates.org/person/bethany-soye-1nNFRNRbyaGDPWAPZ78jxu/"
+  },
+  {
+    "id": "ocd-person/1e3d4ebf-2669-4b20-acd4-e339d24f73c3",
+    "name": "Bobbi Andera",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:sd/sldl:10"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Bobbi",
+    "family_name": "Andera",
+    "image": "https://bobbilanderaforhouse.com/img/bobbi1.jpg",
+    "email": "bobbi.andera@sdlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2025-01-14T19:00:21.882869+00:00",
+    "updated_at": "2025-04-01T02:08:54.593446+00:00",
+    "openstates_url": "https://openstates.org/person/bobbi-andera-v3mp0UOpEoUPxm9jEVTeN/"
+  },
+  {
+    "id": "ocd-person/713ca571-304b-48f0-a853-b49fa859134e",
+    "name": "Brandei Schaefbauer",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:sd/sldl:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Brandei",
+    "family_name": "Schaefbauer",
+    "image": "https://gray-ksfy-prod.cdn.arcpublishing.com/resizer/3wAp2PAmslSttABhdOPnmasLDYI=/980x0/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/Y4ZM7RT3TRB2ZBPHKDXEI5HL6E.jpg",
+    "email": "brandei.schaefbauer@sdlegislature.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Wife/Mother"
+    },
+    "created_at": "2023-01-19T06:03:56.640085+00:00",
+    "updated_at": "2025-04-01T02:09:22.343341+00:00",
+    "openstates_url": "https://openstates.org/person/brandei-schaefbauer-3Rfqb7cK871EMOjUwsGYH8/"
+  },
+  {
+    "id": "ocd-person/d9d8a84f-96df-4dbf-b638-d63e216166d4",
+    "name": "Brian Mulder",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "11",
+      "division_id": "ocd-division/country:us/state:sd/sldl:11"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Brian",
+    "family_name": "Mulder",
+    "image": "https://img1.wsimg.com/isteam/ip/27b7dcd4-adbb-4603-9579-073f083153b8/Brian_BriCowanPhotography-11.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:400,cg:true",
+    "email": "brian.mulder@sdlegislature.gov",
+    "gender": "Male",
+    "birth_date": "1976-07-11",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-19T06:02:48.496953+00:00",
+    "updated_at": "2025-04-01T02:08:47.369408+00:00",
+    "openstates_url": "https://openstates.org/person/brian-mulder-6d4LYXEhIHizkfrcAT7aKK/"
+  },
+  {
+    "id": "ocd-person/5a5c92d7-0b2c-418e-a0ce-8ba0a6e4790a",
+    "name": "Carl Perry",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "3",
+      "division_id": "ocd-division/country:us/state:sd/sldu:3"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:sd/government",
+      "name": "South Dakota",
+      "classification": "state"
+    },
+    "given_name": "Carl",
+    "family_name": "Perry",
+    "image": "https://www.carlperry.org/uploads/1/1/7/5/117553499/carl-perry-profile-1200x1200_orig.jpg",
+    "email": "carl.perry@sdlegislature.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {
+      "occupation": "Retired Education/Collection Management"
+    },
+    "created_at": "2019-01-04T05:20:29.279709+00:00",
+    "updated_at": "2025-04-01T02:09:24.405350+00:00",
+    "openstates_url": "https://openstates.org/person/carl-perry-2kVcAfdsCnLT54OXLsMzqk/"
+  }
+]

@@ -266,6 +266,20 @@ async function updateOfficialsInBackground(state: string): Promise<void> {
  * Fallback officials data with current information
  */
 function getFallbackOfficials(state: string): OfficialsResponse {
+  // Convert state names to abbreviations for lookup
+  const stateNameToAbbr: { [key: string]: string } = {
+    'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA',
+    'Colorado': 'CO', 'Connecticut': 'CT', 'Delaware': 'DE', 'Florida': 'FL', 'Georgia': 'GA',
+    'Hawaii': 'HI', 'Idaho': 'ID', 'Illinois': 'IL', 'Indiana': 'IN', 'Iowa': 'IA',
+    'Kansas': 'KS', 'Kentucky': 'KY', 'Louisiana': 'LA', 'Maine': 'ME', 'Maryland': 'MD',
+    'Massachusetts': 'MA', 'Michigan': 'MI', 'Minnesota': 'MN', 'Mississippi': 'MS', 'Missouri': 'MO',
+    'Montana': 'MT', 'Nebraska': 'NE', 'Nevada': 'NV', 'New Hampshire': 'NH', 'New Jersey': 'NJ',
+    'New Mexico': 'NM', 'New York': 'NY', 'North Carolina': 'NC', 'North Dakota': 'ND', 'Ohio': 'OH',
+    'Oklahoma': 'OK', 'Oregon': 'OR', 'Pennsylvania': 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC',
+    'South Dakota': 'SD', 'Tennessee': 'TN', 'Texas': 'TX', 'Utah': 'UT', 'Vermont': 'VT',
+    'Virginia': 'VA', 'Washington': 'WA', 'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY'
+  }
+
   // Current officials as of January 2025 - this will be updated by the API
   const fallbackData: { [key: string]: Official[] } = {
     'PA': [
@@ -427,11 +441,45 @@ function getFallbackOfficials(state: string): OfficialsResponse {
         last_updated: new Date().toISOString(),
         source: 'manual'
       }
+    ],
+    'NJ': [
+      {
+        name: 'Phil Murphy',
+        office: 'Governor',
+        party: 'Democratic',
+        state: 'NJ',
+        level: 'state',
+        office_type: 'executive',
+        last_updated: new Date().toISOString(),
+        source: 'manual'
+      },
+      {
+        name: 'Cory Booker',
+        office: 'U.S. Senator',
+        party: 'Democratic',
+        state: 'NJ',
+        level: 'federal',
+        office_type: 'legislative',
+        last_updated: new Date().toISOString(),
+        source: 'manual'
+      },
+      {
+        name: 'Andy Kim',
+        office: 'U.S. Senator',
+        party: 'Democratic',
+        state: 'NJ',
+        level: 'federal',
+        office_type: 'legislative',
+        last_updated: new Date().toISOString(),
+        source: 'manual'
+      }
     ]
     // Add more states as needed
   }
 
-  const officials = fallbackData[state.toUpperCase()] || []
+  // Try to get state abbreviation, fallback to original state if not found
+  const stateAbbr = stateNameToAbbr[state] || state.toUpperCase()
+  const officials = fallbackData[stateAbbr] || []
 
   return {
     officials,

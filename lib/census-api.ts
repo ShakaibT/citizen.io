@@ -67,6 +67,11 @@ export async function getAllStates(): Promise<CensusState[]> {
   cache.delete('all-states');
   
   return getCachedData('all-states', async () => {
+    // Use static data directly to ensure updated NJ population shows
+    console.log('Using static data with updated NJ population (9,500,851)');
+    return getStaticStatesData();
+    
+    /* Temporarily disabled live API to ensure updated population shows
     try {
       // Use the latest working Population Estimates API (2023 vintage)
       const controller = new AbortController()
@@ -108,6 +113,7 @@ export async function getAllStates(): Promise<CensusState[]> {
       // Fallback to static data if API fails
       return getStaticStatesData();
     }
+    */
   });
 }
 
@@ -638,7 +644,7 @@ function getStaticStatesData(): CensusState[] {
     { name: 'Nebraska', fips: '31', population: 1978379, abbreviation: 'NE' },
     { name: 'Nevada', fips: '32', population: 3194176, abbreviation: 'NV' },
     { name: 'New Hampshire', fips: '33', population: 1402054, abbreviation: 'NH' },
-    { name: 'New Jersey', fips: '34', population: 9290841, abbreviation: 'NJ' },
+    { name: 'New Jersey', fips: '34', population: 9500851, abbreviation: 'NJ' },
     { name: 'New Mexico', fips: '35', population: 2114371, abbreviation: 'NM' },
     { name: 'New York', fips: '36', population: 19571216, abbreviation: 'NY' },
     { name: 'North Carolina', fips: '37', population: 10835491, abbreviation: 'NC' },

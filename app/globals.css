@@ -38,6 +38,9 @@
   --civic-amber-400: #d97706;
   --civic-amber-500: #b45309;
   --civic-amber-600: #92400e;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 .dark {
@@ -60,6 +63,9 @@
   --border: 51 65 85; /* Slate-600 for better visibility */
   --input: 51 65 85; /* Slate-600 */
   --ring: 0 40 104; /* US Flag Navy Blue #002868 */
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 /* Base styles */
@@ -71,13 +77,25 @@
   html,
   body {
     background-color: white;
-    color: rgb(17, 24, 39);
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   }
 
   .dark html,
   .dark body {
     background-color: rgb(3, 7, 18);
-    color: rgb(248, 250, 252);
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   }
 
   body {
@@ -934,4 +952,542 @@ html.dark [data-radix-collection-item].glass-card,
   .county-feature {
     fill-opacity: 0.9 !important;
   }
+}
+
+/* Custom animations for tutorial */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Enhanced map zoom performance and smoothness */
+.nyt-style-map .leaflet-tile-container {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.nyt-style-map .leaflet-zoom-anim .leaflet-zoom-animated {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nyt-style-map .leaflet-interactive {
+  transition: all 0.1s ease-out;
+  will-change: transform;
+}
+
+.responsive-tile-layer {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smooth hover tooltip transitions */
+.nyt-style-map + div[class*="absolute"][class*="pointer-events-none"] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Enhanced tooltip positioning to prevent cutoff */
+.map-tooltip {
+  position: absolute !important;
+  z-index: 2000 !important;
+  pointer-events: none !important;
+  max-width: 280px !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+/* Ensure tooltips stay within viewport */
+.map-tooltip.tooltip-left {
+  transform: translateX(-100%) !important;
+}
+
+.map-tooltip.tooltip-top {
+  transform: translateY(-100%) !important;
+}
+
+.map-tooltip.tooltip-top-left {
+  transform: translate(-100%, -100%) !important;
+}
+
+/* Responsive tooltip adjustments */
+@media (max-width: 768px) {
+  .map-tooltip {
+    max-width: 240px !important;
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Map Anti-Flashing Improvements */
+.leaflet-container {
+  background: #f8fafc !important;
+  image-rendering: optimizeQuality;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.leaflet-tile-container {
+  transition: none !important;
+  animation: none !important;
+}
+
+.leaflet-tile {
+  transition: opacity 0.1s ease-in-out !important;
+  image-rendering: optimizeQuality;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.leaflet-zoom-animated {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.leaflet-tile-loaded {
+  opacity: 1 !important;
+}
+
+.leaflet-tile-loading {
+  opacity: 0.5 !important;
+}
+
+/* Prevent overlay flashing during zoom */
+.leaflet-overlay-pane {
+  transition: none !important;
+  will-change: transform;
+}
+
+.leaflet-layer {
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Smooth SVG rendering */
+.leaflet-overlay-pane svg {
+  transition: none !important;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.leaflet-overlay-pane path {
+  transition: none !important;
+  vector-effect: non-scaling-stroke;
+  backface-visibility: hidden;
+  will-change: transform, fill, stroke;
+}
+
+/* Optimize GeoJSON layer performance */
+.leaflet-interactive {
+  will-change: transform, fill, stroke;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Tutorial animations */
+@keyframes tutorialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tutorialSlideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tutorialPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes tutorialGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes tutorialBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes successCheckmark {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes celebrationPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+}
+
+.tutorial-fade-in {
+  animation: tutorialFadeIn 0.6s ease-out;
+}
+
+.tutorial-slide-in {
+  animation: tutorialSlideIn 0.8s ease-out;
+}
+
+.tutorial-pulse {
+  animation: tutorialPulse 2s infinite;
+}
+
+.tutorial-glow {
+  animation: tutorialGlow 2s infinite;
+}
+
+.tutorial-bounce {
+  animation: tutorialBounce 1s infinite;
+}
+
+.success-checkmark {
+  animation: successCheckmark 0.6s ease-out;
+}
+
+.celebration-pulse {
+  animation: celebrationPulse 1.5s infinite;
+}
+
+.tutorial-step-content {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Optimized Map Performance Styles */
+.leaflet-container {
+  background: #f8fafc !important;
+  image-rendering: optimizeQuality;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.leaflet-tile-container {
+  transition: none !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.leaflet-tile {
+  transition: none !important;
+  backface-visibility: hidden;
+  image-rendering: optimizeQuality;
+}
+
+/* Smooth SVG rendering */
+.leaflet-overlay-pane svg {
+  transition: none !important;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.leaflet-overlay-pane path {
+  transition: none !important;
+  vector-effect: non-scaling-stroke;
+  backface-visibility: hidden;
+  will-change: transform, fill, stroke;
+}
+
+/* Optimize GeoJSON layer performance */
+.leaflet-interactive {
+  will-change: transform, fill, stroke;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Real-time GeoJSON zoom optimization */
+.leaflet-zoom-anim .leaflet-interactive {
+  transition: none !important;
+  transform: translateZ(0);
+  will-change: transform, fill, stroke;
+  backface-visibility: hidden;
+}
+
+/* Prevent GeoJSON layer delay during zoom */
+.leaflet-overlay-pane .leaflet-interactive {
+  transition: none !important;
+  will-change: transform, fill, stroke;
+  transform: translateZ(0);
+}
+
+/* Optimize SVG path rendering during zoom */
+.leaflet-overlay-pane svg path {
+  vector-effect: non-scaling-stroke;
+  shape-rendering: geometricPrecision;
+  will-change: transform, fill, stroke;
+  transition: none !important;
+}
+
+/* Force immediate GeoJSON updates during zoom */
+.leaflet-zoom-anim .leaflet-overlay-pane svg {
+  transition: none !important;
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+}
+
+.leaflet-zoom-anim .leaflet-overlay-pane path {
+  transition: none !important;
+  will-change: transform, fill, stroke !important;
+  backface-visibility: hidden !important;
+}
+
+/* Prevent any animation delays on GeoJSON layers */
+.leaflet-overlay-pane svg g {
+  transition: none !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+}
+
+/* Optimize zoom animation performance */
+.leaflet-zoom-animated {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+}
+
+/* Ensure immediate positioning updates */
+.leaflet-interactive path {
+  transition: none !important;
+  will-change: transform, fill, stroke !important;
+  transform: translateZ(0) !important;
+}
+
+/* Prevent zoom control flashing */
+.leaflet-control-zoom {
+  transition: none !important;
+}
+
+.leaflet-control-zoom a {
+  transition: background-color 0.1s ease !important;
+}
+
+/* Tooltip positioning improvements */
+.absolute.z-50.pointer-events-none {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Animation classes for tutorial */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.6s ease-out;
+}
+
+.animate-bounceIn {
+  animation: bounceIn 0.8s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }

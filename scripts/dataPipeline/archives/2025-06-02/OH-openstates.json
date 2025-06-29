@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/0c6a7bcf-e990-41a0-b59c-923f05771880",
+    "name": "Adam Bird",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "63",
+      "division_id": "ocd-division/country:us/state:oh/sldl:63"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Bird",
+    "image": "https://www.legislature.ohio.gov/assets/people/adam-c-bird/headshots/thumbnails/medium/adam-c-bird-january-2023-headshot_medium.jpg",
+    "email": "rep63@ohiohouse.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-06T06:14:13.057037+00:00",
+    "updated_at": "2025-05-15T01:47:59.766872+00:00",
+    "openstates_url": "https://openstates.org/person/adam-bird-NQZPFHYZ23Qy211E9jM00/"
+  },
+  {
+    "id": "ocd-person/78912d95-3dac-4487-810a-74be41508ebb",
+    "name": "Adam Holmes",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "97",
+      "division_id": "ocd-division/country:us/state:oh/sldl:97"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Holmes",
+    "image": "https://www.legislature.ohio.gov/assets/people/adam-holmes/headshots/thumbnails/medium/adam-holmes-january-2021-headshot_medium.jpg",
+    "email": "rep97@ohiohouse.gov",
+    "gender": "Male",
+    "birth_date": "1967-07-31",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-03-14T05:16:21.869653+00:00",
+    "updated_at": "2025-03-05T08:29:46.806564+00:00",
+    "openstates_url": "https://openstates.org/person/adam-holmes-3fVQOlF5ApbRp8WO85XlVr/"
+  },
+  {
+    "id": "ocd-person/b04e2962-e7c6-46b8-9a99-d7a6d3a32717",
+    "name": "Adam Mathews",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "56",
+      "division_id": "ocd-division/country:us/state:oh/sldl:56"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Adam",
+    "family_name": "Mathews",
+    "image": "https://www.legislature.ohio.gov/assets/people/adam-mathews/headshots/thumbnails/medium/adam-mathews-january-2023-headshot_medium.jpg",
+    "email": "rep56@ohiohouse.gov",
+    "gender": "Male",
+    "birth_date": "1988-01-07",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-10T19:49:39.114883+00:00",
+    "updated_at": "2025-03-05T20:27:52.938548+00:00",
+    "openstates_url": "https://openstates.org/person/adam-mathews-5MgMuTU8zAkrFYCdF8YPI7/"
+  },
+  {
+    "id": "ocd-person/6a1fc3b1-ebfd-47b7-adec-ddcd84d137c9",
+    "name": "Al Cutrona",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "33",
+      "division_id": "ocd-division/country:us/state:oh/sldu:33"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Cutrona",
+    "image": "https://www.legislature.ohio.gov/assets/people/al-cutrona/headshots/thumbnails/medium/al-cutrona-february-2023-headshot_medium.jpg",
+    "email": "sd33@ohiosenate.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-06T06:14:17.667155+00:00",
+    "updated_at": "2025-03-05T08:30:15.784776+00:00",
+    "openstates_url": "https://openstates.org/person/al-cutrona-3EFhaVrUXTn6wjr1yAnMGv/"
+  },
+  {
+    "id": "ocd-person/debec71d-fcfb-4422-9c9e-c6a8709cbb3a",
+    "name": "Al Landis",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "31",
+      "division_id": "ocd-division/country:us/state:oh/sldu:31"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Al",
+    "family_name": "Landis",
+    "image": "https://www.legislature.ohio.gov/assets/people/al-landis/headshots/thumbnails/medium/al-landis-may-2023-headshot_medium.jpg",
+    "email": "sd31@ohiosenate.gov",
+    "gender": "Male",
+    "birth_date": "1954-11-02",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-10T19:49:36.627091+00:00",
+    "updated_at": "2025-03-05T08:30:49.326831+00:00",
+    "openstates_url": "https://openstates.org/person/al-landis-6mJTtvC2hy8Os9JciOOPEo/"
+  },
+  {
+    "id": "ocd-person/c58b6767-730d-4486-a08e-462ea3af3bfe",
+    "name": "Allison Russo",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "7",
+      "division_id": "ocd-division/country:us/state:oh/sldl:7"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Allison",
+    "family_name": "Russo",
+    "image": "https://www.legislature.ohio.gov/assets/people/c-allison-russo/headshots/thumbnails/medium/c-allison-russo-january-2021-headshot_medium.jpg",
+    "email": "rep07@ohiohouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2019-01-10T06:15:47.112401+00:00",
+    "updated_at": "2025-03-29T01:53:25.760180+00:00",
+    "openstates_url": "https://openstates.org/person/allison-russo-60lCA8pfJbgoGDgSTScgl4/"
+  },
+  {
+    "id": "ocd-person/07c054e9-9a51-41b2-994a-8f63b0148d07",
+    "name": "Andrea White",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "36",
+      "division_id": "ocd-division/country:us/state:oh/sldl:36"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Andrea",
+    "family_name": "White",
+    "image": "https://www.legislature.ohio.gov/assets/people/andrea-white/headshots/thumbnails/medium/andrea-white-march-2023-headshot_medium.jpg",
+    "email": "rep36@ohiohouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-06T06:14:13.939880+00:00",
+    "updated_at": "2025-03-05T20:28:26.906669+00:00",
+    "openstates_url": "https://openstates.org/person/andrea-white-EcqD5yrk0bdRvQHqyJ703/"
+  },
+  {
+    "id": "ocd-person/c61c8eaf-1de9-419d-a5dc-c96787315578",
+    "name": "Andrew Brenner",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "19",
+      "division_id": "ocd-division/country:us/state:oh/sldu:19"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Andrew",
+    "family_name": "Brenner",
+    "image": "https://www.legislature.ohio.gov/assets/people/andrew-o-brenner/headshots/thumbnails/medium/andrew-o-brenner-may-2023-headshot_medium.jpg",
+    "email": "sd19@ohiosenate.gov",
+    "gender": "Male",
+    "birth_date": "1971-01-14",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:57:14.181958+00:00",
+    "updated_at": "2025-05-15T01:47:24.237299+00:00",
+    "openstates_url": "https://openstates.org/person/andrew-brenner-61pWx3hWVa8dGs6JkGfU9Q/"
+  },
+  {
+    "id": "ocd-person/4ed8184a-01ff-4bdc-a06c-cbf8b4c73fd6",
+    "name": "Angie King",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "84",
+      "division_id": "ocd-division/country:us/state:oh/sldl:84"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Angie",
+    "family_name": "King",
+    "image": "https://www.legislature.ohio.gov/assets/people/angela-n-king/headshots/thumbnails/medium/angela-n-king-january-2023-headshot_medium.jpg",
+    "email": "rep84@ohiohouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-10T19:49:40.789971+00:00",
+    "updated_at": "2025-03-05T08:29:48.151974+00:00",
+    "openstates_url": "https://openstates.org/person/angie-king-2Om9k33IVtCwgVbWwA2tPS/"
+  },
+  {
+    "id": "ocd-person/3bfe0748-5423-4fcf-9962-905d2b747f23",
+    "name": "Anita Somani",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "8",
+      "division_id": "ocd-division/country:us/state:oh/sldl:8"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:oh/government",
+      "name": "Ohio",
+      "classification": "state"
+    },
+    "given_name": "Anita",
+    "family_name": "Somani",
+    "image": "https://www.legislature.ohio.gov/assets/people/anita-somani/headshots/thumbnails/medium/anita-somani-january-2023-headshot_medium.jpg",
+    "email": "rep08@ohiohouse.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-01-10T19:49:43.209112+00:00",
+    "updated_at": "2025-05-15T01:47:34.663367+00:00",
+    "openstates_url": "https://openstates.org/person/anita-somani-1pCdaqLTZbqcjOLkqUAlt5/"
+  }
+]

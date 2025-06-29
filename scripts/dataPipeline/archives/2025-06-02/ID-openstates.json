@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ocd-person/c77bc461-d0fe-47b4-8999-72e4eda69da1",
+    "name": "Ali Rabe",
+    "party": "Democratic",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:id/sldu:16"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Ali",
+    "family_name": "Rabe",
+    "image": "https://cdn.theorg.com/61b74bbb-61b5-48d5-a84d-fb498da306b9_thumb.jpg",
+    "email": "arabe@senate.idaho.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-06T06:05:37.027855+00:00",
+    "updated_at": "2025-05-15T00:35:39.052262+00:00",
+    "openstates_url": "https://openstates.org/person/ali-rabe-64Q29m5cA0K0kuZ7j8QeqP/"
+  },
+  {
+    "id": "ocd-person/c8c374b3-22b8-4221-a65a-6a4616cb107d",
+    "name": "Barbara Ehardt",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "33A",
+      "division_id": "ocd-division/country:us/state:id/sldl:33a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Barbara",
+    "family_name": "Ehardt",
+    "image": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2017/directory/Ehardt4945.jpg",
+    "email": "behardt@house.idaho.gov",
+    "gender": "Female",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:42:23.552694+00:00",
+    "updated_at": "2024-10-09T15:01:31.848772+00:00",
+    "openstates_url": "https://openstates.org/person/barbara-ehardt-66pmuoexho2VWqm3x715q9/"
+  },
+  {
+    "id": "ocd-person/02a86541-b10a-42cc-b260-0d0f5e3226c0",
+    "name": "Ben Adams",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "12",
+      "division_id": "ocd-division/country:us/state:id/sldu:12"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Adams",
+    "image": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2023/directory/Adams6685.jpg",
+    "email": "badams@senate.idaho.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-06T06:05:35.729746+00:00",
+    "updated_at": "2024-10-09T15:01:36.333413+00:00",
+    "openstates_url": "https://openstates.org/person/ben-adams-50wNcIfowdnHSFb1H0IFc/"
+  },
+  {
+    "id": "ocd-person/cd9538d6-3ed0-4c87-8e0d-d524e8861157",
+    "name": "Ben Fuhriman",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "30B",
+      "division_id": "ocd-division/country:us/state:id/sldl:30b"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Fuhriman",
+    "image": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2025/directory/Fuhriman9429.jpg",
+    "email": "bfuhriman@house.idaho.gov",
+    "gender": "Male",
+    "birth_date": "1983-11-22",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-12-03T00:56:36.261542+00:00",
+    "updated_at": "2025-03-11T00:34:29.639936+00:00",
+    "openstates_url": "https://openstates.org/person/ben-fuhriman-6FvcXl5QDZPnJs5H5fNfeB/"
+  },
+  {
+    "id": "ocd-person/a0bec144-a980-4ce8-9e02-ada83079a300",
+    "name": "Ben Toews",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "4",
+      "division_id": "ocd-division/country:us/state:id/sldu:4"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Ben",
+    "family_name": "Toews",
+    "image": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2023/directory/Toews7795.jpg",
+    "email": "btoews@senate.idaho.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:12:12.057305+00:00",
+    "updated_at": "2024-10-09T15:01:36.175174+00:00",
+    "openstates_url": "https://openstates.org/person/ben-toews-4tJwkTlZ64tZeRm5gKNpJI/"
+  },
+  {
+    "id": "ocd-person/7b647b3d-a3e6-47b3-91b2-a26f0f7f711c",
+    "name": "Brad Little",
+    "party": "Republican",
+    "current_role": {
+      "title": "Governor",
+      "org_classification": "executive",
+      "district": "",
+      "division_id": ""
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Brad",
+    "family_name": "Little",
+    "image": "https://gov.idaho.gov/wp-content/uploads/2018/12/Brad-Little.jpg",
+    "email": "",
+    "gender": "",
+    "birth_date": "1954-02-15",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2020-08-04T05:06:27.558470+00:00",
+    "updated_at": "2023-02-13T19:12:15.577447+00:00",
+    "openstates_url": "https://openstates.org/person/brad-little-3kpyX5xcCd3s91fkHy9Zsa/"
+  },
+  {
+    "id": "ocd-person/59fc8cd0-bec0-4df6-a3e6-99ea305c7100",
+    "name": "Brandon Mitchell",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "6B",
+      "division_id": "ocd-division/country:us/state:id/sldl:6b"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Brandon",
+    "family_name": "Mitchell",
+    "image": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2021/directory/Mitchell6704.jpg",
+    "email": "bmitchell@house.idaho.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2021-01-06T06:05:34.169070+00:00",
+    "updated_at": "2024-12-03T00:56:44.890994+00:00",
+    "openstates_url": "https://openstates.org/person/brandon-mitchell-2jnjQtD9j8lDcdDexjYbR2/"
+  },
+  {
+    "id": "ocd-person/42e5ac22-a35c-4e0e-80fb-05bab9093b28",
+    "name": "Brandon Shippy",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "9",
+      "division_id": "ocd-division/country:us/state:id/sldu:9"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Brandon",
+    "family_name": "Shippy",
+    "image": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2025/directory/Shippy9215.jpg",
+    "email": "bshippy@senate.idaho.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2024-10-09T15:01:29.939804+00:00",
+    "updated_at": "2025-03-11T00:34:23.177255+00:00",
+    "openstates_url": "https://openstates.org/person/brandon-shippy-22ES9njWzI8DH1EiQRe23s/"
+  },
+  {
+    "id": "ocd-person/81d4b890-9bf4-44e0-99b2-eda866f02d48",
+    "name": "Brent Crane",
+    "party": "Republican",
+    "current_role": {
+      "title": "Representative",
+      "org_classification": "lower",
+      "district": "13A",
+      "division_id": "ocd-division/country:us/state:id/sldl:13a"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Brent",
+    "family_name": "Crane",
+    "image": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2023/directory/Crane21.jpg",
+    "email": "bcrane@house.idaho.gov",
+    "gender": "Male",
+    "birth_date": "1974-07-02",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2018-10-18T14:42:23.400025+00:00",
+    "updated_at": "2024-12-03T00:56:46.397614+00:00",
+    "openstates_url": "https://openstates.org/person/brent-crane-3wzDsmovLNhK7Bbboq8VDc/"
+  },
+  {
+    "id": "ocd-person/e89ea88e-7519-48fe-8cb9-65ea18d0dd7b",
+    "name": "Brian Lenney",
+    "party": "Republican",
+    "current_role": {
+      "title": "Senator",
+      "org_classification": "upper",
+      "district": "13",
+      "division_id": "ocd-division/country:us/state:id/sldu:13"
+    },
+    "jurisdiction": {
+      "id": "ocd-jurisdiction/country:us/state:id/government",
+      "name": "Idaho",
+      "classification": "state"
+    },
+    "given_name": "Brian",
+    "family_name": "Lenney",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Brian_Lenney_by_Gage_Skidmore.jpg/800px-Brian_Lenney_by_Gage_Skidmore.jpg",
+    "email": "blenney@senate.idaho.gov",
+    "gender": "Male",
+    "birth_date": "",
+    "death_date": "",
+    "extras": {},
+    "created_at": "2023-02-13T19:12:07.861183+00:00",
+    "updated_at": "2025-03-11T00:34:25.527910+00:00",
+    "openstates_url": "https://openstates.org/person/brian-lenney-74wj4RgYy2RAw0UbvNJWX5/"
+  }
+]

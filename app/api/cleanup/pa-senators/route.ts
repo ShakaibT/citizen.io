@@ -1,12 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
-const supabase = createClient(supabaseUrl, supabaseServiceKey)
-
 export async function POST(request: NextRequest) {
   try {
+    // Check if Supabase is configured
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+    
+    if (!supabaseUrl || !supabaseServiceKey) {
+      return NextResponse.json({ 
+        success: false, 
+        error: 'Supabase not configured',
+        message: 'Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables'
+      }, { status: 500 })
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceKey)
+    
     console.log('🧹 Starting Pennsylvania senators database cleanup...')
     
     // Remove Bob Casey Jr. (no longer a senator as of 2025)

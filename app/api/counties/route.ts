@@ -1,13 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
-
 export async function GET(request: NextRequest) {
   try {
+    // Check if Supabase is configured
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+    
+    if (!supabaseUrl || !supabaseServiceKey) {
+      return NextResponse.json({ 
+        success: false, 
+        error: 'Supabase not configured',
+        message: 'Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables'
+      }, { status: 500 })
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceKey)
+    
     const { searchParams } = new URL(request.url)
     const state = searchParams.get('state')
     const county = searchParams.get('county')
@@ -56,18 +65,18 @@ export async function GET(request: NextRequest) {
     // Get all counties for the state using direct table query
     console.log(`🔍 Getting all counties for state: ${state}`)
     
-    const { data: counties, error } = await supabase
+    const { data: counties, error: countiesError } = await supabase
       .from('counties')
       .select('*')
       .eq('state', state)
       .order('name')
 
-    if (error) {
-      console.error('Database error:', error)
+    if (countiesError) {
+      console.error('Database error:', countiesError)
       return NextResponse.json({
         success: false,
         error: 'Database error',
-        details: error.message
+        details: countiesError.message
       }, { status: 500 })
     }
 

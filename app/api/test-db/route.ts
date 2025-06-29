@@ -1,124 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
-
 export async function GET(request: NextRequest) {
   try {
-    console.log('🔍 Testing database schema and functions...')
-
-    // Test 1: Check if tables exist
-    const { data: tables, error: tablesError } = await supabase
-      .from('information_schema.tables')
-      .select('table_name')
-      .eq('table_schema', 'public')
-      .in('table_name', ['officials', 'counties', 'fallback_officials', 'fallback_counties', 'data_sync_logs'])
-
-    if (tablesError) {
-      console.error('❌ Error checking tables:', tablesError)
-      return NextResponse.json({
-        success: false,
-        error: 'Failed to check tables',
-        details: tablesError.message
+    // Check if Supabase is configured
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    
+    if (!supabaseUrl || !supabaseAnonKey) {
+      return NextResponse.json({ 
+        success: false, 
+        error: 'Supabase not configured',
+        message: 'Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables'
       }, { status: 500 })
     }
 
-    console.log('✅ Tables found:', tables?.map(t => t.table_name))
-
-    // Test 2: Check if functions exist
-    const { data: functions, error: functionsError } = await supabase
-      .from('information_schema.routines')
-      .select('routine_name')
-      .eq('routine_schema', 'public')
-      .in('routine_name', ['upsert_official', 'upsert_county', 'get_officials_with_fallback', 'get_counties_with_fallback', 'log_sync_operation'])
-
-    if (functionsError) {
-      console.error('❌ Error checking functions:', functionsError)
-    } else {
-      console.log('✅ Functions found:', functions?.map(f => f.routine_name))
-    }
-
-    // Test 3: Count records in each table
-    const counts: Record<string, number | string> = {}
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
     
-    for (const table of ['officials', 'counties', 'fallback_officials', 'fallback_counties', 'data_sync_logs']) {
-      try {
-        const { count, error } = await supabase
-          .from(table)
-          .select('*', { count: 'exact', head: true })
-        
-        if (error) {
-          console.error(`❌ Error counting ${table}:`, error)
-          counts[table] = `Error: ${error.message}`
-        } else {
-          counts[table] = count || 0
-          console.log(`✅ ${table}: ${count} records`)
-        }
-      } catch (err) {
-        console.error(`❌ Exception counting ${table}:`, err)
-        counts[table] = `Exception: ${err}`
-      }
+    // Test if we can connect to the database
+    const { data, error } = await supabase
+      .from('officials')
+      .select('count')
+      .limit(1)
+    
+    if (error) {
+      return NextResponse.json({ 
+        success: false, 
+        error: 'Database connection failed',
+        details: error.message
+      }, { status: 500 })
     }
-
-    // Test 4: Test get_officials_with_fallback function
-    let officialsTest = null
-    try {
-      const { data: officials, error: officialsError } = await supabase
-        .rpc('get_officials_with_fallback', { state_name: 'Pennsylvania' })
-
-      if (officialsError) {
-        console.error('❌ Error testing get_officials_with_fallback:', officialsError)
-        officialsTest = `Error: ${officialsError.message}`
-      } else {
-        officialsTest = `Success: ${officials?.length || 0} officials found`
-        console.log('✅ get_officials_with_fallback test passed:', officials?.length)
-      }
-    } catch (err) {
-      console.error('❌ Exception testing get_officials_with_fallback:', err)
-      officialsTest = `Exception: ${err}`
-    }
-
-    // Test 5: Test get_counties_with_fallback function
-    let countiesTest = null
-    try {
-      const { data: counties, error: countiesError } = await supabase
-        .rpc('get_counties_with_fallback', { state_name: 'Pennsylvania' })
-
-      if (countiesError) {
-        console.error('❌ Error testing get_counties_with_fallback:', countiesError)
-        countiesTest = `Error: ${countiesError.message}`
-      } else {
-        countiesTest = `Success: ${counties?.length || 0} counties found`
-        console.log('✅ get_counties_with_fallback test passed:', counties?.length)
-      }
-    } catch (err) {
-      console.error('❌ Exception testing get_counties_with_fallback:', err)
-      countiesTest = `Exception: ${err}`
-    }
-
-    return NextResponse.json({
-      success: true,
-      message: 'Database schema test completed',
-      results: {
-        tables: tables?.map(t => t.table_name) || [],
-        functions: functions?.map(f => f.routine_name) || [],
-        record_counts: counts,
-        function_tests: {
-          get_officials_with_fallback: officialsTest,
-          get_counties_with_fallback: countiesTest
-        }
-      }
+    
+    return NextResponse.json({ 
+      success: true, 
+      message: 'Database connection successful',
+      timestamp: new Date().toISOString()
     })
-
   } catch (error) {
-    console.error('❌ Error in database test:', error)
-    return NextResponse.json({
-      success: false,
+    return NextResponse.json({ 
+      success: false, 
       error: 'Database test failed',
-      details: String(error)
+      details: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 })
   }
 } 

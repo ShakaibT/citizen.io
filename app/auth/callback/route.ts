@@ -1,5 +1,3 @@
-import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs"
-import { cookies } from "next/headers"
 import { type NextRequest, NextResponse } from "next/server"
 
 export async function GET(request: NextRequest) {
@@ -13,14 +11,9 @@ export async function GET(request: NextRequest) {
   )
 
   if (code && isSupabaseConfigured) {
-    try {
-      const cookieStore = cookies()
-      const supabase = createRouteHandlerClient({ cookies: () => cookieStore })
-      await supabase.auth.exchangeCodeForSession(code)
-    } catch (error) {
-      console.error('Auth callback error:', error)
-      // Continue to redirect even if auth fails
-    }
+    // TODO: Re-enable Supabase auth when configuration is complete
+    // For now, just log the auth attempt
+    console.log('Auth callback received code:', code)
   }
 
   // URL to redirect to after sign in process completes

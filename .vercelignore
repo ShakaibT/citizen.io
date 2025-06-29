@@ -27,4 +27,13 @@ test-*.js
 
 # Cache directories
 .monitor/
-.DS_Store 
+.DS_Store
+
+# Temporarily exclude problematic API routes
+app/api/cleanup/
+app/api/cron/
+app/api/reports/
+app/api/sync/
+app/api/officials/add/
+app/api/officials/pa-senators/
+app/api/counties/setup/ 

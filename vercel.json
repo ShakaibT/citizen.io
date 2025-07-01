@@ -1,5 +1,9 @@
 {
+  "buildCommand": "pnpm install && pnpm run build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
   "framework": "nextjs",
+  "regions": ["iad1"],
   "crons": [
     {
       "path": "/api/officials/update",

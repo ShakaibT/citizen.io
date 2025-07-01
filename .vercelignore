@@ -35,6 +35,10 @@ app/api/cron/
 app/api/reports/
 app/api/sync/
 app/api/officials/add/
+app/api/officials/init/
 app/api/officials/pa-senators/
+app/api/officials/route.ts
+app/api/officials/test/
+app/api/officials/update/
 app/api/counties/setup/
 app/api/counties/init/ 

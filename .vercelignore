@@ -36,4 +36,5 @@ app/api/reports/
 app/api/sync/
 app/api/officials/add/
 app/api/officials/pa-senators/
-app/api/counties/setup/ 
+app/api/counties/setup/
+app/api/counties/init/ 

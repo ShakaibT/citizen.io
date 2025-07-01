@@ -43,4 +43,6 @@ app/api/officials/update/
 app/api/counties/route.ts
 app/api/counties/setup/
 app/api/counties/init/
-app/api/test-db/ 
+app/api/counties/test/
+app/api/test-db/
+app/api/test-db/route.ts 

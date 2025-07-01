@@ -1,13 +1,3 @@
 {
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": "nextjs",
-  "regions": ["iad1"],
-  "crons": [
-    {
-      "path": "/api/officials/update",
-      "schedule": "0 6 * * *"
-    }
-  ]
+  "framework": "nextjs"
 } 

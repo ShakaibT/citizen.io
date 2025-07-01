@@ -40,5 +40,7 @@ app/api/officials/pa-senators/
 app/api/officials/route.ts
 app/api/officials/test/
 app/api/officials/update/
+app/api/counties/route.ts
 app/api/counties/setup/
-app/api/counties/init/ 
+app/api/counties/init/
+app/api/test-db/ 

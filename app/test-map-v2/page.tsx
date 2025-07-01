@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react'
-import Map from '@/components/Map'
+import Map from '../../components/Map'
 
 export default function TestMapV2() {
   const [selectedState, setSelectedState] = useState<string | null>(null)

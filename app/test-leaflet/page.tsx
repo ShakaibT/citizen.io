@@ -4,7 +4,7 @@ import { useState } from 'react'
 import dynamic from 'next/dynamic'
 
 // Dynamic import to prevent SSR issues
-const LeafletMap = dynamic(() => import('@/components/LeafletMap'), {
+const LeafletMap = dynamic(() => import('../../components/LeafletMap'), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center bg-gray-50 rounded-lg">
